@@ -8,12 +8,52 @@
 
 /* Begin PBXBuildFile section */
 		0D1DD217228D503600FFC9FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD216228D503600FFC9FD /* AppDelegate.swift */; };
-		0D1DD219228D503600FFC9FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD218228D503600FFC9FD /* ViewController.swift */; };
-		0D1DD21C228D503600FFC9FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D1DD21A228D503600FFC9FD /* Main.storyboard */; };
 		0D1DD21E228D503800FFC9FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D1DD21D228D503800FFC9FD /* Assets.xcassets */; };
 		0D1DD221228D503800FFC9FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D1DD21F228D503800FFC9FD /* LaunchScreen.storyboard */; };
 		0D1DD22C228D503800FFC9FD /* DiabloAssistantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD22B228D503800FFC9FD /* DiabloAssistantTests.swift */; };
 		0D1DD237228D503800FFC9FD /* DiabloAssistantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD236228D503800FFC9FD /* DiabloAssistantUITests.swift */; };
+		0D1DD288228D513200FFC9FD /* FFLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD249228D513200FFC9FD /* FFLabel.swift */; };
+		0D1DD289228D513200FFC9FD /* UIButton+SCAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD24E228D513200FFC9FD /* UIButton+SCAddition.m */; };
+		0D1DD28A228D513200FFC9FD /* NSObject+SCAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD250228D513200FFC9FD /* NSObject+SCAddition.m */; };
+		0D1DD28B228D513200FFC9FD /* UIImageView+SCAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD251228D513200FFC9FD /* UIImageView+SCAddition.m */; };
+		0D1DD28C228D513200FFC9FD /* NSString+SCAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD252228D513200FFC9FD /* NSString+SCAddition.m */; };
+		0D1DD28D228D513200FFC9FD /* UIScreen+UISCreen_extenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD253228D513200FFC9FD /* UIScreen+UISCreen_extenshion.m */; };
+		0D1DD28E228D513200FFC9FD /* CABasicAnimation+SCAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD254228D513200FFC9FD /* CABasicAnimation+SCAddition.m */; };
+		0D1DD28F228D513200FFC9FD /* UILabel+SCAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD255228D513200FFC9FD /* UILabel+SCAddition.m */; };
+		0D1DD290228D513200FFC9FD /* UIColor+SCAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD257228D513200FFC9FD /* UIColor+SCAddition.m */; };
+		0D1DD291228D513200FFC9FD /* SCNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD25D228D513200FFC9FD /* SCNetworkManager.swift */; };
+		0D1DD292228D513200FFC9FD /* SCUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD25F228D513200FFC9FD /* SCUserAccount.swift */; };
+		0D1DD293228D513200FFC9FD /* SCNetworkManager+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD260228D513200FFC9FD /* SCNetworkManager+extension.swift */; };
+		0D1DD294228D513200FFC9FD /* SCSQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD262228D513200FFC9FD /* SCSQLiteManager.swift */; };
+		0D1DD295228D513200FFC9FD /* mydata.sql in Resources */ = {isa = PBXBuildFile; fileRef = 0D1DD263228D513200FFC9FD /* mydata.sql */; };
+		0D1DD296228D513200FFC9FD /* UIApplication+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD265228D513200FFC9FD /* UIApplication+extension.swift */; };
+		0D1DD297228D513200FFC9FD /* UIImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD266228D513200FFC9FD /* UIImageView+extension.swift */; };
+		0D1DD298228D513200FFC9FD /* NSAttributedString+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD267228D513200FFC9FD /* NSAttributedString+extension.swift */; };
+		0D1DD299228D513200FFC9FD /* UIWindow+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD268228D513200FFC9FD /* UIWindow+extension.swift */; };
+		0D1DD29A228D513200FFC9FD /* Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD269228D513200FFC9FD /* Date+extension.swift */; };
+		0D1DD29B228D513200FFC9FD /* UILabel+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD26A228D513200FFC9FD /* UILabel+extension.swift */; };
+		0D1DD29C228D513200FFC9FD /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD26B228D513200FFC9FD /* UIView+extension.swift */; };
+		0D1DD29D228D513200FFC9FD /* UIImage+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD26C228D513200FFC9FD /* UIImage+extension.swift */; };
+		0D1DD29E228D513200FFC9FD /* UINavigationController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD26D228D513200FFC9FD /* UINavigationController+extension.swift */; };
+		0D1DD29F228D513200FFC9FD /* Bundle+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD26E228D513200FFC9FD /* Bundle+extension.swift */; };
+		0D1DD2A0228D513200FFC9FD /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD26F228D513200FFC9FD /* UIViewController+extension.swift */; };
+		0D1DD2A1228D513200FFC9FD /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD270228D513200FFC9FD /* String+extension.swift */; };
+		0D1DD2A2228D513200FFC9FD /* UITableViewCell+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD271228D513200FFC9FD /* UITableViewCell+extension.swift */; };
+		0D1DD2A3228D513200FFC9FD /* WKWebView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD272228D513200FFC9FD /* WKWebView+extension.swift */; };
+		0D1DD2A4228D513200FFC9FD /* UIPageControl+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD273228D513200FFC9FD /* UIPageControl+extension.swift */; };
+		0D1DD2A5228D513200FFC9FD /* UIBarButtonItem+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD274228D513200FFC9FD /* UIBarButtonItem+extension.swift */; };
+		0D1DD2A6228D513200FFC9FD /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD275228D513200FFC9FD /* UITableView+extension.swift */; };
+		0D1DD2A7228D513200FFC9FD /* SCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD279228D513200FFC9FD /* SCHomeViewController.swift */; };
+		0D1DD2A8228D513200FFC9FD /* SCDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD27B228D513200FFC9FD /* SCDiscoverViewController.swift */; };
+		0D1DD2A9228D513200FFC9FD /* SCMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD27D228D513200FFC9FD /* SCMessageViewController.swift */; };
+		0D1DD2AA228D513200FFC9FD /* SCProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD27F228D513200FFC9FD /* SCProfileViewController.swift */; };
+		0D1DD2AB228D513200FFC9FD /* SCOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD282228D513200FFC9FD /* SCOAuthViewController.swift */; };
+		0D1DD2AC228D513200FFC9FD /* SCNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD283228D513200FFC9FD /* SCNavigationViewController.swift */; };
+		0D1DD2AD228D513200FFC9FD /* SCMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD284228D513200FFC9FD /* SCMainViewController.swift */; };
+		0D1DD2AE228D513200FFC9FD /* SCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD285228D513200FFC9FD /* SCBaseViewController.swift */; };
+		0D1DD2AF228D513200FFC9FD /* SCVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD287228D513200FFC9FD /* SCVisitorView.swift */; };
+		0D1DD2B2228D51D400FFC9FD /* AssistantCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD2B1228D51D400FFC9FD /* AssistantCommon.swift */; };
+		AB98779B57BACC1F8FFBC77C /* Pods_DiabloAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C792F1AAEC9669FCE6C27E76 /* Pods_DiabloAssistant.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +76,6 @@
 /* Begin PBXFileReference section */
 		0D1DD213228D503600FFC9FD /* DiabloAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiabloAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D1DD216228D503600FFC9FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0D1DD218228D503600FFC9FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0D1DD21B228D503600FFC9FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D1DD21D228D503800FFC9FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D1DD220228D503800FFC9FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D1DD222228D503800FFC9FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +85,60 @@
 		0D1DD232228D503800FFC9FD /* DiabloAssistantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiabloAssistantUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D1DD236228D503800FFC9FD /* DiabloAssistantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabloAssistantUITests.swift; sourceTree = "<group>"; };
 		0D1DD238228D503800FFC9FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D1DD249228D513200FFC9FD /* FFLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFLabel.swift; sourceTree = "<group>"; };
+		0D1DD24B228D513200FFC9FD /* UILabel+SCAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+SCAddition.h"; sourceTree = "<group>"; };
+		0D1DD24C228D513200FFC9FD /* CABasicAnimation+SCAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CABasicAnimation+SCAddition.h"; sourceTree = "<group>"; };
+		0D1DD24D228D513200FFC9FD /* UIScreen+SCAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+SCAddition.h"; sourceTree = "<group>"; };
+		0D1DD24E228D513200FFC9FD /* UIButton+SCAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SCAddition.m"; sourceTree = "<group>"; };
+		0D1DD24F228D513200FFC9FD /* UIColor+SCAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SCAddition.h"; sourceTree = "<group>"; };
+		0D1DD250228D513200FFC9FD /* NSObject+SCAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SCAddition.m"; sourceTree = "<group>"; };
+		0D1DD251228D513200FFC9FD /* UIImageView+SCAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SCAddition.m"; sourceTree = "<group>"; };
+		0D1DD252228D513200FFC9FD /* NSString+SCAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SCAddition.m"; sourceTree = "<group>"; };
+		0D1DD253228D513200FFC9FD /* UIScreen+UISCreen_extenshion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+UISCreen_extenshion.m"; sourceTree = "<group>"; };
+		0D1DD254228D513200FFC9FD /* CABasicAnimation+SCAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CABasicAnimation+SCAddition.m"; sourceTree = "<group>"; };
+		0D1DD255228D513200FFC9FD /* UILabel+SCAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+SCAddition.m"; sourceTree = "<group>"; };
+		0D1DD256228D513200FFC9FD /* NSObject+SCAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SCAddition.h"; sourceTree = "<group>"; };
+		0D1DD257228D513200FFC9FD /* UIColor+SCAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SCAddition.m"; sourceTree = "<group>"; };
+		0D1DD258228D513200FFC9FD /* UIButton+SCAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SCAddition.h"; sourceTree = "<group>"; };
+		0D1DD259228D513200FFC9FD /* UIImageView+SCAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SCAddition.h"; sourceTree = "<group>"; };
+		0D1DD25A228D513200FFC9FD /* SCAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAdditions.h; sourceTree = "<group>"; };
+		0D1DD25B228D513200FFC9FD /* NSString+SCAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SCAddition.h"; sourceTree = "<group>"; };
+		0D1DD25D228D513200FFC9FD /* SCNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNetworkManager.swift; sourceTree = "<group>"; };
+		0D1DD25F228D513200FFC9FD /* SCUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCUserAccount.swift; sourceTree = "<group>"; };
+		0D1DD260228D513200FFC9FD /* SCNetworkManager+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNetworkManager+extension.swift"; sourceTree = "<group>"; };
+		0D1DD262228D513200FFC9FD /* SCSQLiteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCSQLiteManager.swift; sourceTree = "<group>"; };
+		0D1DD263228D513200FFC9FD /* mydata.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mydata.sql; sourceTree = "<group>"; };
+		0D1DD265228D513200FFC9FD /* UIApplication+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+extension.swift"; sourceTree = "<group>"; };
+		0D1DD266228D513200FFC9FD /* UIImageView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+extension.swift"; sourceTree = "<group>"; };
+		0D1DD267228D513200FFC9FD /* NSAttributedString+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+extension.swift"; sourceTree = "<group>"; };
+		0D1DD268228D513200FFC9FD /* UIWindow+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+extension.swift"; sourceTree = "<group>"; };
+		0D1DD269228D513200FFC9FD /* Date+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+extension.swift"; sourceTree = "<group>"; };
+		0D1DD26A228D513200FFC9FD /* UILabel+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+extension.swift"; sourceTree = "<group>"; };
+		0D1DD26B228D513200FFC9FD /* UIView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		0D1DD26C228D513200FFC9FD /* UIImage+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+extension.swift"; sourceTree = "<group>"; };
+		0D1DD26D228D513200FFC9FD /* UINavigationController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+extension.swift"; sourceTree = "<group>"; };
+		0D1DD26E228D513200FFC9FD /* Bundle+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+extension.swift"; sourceTree = "<group>"; };
+		0D1DD26F228D513200FFC9FD /* UIViewController+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		0D1DD270228D513200FFC9FD /* String+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
+		0D1DD271228D513200FFC9FD /* UITableViewCell+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+extension.swift"; sourceTree = "<group>"; };
+		0D1DD272228D513200FFC9FD /* WKWebView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKWebView+extension.swift"; sourceTree = "<group>"; };
+		0D1DD273228D513200FFC9FD /* UIPageControl+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPageControl+extension.swift"; sourceTree = "<group>"; };
+		0D1DD274228D513200FFC9FD /* UIBarButtonItem+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+extension.swift"; sourceTree = "<group>"; };
+		0D1DD275228D513200FFC9FD /* UITableView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
+		0D1DD279228D513200FFC9FD /* SCHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHomeViewController.swift; sourceTree = "<group>"; };
+		0D1DD27B228D513200FFC9FD /* SCDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCDiscoverViewController.swift; sourceTree = "<group>"; };
+		0D1DD27D228D513200FFC9FD /* SCMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCMessageViewController.swift; sourceTree = "<group>"; };
+		0D1DD27F228D513200FFC9FD /* SCProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCProfileViewController.swift; sourceTree = "<group>"; };
+		0D1DD282228D513200FFC9FD /* SCOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCOAuthViewController.swift; sourceTree = "<group>"; };
+		0D1DD283228D513200FFC9FD /* SCNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNavigationViewController.swift; sourceTree = "<group>"; };
+		0D1DD284228D513200FFC9FD /* SCMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCMainViewController.swift; sourceTree = "<group>"; };
+		0D1DD285228D513200FFC9FD /* SCBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCBaseViewController.swift; sourceTree = "<group>"; };
+		0D1DD287228D513200FFC9FD /* SCVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCVisitorView.swift; sourceTree = "<group>"; };
+		0D1DD2B0228D517D00FFC9FD /* Assistant-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Assistant-Bridge.h"; path = "DiabloAssistant/Assistant-Bridge.h"; sourceTree = SOURCE_ROOT; };
+		0D1DD2B1228D51D400FFC9FD /* AssistantCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssistantCommon.swift; sourceTree = "<group>"; };
+		72F020C3052E04C7B10CCA82 /* Pods-DiabloAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiabloAssistant.release.xcconfig"; path = "Target Support Files/Pods-DiabloAssistant/Pods-DiabloAssistant.release.xcconfig"; sourceTree = "<group>"; };
+		B36DBCB64FF9A45F4835F5A5 /* Pods-DiabloAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiabloAssistant.debug.xcconfig"; path = "Target Support Files/Pods-DiabloAssistant/Pods-DiabloAssistant.debug.xcconfig"; sourceTree = "<group>"; };
+		C792F1AAEC9669FCE6C27E76 /* Pods_DiabloAssistant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiabloAssistant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB98779B57BACC1F8FFBC77C /* Pods_DiabloAssistant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +174,8 @@
 				0D1DD22A228D503800FFC9FD /* DiabloAssistantTests */,
 				0D1DD235228D503800FFC9FD /* DiabloAssistantUITests */,
 				0D1DD214228D503600FFC9FD /* Products */,
+				5AE1837790C6C92DCCAD91F0 /* Pods */,
+				FA3046ACEF80F32D518E8BC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +192,10 @@
 		0D1DD215228D503600FFC9FD /* DiabloAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				0D1DD244228D513200FFC9FD /* Classes */,
+				0D1DD2B0228D517D00FFC9FD /* Assistant-Bridge.h */,
+				0D1DD2B1228D51D400FFC9FD /* AssistantCommon.swift */,
 				0D1DD216228D503600FFC9FD /* AppDelegate.swift */,
-				0D1DD218228D503600FFC9FD /* ViewController.swift */,
-				0D1DD21A228D503600FFC9FD /* Main.storyboard */,
 				0D1DD21D228D503800FFC9FD /* Assets.xcassets */,
 				0D1DD21F228D503800FFC9FD /* LaunchScreen.storyboard */,
 				0D1DD222228D503800FFC9FD /* Info.plist */,
@@ -125,6 +221,223 @@
 			path = DiabloAssistantUITests;
 			sourceTree = "<group>";
 		};
+		0D1DD244228D513200FFC9FD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0D1DD276228D513200FFC9FD /* Model */,
+				0D1DD277228D513200FFC9FD /* View */,
+				0D1DD245228D513200FFC9FD /* ViewModel */,
+				0D1DD246228D513200FFC9FD /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0D1DD245228D513200FFC9FD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0D1DD246228D513200FFC9FD /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				0D1DD25C228D513200FFC9FD /* Network */,
+				0D1DD247228D513200FFC9FD /* FFLabel */,
+				0D1DD24A228D513200FFC9FD /* Additions */,
+				0D1DD261228D513200FFC9FD /* SQLite */,
+				0D1DD264228D513200FFC9FD /* Extensions */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		0D1DD247228D513200FFC9FD /* FFLabel */ = {
+			isa = PBXGroup;
+			children = (
+				0D1DD248228D513200FFC9FD /* Source */,
+			);
+			path = FFLabel;
+			sourceTree = "<group>";
+		};
+		0D1DD248228D513200FFC9FD /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0D1DD249228D513200FFC9FD /* FFLabel.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		0D1DD24A228D513200FFC9FD /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				0D1DD24B228D513200FFC9FD /* UILabel+SCAddition.h */,
+				0D1DD24C228D513200FFC9FD /* CABasicAnimation+SCAddition.h */,
+				0D1DD24D228D513200FFC9FD /* UIScreen+SCAddition.h */,
+				0D1DD24E228D513200FFC9FD /* UIButton+SCAddition.m */,
+				0D1DD24F228D513200FFC9FD /* UIColor+SCAddition.h */,
+				0D1DD250228D513200FFC9FD /* NSObject+SCAddition.m */,
+				0D1DD251228D513200FFC9FD /* UIImageView+SCAddition.m */,
+				0D1DD252228D513200FFC9FD /* NSString+SCAddition.m */,
+				0D1DD253228D513200FFC9FD /* UIScreen+UISCreen_extenshion.m */,
+				0D1DD254228D513200FFC9FD /* CABasicAnimation+SCAddition.m */,
+				0D1DD255228D513200FFC9FD /* UILabel+SCAddition.m */,
+				0D1DD256228D513200FFC9FD /* NSObject+SCAddition.h */,
+				0D1DD257228D513200FFC9FD /* UIColor+SCAddition.m */,
+				0D1DD258228D513200FFC9FD /* UIButton+SCAddition.h */,
+				0D1DD259228D513200FFC9FD /* UIImageView+SCAddition.h */,
+				0D1DD25A228D513200FFC9FD /* SCAdditions.h */,
+				0D1DD25B228D513200FFC9FD /* NSString+SCAddition.h */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		0D1DD25C228D513200FFC9FD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0D1DD25D228D513200FFC9FD /* SCNetworkManager.swift */,
+				0D1DD260228D513200FFC9FD /* SCNetworkManager+extension.swift */,
+				0D1DD25E228D513200FFC9FD /* Model */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0D1DD25E228D513200FFC9FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D1DD25F228D513200FFC9FD /* SCUserAccount.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0D1DD261228D513200FFC9FD /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				0D1DD262228D513200FFC9FD /* SCSQLiteManager.swift */,
+				0D1DD263228D513200FFC9FD /* mydata.sql */,
+			);
+			path = SQLite;
+			sourceTree = "<group>";
+		};
+		0D1DD264228D513200FFC9FD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0D1DD265228D513200FFC9FD /* UIApplication+extension.swift */,
+				0D1DD266228D513200FFC9FD /* UIImageView+extension.swift */,
+				0D1DD267228D513200FFC9FD /* NSAttributedString+extension.swift */,
+				0D1DD268228D513200FFC9FD /* UIWindow+extension.swift */,
+				0D1DD269228D513200FFC9FD /* Date+extension.swift */,
+				0D1DD26A228D513200FFC9FD /* UILabel+extension.swift */,
+				0D1DD26B228D513200FFC9FD /* UIView+extension.swift */,
+				0D1DD26C228D513200FFC9FD /* UIImage+extension.swift */,
+				0D1DD26D228D513200FFC9FD /* UINavigationController+extension.swift */,
+				0D1DD26E228D513200FFC9FD /* Bundle+extension.swift */,
+				0D1DD26F228D513200FFC9FD /* UIViewController+extension.swift */,
+				0D1DD270228D513200FFC9FD /* String+extension.swift */,
+				0D1DD271228D513200FFC9FD /* UITableViewCell+extension.swift */,
+				0D1DD272228D513200FFC9FD /* WKWebView+extension.swift */,
+				0D1DD273228D513200FFC9FD /* UIPageControl+extension.swift */,
+				0D1DD274228D513200FFC9FD /* UIBarButtonItem+extension.swift */,
+				0D1DD275228D513200FFC9FD /* UITableView+extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0D1DD276228D513200FFC9FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0D1DD277228D513200FFC9FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D1DD280228D513200FFC9FD /* Base */,
+				0D1DD278228D513200FFC9FD /* Home */,
+				0D1DD27A228D513200FFC9FD /* Discover */,
+				0D1DD27C228D513200FFC9FD /* Message */,
+				0D1DD27E228D513200FFC9FD /* Profile */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0D1DD278228D513200FFC9FD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0D1DD279228D513200FFC9FD /* SCHomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0D1DD27A228D513200FFC9FD /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				0D1DD27B228D513200FFC9FD /* SCDiscoverViewController.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		0D1DD27C228D513200FFC9FD /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				0D1DD27D228D513200FFC9FD /* SCMessageViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		0D1DD27E228D513200FFC9FD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0D1DD27F228D513200FFC9FD /* SCProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		0D1DD280228D513200FFC9FD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0D1DD281228D513200FFC9FD /* OAuth */,
+				0D1DD283228D513200FFC9FD /* SCNavigationViewController.swift */,
+				0D1DD284228D513200FFC9FD /* SCMainViewController.swift */,
+				0D1DD285228D513200FFC9FD /* SCBaseViewController.swift */,
+				0D1DD286228D513200FFC9FD /* VisitorView */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0D1DD281228D513200FFC9FD /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				0D1DD282228D513200FFC9FD /* SCOAuthViewController.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		0D1DD286228D513200FFC9FD /* VisitorView */ = {
+			isa = PBXGroup;
+			children = (
+				0D1DD287228D513200FFC9FD /* SCVisitorView.swift */,
+			);
+			path = VisitorView;
+			sourceTree = "<group>";
+		};
+		5AE1837790C6C92DCCAD91F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B36DBCB64FF9A45F4835F5A5 /* Pods-DiabloAssistant.debug.xcconfig */,
+				72F020C3052E04C7B10CCA82 /* Pods-DiabloAssistant.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FA3046ACEF80F32D518E8BC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C792F1AAEC9669FCE6C27E76 /* Pods_DiabloAssistant.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +445,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D1DD23B228D503800FFC9FD /* Build configuration list for PBXNativeTarget "DiabloAssistant" */;
 			buildPhases = (
+				BD66B9277FB3306FCACAA4CA /* [CP] Check Pods Manifest.lock */,
 				0D1DD20F228D503600FFC9FD /* Sources */,
 				0D1DD210228D503600FFC9FD /* Frameworks */,
 				0D1DD211228D503600FFC9FD /* Resources */,
+				7AB969E4B9951B399024D956 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,9 +544,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D1DD295228D513200FFC9FD /* mydata.sql in Resources */,
 				0D1DD221228D503800FFC9FD /* LaunchScreen.storyboard in Resources */,
 				0D1DD21E228D503800FFC9FD /* Assets.xcassets in Resources */,
-				0D1DD21C228D503600FFC9FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +566,113 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7AB969E4B9951B399024D956 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DiabloAssistant/Pods-DiabloAssistant-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DiabloAssistant/Pods-DiabloAssistant-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD66B9277FB3306FCACAA4CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DiabloAssistant-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0D1DD20F228D503600FFC9FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D1DD219228D503600FFC9FD /* ViewController.swift in Sources */,
+				0D1DD29B228D513200FFC9FD /* UILabel+extension.swift in Sources */,
+				0D1DD289228D513200FFC9FD /* UIButton+SCAddition.m in Sources */,
+				0D1DD28C228D513200FFC9FD /* NSString+SCAddition.m in Sources */,
+				0D1DD29D228D513200FFC9FD /* UIImage+extension.swift in Sources */,
+				0D1DD2AB228D513200FFC9FD /* SCOAuthViewController.swift in Sources */,
+				0D1DD2AE228D513200FFC9FD /* SCBaseViewController.swift in Sources */,
+				0D1DD2AD228D513200FFC9FD /* SCMainViewController.swift in Sources */,
+				0D1DD2AF228D513200FFC9FD /* SCVisitorView.swift in Sources */,
+				0D1DD29E228D513200FFC9FD /* UINavigationController+extension.swift in Sources */,
+				0D1DD29C228D513200FFC9FD /* UIView+extension.swift in Sources */,
+				0D1DD291228D513200FFC9FD /* SCNetworkManager.swift in Sources */,
+				0D1DD294228D513200FFC9FD /* SCSQLiteManager.swift in Sources */,
+				0D1DD2A9228D513200FFC9FD /* SCMessageViewController.swift in Sources */,
+				0D1DD28A228D513200FFC9FD /* NSObject+SCAddition.m in Sources */,
+				0D1DD299228D513200FFC9FD /* UIWindow+extension.swift in Sources */,
+				0D1DD2A8228D513200FFC9FD /* SCDiscoverViewController.swift in Sources */,
+				0D1DD2A5228D513200FFC9FD /* UIBarButtonItem+extension.swift in Sources */,
+				0D1DD28F228D513200FFC9FD /* UILabel+SCAddition.m in Sources */,
+				0D1DD2A3228D513200FFC9FD /* WKWebView+extension.swift in Sources */,
+				0D1DD2A2228D513200FFC9FD /* UITableViewCell+extension.swift in Sources */,
+				0D1DD298228D513200FFC9FD /* NSAttributedString+extension.swift in Sources */,
+				0D1DD2A1228D513200FFC9FD /* String+extension.swift in Sources */,
+				0D1DD2B2228D51D400FFC9FD /* AssistantCommon.swift in Sources */,
+				0D1DD2A0228D513200FFC9FD /* UIViewController+extension.swift in Sources */,
+				0D1DD28E228D513200FFC9FD /* CABasicAnimation+SCAddition.m in Sources */,
+				0D1DD290228D513200FFC9FD /* UIColor+SCAddition.m in Sources */,
+				0D1DD2A7228D513200FFC9FD /* SCHomeViewController.swift in Sources */,
+				0D1DD2AA228D513200FFC9FD /* SCProfileViewController.swift in Sources */,
+				0D1DD28B228D513200FFC9FD /* UIImageView+SCAddition.m in Sources */,
+				0D1DD292228D513200FFC9FD /* SCUserAccount.swift in Sources */,
+				0D1DD297228D513200FFC9FD /* UIImageView+extension.swift in Sources */,
+				0D1DD288228D513200FFC9FD /* FFLabel.swift in Sources */,
+				0D1DD2A6228D513200FFC9FD /* UITableView+extension.swift in Sources */,
+				0D1DD293228D513200FFC9FD /* SCNetworkManager+extension.swift in Sources */,
+				0D1DD29F228D513200FFC9FD /* Bundle+extension.swift in Sources */,
+				0D1DD29A228D513200FFC9FD /* Date+extension.swift in Sources */,
+				0D1DD296228D513200FFC9FD /* UIApplication+extension.swift in Sources */,
+				0D1DD2AC228D513200FFC9FD /* SCNavigationViewController.swift in Sources */,
+				0D1DD28D228D513200FFC9FD /* UIScreen+UISCreen_extenshion.m in Sources */,
 				0D1DD217228D503600FFC9FD /* AppDelegate.swift in Sources */,
+				0D1DD2A4228D513200FFC9FD /* UIPageControl+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +708,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0D1DD21A228D503600FFC9FD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0D1DD21B228D503600FFC9FD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0D1DD21F228D503800FFC9FD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -430,6 +837,7 @@
 		};
 		0D1DD23C228D503800FFC9FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B36DBCB64FF9A45F4835F5A5 /* Pods-DiabloAssistant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -440,6 +848,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.stephencao.project.DiabloAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DiabloAssistant/Assistant-Bridge.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -447,6 +856,7 @@
 		};
 		0D1DD23D228D503800FFC9FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72F020C3052E04C7B10CCA82 /* Pods-DiabloAssistant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -457,6 +867,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.stephencao.project.DiabloAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DiabloAssistant/Assistant-Bridge.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
