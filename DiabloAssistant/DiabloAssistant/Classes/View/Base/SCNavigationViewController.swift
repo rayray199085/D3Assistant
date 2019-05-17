@@ -13,7 +13,16 @@ class SCNavigationViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         allowSwipeToGoBack()
+        navigationBar.barTintColor = UIColor.black
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setNeedsStatusBarAppearanceUpdate()
+    }
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if children.count > 0{
             viewController.hidesBottomBarWhenPushed = true

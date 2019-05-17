@@ -56,6 +56,7 @@ extension SCBaseViewController{
 
     @objc private func successLogin(){
         navigationItem.rightBarButtonItem = nil
+        navigationItem.leftBarButtonItem = nil
         view = nil
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name(SCUserSuccessLoginNotification), object: nil)
     }
@@ -65,7 +66,7 @@ extension SCBaseViewController{
 extension SCBaseViewController{
     @objc private func setupUI(){
         //        view.backgroundColor = UIColor.orange
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: SCButtonTitleColor]
         SCNetworkManager.shared.userLogon ? setupTableView() : setupVisitorView()
     }
     
@@ -90,13 +91,11 @@ extension SCBaseViewController{
             return
         }
         view.insertSubview(visitiorView, belowSubview: naviBar)
-        
+        naviBar.tintColor = SCButtonTitleColor
         let loginBarButtonItem = UIBarButtonItem(title: "Login", style: UIBarButtonItem.Style.plain, target: self, action: #selector(login))
-        
+      
+        let regionBarButtonItem = UIBarButtonItem(title: "🇺🇸US", target: self, action: #selector(region))//UIBarButtonItem(title: "🇺🇸US", style: UIBarButtonItem.Style.plain, target: self, action: #selector(region))
         navigationItem.rightBarButtonItem = loginBarButtonItem
-        naviBar.tintColor = UIColor.orange
-        
-        let regionBarButtonItem = UIBarButtonItem(title: "🇺🇸US", target: self, action: #selector(region))
         navigationItem.leftBarButtonItem = regionBarButtonItem
         // init region value is us
         userDefault.set(regionName, forKey: "region")

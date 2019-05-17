@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0D1DD217228D503600FFC9FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD216228D503600FFC9FD /* AppDelegate.swift */; };
 		0D1DD21E228D503800FFC9FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D1DD21D228D503800FFC9FD /* Assets.xcassets */; };
-		0D1DD221228D503800FFC9FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D1DD21F228D503800FFC9FD /* LaunchScreen.storyboard */; };
 		0D1DD22C228D503800FFC9FD /* DiabloAssistantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD22B228D503800FFC9FD /* DiabloAssistantTests.swift */; };
 		0D1DD237228D503800FFC9FD /* DiabloAssistantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD236228D503800FFC9FD /* DiabloAssistantUITests.swift */; };
 		0D1DD288228D513200FFC9FD /* FFLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD249228D513200FFC9FD /* FFLabel.swift */; };
@@ -43,16 +42,20 @@
 		0D1DD2A4228D513200FFC9FD /* UIPageControl+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD273228D513200FFC9FD /* UIPageControl+extension.swift */; };
 		0D1DD2A5228D513200FFC9FD /* UIBarButtonItem+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD274228D513200FFC9FD /* UIBarButtonItem+extension.swift */; };
 		0D1DD2A6228D513200FFC9FD /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD275228D513200FFC9FD /* UITableView+extension.swift */; };
-		0D1DD2A7228D513200FFC9FD /* SCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD279228D513200FFC9FD /* SCHomeViewController.swift */; };
-		0D1DD2A8228D513200FFC9FD /* SCDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD27B228D513200FFC9FD /* SCDiscoverViewController.swift */; };
-		0D1DD2A9228D513200FFC9FD /* SCMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD27D228D513200FFC9FD /* SCMessageViewController.swift */; };
-		0D1DD2AA228D513200FFC9FD /* SCProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD27F228D513200FFC9FD /* SCProfileViewController.swift */; };
+		0D1DD2A7228D513200FFC9FD /* SCNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD279228D513200FFC9FD /* SCNewsViewController.swift */; };
+		0D1DD2A8228D513200FFC9FD /* SCRanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD27B228D513200FFC9FD /* SCRanksViewController.swift */; };
+		0D1DD2A9228D513200FFC9FD /* SCItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD27D228D513200FFC9FD /* SCItemsViewController.swift */; };
+		0D1DD2AA228D513200FFC9FD /* SCSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD27F228D513200FFC9FD /* SCSettingsViewController.swift */; };
 		0D1DD2AB228D513200FFC9FD /* SCOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD282228D513200FFC9FD /* SCOAuthViewController.swift */; };
 		0D1DD2AC228D513200FFC9FD /* SCNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD283228D513200FFC9FD /* SCNavigationViewController.swift */; };
 		0D1DD2AD228D513200FFC9FD /* SCMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD284228D513200FFC9FD /* SCMainViewController.swift */; };
 		0D1DD2AE228D513200FFC9FD /* SCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD285228D513200FFC9FD /* SCBaseViewController.swift */; };
 		0D1DD2AF228D513200FFC9FD /* SCVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD287228D513200FFC9FD /* SCVisitorView.swift */; };
 		0D1DD2B2228D51D400FFC9FD /* AssistantCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD2B1228D51D400FFC9FD /* AssistantCommon.swift */; };
+		0DD22C78228E69FC00F37491 /* SCComposeTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD22C71228E69FB00F37491 /* SCComposeTypeView.swift */; };
+		0DD22C79228E69FC00F37491 /* SCComposeTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD22C72228E69FB00F37491 /* SCComposeTypeButton.swift */; };
+		0DD22C7A228E69FC00F37491 /* SCComposeTypeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD22C73228E69FB00F37491 /* SCComposeTypeButton.xib */; };
+		0DD22C7B228E69FC00F37491 /* SCComposeTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD22C74228E69FB00F37491 /* SCComposeTypeView.xib */; };
 		AB98779B57BACC1F8FFBC77C /* Pods_DiabloAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C792F1AAEC9669FCE6C27E76 /* Pods_DiabloAssistant.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,7 +80,6 @@
 		0D1DD213228D503600FFC9FD /* DiabloAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiabloAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D1DD216228D503600FFC9FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D1DD21D228D503800FFC9FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0D1DD220228D503800FFC9FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D1DD222228D503800FFC9FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D1DD227228D503800FFC9FD /* DiabloAssistantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiabloAssistantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D1DD22B228D503800FFC9FD /* DiabloAssistantTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabloAssistantTests.swift; sourceTree = "<group>"; };
@@ -125,10 +127,10 @@
 		0D1DD273228D513200FFC9FD /* UIPageControl+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIPageControl+extension.swift"; sourceTree = "<group>"; };
 		0D1DD274228D513200FFC9FD /* UIBarButtonItem+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+extension.swift"; sourceTree = "<group>"; };
 		0D1DD275228D513200FFC9FD /* UITableView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
-		0D1DD279228D513200FFC9FD /* SCHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHomeViewController.swift; sourceTree = "<group>"; };
-		0D1DD27B228D513200FFC9FD /* SCDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCDiscoverViewController.swift; sourceTree = "<group>"; };
-		0D1DD27D228D513200FFC9FD /* SCMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCMessageViewController.swift; sourceTree = "<group>"; };
-		0D1DD27F228D513200FFC9FD /* SCProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCProfileViewController.swift; sourceTree = "<group>"; };
+		0D1DD279228D513200FFC9FD /* SCNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNewsViewController.swift; sourceTree = "<group>"; };
+		0D1DD27B228D513200FFC9FD /* SCRanksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCRanksViewController.swift; sourceTree = "<group>"; };
+		0D1DD27D228D513200FFC9FD /* SCItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCItemsViewController.swift; sourceTree = "<group>"; };
+		0D1DD27F228D513200FFC9FD /* SCSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCSettingsViewController.swift; sourceTree = "<group>"; };
 		0D1DD282228D513200FFC9FD /* SCOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCOAuthViewController.swift; sourceTree = "<group>"; };
 		0D1DD283228D513200FFC9FD /* SCNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNavigationViewController.swift; sourceTree = "<group>"; };
 		0D1DD284228D513200FFC9FD /* SCMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCMainViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,10 @@
 		0D1DD287228D513200FFC9FD /* SCVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCVisitorView.swift; sourceTree = "<group>"; };
 		0D1DD2B0228D517D00FFC9FD /* Assistant-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Assistant-Bridge.h"; path = "DiabloAssistant/Assistant-Bridge.h"; sourceTree = SOURCE_ROOT; };
 		0D1DD2B1228D51D400FFC9FD /* AssistantCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssistantCommon.swift; sourceTree = "<group>"; };
+		0DD22C71228E69FB00F37491 /* SCComposeTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCComposeTypeView.swift; sourceTree = "<group>"; };
+		0DD22C72228E69FB00F37491 /* SCComposeTypeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCComposeTypeButton.swift; sourceTree = "<group>"; };
+		0DD22C73228E69FB00F37491 /* SCComposeTypeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCComposeTypeButton.xib; sourceTree = "<group>"; };
+		0DD22C74228E69FB00F37491 /* SCComposeTypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCComposeTypeView.xib; sourceTree = "<group>"; };
 		72F020C3052E04C7B10CCA82 /* Pods-DiabloAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiabloAssistant.release.xcconfig"; path = "Target Support Files/Pods-DiabloAssistant/Pods-DiabloAssistant.release.xcconfig"; sourceTree = "<group>"; };
 		B36DBCB64FF9A45F4835F5A5 /* Pods-DiabloAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiabloAssistant.debug.xcconfig"; path = "Target Support Files/Pods-DiabloAssistant/Pods-DiabloAssistant.debug.xcconfig"; sourceTree = "<group>"; };
 		C792F1AAEC9669FCE6C27E76 /* Pods_DiabloAssistant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiabloAssistant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,7 +203,6 @@
 				0D1DD2B1228D51D400FFC9FD /* AssistantCommon.swift */,
 				0D1DD216228D503600FFC9FD /* AppDelegate.swift */,
 				0D1DD21D228D503800FFC9FD /* Assets.xcassets */,
-				0D1DD21F228D503800FFC9FD /* LaunchScreen.storyboard */,
 				0D1DD222228D503800FFC9FD /* Info.plist */,
 			);
 			path = DiabloAssistant;
@@ -244,9 +249,9 @@
 			children = (
 				0D1DD25C228D513200FFC9FD /* Network */,
 				0D1DD247228D513200FFC9FD /* FFLabel */,
+				0D1DD264228D513200FFC9FD /* Extensions */,
 				0D1DD24A228D513200FFC9FD /* Additions */,
 				0D1DD261228D513200FFC9FD /* SQLite */,
-				0D1DD264228D513200FFC9FD /* Extensions */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -352,54 +357,55 @@
 		0D1DD277228D513200FFC9FD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0DD22C6C228E69FB00F37491 /* Compose */,
 				0D1DD280228D513200FFC9FD /* Base */,
-				0D1DD278228D513200FFC9FD /* Home */,
-				0D1DD27A228D513200FFC9FD /* Discover */,
-				0D1DD27C228D513200FFC9FD /* Message */,
-				0D1DD27E228D513200FFC9FD /* Profile */,
+				0D1DD278228D513200FFC9FD /* News */,
+				0D1DD27A228D513200FFC9FD /* Ranks */,
+				0D1DD27C228D513200FFC9FD /* Items */,
+				0D1DD27E228D513200FFC9FD /* Settings */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		0D1DD278228D513200FFC9FD /* Home */ = {
+		0D1DD278228D513200FFC9FD /* News */ = {
 			isa = PBXGroup;
 			children = (
-				0D1DD279228D513200FFC9FD /* SCHomeViewController.swift */,
+				0D1DD279228D513200FFC9FD /* SCNewsViewController.swift */,
 			);
-			path = Home;
+			path = News;
 			sourceTree = "<group>";
 		};
-		0D1DD27A228D513200FFC9FD /* Discover */ = {
+		0D1DD27A228D513200FFC9FD /* Ranks */ = {
 			isa = PBXGroup;
 			children = (
-				0D1DD27B228D513200FFC9FD /* SCDiscoverViewController.swift */,
+				0D1DD27B228D513200FFC9FD /* SCRanksViewController.swift */,
 			);
-			path = Discover;
+			path = Ranks;
 			sourceTree = "<group>";
 		};
-		0D1DD27C228D513200FFC9FD /* Message */ = {
+		0D1DD27C228D513200FFC9FD /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				0D1DD27D228D513200FFC9FD /* SCMessageViewController.swift */,
+				0D1DD27D228D513200FFC9FD /* SCItemsViewController.swift */,
 			);
-			path = Message;
+			path = Items;
 			sourceTree = "<group>";
 		};
-		0D1DD27E228D513200FFC9FD /* Profile */ = {
+		0D1DD27E228D513200FFC9FD /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				0D1DD27F228D513200FFC9FD /* SCProfileViewController.swift */,
+				0D1DD27F228D513200FFC9FD /* SCSettingsViewController.swift */,
 			);
-			path = Profile;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		0D1DD280228D513200FFC9FD /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				0D1DD281228D513200FFC9FD /* OAuth */,
-				0D1DD283228D513200FFC9FD /* SCNavigationViewController.swift */,
 				0D1DD284228D513200FFC9FD /* SCMainViewController.swift */,
+				0D1DD283228D513200FFC9FD /* SCNavigationViewController.swift */,
 				0D1DD285228D513200FFC9FD /* SCBaseViewController.swift */,
+				0D1DD281228D513200FFC9FD /* OAuth */,
 				0D1DD286228D513200FFC9FD /* VisitorView */,
 			);
 			path = Base;
@@ -419,6 +425,25 @@
 				0D1DD287228D513200FFC9FD /* SCVisitorView.swift */,
 			);
 			path = VisitorView;
+			sourceTree = "<group>";
+		};
+		0DD22C6C228E69FB00F37491 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				0DD22C70228E69FB00F37491 /* ComposeType */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		0DD22C70228E69FB00F37491 /* ComposeType */ = {
+			isa = PBXGroup;
+			children = (
+				0DD22C71228E69FB00F37491 /* SCComposeTypeView.swift */,
+				0DD22C72228E69FB00F37491 /* SCComposeTypeButton.swift */,
+				0DD22C73228E69FB00F37491 /* SCComposeTypeButton.xib */,
+				0DD22C74228E69FB00F37491 /* SCComposeTypeView.xib */,
+			);
+			path = ComposeType;
 			sourceTree = "<group>";
 		};
 		5AE1837790C6C92DCCAD91F0 /* Pods */ = {
@@ -545,8 +570,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D1DD295228D513200FFC9FD /* mydata.sql in Resources */,
-				0D1DD221228D503800FFC9FD /* LaunchScreen.storyboard in Resources */,
 				0D1DD21E228D503800FFC9FD /* Assets.xcassets in Resources */,
+				0DD22C7B228E69FC00F37491 /* SCComposeTypeView.xib in Resources */,
+				0DD22C7A228E69FC00F37491 /* SCComposeTypeButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,10 +670,10 @@
 				0D1DD29C228D513200FFC9FD /* UIView+extension.swift in Sources */,
 				0D1DD291228D513200FFC9FD /* SCNetworkManager.swift in Sources */,
 				0D1DD294228D513200FFC9FD /* SCSQLiteManager.swift in Sources */,
-				0D1DD2A9228D513200FFC9FD /* SCMessageViewController.swift in Sources */,
+				0D1DD2A9228D513200FFC9FD /* SCItemsViewController.swift in Sources */,
 				0D1DD28A228D513200FFC9FD /* NSObject+SCAddition.m in Sources */,
 				0D1DD299228D513200FFC9FD /* UIWindow+extension.swift in Sources */,
-				0D1DD2A8228D513200FFC9FD /* SCDiscoverViewController.swift in Sources */,
+				0D1DD2A8228D513200FFC9FD /* SCRanksViewController.swift in Sources */,
 				0D1DD2A5228D513200FFC9FD /* UIBarButtonItem+extension.swift in Sources */,
 				0D1DD28F228D513200FFC9FD /* UILabel+SCAddition.m in Sources */,
 				0D1DD2A3228D513200FFC9FD /* WKWebView+extension.swift in Sources */,
@@ -658,10 +684,12 @@
 				0D1DD2A0228D513200FFC9FD /* UIViewController+extension.swift in Sources */,
 				0D1DD28E228D513200FFC9FD /* CABasicAnimation+SCAddition.m in Sources */,
 				0D1DD290228D513200FFC9FD /* UIColor+SCAddition.m in Sources */,
-				0D1DD2A7228D513200FFC9FD /* SCHomeViewController.swift in Sources */,
-				0D1DD2AA228D513200FFC9FD /* SCProfileViewController.swift in Sources */,
+				0D1DD2A7228D513200FFC9FD /* SCNewsViewController.swift in Sources */,
+				0DD22C79228E69FC00F37491 /* SCComposeTypeButton.swift in Sources */,
+				0D1DD2AA228D513200FFC9FD /* SCSettingsViewController.swift in Sources */,
 				0D1DD28B228D513200FFC9FD /* UIImageView+SCAddition.m in Sources */,
 				0D1DD292228D513200FFC9FD /* SCUserAccount.swift in Sources */,
+				0DD22C78228E69FC00F37491 /* SCComposeTypeView.swift in Sources */,
 				0D1DD297228D513200FFC9FD /* UIImageView+extension.swift in Sources */,
 				0D1DD288228D513200FFC9FD /* FFLabel.swift in Sources */,
 				0D1DD2A6228D513200FFC9FD /* UITableView+extension.swift in Sources */,
@@ -706,17 +734,6 @@
 			targetProxy = 0D1DD233228D503800FFC9FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		0D1DD21F228D503800FFC9FD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0D1DD220228D503800FFC9FD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0D1DD239228D503800FFC9FD /* Debug */ = {
@@ -840,7 +857,9 @@
 			baseConfigurationReference = B36DBCB64FF9A45F4835F5A5 /* Pods-DiabloAssistant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CB5U428B8;
 				INFOPLIST_FILE = DiabloAssistant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -859,7 +878,9 @@
 			baseConfigurationReference = 72F020C3052E04C7B10CCA82 /* Pods-DiabloAssistant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CB5U428B8;
 				INFOPLIST_FILE = DiabloAssistant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
