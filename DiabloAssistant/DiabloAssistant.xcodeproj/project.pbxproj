@@ -43,7 +43,7 @@
 		0D1DD2A5228D513200FFC9FD /* UIBarButtonItem+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD274228D513200FFC9FD /* UIBarButtonItem+extension.swift */; };
 		0D1DD2A6228D513200FFC9FD /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD275228D513200FFC9FD /* UITableView+extension.swift */; };
 		0D1DD2A7228D513200FFC9FD /* SCNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD279228D513200FFC9FD /* SCNewsViewController.swift */; };
-		0D1DD2A8228D513200FFC9FD /* SCRanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD27B228D513200FFC9FD /* SCRanksViewController.swift */; };
+		0D1DD2A8228D513200FFC9FD /* SCRankingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD27B228D513200FFC9FD /* SCRankingsViewController.swift */; };
 		0D1DD2A9228D513200FFC9FD /* SCItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD27D228D513200FFC9FD /* SCItemsViewController.swift */; };
 		0D1DD2AA228D513200FFC9FD /* SCSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD27F228D513200FFC9FD /* SCSettingsViewController.swift */; };
 		0D1DD2AB228D513200FFC9FD /* SCOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD282228D513200FFC9FD /* SCOAuthViewController.swift */; };
@@ -52,6 +52,12 @@
 		0D1DD2AE228D513200FFC9FD /* SCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD285228D513200FFC9FD /* SCBaseViewController.swift */; };
 		0D1DD2AF228D513200FFC9FD /* SCVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD287228D513200FFC9FD /* SCVisitorView.swift */; };
 		0D1DD2B2228D51D400FFC9FD /* AssistantCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD2B1228D51D400FFC9FD /* AssistantCommon.swift */; };
+		0D71CF42228F86A70029FF16 /* SCCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D71CF41228F86A70029FF16 /* SCCharacterViewController.swift */; };
+		0D71CF44228F92990029FF16 /* SCCharacterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D71CF43228F92990029FF16 /* SCCharacterViewController.xib */; };
+		0D71CF4A228FB1B00029FF16 /* SCSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D71CF49228FB1B00029FF16 /* SCSkillsViewController.swift */; };
+		0D71CF4C228FB1CD0029FF16 /* SCSkillsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D71CF4B228FB1CD0029FF16 /* SCSkillsViewController.xib */; };
+		0D71CF4F228FECF00029FF16 /* SCEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D71CF4E228FECF00029FF16 /* SCEquipmentViewController.swift */; };
+		0D71CF51228FECFE0029FF16 /* SCEquipmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D71CF50228FECFE0029FF16 /* SCEquipmentViewController.xib */; };
 		0DD22C78228E69FC00F37491 /* SCComposeTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD22C71228E69FB00F37491 /* SCComposeTypeView.swift */; };
 		0DD22C79228E69FC00F37491 /* SCComposeTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD22C72228E69FB00F37491 /* SCComposeTypeButton.swift */; };
 		0DD22C7A228E69FC00F37491 /* SCComposeTypeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD22C73228E69FB00F37491 /* SCComposeTypeButton.xib */; };
@@ -128,7 +134,7 @@
 		0D1DD274228D513200FFC9FD /* UIBarButtonItem+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+extension.swift"; sourceTree = "<group>"; };
 		0D1DD275228D513200FFC9FD /* UITableView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
 		0D1DD279228D513200FFC9FD /* SCNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNewsViewController.swift; sourceTree = "<group>"; };
-		0D1DD27B228D513200FFC9FD /* SCRanksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCRanksViewController.swift; sourceTree = "<group>"; };
+		0D1DD27B228D513200FFC9FD /* SCRankingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCRankingsViewController.swift; sourceTree = "<group>"; };
 		0D1DD27D228D513200FFC9FD /* SCItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCItemsViewController.swift; sourceTree = "<group>"; };
 		0D1DD27F228D513200FFC9FD /* SCSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCSettingsViewController.swift; sourceTree = "<group>"; };
 		0D1DD282228D513200FFC9FD /* SCOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCOAuthViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +144,12 @@
 		0D1DD287228D513200FFC9FD /* SCVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCVisitorView.swift; sourceTree = "<group>"; };
 		0D1DD2B0228D517D00FFC9FD /* Assistant-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Assistant-Bridge.h"; path = "DiabloAssistant/Assistant-Bridge.h"; sourceTree = SOURCE_ROOT; };
 		0D1DD2B1228D51D400FFC9FD /* AssistantCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssistantCommon.swift; sourceTree = "<group>"; };
+		0D71CF41228F86A70029FF16 /* SCCharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCharacterViewController.swift; sourceTree = "<group>"; };
+		0D71CF43228F92990029FF16 /* SCCharacterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCCharacterViewController.xib; sourceTree = "<group>"; };
+		0D71CF49228FB1B00029FF16 /* SCSkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCSkillsViewController.swift; sourceTree = "<group>"; };
+		0D71CF4B228FB1CD0029FF16 /* SCSkillsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCSkillsViewController.xib; sourceTree = "<group>"; };
+		0D71CF4E228FECF00029FF16 /* SCEquipmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCEquipmentViewController.swift; sourceTree = "<group>"; };
+		0D71CF50228FECFE0029FF16 /* SCEquipmentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCEquipmentViewController.xib; sourceTree = "<group>"; };
 		0DD22C71228E69FB00F37491 /* SCComposeTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCComposeTypeView.swift; sourceTree = "<group>"; };
 		0DD22C72228E69FB00F37491 /* SCComposeTypeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCComposeTypeButton.swift; sourceTree = "<group>"; };
 		0DD22C73228E69FB00F37491 /* SCComposeTypeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCComposeTypeButton.xib; sourceTree = "<group>"; };
@@ -378,7 +390,7 @@
 		0D1DD27A228D513200FFC9FD /* Ranks */ = {
 			isa = PBXGroup;
 			children = (
-				0D1DD27B228D513200FFC9FD /* SCRanksViewController.swift */,
+				0D1DD27B228D513200FFC9FD /* SCRankingsViewController.swift */,
 			);
 			path = Ranks;
 			sourceTree = "<group>";
@@ -427,9 +439,39 @@
 			path = VisitorView;
 			sourceTree = "<group>";
 		};
+		0D71CF40228F86A70029FF16 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				0D71CF4D228FECCB0029FF16 /* Equipment */,
+				0D71CF48228FB1950029FF16 /* Skills */,
+				0D71CF41228F86A70029FF16 /* SCCharacterViewController.swift */,
+				0D71CF43228F92990029FF16 /* SCCharacterViewController.xib */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		0D71CF48228FB1950029FF16 /* Skills */ = {
+			isa = PBXGroup;
+			children = (
+				0D71CF49228FB1B00029FF16 /* SCSkillsViewController.swift */,
+				0D71CF4B228FB1CD0029FF16 /* SCSkillsViewController.xib */,
+			);
+			path = Skills;
+			sourceTree = "<group>";
+		};
+		0D71CF4D228FECCB0029FF16 /* Equipment */ = {
+			isa = PBXGroup;
+			children = (
+				0D71CF4E228FECF00029FF16 /* SCEquipmentViewController.swift */,
+				0D71CF50228FECFE0029FF16 /* SCEquipmentViewController.xib */,
+			);
+			path = Equipment;
+			sourceTree = "<group>";
+		};
 		0DD22C6C228E69FB00F37491 /* Compose */ = {
 			isa = PBXGroup;
 			children = (
+				0D71CF40228F86A70029FF16 /* Character */,
 				0DD22C70228E69FB00F37491 /* ComposeType */,
 			);
 			path = Compose;
@@ -569,7 +611,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D71CF44228F92990029FF16 /* SCCharacterViewController.xib in Resources */,
 				0D1DD295228D513200FFC9FD /* mydata.sql in Resources */,
+				0D71CF4C228FB1CD0029FF16 /* SCSkillsViewController.xib in Resources */,
+				0D71CF51228FECFE0029FF16 /* SCEquipmentViewController.xib in Resources */,
 				0D1DD21E228D503800FFC9FD /* Assets.xcassets in Resources */,
 				0DD22C7B228E69FC00F37491 /* SCComposeTypeView.xib in Resources */,
 				0DD22C7A228E69FC00F37491 /* SCComposeTypeButton.xib in Resources */,
@@ -604,6 +649,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-DiabloAssistant/Pods-DiabloAssistant-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/DLSlideView/DLSlideView.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -617,6 +663,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLSlideView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -673,7 +720,8 @@
 				0D1DD2A9228D513200FFC9FD /* SCItemsViewController.swift in Sources */,
 				0D1DD28A228D513200FFC9FD /* NSObject+SCAddition.m in Sources */,
 				0D1DD299228D513200FFC9FD /* UIWindow+extension.swift in Sources */,
-				0D1DD2A8228D513200FFC9FD /* SCRanksViewController.swift in Sources */,
+				0D1DD2A8228D513200FFC9FD /* SCRankingsViewController.swift in Sources */,
+				0D71CF42228F86A70029FF16 /* SCCharacterViewController.swift in Sources */,
 				0D1DD2A5228D513200FFC9FD /* UIBarButtonItem+extension.swift in Sources */,
 				0D1DD28F228D513200FFC9FD /* UILabel+SCAddition.m in Sources */,
 				0D1DD2A3228D513200FFC9FD /* WKWebView+extension.swift in Sources */,
@@ -690,6 +738,7 @@
 				0D1DD28B228D513200FFC9FD /* UIImageView+SCAddition.m in Sources */,
 				0D1DD292228D513200FFC9FD /* SCUserAccount.swift in Sources */,
 				0DD22C78228E69FC00F37491 /* SCComposeTypeView.swift in Sources */,
+				0D71CF4A228FB1B00029FF16 /* SCSkillsViewController.swift in Sources */,
 				0D1DD297228D513200FFC9FD /* UIImageView+extension.swift in Sources */,
 				0D1DD288228D513200FFC9FD /* FFLabel.swift in Sources */,
 				0D1DD2A6228D513200FFC9FD /* UITableView+extension.swift in Sources */,
@@ -697,6 +746,7 @@
 				0D1DD29F228D513200FFC9FD /* Bundle+extension.swift in Sources */,
 				0D1DD29A228D513200FFC9FD /* Date+extension.swift in Sources */,
 				0D1DD296228D513200FFC9FD /* UIApplication+extension.swift in Sources */,
+				0D71CF4F228FECF00029FF16 /* SCEquipmentViewController.swift in Sources */,
 				0D1DD2AC228D513200FFC9FD /* SCNavigationViewController.swift in Sources */,
 				0D1DD28D228D513200FFC9FD /* UIScreen+UISCreen_extenshion.m in Sources */,
 				0D1DD217228D503600FFC9FD /* AppDelegate.swift in Sources */,

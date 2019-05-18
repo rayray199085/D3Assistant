@@ -66,7 +66,6 @@ extension SCBaseViewController{
 extension SCBaseViewController{
     @objc private func setupUI(){
         //        view.backgroundColor = UIColor.orange
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: SCButtonTitleColor]
         SCNetworkManager.shared.userLogon ? setupTableView() : setupVisitorView()
     }
     

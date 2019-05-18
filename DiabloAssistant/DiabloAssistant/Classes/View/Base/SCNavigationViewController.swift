@@ -14,6 +14,8 @@ class SCNavigationViewController: UINavigationController {
         super.viewDidLoad()
         allowSwipeToGoBack()
         navigationBar.barTintColor = UIColor.black
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: SCButtonTitleColor]
+
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

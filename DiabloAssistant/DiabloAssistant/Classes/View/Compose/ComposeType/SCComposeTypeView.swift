@@ -19,8 +19,8 @@ class SCComposeTypeView: UIView {
     
     @IBOutlet weak var closeButtonCenterXCons: NSLayoutConstraint!
     @IBOutlet weak var prevButtonCenterXCons: NSLayoutConstraint!
-    private var completionBlock:((_ clsName: String?)->())?
-    private let buttonsInfo = [["imageName":"barbarian_male","title":"Barbarian","clsName":"SCComposeIdeaController"],["imageName":"crusader_male","title":"Crusader"],["imageName":"demonhunter_female","title":"Demon Hunter"],["imageName":"monk_male","title":"Monk"],["imageName":"necro_male","title":"Necro"],["imageName":"moreHeroes","title":"More", "actionName":"clickMore"],["imageName":"witchdoctor_male","title":"Witch Doctor"],["imageName":"wizard_female","title":"Wizard"]]
+    private var completionBlock:((_ characterName: String?)->())?
+    private let buttonsInfo = [["imageName":"barbarian_male","title":"Barbarian","characterName":"barbarian"],["imageName":"crusader_male","title":"Crusader","characterName":"crusader"],["imageName":"demonhunter_female","title":"Demon Hunter","characterName":"demon-hunter"],["imageName":"monk_male","title":"Monk","characterName":"monk"],["imageName":"necro_male","title":"Necro","characterName":"necromancer"],["imageName":"moreHeroes","title":"More", "actionName":"clickMore"],["imageName":"witchdoctor_male","title":"Witch Doctor","characterName":"witch-doctor"],["imageName":"wizard_female","title":"Wizard","characterName":"wizard"]]
     
     class func composeTypeView()->SCComposeTypeView{
         let nib = UINib(nibName: "SCComposeTypeView", bundle: nil)
@@ -32,8 +32,8 @@ class SCComposeTypeView: UIView {
     
     func show(completion: @escaping (_ clsName: String?)->()) {
         let vc = UIApplication.shared.keyWindow?.rootViewController
-        completionBlock = completion
         vc?.view.addSubview(self)
+        completionBlock = completion
         showViewWithAnimation()
         showFireViewAnimation()
     }
@@ -69,15 +69,15 @@ class SCComposeTypeView: UIView {
     @objc private func clickComposeButton(button: SCComposeTypeButton){
         let currentPage = Int(scrollView.contentOffset.x / UIScreen.screenWidth())
         let currentView = scrollView.subviews[currentPage]
-        for (index,btn) in currentView.subviews.enumerated(){
+        for btn in currentView.subviews{
             if btn == button{
                 btn.addPopScaleAnimation(toValue: 2, duration: 0.5)
             }else{
                 btn.addPopScaleAnimation(toValue: 0.5, duration: 0.5)
             }
             btn.addPopAlphaAnimation(fromValue: 1.0, toValue: 0.2, duration: 0.5) { (_, _) in
-                if index == currentView.subviews.count - 1{
-                    self.completionBlock?(button.className)
+                if btn == currentView.subviews.last{
+                    self.completionBlock?(button.characterName)
                 }
             }
         }
@@ -114,7 +114,7 @@ private extension SCComposeTypeView{
             }else{
                 button.addTarget(self, action: #selector(clickComposeButton), for: UIControl.Event.touchUpInside)
             }
-            button.className = dict["clsName"]
+            button.characterName = dict["characterName"]
             parentView.addSubview(button)
             
         }

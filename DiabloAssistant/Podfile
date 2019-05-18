@@ -14,4 +14,5 @@ pod "FMDB"
 pod "DropDown"
 pod "SVProgressHUD"
 pod "YYModel"
+pod 'DLSlideView', :git => 'https://github.com/agdsdl/DLSlideView.git'
 end

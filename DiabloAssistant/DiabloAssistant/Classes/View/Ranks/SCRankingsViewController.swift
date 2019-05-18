@@ -1,5 +1,5 @@
 //
-//  SCRanksViewController.swift
+//  SCRankingsViewController.swift
 //  DiabloAssistant
 //
 //  Created by Stephen Cao on 16/5/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SCRanksViewController: SCBaseViewController {
+class SCRankingsViewController: SCBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

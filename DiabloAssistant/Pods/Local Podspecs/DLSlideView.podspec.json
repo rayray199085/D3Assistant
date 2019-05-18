@@ -1,0 +1,28 @@
+{
+  "name": "DLSlideView",
+  "version": "0.8.3",
+  "summary": "Tabed slide view based on container of ViewController(not UIScrollView). support infinit pages.",
+  "description": "DLSlideView对常见的顶部Tab页点击、滑动分页做了封装。 它使用基于ViewController的container特性（而不是scrollview）来管理各个子页面，保留原始的系统消息，没有隐患。 同时内存模型更优于使用scrollview的方式，理论上可以支持无限分页。",
+  "homepage": "https://github.com/agdsdl/DLSlideView",
+  "screenshots": [
+    "https://github.com/agdsdl/DLSlideView/raw/master/Images/demo1.jpg",
+    "https://github.com/agdsdl/DLSlideView/raw/master/Images/demo2.jpg"
+  ],
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Dongle Su": "agdsdl@sina.com.cn"
+  },
+  "social_media_url": "http://weibo.com/u/1421886475",
+  "platforms": {
+    "ios": "5.0"
+  },
+  "source": {
+    "git": "https://github.com/agdsdl/DLSlideView.git",
+    "tag": "0.8.3"
+  },
+  "source_files": "DLSlideView/**/*.{m,h}",
+  "requires_arc": true
+}

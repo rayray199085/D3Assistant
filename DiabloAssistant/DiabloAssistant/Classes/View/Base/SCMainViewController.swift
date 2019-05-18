@@ -38,18 +38,13 @@ class SCMainViewController: UITabBarController {
     
     @objc private func clickComposeButton(){
         let composeView = SCComposeTypeView.composeTypeView()
-        composeView.show { [weak composeView](clsName) in
-            //            FIXME: for heroes controller
-//            guard let clsName = clsName,
-//                let cls = NSClassFromString(Bundle.main.nameSpace + "." + clsName) as? UIViewController.Type else{
-//                    composeView?.removeFromSuperview()
-//                    return
-//            }
-//            let nav = UINavigationController(rootViewController: cls.init())
-//            nav.view.layoutIfNeeded()
-//            self.present(nav, animated: true, completion: {
-//                composeView?.removeFromSuperview()
-//            })
+        composeView.show { [weak composeView](characterName) in
+            let vc = SCCharacterViewController()
+            vc.characterName = characterName
+            let nav = SCNavigationViewController(rootViewController: vc)
+            self.present(nav, animated: true, completion: {
+                composeView?.removeFromSuperview()
+            })
         }
     }
 }
@@ -59,7 +54,7 @@ private extension SCMainViewController{
     func setupChildControllers(){
         let array = [
         ["title": "News","clsName":"SCNewsViewController","imageName":"news"],
-        ["title": "Ranks","clsName":"SCRanksViewController","imageName":"rank"],
+        ["title": "Rankings","clsName":"SCRankingsViewController","imageName":"rank"],
         ["clsName":"UIViewController"],
         ["title": "Items","clsName":"SCItemsViewController","imageName":"items"],
         ["title": "Settings","clsName":"SCSettingsViewController","imageName":"settings"]]

@@ -9,7 +9,7 @@
 import UIKit
 
 class SCComposeTypeButton: UIControl {
-    var className: String?
+    var characterName: String?
     
     @IBOutlet weak var buttonImageView: UIImageView!
     @IBOutlet weak var buttonLabel: UILabel!
