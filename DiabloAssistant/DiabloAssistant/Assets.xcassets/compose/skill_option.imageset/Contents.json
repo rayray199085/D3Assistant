@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "demonStatueReversed.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "demonStatueReversed@2x.png",
+      "filename" : "skill_option@2x.png",
       "scale" : "2x"
     },
     {

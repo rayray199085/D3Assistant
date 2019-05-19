@@ -52,6 +52,21 @@
 		0D1DD2AE228D513200FFC9FD /* SCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD285228D513200FFC9FD /* SCBaseViewController.swift */; };
 		0D1DD2AF228D513200FFC9FD /* SCVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD287228D513200FFC9FD /* SCVisitorView.swift */; };
 		0D1DD2B2228D51D400FFC9FD /* AssistantCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD2B1228D51D400FFC9FD /* AssistantCommon.swift */; };
+		0D6B19332290C76E00F564B7 /* SCActiveSkillView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B19322290C76E00F564B7 /* SCActiveSkillView.xib */; };
+		0D6B19352290C9BF00F564B7 /* SCActiveSkillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B19342290C9BF00F564B7 /* SCActiveSkillView.swift */; };
+		0D6B19372290DEEB00F564B7 /* SCPassiveSkillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B19362290DEEB00F564B7 /* SCPassiveSkillView.swift */; };
+		0D6B19392290DEFE00F564B7 /* SCPassiveSkillView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B19382290DEFE00F564B7 /* SCPassiveSkillView.xib */; };
+		0D6B193D2290EA7500F564B7 /* Exocet.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B193B2290EA0B00F564B7 /* Exocet.ttf */; };
+		0D6B193E2290EA7800F564B7 /* ExocetBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B193C2290EA0B00F564B7 /* ExocetBold.ttf */; };
+		0D6B19482290EFFB00F564B7 /* SCCharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B19472290EFFB00F564B7 /* SCCharacterViewModel.swift */; };
+		0D6B194A2290F8F200F564B7 /* SCCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B19492290F8F200F564B7 /* SCCharacter.swift */; };
+		0D6B194C2290F94400F564B7 /* SCSkillCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B194B2290F94400F564B7 /* SCSkillCategory.swift */; };
+		0D6B194E2290F98F00F564B7 /* SCSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B194D2290F98F00F564B7 /* SCSkill.swift */; };
+		0D6B19502290F9C700F564B7 /* SCActiveSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B194F2290F9C700F564B7 /* SCActiveSkill.swift */; };
+		0D6B19522290FA8F00F564B7 /* SCPassiveSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B19512290FA8F00F564B7 /* SCPassiveSkill.swift */; };
+		0D6B195422911A5500F564B7 /* SCRunes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B195322911A5500F564B7 /* SCRunes.swift */; };
+		0D6B195622912A0600F564B7 /* SCActiveSkillsIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B195522912A0600F564B7 /* SCActiveSkillsIntroView.swift */; };
+		0D6B195822912A1C00F564B7 /* SCActiveSkillsIntroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B195722912A1C00F564B7 /* SCActiveSkillsIntroView.xib */; };
 		0D71CF42228F86A70029FF16 /* SCCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D71CF41228F86A70029FF16 /* SCCharacterViewController.swift */; };
 		0D71CF44228F92990029FF16 /* SCCharacterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D71CF43228F92990029FF16 /* SCCharacterViewController.xib */; };
 		0D71CF4A228FB1B00029FF16 /* SCSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D71CF49228FB1B00029FF16 /* SCSkillsViewController.swift */; };
@@ -144,6 +159,21 @@
 		0D1DD287228D513200FFC9FD /* SCVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCVisitorView.swift; sourceTree = "<group>"; };
 		0D1DD2B0228D517D00FFC9FD /* Assistant-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Assistant-Bridge.h"; path = "DiabloAssistant/Assistant-Bridge.h"; sourceTree = SOURCE_ROOT; };
 		0D1DD2B1228D51D400FFC9FD /* AssistantCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssistantCommon.swift; sourceTree = "<group>"; };
+		0D6B19322290C76E00F564B7 /* SCActiveSkillView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCActiveSkillView.xib; sourceTree = "<group>"; };
+		0D6B19342290C9BF00F564B7 /* SCActiveSkillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCActiveSkillView.swift; sourceTree = "<group>"; };
+		0D6B19362290DEEB00F564B7 /* SCPassiveSkillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCPassiveSkillView.swift; sourceTree = "<group>"; };
+		0D6B19382290DEFE00F564B7 /* SCPassiveSkillView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCPassiveSkillView.xib; sourceTree = "<group>"; };
+		0D6B193B2290EA0B00F564B7 /* Exocet.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Exocet.ttf; sourceTree = "<group>"; };
+		0D6B193C2290EA0B00F564B7 /* ExocetBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ExocetBold.ttf; sourceTree = "<group>"; };
+		0D6B19472290EFFB00F564B7 /* SCCharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCharacterViewModel.swift; sourceTree = "<group>"; };
+		0D6B19492290F8F200F564B7 /* SCCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCharacter.swift; sourceTree = "<group>"; };
+		0D6B194B2290F94400F564B7 /* SCSkillCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCSkillCategory.swift; sourceTree = "<group>"; };
+		0D6B194D2290F98F00F564B7 /* SCSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCSkill.swift; sourceTree = "<group>"; };
+		0D6B194F2290F9C700F564B7 /* SCActiveSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCActiveSkill.swift; sourceTree = "<group>"; };
+		0D6B19512290FA8F00F564B7 /* SCPassiveSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCPassiveSkill.swift; sourceTree = "<group>"; };
+		0D6B195322911A5500F564B7 /* SCRunes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCRunes.swift; sourceTree = "<group>"; };
+		0D6B195522912A0600F564B7 /* SCActiveSkillsIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCActiveSkillsIntroView.swift; sourceTree = "<group>"; };
+		0D6B195722912A1C00F564B7 /* SCActiveSkillsIntroView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCActiveSkillsIntroView.xib; sourceTree = "<group>"; };
 		0D71CF41228F86A70029FF16 /* SCCharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCharacterViewController.swift; sourceTree = "<group>"; };
 		0D71CF43228F92990029FF16 /* SCCharacterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCCharacterViewController.xib; sourceTree = "<group>"; };
 		0D71CF49228FB1B00029FF16 /* SCSkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCSkillsViewController.swift; sourceTree = "<group>"; };
@@ -241,24 +271,18 @@
 		0D1DD244228D513200FFC9FD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0D1DD276228D513200FFC9FD /* Model */,
+				0D6B19442290EFAC00F564B7 /* Model */,
+				0D6B19432290EFAC00F564B7 /* ViewModel */,
 				0D1DD277228D513200FFC9FD /* View */,
-				0D1DD245228D513200FFC9FD /* ViewModel */,
 				0D1DD246228D513200FFC9FD /* Tools */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		0D1DD245228D513200FFC9FD /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		0D1DD246228D513200FFC9FD /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				0D6B193A2290E9EA00F564B7 /* Font */,
 				0D1DD25C228D513200FFC9FD /* Network */,
 				0D1DD247228D513200FFC9FD /* FFLabel */,
 				0D1DD264228D513200FFC9FD /* Extensions */,
@@ -359,13 +383,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		0D1DD276228D513200FFC9FD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		0D1DD277228D513200FFC9FD /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +456,49 @@
 			path = VisitorView;
 			sourceTree = "<group>";
 		};
+		0D6B19312290C74B00F564B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D6B19342290C9BF00F564B7 /* SCActiveSkillView.swift */,
+				0D6B19322290C76E00F564B7 /* SCActiveSkillView.xib */,
+				0D6B19362290DEEB00F564B7 /* SCPassiveSkillView.swift */,
+				0D6B19382290DEFE00F564B7 /* SCPassiveSkillView.xib */,
+				0D6B195522912A0600F564B7 /* SCActiveSkillsIntroView.swift */,
+				0D6B195722912A1C00F564B7 /* SCActiveSkillsIntroView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0D6B193A2290E9EA00F564B7 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				0D6B193B2290EA0B00F564B7 /* Exocet.ttf */,
+				0D6B193C2290EA0B00F564B7 /* ExocetBold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		0D6B19432290EFAC00F564B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0D6B19472290EFFB00F564B7 /* SCCharacterViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0D6B19442290EFAC00F564B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D6B19492290F8F200F564B7 /* SCCharacter.swift */,
+				0D6B194B2290F94400F564B7 /* SCSkillCategory.swift */,
+				0D6B194D2290F98F00F564B7 /* SCSkill.swift */,
+				0D6B194F2290F9C700F564B7 /* SCActiveSkill.swift */,
+				0D6B19512290FA8F00F564B7 /* SCPassiveSkill.swift */,
+				0D6B195322911A5500F564B7 /* SCRunes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0D71CF40228F86A70029FF16 /* Character */ = {
 			isa = PBXGroup;
 			children = (
@@ -453,6 +513,7 @@
 		0D71CF48228FB1950029FF16 /* Skills */ = {
 			isa = PBXGroup;
 			children = (
+				0D6B19312290C74B00F564B7 /* View */,
 				0D71CF49228FB1B00029FF16 /* SCSkillsViewController.swift */,
 				0D71CF4B228FB1CD0029FF16 /* SCSkillsViewController.xib */,
 			);
@@ -611,13 +672,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D6B193D2290EA7500F564B7 /* Exocet.ttf in Resources */,
 				0D71CF44228F92990029FF16 /* SCCharacterViewController.xib in Resources */,
 				0D1DD295228D513200FFC9FD /* mydata.sql in Resources */,
+				0D6B19332290C76E00F564B7 /* SCActiveSkillView.xib in Resources */,
 				0D71CF4C228FB1CD0029FF16 /* SCSkillsViewController.xib in Resources */,
 				0D71CF51228FECFE0029FF16 /* SCEquipmentViewController.xib in Resources */,
 				0D1DD21E228D503800FFC9FD /* Assets.xcassets in Resources */,
+				0D6B19392290DEFE00F564B7 /* SCPassiveSkillView.xib in Resources */,
+				0D6B193E2290EA7800F564B7 /* ExocetBold.ttf in Resources */,
 				0DD22C7B228E69FC00F37491 /* SCComposeTypeView.xib in Resources */,
 				0DD22C7A228E69FC00F37491 /* SCComposeTypeButton.xib in Resources */,
+				0D6B195822912A1C00F564B7 /* SCActiveSkillsIntroView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +773,9 @@
 			files = (
 				0D1DD29B228D513200FFC9FD /* UILabel+extension.swift in Sources */,
 				0D1DD289228D513200FFC9FD /* UIButton+SCAddition.m in Sources */,
+				0D6B19522290FA8F00F564B7 /* SCPassiveSkill.swift in Sources */,
+				0D6B195622912A0600F564B7 /* SCActiveSkillsIntroView.swift in Sources */,
+				0D6B194E2290F98F00F564B7 /* SCSkill.swift in Sources */,
 				0D1DD28C228D513200FFC9FD /* NSString+SCAddition.m in Sources */,
 				0D1DD29D228D513200FFC9FD /* UIImage+extension.swift in Sources */,
 				0D1DD2AB228D513200FFC9FD /* SCOAuthViewController.swift in Sources */,
@@ -715,15 +784,20 @@
 				0D1DD2AF228D513200FFC9FD /* SCVisitorView.swift in Sources */,
 				0D1DD29E228D513200FFC9FD /* UINavigationController+extension.swift in Sources */,
 				0D1DD29C228D513200FFC9FD /* UIView+extension.swift in Sources */,
+				0D6B19502290F9C700F564B7 /* SCActiveSkill.swift in Sources */,
 				0D1DD291228D513200FFC9FD /* SCNetworkManager.swift in Sources */,
 				0D1DD294228D513200FFC9FD /* SCSQLiteManager.swift in Sources */,
 				0D1DD2A9228D513200FFC9FD /* SCItemsViewController.swift in Sources */,
 				0D1DD28A228D513200FFC9FD /* NSObject+SCAddition.m in Sources */,
+				0D6B19352290C9BF00F564B7 /* SCActiveSkillView.swift in Sources */,
+				0D6B194C2290F94400F564B7 /* SCSkillCategory.swift in Sources */,
+				0D6B194A2290F8F200F564B7 /* SCCharacter.swift in Sources */,
 				0D1DD299228D513200FFC9FD /* UIWindow+extension.swift in Sources */,
 				0D1DD2A8228D513200FFC9FD /* SCRankingsViewController.swift in Sources */,
 				0D71CF42228F86A70029FF16 /* SCCharacterViewController.swift in Sources */,
 				0D1DD2A5228D513200FFC9FD /* UIBarButtonItem+extension.swift in Sources */,
 				0D1DD28F228D513200FFC9FD /* UILabel+SCAddition.m in Sources */,
+				0D6B19482290EFFB00F564B7 /* SCCharacterViewModel.swift in Sources */,
 				0D1DD2A3228D513200FFC9FD /* WKWebView+extension.swift in Sources */,
 				0D1DD2A2228D513200FFC9FD /* UITableViewCell+extension.swift in Sources */,
 				0D1DD298228D513200FFC9FD /* NSAttributedString+extension.swift in Sources */,
@@ -736,6 +810,7 @@
 				0DD22C79228E69FC00F37491 /* SCComposeTypeButton.swift in Sources */,
 				0D1DD2AA228D513200FFC9FD /* SCSettingsViewController.swift in Sources */,
 				0D1DD28B228D513200FFC9FD /* UIImageView+SCAddition.m in Sources */,
+				0D6B195422911A5500F564B7 /* SCRunes.swift in Sources */,
 				0D1DD292228D513200FFC9FD /* SCUserAccount.swift in Sources */,
 				0DD22C78228E69FC00F37491 /* SCComposeTypeView.swift in Sources */,
 				0D71CF4A228FB1B00029FF16 /* SCSkillsViewController.swift in Sources */,
@@ -750,6 +825,7 @@
 				0D1DD2AC228D513200FFC9FD /* SCNavigationViewController.swift in Sources */,
 				0D1DD28D228D513200FFC9FD /* UIScreen+UISCreen_extenshion.m in Sources */,
 				0D1DD217228D503600FFC9FD /* AppDelegate.swift in Sources */,
+				0D6B19372290DEEB00F564B7 /* SCPassiveSkillView.swift in Sources */,
 				0D1DD2A4228D513200FFC9FD /* UIPageControl+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

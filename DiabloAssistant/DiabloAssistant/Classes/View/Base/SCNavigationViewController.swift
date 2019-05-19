@@ -14,7 +14,7 @@ class SCNavigationViewController: UINavigationController {
         super.viewDidLoad()
         allowSwipeToGoBack()
         navigationBar.barTintColor = UIColor.black
-        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: SCButtonTitleColor]
+        navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: SCButtonTitleColor, NSAttributedString.Key.font:  UIFont(name: "Exocet", size: 18)!]
 
     }
     override func viewWillAppear(_ animated: Bool) {

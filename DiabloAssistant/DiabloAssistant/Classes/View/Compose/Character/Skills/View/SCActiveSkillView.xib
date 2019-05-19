@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="bZh-m2-Kgm" customClass="SCActiveSkillView" customModule="DiabloAssistant" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="84"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOi-4g-kyR">
+                    <rect key="frame" x="0.0" y="21" width="180" height="63"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="0ir-vK-CAI"/>
+                        <constraint firstAttribute="height" constant="63" id="M7r-2s-Zku"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="skill_option"/>
+                    <state key="selected" backgroundImage="skill_option_selected"/>
+                    <state key="highlighted" backgroundImage="skill_option_highlighted"/>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2WL-hL-iCp">
+                    <rect key="frame" x="12" y="33" width="30" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="Gcz-WJ-BH2"/>
+                        <constraint firstAttribute="width" constant="30" id="INM-sc-w0n"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mouse_left_click" translatesAutoresizingMaskIntoConstraints="NO" id="N0v-8v-gMO">
+                    <rect key="frame" x="85" y="70" width="10" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="10" id="1gN-DZ-0Fq"/>
+                        <constraint firstAttribute="height" constant="10" id="Qxx-ee-huP"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Skill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwW-Xh-zBu">
+                    <rect key="frame" x="47" y="33" width="65" height="13.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LLu-sY-Mcd">
+                    <rect key="frame" x="47" y="51" width="13" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="13" id="PZ9-jM-CuX"/>
+                        <constraint firstAttribute="width" constant="13" id="Sz7-gc-ycR"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrS-bB-g6i">
+                    <rect key="frame" x="63" y="57.5" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.79607843137254897" green="0.53752726316452026" blue="0.21543988585472107" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prB-jz-xKb">
+                    <rect key="frame" x="62.5" y="0.0" width="55" height="19"/>
+                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                    <color key="textColor" red="0.94117647058823528" green="0.79607843137254897" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="dOi-4g-kyR" secondAttribute="bottom" id="42A-bw-UKk"/>
+                <constraint firstItem="N0v-8v-gMO" firstAttribute="bottom" secondItem="dOi-4g-kyR" secondAttribute="bottom" constant="-4" id="60V-D6-Kn1"/>
+                <constraint firstItem="LLu-sY-Mcd" firstAttribute="bottom" secondItem="2WL-hL-iCp" secondAttribute="bottom" id="8en-ra-Fe1"/>
+                <constraint firstItem="prB-jz-xKb" firstAttribute="centerX" secondItem="bZh-m2-Kgm" secondAttribute="centerX" id="BcP-oE-6PU"/>
+                <constraint firstItem="TrS-bB-g6i" firstAttribute="leading" secondItem="LLu-sY-Mcd" secondAttribute="trailing" constant="3" id="COS-L2-DCa"/>
+                <constraint firstItem="IwW-Xh-zBu" firstAttribute="leading" secondItem="2WL-hL-iCp" secondAttribute="trailing" constant="5" id="D0Y-cO-Jap"/>
+                <constraint firstItem="TrS-bB-g6i" firstAttribute="centerY" secondItem="LLu-sY-Mcd" secondAttribute="centerY" id="MXU-kM-Oop"/>
+                <constraint firstItem="N0v-8v-gMO" firstAttribute="centerX" secondItem="bZh-m2-Kgm" secondAttribute="centerX" id="Wqx-tf-r3P"/>
+                <constraint firstItem="IwW-Xh-zBu" firstAttribute="top" secondItem="2WL-hL-iCp" secondAttribute="top" id="Zzb-kl-USS"/>
+                <constraint firstItem="2WL-hL-iCp" firstAttribute="leading" secondItem="dOi-4g-kyR" secondAttribute="leading" constant="12" id="dfc-Bd-uV9"/>
+                <constraint firstItem="dOi-4g-kyR" firstAttribute="leading" secondItem="raC-4U-IzS" secondAttribute="leading" id="eFG-jp-a3U"/>
+                <constraint firstItem="prB-jz-xKb" firstAttribute="top" secondItem="bZh-m2-Kgm" secondAttribute="top" id="isU-8F-6HZ"/>
+                <constraint firstItem="2WL-hL-iCp" firstAttribute="top" secondItem="dOi-4g-kyR" secondAttribute="top" constant="12" id="yrZ-zE-RLT"/>
+                <constraint firstItem="LLu-sY-Mcd" firstAttribute="leading" secondItem="IwW-Xh-zBu" secondAttribute="leading" id="zFf-BM-5d7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="raC-4U-IzS"/>
+            <connections>
+                <outlet property="activeSkillImageView" destination="2WL-hL-iCp" id="hGt-S5-8Xq"/>
+                <outlet property="controlImageView" destination="N0v-8v-gMO" id="A0N-Si-hkX"/>
+                <outlet property="runeIcon" destination="LLu-sY-Mcd" id="d79-dk-Vsy"/>
+                <outlet property="runeName" destination="TrS-bB-g6i" id="sfi-2S-GdS"/>
+                <outlet property="skillNameLabel" destination="IwW-Xh-zBu" id="2SP-Bu-IGI"/>
+                <outlet property="skillOptionButton" destination="dOi-4g-kyR" id="k7i-R0-Ses"/>
+            </connections>
+            <point key="canvasLocation" x="-224.63768115942031" y="-38.169642857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mouse_left_click" width="7.5" height="10"/>
+        <image name="skill_option" width="125" height="42"/>
+        <image name="skill_option_highlighted" width="125" height="42.5"/>
+        <image name="skill_option_selected" width="125" height="43"/>
+    </resources>
+</document>

@@ -33,3 +33,49 @@ extension SCNetworkManager{
         }
     }
 }
+
+
+// MARK: - load character info
+extension SCNetworkManager{
+    func getCharacterInfo(characterName: String,completion:@escaping (_ dict:[String: Any]?, _ isSuccess: Bool)->()){
+        guard let region = UserDefaults.standard.object(forKey: "region") as? String else{
+            completion(nil,false)
+            return
+        }
+        let urlString = "https://\(region).api.blizzard.com/d3/data/hero/\(characterName)"
+        requestWithToken(urlString: urlString, method: HTTPMethod.get, params: nil) { (res, isSuccess) in
+            let dict = res as? [String: Any]
+            completion(dict,isSuccess)
+        }
+    }
+    
+    func getSkillRunes(skillSlug: String, characterSlug: String,completion:@escaping (_ array: [[String: Any]]?, _ isSuccess: Bool)->()){
+        guard let region = UserDefaults.standard.object(forKey: "region") as? String else{
+            completion(nil,false)
+            return
+        }
+        let urlString = "https://\(region).api.blizzard.com/d3/data/hero/\(characterSlug)/skill/\(skillSlug)"
+        requestWithToken(urlString: urlString, method: HTTPMethod.get, params: nil) { (res, isSuccess) in
+            let dict = res as? [String: Any]
+            let array = dict?["runes"] as? [[String: Any]]
+            completion(array,isSuccess)
+        }
+    }
+}
+
+extension SCNetworkManager{
+    
+    /// get skill icon image
+    ///
+    /// - Parameter icon: skill icon name
+    func getSkillImage(icon: String,completion:@escaping (_ image: UIImage?)->()){
+        let urlString = "http://media.blizzard.com/d3/icons/skills/64/\(icon).png"
+        guard let url = URL(string: urlString) else{
+            completion(nil)
+            return
+        }
+        UIImage.downloadImage(url: url) { (image) in
+            completion(image)
+        }
+    }
+}

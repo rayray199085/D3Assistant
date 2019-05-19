@@ -10,9 +10,14 @@ import UIKit
 import DLSlideView
 
 class SCCharacterViewController: UIViewController {
+    private var characterViewModel : SCCharacterViewModel?
     var characterName: String?{
         didSet{
+            guard let characterName = characterName else{
+                return
+            }
             navigationItem.title = characterName
+            characterViewModel = SCCharacterViewModel(characterName: characterName)
         }
     }
     
@@ -62,12 +67,13 @@ extension SCCharacterViewController: DLTabedSlideViewDelegate{
     func dlTabedSlideView(_ sender: DLTabedSlideView!, controllerAt index: Int) -> UIViewController? {
         switch index {
         case 0:
-            let v1 = SCSkillsViewController()
-            return v1
+            let skillViewController = SCSkillsViewController()
+            skillViewController.characterViewModel = characterViewModel
+            return skillViewController
         case 1:
-            let v2 = SCEquipmentViewController()
-            v2.characterName = characterName
-            return v2
+            let equipmentViewController = SCEquipmentViewController()
+            equipmentViewController.characterName = characterName
+            return equipmentViewController
         default:
             return nil
         }

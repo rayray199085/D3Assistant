@@ -86,7 +86,7 @@ private extension SCMainViewController{
         vc.tabBarItem.setTitleTextAttributes(
             [NSAttributedString.Key.foregroundColor : SCButtonTitleColor],
             for: UIControl.State.highlighted)
-        vc.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.darkGray], for: [])
+        vc.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.darkGray,NSAttributedString.Key.font: UIFont(name: "Exocet", size: 10)!], for: [])
         let nav = SCNavigationViewController(rootViewController: vc)
         return nav
     }

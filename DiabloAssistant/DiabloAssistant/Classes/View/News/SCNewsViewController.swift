@@ -26,7 +26,7 @@ class SCNewsViewController: UIViewController {
 }
 private extension SCNewsViewController{
     func setupUI(){
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : SCButtonTitleColor]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : SCButtonTitleColor, NSAttributedString.Key.font: UIFont(name: "Exocet", size: 18)!]
     }
     func loadWebView(){
         let urlString = "https://news.blizzard.com/en-us/diablo3"

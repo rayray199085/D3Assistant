@@ -29,7 +29,6 @@ class SCUserAccount: NSObject {
         if expiresDate?.compare(Date()) != ComparisonResult.orderedDescending{
             try? FileManager.default.removeItem(atPath: NSString.getDocumentDirectory().appendingPathComponent(fileName))
             access_token = nil
-//            uid = nil
             expiresDate = nil
         }
     }

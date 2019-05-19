@@ -93,7 +93,7 @@ extension SCBaseViewController{
         naviBar.tintColor = SCButtonTitleColor
         let loginBarButtonItem = UIBarButtonItem(title: "Login", style: UIBarButtonItem.Style.plain, target: self, action: #selector(login))
       
-        let regionBarButtonItem = UIBarButtonItem(title: "🇺🇸US", target: self, action: #selector(region))//UIBarButtonItem(title: "🇺🇸US", style: UIBarButtonItem.Style.plain, target: self, action: #selector(region))
+        let regionBarButtonItem = UIBarButtonItem(title: "🇺🇸US", target: self, action: #selector(region))
         navigationItem.rightBarButtonItem = loginBarButtonItem
         navigationItem.leftBarButtonItem = regionBarButtonItem
         // init region value is us
