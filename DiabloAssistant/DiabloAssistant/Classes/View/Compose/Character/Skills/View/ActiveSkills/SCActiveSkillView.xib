@@ -59,8 +59,8 @@
                     <color key="textColor" red="0.79607843137254897" green="0.53752726316452026" blue="0.21543988585472107" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prB-jz-xKb">
-                    <rect key="frame" x="62.5" y="0.0" width="55" height="19"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prB-jz-xKb">
+                    <rect key="frame" x="90" y="0.0" width="0.0" height="0.0"/>
                     <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                     <color key="textColor" red="0.94117647058823528" green="0.79607843137254897" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -91,6 +91,7 @@
                 <outlet property="runeName" destination="TrS-bB-g6i" id="sfi-2S-GdS"/>
                 <outlet property="skillNameLabel" destination="IwW-Xh-zBu" id="2SP-Bu-IGI"/>
                 <outlet property="skillOptionButton" destination="dOi-4g-kyR" id="k7i-R0-Ses"/>
+                <outlet property="titleLabel" destination="prB-jz-xKb" id="zQm-xU-UeA"/>
             </connections>
             <point key="canvasLocation" x="-224.63768115942031" y="-38.169642857142854"/>
         </view>

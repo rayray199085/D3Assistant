@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "passiveHighlightBG.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "right_button_highlight@2x.png",
       "scale" : "2x"
     },
     {

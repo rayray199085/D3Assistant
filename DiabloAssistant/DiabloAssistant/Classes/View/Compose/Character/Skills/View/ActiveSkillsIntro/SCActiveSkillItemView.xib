@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SCActiveSkillItemView" customModule="DiabloAssistant" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64j-Dp-CqT">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="17H-NC-kzV"/>
+                        <constraint firstAttribute="height" constant="50" id="bJL-wD-RBJ"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="barbarian_bash"/>
+                    <connections>
+                        <action selector="clickSkillButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="aXy-0b-CMx"/>
+                    </connections>
+                </button>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2IW-7i-Yle" userLabel="mask">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Ukw-b3-2sD"/>
+                        <constraint firstAttribute="width" constant="50" id="lJn-QP-8aG"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skill_selected_frame" translatesAutoresizingMaskIntoConstraints="NO" id="8oS-Bw-F27">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="D4b-pl-zgY"/>
+                        <constraint firstAttribute="height" constant="50" id="xay-ki-ULY"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="8oS-Bw-F27" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6Sm-5X-9z1"/>
+                <constraint firstItem="2IW-7i-Yle" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9yA-zQ-8bn"/>
+                <constraint firstItem="64j-Dp-CqT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="LvN-HA-rGs"/>
+                <constraint firstItem="2IW-7i-Yle" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ZlT-yy-rc8"/>
+                <constraint firstItem="64j-Dp-CqT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hVL-lB-eu8"/>
+                <constraint firstItem="8oS-Bw-F27" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="q78-pm-8Fy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="selectedFrame" destination="8oS-Bw-F27" id="vI3-Aq-oiv"/>
+                <outlet property="skillButton" destination="64j-Dp-CqT" id="thQ-Pa-Ce6"/>
+                <outlet property="skillMask" destination="2IW-7i-Yle" id="nrv-6X-OIX"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="barbarian_bash" width="68" height="68"/>
+        <image name="skill_selected_frame" width="21" height="21"/>
+    </resources>
+</document>

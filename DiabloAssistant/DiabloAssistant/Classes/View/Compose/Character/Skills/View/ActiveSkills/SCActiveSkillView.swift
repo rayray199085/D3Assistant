@@ -16,6 +16,7 @@ class SCActiveSkillView: UIView {
     @IBOutlet weak var controlImageView: UIImageView!
     @IBOutlet weak var activeSkillImageView: UIImageView!
     
+    @IBOutlet weak var titleLabel: UILabel!
     class func activeSkillView()->SCActiveSkillView{
         let nib = UINib(nibName: "SCActiveSkillView", bundle: nil)
         let v = nib.instantiate(withOwner: self, options: nil)[0] as! SCActiveSkillView

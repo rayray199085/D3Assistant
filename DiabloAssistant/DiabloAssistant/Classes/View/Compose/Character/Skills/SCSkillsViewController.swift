@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 
 private let activeSkillCount: Int = 6
@@ -21,25 +22,26 @@ class SCSkillsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        
-        //characterViewModel?.loadCharacter(completion: {[weak self] (isSuccess) in
-            
-        //})
+        SVProgressHUD.show()
+        SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.gradient)
+        characterViewModel?.loadCharacter(completion: {[weak self] (isSuccess) in
+            guard let character = self?.characterViewModel?.character else{
+                return
+            }
+            self?.activeSkillIntroView.character = character
+            for (index,skillView) in (self?.activeSkillView.subviews.enumerated())!{
+                (skillView as! SCActiveSkillView).titleLabel.text = character.skillCategories?[index].name
+            }
+            SVProgressHUD.dismiss()
+        })
     }
     
     @objc private func clickActiveSkillButton(button: UIButton){
         displayActiveIntroView()
+        activeSkillIntroView.index = button.tag
     }
-    
-    @objc private func clickActiveIntroCloseButton(){
-        hideActiveIntroView()
-    }
-    
-    @objc private func clickActiveIntroYesButton(){
-        hideActiveIntroView()
-    }
-    @objc private func clickActiveIntroNoButton(){
-        hideActiveIntroView()
+    deinit {
+        SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.clear)
     }
 }
 
@@ -98,16 +100,14 @@ private extension SCSkillsViewController{
     
     /// setup activeSkillIntroView and maskView
     func setupActiveSkillIntroView(){
-        maskView.backgroundColor = UIColor.black
-        maskView.alpha = 0.8
-        hideActiveIntroView()
-        activeSkillIntroView.closeButton.addTarget(self, action: #selector(clickActiveIntroCloseButton), for: UIControl.Event.touchUpInside)
-        activeSkillIntroView.yesButton.addTarget(self, action: #selector(clickActiveIntroYesButton), for: UIControl.Event.touchUpInside)
-        activeSkillIntroView.noButton.addTarget(self, action: #selector(clickActiveIntroNoButton), for: UIControl.Event.touchUpInside)
         guard let naviView = navigationController?.view else{
             return
         }
+        maskView.backgroundColor = UIColor.black
+        maskView.alpha = 0.8
         activeSkillIntroView.center = naviView.center
+        activeSkillIntroView.delegate = self
+        hideActiveIntroView()
         naviView.addSubview(maskView)
         naviView.addSubview(activeSkillIntroView)
     }
@@ -119,5 +119,21 @@ private extension SCSkillsViewController{
     func hideActiveIntroView(){
         maskView.isHidden = true
         activeSkillIntroView.isHidden = true
+    }
+}
+
+extension SCSkillsViewController: SCActiveSkillsIntroViewDelegate{
+    func clickQuitButton(view: SCActiveSkillsIntroView, tag: Int) {
+        switch tag {
+        case 0:
+            print(tag)
+        case 1:
+            print(tag)
+        case 2:
+            print(tag)
+        default:
+            break
+        }
+        hideActiveIntroView()
     }
 }

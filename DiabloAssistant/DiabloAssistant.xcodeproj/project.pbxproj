@@ -52,6 +52,10 @@
 		0D1DD2AE228D513200FFC9FD /* SCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD285228D513200FFC9FD /* SCBaseViewController.swift */; };
 		0D1DD2AF228D513200FFC9FD /* SCVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD287228D513200FFC9FD /* SCVisitorView.swift */; };
 		0D1DD2B2228D51D400FFC9FD /* AssistantCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD2B1228D51D400FFC9FD /* AssistantCommon.swift */; };
+		0D516C4022921ADA0006DBCB /* SCActiveSkillItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D516C3F22921ADA0006DBCB /* SCActiveSkillItemView.swift */; };
+		0D516C4222921AED0006DBCB /* SCActiveSkillItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D516C4122921AED0006DBCB /* SCActiveSkillItemView.xib */; };
+		0D516C44229223E10006DBCB /* SCActiveSkillRuneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D516C43229223E10006DBCB /* SCActiveSkillRuneView.swift */; };
+		0D516C46229223F10006DBCB /* SCActiveSkillRuneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D516C45229223F10006DBCB /* SCActiveSkillRuneView.xib */; };
 		0D6B19332290C76E00F564B7 /* SCActiveSkillView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D6B19322290C76E00F564B7 /* SCActiveSkillView.xib */; };
 		0D6B19352290C9BF00F564B7 /* SCActiveSkillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B19342290C9BF00F564B7 /* SCActiveSkillView.swift */; };
 		0D6B19372290DEEB00F564B7 /* SCPassiveSkillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6B19362290DEEB00F564B7 /* SCPassiveSkillView.swift */; };
@@ -159,6 +163,10 @@
 		0D1DD287228D513200FFC9FD /* SCVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCVisitorView.swift; sourceTree = "<group>"; };
 		0D1DD2B0228D517D00FFC9FD /* Assistant-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Assistant-Bridge.h"; path = "DiabloAssistant/Assistant-Bridge.h"; sourceTree = SOURCE_ROOT; };
 		0D1DD2B1228D51D400FFC9FD /* AssistantCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssistantCommon.swift; sourceTree = "<group>"; };
+		0D516C3F22921ADA0006DBCB /* SCActiveSkillItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCActiveSkillItemView.swift; sourceTree = "<group>"; };
+		0D516C4122921AED0006DBCB /* SCActiveSkillItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCActiveSkillItemView.xib; sourceTree = "<group>"; };
+		0D516C43229223E10006DBCB /* SCActiveSkillRuneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCActiveSkillRuneView.swift; sourceTree = "<group>"; };
+		0D516C45229223F10006DBCB /* SCActiveSkillRuneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCActiveSkillRuneView.xib; sourceTree = "<group>"; };
 		0D6B19322290C76E00F564B7 /* SCActiveSkillView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCActiveSkillView.xib; sourceTree = "<group>"; };
 		0D6B19342290C9BF00F564B7 /* SCActiveSkillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCActiveSkillView.swift; sourceTree = "<group>"; };
 		0D6B19362290DEEB00F564B7 /* SCPassiveSkillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCPassiveSkillView.swift; sourceTree = "<group>"; };
@@ -456,15 +464,43 @@
 			path = VisitorView;
 			sourceTree = "<group>";
 		};
-		0D6B19312290C74B00F564B7 /* View */ = {
+		0D516C3C22921A310006DBCB /* ActiveSkills */ = {
 			isa = PBXGroup;
 			children = (
 				0D6B19342290C9BF00F564B7 /* SCActiveSkillView.swift */,
 				0D6B19322290C76E00F564B7 /* SCActiveSkillView.xib */,
+			);
+			path = ActiveSkills;
+			sourceTree = "<group>";
+		};
+		0D516C3D22921A410006DBCB /* PassiveSkills */ = {
+			isa = PBXGroup;
+			children = (
 				0D6B19362290DEEB00F564B7 /* SCPassiveSkillView.swift */,
 				0D6B19382290DEFE00F564B7 /* SCPassiveSkillView.xib */,
+			);
+			path = PassiveSkills;
+			sourceTree = "<group>";
+		};
+		0D516C3E22921A550006DBCB /* ActiveSkillsIntro */ = {
+			isa = PBXGroup;
+			children = (
 				0D6B195522912A0600F564B7 /* SCActiveSkillsIntroView.swift */,
 				0D6B195722912A1C00F564B7 /* SCActiveSkillsIntroView.xib */,
+				0D516C3F22921ADA0006DBCB /* SCActiveSkillItemView.swift */,
+				0D516C4122921AED0006DBCB /* SCActiveSkillItemView.xib */,
+				0D516C43229223E10006DBCB /* SCActiveSkillRuneView.swift */,
+				0D516C45229223F10006DBCB /* SCActiveSkillRuneView.xib */,
+			);
+			path = ActiveSkillsIntro;
+			sourceTree = "<group>";
+		};
+		0D6B19312290C74B00F564B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D516C3C22921A310006DBCB /* ActiveSkills */,
+				0D516C3D22921A410006DBCB /* PassiveSkills */,
+				0D516C3E22921A550006DBCB /* ActiveSkillsIntro */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -674,10 +710,12 @@
 			files = (
 				0D6B193D2290EA7500F564B7 /* Exocet.ttf in Resources */,
 				0D71CF44228F92990029FF16 /* SCCharacterViewController.xib in Resources */,
+				0D516C46229223F10006DBCB /* SCActiveSkillRuneView.xib in Resources */,
 				0D1DD295228D513200FFC9FD /* mydata.sql in Resources */,
 				0D6B19332290C76E00F564B7 /* SCActiveSkillView.xib in Resources */,
 				0D71CF4C228FB1CD0029FF16 /* SCSkillsViewController.xib in Resources */,
 				0D71CF51228FECFE0029FF16 /* SCEquipmentViewController.xib in Resources */,
+				0D516C4222921AED0006DBCB /* SCActiveSkillItemView.xib in Resources */,
 				0D1DD21E228D503800FFC9FD /* Assets.xcassets in Resources */,
 				0D6B19392290DEFE00F564B7 /* SCPassiveSkillView.xib in Resources */,
 				0D6B193E2290EA7800F564B7 /* ExocetBold.ttf in Resources */,
@@ -715,6 +753,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-DiabloAssistant/Pods-DiabloAssistant-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/Atributika/Atributika.framework",
 				"${BUILT_PRODUCTS_DIR}/DLSlideView/DLSlideView.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
@@ -729,6 +768,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Atributika.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLSlideView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
@@ -776,6 +816,7 @@
 				0D6B19522290FA8F00F564B7 /* SCPassiveSkill.swift in Sources */,
 				0D6B195622912A0600F564B7 /* SCActiveSkillsIntroView.swift in Sources */,
 				0D6B194E2290F98F00F564B7 /* SCSkill.swift in Sources */,
+				0D516C4022921ADA0006DBCB /* SCActiveSkillItemView.swift in Sources */,
 				0D1DD28C228D513200FFC9FD /* NSString+SCAddition.m in Sources */,
 				0D1DD29D228D513200FFC9FD /* UIImage+extension.swift in Sources */,
 				0D1DD2AB228D513200FFC9FD /* SCOAuthViewController.swift in Sources */,
@@ -818,6 +859,7 @@
 				0D1DD288228D513200FFC9FD /* FFLabel.swift in Sources */,
 				0D1DD2A6228D513200FFC9FD /* UITableView+extension.swift in Sources */,
 				0D1DD293228D513200FFC9FD /* SCNetworkManager+extension.swift in Sources */,
+				0D516C44229223E10006DBCB /* SCActiveSkillRuneView.swift in Sources */,
 				0D1DD29F228D513200FFC9FD /* Bundle+extension.swift in Sources */,
 				0D1DD29A228D513200FFC9FD /* Date+extension.swift in Sources */,
 				0D1DD296228D513200FFC9FD /* UIApplication+extension.swift in Sources */,

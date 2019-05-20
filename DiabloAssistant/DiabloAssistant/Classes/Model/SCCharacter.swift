@@ -17,4 +17,7 @@ class SCCharacter: NSObject {
     override var description: String{
         return yy_modelDescription()
     }
+    @objc class func modelContainerPropertyGenericClass()->[String:AnyClass]{
+        return ["skillCategories": SCSkillCategory.self]
+    }
 }

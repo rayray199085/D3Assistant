@@ -37,6 +37,10 @@ class SCMainViewController: UITabBarController {
     }
     
     @objc private func clickComposeButton(){
+        if !SCNetworkManager.shared.userLogon{
+            NotificationCenter.default.post(name: NSNotification.Name(SCUserShouldLoginNotification), object: nil)
+            return
+        }
         let composeView = SCComposeTypeView.composeTypeView()
         composeView.show { [weak composeView](characterName) in
             let vc = SCCharacterViewController()

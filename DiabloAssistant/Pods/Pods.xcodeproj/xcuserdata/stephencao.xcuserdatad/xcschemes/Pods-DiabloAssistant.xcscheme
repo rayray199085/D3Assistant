@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6FB1D27A4D257291FC43327567277444"
+               BlueprintIdentifier = "5F4A604DD3FC3FA3DF690E76FD9312D7"
                BuildableName = "Pods_DiabloAssistant.framework"
                BlueprintName = "Pods-DiabloAssistant"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6FB1D27A4D257291FC43327567277444"
+            BlueprintIdentifier = "5F4A604DD3FC3FA3DF690E76FD9312D7"
             BuildableName = "Pods_DiabloAssistant.framework"
             BlueprintName = "Pods-DiabloAssistant"
             ReferencedContainer = "container:Pods.xcodeproj">
