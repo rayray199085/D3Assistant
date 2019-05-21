@@ -41,8 +41,8 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Skill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwW-Xh-zBu">
-                    <rect key="frame" x="47" y="33" width="65" height="13.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <rect key="frame" x="47" y="33" width="58" height="11"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -55,7 +55,7 @@
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TrS-bB-g6i">
                     <rect key="frame" x="63" y="57.5" width="0.0" height="0.0"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
                     <color key="textColor" red="0.79607843137254897" green="0.53752726316452026" blue="0.21543988585472107" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -88,7 +88,7 @@
                 <outlet property="activeSkillImageView" destination="2WL-hL-iCp" id="hGt-S5-8Xq"/>
                 <outlet property="controlImageView" destination="N0v-8v-gMO" id="A0N-Si-hkX"/>
                 <outlet property="runeIcon" destination="LLu-sY-Mcd" id="d79-dk-Vsy"/>
-                <outlet property="runeName" destination="TrS-bB-g6i" id="sfi-2S-GdS"/>
+                <outlet property="runeNameLabel" destination="TrS-bB-g6i" id="sfi-2S-GdS"/>
                 <outlet property="skillNameLabel" destination="IwW-Xh-zBu" id="2SP-Bu-IGI"/>
                 <outlet property="skillOptionButton" destination="dOi-4g-kyR" id="k7i-R0-Ses"/>
                 <outlet property="titleLabel" destination="prB-jz-xKb" id="zQm-xU-UeA"/>

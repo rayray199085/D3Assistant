@@ -11,7 +11,7 @@ import UIKit
 class SCActiveSkillView: UIView {
     @IBOutlet weak var skillOptionButton: UIButton!
     @IBOutlet weak var runeIcon: UIImageView!
-    @IBOutlet weak var runeName: UILabel!
+    @IBOutlet weak var runeNameLabel: UILabel!
     @IBOutlet weak var skillNameLabel: UILabel!
     @IBOutlet weak var controlImageView: UIImageView!
     @IBOutlet weak var activeSkillImageView: UIImageView!
@@ -24,6 +24,23 @@ class SCActiveSkillView: UIView {
         return v
     }
     
+    func setActiveSkillView(skillIcon: UIImage?, skillName: String?, runeImage: UIImage?, runeName: String?, title: String?){
+        activeSkillImageView.image = skillIcon
+        skillNameLabel.text = skillName
+        skillNameLabel.textColor = UIColor.white
+        runeIcon.image = runeImage
+        runeNameLabel.text = runeName
+        titleLabel.text = title
+    }
+    
+    func resetActiveSkillView(title: String?){
+        activeSkillImageView.image = nil
+        skillNameLabel.text = "Choose Skill"
+        skillNameLabel.textColor = UIColor.darkGray
+        runeIcon.image = nil
+        runeNameLabel.text = nil
+        titleLabel.text = title
+    }
     override func awakeFromNib() {
         
     }

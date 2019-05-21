@@ -39,10 +39,10 @@
                     <state key="normal" backgroundImage="closePopupButton"/>
                     <state key="highlighted" backgroundImage="closePopupButtonActive"/>
                     <connections>
-                        <action selector="clickCloseButton:" destination="lO2-CH-AGb" eventType="touchUpInside" id="jOn-DS-3ro"/>
+                        <action selector="clickButtonToDismissIntroView:" destination="lO2-CH-AGb" eventType="touchUpInside" id="Nzg-e1-TEL"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hns-Yc-bOy" userLabel="rightButton">
+                <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hns-Yc-bOy" userLabel="rightButton">
                     <rect key="frame" x="297.5" y="45" width="20" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="C8D-OD-lb2"/>
@@ -51,10 +51,10 @@
                     <state key="normal" backgroundImage="right_button_normal"/>
                     <state key="highlighted" backgroundImage="right_button_highlight"/>
                     <connections>
-                        <action selector="clickRightButton:" destination="lO2-CH-AGb" eventType="touchUpInside" id="UJ6-nN-8Ep"/>
+                        <action selector="clickChangePageButton:" destination="lO2-CH-AGb" eventType="touchUpInside" id="jGm-At-GDU"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQd-1u-cfm" userLabel="leftButton">
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQd-1u-cfm" userLabel="leftButton">
                     <rect key="frame" x="25" y="45" width="20" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="20" id="5o2-1b-Ntm"/>
@@ -63,7 +63,7 @@
                     <state key="normal" backgroundImage="left_button_normal"/>
                     <state key="highlighted" backgroundImage="left_button_highlight"/>
                     <connections>
-                        <action selector="clickLeftButton:" destination="lO2-CH-AGb" eventType="touchUpInside" id="WOR-DI-OaC"/>
+                        <action selector="clickChangePageButton:" destination="lO2-CH-AGb" eventType="touchUpInside" id="Sd7-a7-P1C"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defensive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoP-Fe-00H">
@@ -72,19 +72,19 @@
                     <color key="textColor" red="0.36402502655982971" green="0.055355757474899292" blue="0.031258717179298401" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJs-Hg-jdg">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJs-Hg-jdg" customClass="SCActiveSkillSelectionView" customModule="DiabloAssistant" customModuleProvider="target">
                     <rect key="frame" x="35" y="76" width="272.5" height="70"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="70" id="bGD-YQ-7DL"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xb-iG-DPj">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xb-iG-DPj" customClass="SCRuneSelectionView" customModule="DiabloAssistant" customModuleProvider="target">
                     <rect key="frame" x="35" y="161" width="272.5" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Ip3-pS-r8J"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTW-sl-RRC">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTW-sl-RRC">
                     <rect key="frame" x="217.5" y="441" width="100" height="31.5"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="31.5" id="RmB-o5-vN1"/>
@@ -96,10 +96,10 @@
                     </state>
                     <state key="highlighted" backgroundImage="buttonActiveHighlighted"/>
                     <connections>
-                        <action selector="clickYesButton:" destination="lO2-CH-AGb" eventType="touchUpInside" id="Htm-m8-OiC"/>
+                        <action selector="clickButtonToDismissIntroView:" destination="lO2-CH-AGb" eventType="touchUpInside" id="6ht-J8-NP2"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuM-jZ-0hL">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuM-jZ-0hL">
                     <rect key="frame" x="25" y="441" width="100" height="31.5"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="31.5" id="Bga-5n-YPe"/>
@@ -111,7 +111,7 @@
                     </state>
                     <state key="highlighted" backgroundImage="buttonActiveHighlighted"/>
                     <connections>
-                        <action selector="clickNoButton:" destination="lO2-CH-AGb" eventType="touchUpInside" id="eV7-4Y-Ucr"/>
+                        <action selector="clickButtonToDismissIntroView:" destination="lO2-CH-AGb" eventType="touchUpInside" id="hQ5-gx-SyF"/>
                     </connections>
                 </button>
                 <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Mzj-wo-PxO">

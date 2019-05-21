@@ -11,7 +11,49 @@ import YYModel
 
 class SCCharacterViewModel {
     private var characterName: String
-    var character: SCCharacter?
+    
+    var character: SCCharacter?{
+        didSet{
+            guard let categories = character?.skillCategories,
+                  let skillArray = character?.skills?.active,
+                  let filePath = Bundle.main.path(forResource: "characterSkills", ofType: "plist"),
+                  let array = NSArray(contentsOfFile: filePath) as? [[String: Any]] else{
+                    return
+            }
+            var location = 0
+            for (index,dict) in array.enumerated(){
+                guard let name = dict["name"] as? String else{
+                    continue
+                }
+                if name == characterName{
+                    location = index
+                    break
+                }
+            }
+            let skills = array[location]["skills"] as? [[String: Any]]
+            for dict in skills ?? []{
+                let res = skillArray.filter { (skill) -> Bool in
+                    return skill.slug == (dict["name"] as? String)
+                }
+                if res.count > 0{
+                    res[0].type = dict["type"] as? String
+                }
+            }
+            
+            categorySkills = [[SCActiveSkill]]()
+            for category in categories{
+                var group = [SCActiveSkill]()
+                for skill in skillArray{
+                    if skill.type == category.slug{
+                        group.append(skill)
+                    }
+                }
+                categorySkills?.append(group)
+            }
+        }
+    }
+    
+    var categorySkills: [[SCActiveSkill]]?
     
     init(characterName: String) {
         self.characterName = characterName

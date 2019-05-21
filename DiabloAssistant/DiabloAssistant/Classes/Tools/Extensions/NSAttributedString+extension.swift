@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Atributika
 
 extension NSAttributedString{
     
@@ -24,25 +25,29 @@ extension NSAttributedString{
 }
 
 extension NSAttributedString {
-    public convenience init?(HTMLString html: String, font: UIFont? = nil) throws {
-        let options : [NSAttributedString.DocumentReadingOptionKey : Any] =
-            [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html,
-             NSAttributedString.DocumentReadingOptionKey.characterEncoding: String.Encoding.utf8.rawValue]
+    /// Transform html string to attributed string for textView
+    ///
+    /// - Parameters:
+    ///   - skillName: skill name
+    ///   - skillLevel: required level
+    ///   - htmlString: description html
+    /// - Returns: attributed string for showing description
+    static func getDescriptionAttributedText(skillName: String?, skillLevel: Int, htmlString: String?) -> NSAttributedString {
+        let skillDescription = NSMutableAttributedString(string: "\(skillName ?? "")\n")
+        skillDescription.addAttributes(
+            [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 15),
+             NSAttributedString.Key.foregroundColor: SCButtonTitleColor], range: NSRange(location: 0, length: skillDescription.length))
         
-        guard let data = html.data(using: .utf8, allowLossyConversion: true) else {
-            throw NSError(domain: "Parse Error", code: 0, userInfo: nil)
-        }
+        let des = htmlString ?? ""
+        let digits = Style("span").font(.boldSystemFont(ofSize: 13)).foregroundColor(.green)
+        let all = Style.font(.systemFont(ofSize: 13)).foregroundColor(SCButtonTitleColor)
+        skillDescription.append(des.style(tags: [digits]).styleAll(all).attributedString)
         
-        if let font = font {
-            guard let attr = try? NSMutableAttributedString(data: data, options: options, documentAttributes: nil) else {
-                throw NSError(domain: "Parse Error", code: 0, userInfo: nil)
-            }
-            var attrs = attr.attributes(at: 0, effectiveRange: nil)
-            attrs[NSAttributedString.Key.font] = font
-            attr.setAttributes(attrs, range: NSRange(location: 0, length: attr.length))
-            self.init(attributedString: attr)
-        } else {
-            try? self.init(data: data, options: options, documentAttributes: nil)
-        }
+        let requiredLevel = NSMutableAttributedString(string: "\nRequired level: \(skillLevel)")
+        requiredLevel.addAttributes(
+            [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 13),
+             NSAttributedString.Key.foregroundColor: UIColor.purple], range: NSRange(location: 0, length: requiredLevel.length))
+        skillDescription.append(requiredLevel)
+        return skillDescription
     }
 }

@@ -116,3 +116,13 @@ extension String{
         return (self as NSString).sizeOfText(withMaxSize: size, andWith: font).height
     }
 }
+
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+    
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
+}

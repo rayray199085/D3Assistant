@@ -16,6 +16,7 @@ class SCActiveSkill: NSObject {
     @objc var slug: String?
     @objc var skillImage: UIImage?
     @objc var runes: [SCRunes]?
+    @objc var type: String?
     override var description: String{
         return yy_modelDescription()
     }

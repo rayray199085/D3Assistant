@@ -13,11 +13,15 @@ import SVProgressHUD
 private let activeSkillCount: Int = 6
 private let passiveSkillCount: Int = 4
 class SCSkillsViewController: UIViewController {
+    
+    @IBOutlet weak var requiredLevelLabel: UILabel!
     @IBOutlet weak var activeSkillView: UIView!
     @IBOutlet weak var passiveSkillView: UIView!
     var characterViewModel: SCCharacterViewModel?
     private lazy var activeSkillIntroView: SCActiveSkillsIntroView = SCActiveSkillsIntroView.skillIntroView()
     private lazy var maskView = UIView(frame: UIScreen.main.bounds)
+    private var selectedButtonIndex: Int = 0
+    private lazy var selectedActiveSkills = [[String: Any]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +32,8 @@ class SCSkillsViewController: UIViewController {
             guard let character = self?.characterViewModel?.character else{
                 return
             }
-            self?.activeSkillIntroView.character = character
+            self?.activeSkillIntroView.viewModel = self?.characterViewModel
+            
             for (index,skillView) in (self?.activeSkillView.subviews.enumerated())!{
                 (skillView as! SCActiveSkillView).titleLabel.text = character.skillCategories?[index].name
             }
@@ -39,7 +44,21 @@ class SCSkillsViewController: UIViewController {
     @objc private func clickActiveSkillButton(button: UIButton){
         displayActiveIntroView()
         activeSkillIntroView.index = button.tag
+        selectedButtonIndex = button.tag
     }
+    
+    
+    /// clear all selected record
+    ///
+    /// - Parameter sender: reset button
+    @IBAction func clickResetButton(_ sender: Any) {
+        requiredLevelLabel.text = "\(0)"
+        selectedActiveSkills.removeAll()
+        for (index,v) in activeSkillView.subviews.enumerated(){
+            (v as! SCActiveSkillView).resetActiveSkillView(title: characterViewModel?.character?.skillCategories?[index].name)
+        }
+    }
+    
     deinit {
         SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.clear)
     }
@@ -71,16 +90,7 @@ private extension SCSkillsViewController{
         
         for index in 0..<activeSkillCount{
             let activeView = activeSkillView.subviews[index] as! SCActiveSkillView
-            switch index{
-            case 0:
-                activeView.controlImageView.image = UIImage(named: "mouse_left_click")
-            case 1:
-                activeView.controlImageView.image = UIImage(named: "mouse_right_click")
-            case 2, 3, 4, 5:
-                activeView.controlImageView.image = UIImage(named: "skillNumber_\(index - 1)")
-            default:
-                break
-            }
+            activeView.controlImageView.image = UIImage(named: "position_\(index)")
         }
     }
     
@@ -96,7 +106,6 @@ private extension SCSkillsViewController{
             passiveSkillView.addSubview(v)
         }
     }
-    
     
     /// setup activeSkillIntroView and maskView
     func setupActiveSkillIntroView(){
@@ -124,16 +133,64 @@ private extension SCSkillsViewController{
 
 extension SCSkillsViewController: SCActiveSkillsIntroViewDelegate{
     func clickQuitButton(view: SCActiveSkillsIntroView, tag: Int) {
-        switch tag {
-        case 0:
-            print(tag)
-        case 1:
-            print(tag)
-        case 2:
-            print(tag)
-        default:
-            break
-        }
         hideActiveIntroView()
+        activeSkillIntroView.resetIntroView()
+    }
+    func getSelectedSkillAndRune(typeIndex: Int, skillIndex: Int, runeIndex: Int, requiredLevel: Int) {
+    
+        guard let categerySkills = characterViewModel?.categorySkills,
+              let type = categerySkills[typeIndex][skillIndex].runes?[runeIndex].type?.uppercased() else {
+            return
+        }
+        let activeSkill = categerySkills[typeIndex][skillIndex]
+        
+        // check whether skill was selected before
+        deleteSkillFromSelectedArray(previousSkillName: activeSkill.name)
+        
+        // check whether the selected button has been used
+        let v = activeSkillView.subviews[selectedButtonIndex] as! SCActiveSkillView
+        if v.skillNameLabel.text != "Choose Skill"{
+            deleteSkillFromSelectedArray(previousSkillName: v.skillNameLabel.text)
+        }
+        
+        v.setActiveSkillView(
+            skillIcon: activeSkill.skillImage,
+            skillName: activeSkill.name,
+            runeImage: UIImage(named: "typeSmall\(type)"),
+            runeName: activeSkill.runes?[runeIndex].name,
+            title: activeSkill.type?.capitalizingFirstLetter())
+        
+        let dict = ["skillName": activeSkill.name ?? "", "buttonIndex": selectedButtonIndex, "requiredLevel": requiredLevel] as [String : Any]
+        selectedActiveSkills.append(dict)
+        
+        // calculate required level
+        var largestRequredLevel: Int = 0
+        for dict in selectedActiveSkills{
+            guard let level = dict["requiredLevel"] as? Int else{
+                continue
+            }
+            largestRequredLevel = max(level, largestRequredLevel)
+        }
+        requiredLevelLabel.text = "\(largestRequredLevel)"
+    }
+}
+private extension SCSkillsViewController{
+    
+    /// delete previous selected skill from selected skill array
+    ///
+    /// - Parameter previousSkillName: previous SkillName
+    func deleteSkillFromSelectedArray(previousSkillName: String?){
+        for (index,dict) in selectedActiveSkills.enumerated(){
+            guard let categories = characterViewModel?.character?.skillCategories,
+                let name = dict["skillName"] as? String,
+                let position = dict["buttonIndex"] as? Int else{
+                    continue
+            }
+            if name == previousSkillName{
+                selectedActiveSkills.remove(at: index)
+                (activeSkillView.subviews[position] as! SCActiveSkillView).resetActiveSkillView(title: categories[position].name)
+                break
+            }
+        }
     }
 }
