@@ -30,6 +30,9 @@
                         <constraint firstAttribute="width" constant="42" id="JTu-OE-ahz"/>
                     </constraints>
                     <state key="normal" backgroundImage="wizard_passive_powerhungry"/>
+                    <connections>
+                        <action selector="clickPassiveSkillButton:" destination="OOM-uq-T9H" eventType="touchUpInside" id="JSu-Zi-nuD"/>
+                    </connections>
                 </button>
                 <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qb-ID-xFs">
                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -39,23 +42,26 @@
                         <constraint firstAttribute="height" constant="50" id="oP3-pR-Kli"/>
                     </constraints>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="passive_frame_selected" translatesAutoresizingMaskIntoConstraints="NO" id="LgS-eD-DbS">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDw-2B-tLw">
                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="Y26-Tb-OwT"/>
-                        <constraint firstAttribute="width" constant="50" id="vIv-aX-Fsi"/>
+                        <constraint firstAttribute="width" constant="50" id="Q9F-jI-qhw"/>
+                        <constraint firstAttribute="height" constant="50" id="QRq-Tj-saN"/>
                     </constraints>
-                </imageView>
+                    <state key="normal" backgroundImage="passive_frame_selected"/>
+                    <connections>
+                        <action selector="clickSelectedFrameButton:" destination="OOM-uq-T9H" eventType="touchUpInside" id="zEM-Gu-Pfe"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="cty-Z3-z6V" firstAttribute="centerX" secondItem="OOM-uq-T9H" secondAttribute="centerX" id="IXo-pl-Bqr"/>
                 <constraint firstItem="cty-Z3-z6V" firstAttribute="centerY" secondItem="OOM-uq-T9H" secondAttribute="centerY" id="JW4-e6-0B6"/>
+                <constraint firstItem="eDw-2B-tLw" firstAttribute="centerX" secondItem="OOM-uq-T9H" secondAttribute="centerX" id="NVR-n6-SKH"/>
                 <constraint firstItem="Tji-yu-2OZ" firstAttribute="centerX" secondItem="OOM-uq-T9H" secondAttribute="centerX" id="ROT-2F-CIU"/>
                 <constraint firstItem="5qb-ID-xFs" firstAttribute="centerX" secondItem="OOM-uq-T9H" secondAttribute="centerX" id="UVa-0a-bX8"/>
+                <constraint firstItem="eDw-2B-tLw" firstAttribute="centerY" secondItem="OOM-uq-T9H" secondAttribute="centerY" id="YBn-4U-toN"/>
                 <constraint firstItem="Tji-yu-2OZ" firstAttribute="centerY" secondItem="OOM-uq-T9H" secondAttribute="centerY" id="b7p-sg-i1E"/>
-                <constraint firstItem="LgS-eD-DbS" firstAttribute="centerX" secondItem="OOM-uq-T9H" secondAttribute="centerX" id="pqz-2V-F2G"/>
-                <constraint firstItem="LgS-eD-DbS" firstAttribute="centerY" secondItem="OOM-uq-T9H" secondAttribute="centerY" id="trF-zf-psq"/>
                 <constraint firstItem="5qb-ID-xFs" firstAttribute="centerY" secondItem="OOM-uq-T9H" secondAttribute="centerY" id="wAP-kf-Kdb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -63,7 +69,7 @@
             <connections>
                 <outlet property="iconMaskView" destination="5qb-ID-xFs" id="M24-YX-NbG"/>
                 <outlet property="passiveSkillButton" destination="cty-Z3-z6V" id="feb-6H-f4A"/>
-                <outlet property="selectedSkillFrame" destination="LgS-eD-DbS" id="cYZ-Di-9Ps"/>
+                <outlet property="selectedFrameButton" destination="eDw-2B-tLw" id="koa-zD-6Sl"/>
             </connections>
             <point key="canvasLocation" x="209" y="101"/>
         </view>

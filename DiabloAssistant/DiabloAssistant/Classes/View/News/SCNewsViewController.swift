@@ -16,6 +16,8 @@ class SCNewsViewController: UIViewController {
         webView.scrollView.bounces = false
         webView.navigationDelegate = self
         webView.allowsBackForwardNavigationGestures = true
+        webView.isOpaque = false
+        webView.backgroundColor = UIColor.black
         view = webView
     }
     override func viewDidLoad() {

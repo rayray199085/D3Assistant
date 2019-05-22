@@ -7,9 +7,18 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SCEquipmentViewController: UIViewController {
     var characterName: String?
+    var viewModel: SCEquipmentViewModel?{
+        didSet{
+            SVProgressHUD.show()
+            viewModel?.loadEquipmentTypeList(completion: { (array, isSuccess) in
+                SVProgressHUD.dismiss()
+            })
+        }
+    }
     
     @IBOutlet weak var equipmentImageView: UIImageView!
     override func viewDidLoad() {

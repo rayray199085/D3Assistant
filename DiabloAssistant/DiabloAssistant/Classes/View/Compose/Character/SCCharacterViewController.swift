@@ -8,9 +8,16 @@
 
 import UIKit
 import DLSlideView
+import SVProgressHUD
 
 class SCCharacterViewController: UIViewController {
+    private var equipmentViewController: SCEquipmentViewController?
     private var characterViewModel : SCCharacterViewModel?
+    private var equipmentViewModel : SCEquipmentViewModel?{
+        didSet{
+            equipmentViewController?.viewModel = equipmentViewModel
+        }
+    }
     var characterName: String?{
         didSet{
             guard let characterName = characterName else{
@@ -71,11 +78,25 @@ extension SCCharacterViewController: DLTabedSlideViewDelegate{
             skillViewController.characterViewModel = characterViewModel
             return skillViewController
         case 1:
-            let equipmentViewController = SCEquipmentViewController()
-            equipmentViewController.characterName = characterName
+            equipmentViewController = SCEquipmentViewController()
+            equipmentViewController!.characterName = characterName
             return equipmentViewController
         default:
             return nil
+        }
+    }
+    func dlTabedSlideView(_ sender: DLTabedSlideView!, didSelectedAt index: Int) {
+        // equipment page is being shown
+        if index == 1{
+            guard let name = characterViewModel?.character?.name else{
+                SVProgressHUD.showError(withStatus: "Please try again later")
+                return
+            }
+            if equipmentViewModel == nil{
+                equipmentViewModel = SCEquipmentViewModel(characterName: name)
+            }
+        }else{
+            SVProgressHUD.dismiss()
         }
     }
 

@@ -36,22 +36,20 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aDF-kO-2gj" userLabel="passiveSkillView" customClass="SCPassiveSkillSelectionView" customModule="DiabloAssistant" customModuleProvider="target">
-                    <rect key="frame" x="16" y="40" width="314" height="270"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="16" y="40" width="314" height="220"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="314" id="bs2-fT-Tkv"/>
-                        <constraint firstAttribute="height" constant="270" id="rll-L4-6e0"/>
+                        <constraint firstAttribute="height" constant="220" id="rll-L4-6e0"/>
                     </constraints>
                 </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sidebar-bg" translatesAutoresizingMaskIntoConstraints="NO" id="W6z-8x-RtA">
-                    <rect key="frame" x="16" y="310" width="314" height="158"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="158" id="9D5-MP-xNT"/>
-                    </constraints>
+                    <rect key="frame" x="16" y="260" width="314" height="220"/>
                 </imageView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Go6-dF-H7p">
-                    <rect key="frame" x="16" y="310" width="314" height="158"/>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Go6-dF-H7p">
+                    <rect key="frame" x="16" y="260" width="314" height="220"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="220" id="I9d-26-cLA"/>
+                    </constraints>
                     <color key="textColor" red="0.79607843137254897" green="0.53752726316452026" blue="0.21543988585472107" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -59,26 +57,27 @@
             </subviews>
             <constraints>
                 <constraint firstItem="ZoS-Fv-lVM" firstAttribute="centerX" secondItem="kvP-IW-y40" secondAttribute="centerX" id="AQf-a7-Xtn"/>
-                <constraint firstItem="Go6-dF-H7p" firstAttribute="top" secondItem="W6z-8x-RtA" secondAttribute="top" id="Cif-zd-dHM"/>
-                <constraint firstItem="Go6-dF-H7p" firstAttribute="height" secondItem="W6z-8x-RtA" secondAttribute="height" id="MNI-WS-vjW"/>
-                <constraint firstItem="W6z-8x-RtA" firstAttribute="width" secondItem="aDF-kO-2gj" secondAttribute="width" id="UBS-XL-Xjm"/>
+                <constraint firstItem="Go6-dF-H7p" firstAttribute="width" secondItem="aDF-kO-2gj" secondAttribute="width" id="NnW-25-iTq"/>
+                <constraint firstItem="Go6-dF-H7p" firstAttribute="leading" secondItem="W6z-8x-RtA" secondAttribute="leading" id="Qbr-ms-XI7"/>
+                <constraint firstItem="Go6-dF-H7p" firstAttribute="width" secondItem="W6z-8x-RtA" secondAttribute="width" id="Vgd-hn-rM6"/>
+                <constraint firstItem="Go6-dF-H7p" firstAttribute="trailing" secondItem="aDF-kO-2gj" secondAttribute="trailing" id="WpF-Jb-pIr"/>
                 <constraint firstItem="aDF-kO-2gj" firstAttribute="top" secondItem="jkp-fA-x7V" secondAttribute="bottom" constant="5" id="bOm-Ne-xqa"/>
                 <constraint firstItem="jkp-fA-x7V" firstAttribute="trailing" secondItem="aDF-kO-2gj" secondAttribute="trailing" id="cQ0-Jt-wFe"/>
+                <constraint firstItem="Go6-dF-H7p" firstAttribute="top" secondItem="aDF-kO-2gj" secondAttribute="bottom" id="csb-vO-38N"/>
                 <constraint firstItem="ZoS-Fv-lVM" firstAttribute="centerY" secondItem="kvP-IW-y40" secondAttribute="centerY" id="eES-LP-XnE"/>
-                <constraint firstItem="W6z-8x-RtA" firstAttribute="top" secondItem="aDF-kO-2gj" secondAttribute="bottom" id="i71-35-kvB"/>
+                <constraint firstItem="Go6-dF-H7p" firstAttribute="top" secondItem="W6z-8x-RtA" secondAttribute="top" id="fQR-Cl-HbZ"/>
                 <constraint firstItem="jkp-fA-x7V" firstAttribute="top" secondItem="ZoS-Fv-lVM" secondAttribute="top" constant="10" id="j3Z-pG-f28"/>
-                <constraint firstItem="Go6-dF-H7p" firstAttribute="trailing" secondItem="W6z-8x-RtA" secondAttribute="trailing" id="o0J-JQ-9aU"/>
+                <constraint firstItem="Go6-dF-H7p" firstAttribute="height" secondItem="W6z-8x-RtA" secondAttribute="height" id="mgf-Lw-Kv4"/>
                 <constraint firstItem="jkp-fA-x7V" firstAttribute="trailing" secondItem="ZoS-Fv-lVM" secondAttribute="trailing" constant="-20" id="osF-Fi-zDu"/>
-                <constraint firstItem="W6z-8x-RtA" firstAttribute="trailing" secondItem="aDF-kO-2gj" secondAttribute="trailing" id="wkm-DK-7JX"/>
-                <constraint firstItem="Go6-dF-H7p" firstAttribute="width" secondItem="W6z-8x-RtA" secondAttribute="width" id="wwx-eV-nqj"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="FS9-5W-dBD"/>
             <connections>
+                <outlet property="closeButton" destination="jkp-fA-x7V" id="NlC-e7-N2n"/>
                 <outlet property="passiveSkillView" destination="aDF-kO-2gj" id="mLi-74-qtd"/>
                 <outlet property="textView" destination="Go6-dF-H7p" id="pce-B8-NQb"/>
             </connections>
-            <point key="canvasLocation" x="311.59420289855075" y="157.70089285714286"/>
+            <point key="canvasLocation" x="311.59420289855075" y="157.36607142857142"/>
         </view>
     </objects>
     <resources>

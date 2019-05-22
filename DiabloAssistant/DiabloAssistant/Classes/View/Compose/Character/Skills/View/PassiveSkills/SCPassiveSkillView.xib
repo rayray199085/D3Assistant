@@ -16,6 +16,12 @@
             <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEZ-ob-ojI">
+                    <rect key="frame" x="18.5" y="17" width="27" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <color key="textColor" red="0.94117647058823528" green="0.79607843137254897" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ht-XY-Zz9">
                     <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                     <constraints>
@@ -23,7 +29,7 @@
                         <constraint firstAttribute="width" constant="64" id="Nv4-Ae-d1e"/>
                     </constraints>
                     <state key="normal" backgroundImage="buttonPassive"/>
-                    <state key="highlighted" backgroundImage="buttonPassiveHighlighted"/>
+                    <state key="selected" backgroundImage="buttonPassiveHighlighted"/>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="So6-Y3-dNH">
                     <rect key="frame" x="8" y="8" width="48" height="48"/>
@@ -36,14 +42,17 @@
             <constraints>
                 <constraint firstItem="So6-Y3-dNH" firstAttribute="centerX" secondItem="7HO-uG-BC3" secondAttribute="centerX" id="3Of-hm-bvO"/>
                 <constraint firstItem="3ht-XY-Zz9" firstAttribute="centerY" secondItem="7HO-uG-BC3" secondAttribute="centerY" id="Keh-AN-0eK"/>
+                <constraint firstItem="dEZ-ob-ojI" firstAttribute="centerY" secondItem="7HO-uG-BC3" secondAttribute="centerY" id="MRP-Ze-HzU"/>
                 <constraint firstItem="3ht-XY-Zz9" firstAttribute="centerX" secondItem="7HO-uG-BC3" secondAttribute="centerX" id="ZEh-QZ-Ohc"/>
                 <constraint firstItem="So6-Y3-dNH" firstAttribute="centerY" secondItem="7HO-uG-BC3" secondAttribute="centerY" id="agc-bV-aWQ"/>
+                <constraint firstItem="dEZ-ob-ojI" firstAttribute="centerX" secondItem="7HO-uG-BC3" secondAttribute="centerX" id="gAp-p9-leO"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="Xqj-MH-R7o"/>
             <connections>
                 <outlet property="passiveFrameButton" destination="3ht-XY-Zz9" id="e40-J1-lDg"/>
                 <outlet property="passiveSkillImageView" destination="So6-Y3-dNH" id="3gb-PQ-I5N"/>
+                <outlet property="requiredLevel" destination="dEZ-ob-ojI" id="wex-Rj-hSd"/>
             </connections>
             <point key="canvasLocation" x="164" y="106"/>
         </view>

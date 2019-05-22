@@ -79,3 +79,17 @@ extension SCNetworkManager{
         }
     }
 }
+
+extension SCNetworkManager{
+    func getEquipmentTypeList(completion:@escaping (_ array: [[String: Any]]?, _ isSuccess: Bool)->()){
+        guard let region = UserDefaults.standard.object(forKey: "region") as? String else{
+            completion(nil,false)
+            return
+        }
+        let urlString = "https://\(region).api.blizzard.com/d3/data/item-type"
+        requestWithToken(urlString: urlString, method: HTTPMethod.get, params: nil) { (res, isSuccess) in
+            let array = res as? [[String: Any]]
+            completion(array, isSuccess)
+        }
+    }
+}

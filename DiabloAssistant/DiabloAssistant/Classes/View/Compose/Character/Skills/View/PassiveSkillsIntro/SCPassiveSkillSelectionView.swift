@@ -8,15 +8,23 @@
 
 import UIKit
 
+private let maximumSelectedSkillCount: Int = 4
+protocol SCPassiveSkillSelectionViewDelegate: NSObjectProtocol{
+    func hasReachedMaxSelectedSkillCount(view: SCPassiveSkillSelectionView)
+    func didClickPassiveSkillItem(view: SCPassiveSkillSelectionView, index: Int)
+}
+
 class SCPassiveSkillSelectionView: UIView {
-    var viewModel: SCCharacterViewModel?{
+    var hasSelectedSkillCount: Int = 0
+    weak var delegate: SCPassiveSkillSelectionViewDelegate?
+    
+    var passiveSkills: [SCPassiveSkill]?{
         didSet{
             setupSkillSelectionView()
         }
     }
     func setupSkillSelectionView(){
-        
-        guard let passiveSkills = viewModel?.character?.skills?.passive else{
+        guard let passiveSkills = passiveSkills else{
             return
         }
         let width: CGFloat = 50
@@ -33,8 +41,35 @@ class SCPassiveSkillSelectionView: UIView {
             var y = topMargin + width * CGFloat(index / 5)
             y += (index / 5) > 0 ? verticalMargin * CGFloat(index / 5) : 0
             skillItem.frame = CGRect(x: x, y: y, width: width, height: width)
-//            skillItem.passiveSkillButton.setImage(skill.skillImage, for: [])
+            skillItem.passiveSkillButton.setImage(skill.skillImage, for: [])
+            skillItem.passiveSkillButton.tag = index
+            skillItem.delegate = self
             addSubview(skillItem)
+        }
+    }
+    func clearAllSelectedSkills(){
+        for v in subviews as! [SCPassiveSkillItemView]{
+            v.cancelSelectedItem()
+        }
+    }
+    
+    func selectedSkillRequiredLevel()->Int{
+        var maxLevel: Int = 1
+        for (index,v) in subviews.enumerated(){
+            if (v as! SCPassiveSkillItemView).isSelected(){
+                maxLevel = max(maxLevel, passiveSkills?[index].level ?? 1)
+            }
+        }
+        return maxLevel
+    }
+}
+extension SCPassiveSkillSelectionView: SCPassiveSkillItemViewDelegate{
+    func didClickPassiveSkillButton(view: SCPassiveSkillItemView, index: Int) {
+        delegate?.didClickPassiveSkillItem(view: self, index: index)
+        if hasSelectedSkillCount == maximumSelectedSkillCount - 1{
+            delegate?.hasReachedMaxSelectedSkillCount(view: self)
+        }else{
+            hasSelectedSkillCount += 1
         }
     }
 }

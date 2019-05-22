@@ -89,6 +89,9 @@
 		0DD22C79228E69FC00F37491 /* SCComposeTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD22C72228E69FB00F37491 /* SCComposeTypeButton.swift */; };
 		0DD22C7A228E69FC00F37491 /* SCComposeTypeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD22C73228E69FB00F37491 /* SCComposeTypeButton.xib */; };
 		0DD22C7B228E69FC00F37491 /* SCComposeTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD22C74228E69FB00F37491 /* SCComposeTypeView.xib */; };
+		0DF25CAE229516690050043B /* SCEquipmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF25CAD229516690050043B /* SCEquipmentViewModel.swift */; };
+		0DF25CB222951C070050043B /* SCEquipmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF25CB122951C070050043B /* SCEquipmentType.swift */; };
+		0DF25CB4229520920050043B /* SCCategoryEquipmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF25CB3229520920050043B /* SCCategoryEquipmentType.swift */; };
 		AB98779B57BACC1F8FFBC77C /* Pods_DiabloAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C792F1AAEC9669FCE6C27E76 /* Pods_DiabloAssistant.framework */; };
 /* End PBXBuildFile section */
 
@@ -208,6 +211,9 @@
 		0DD22C72228E69FB00F37491 /* SCComposeTypeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCComposeTypeButton.swift; sourceTree = "<group>"; };
 		0DD22C73228E69FB00F37491 /* SCComposeTypeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCComposeTypeButton.xib; sourceTree = "<group>"; };
 		0DD22C74228E69FB00F37491 /* SCComposeTypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCComposeTypeView.xib; sourceTree = "<group>"; };
+		0DF25CAD229516690050043B /* SCEquipmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCEquipmentViewModel.swift; sourceTree = "<group>"; };
+		0DF25CB122951C070050043B /* SCEquipmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCEquipmentType.swift; sourceTree = "<group>"; };
+		0DF25CB3229520920050043B /* SCCategoryEquipmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCategoryEquipmentType.swift; sourceTree = "<group>"; };
 		72F020C3052E04C7B10CCA82 /* Pods-DiabloAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiabloAssistant.release.xcconfig"; path = "Target Support Files/Pods-DiabloAssistant/Pods-DiabloAssistant.release.xcconfig"; sourceTree = "<group>"; };
 		B36DBCB64FF9A45F4835F5A5 /* Pods-DiabloAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiabloAssistant.debug.xcconfig"; path = "Target Support Files/Pods-DiabloAssistant/Pods-DiabloAssistant.debug.xcconfig"; sourceTree = "<group>"; };
 		C792F1AAEC9669FCE6C27E76 /* Pods_DiabloAssistant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiabloAssistant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -538,6 +544,7 @@
 			isa = PBXGroup;
 			children = (
 				0D6B19472290EFFB00F564B7 /* SCCharacterViewModel.swift */,
+				0DF25CAD229516690050043B /* SCEquipmentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -545,12 +552,8 @@
 		0D6B19442290EFAC00F564B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0D6B19492290F8F200F564B7 /* SCCharacter.swift */,
-				0D6B194B2290F94400F564B7 /* SCSkillCategory.swift */,
-				0D6B194D2290F98F00F564B7 /* SCSkill.swift */,
-				0D6B194F2290F9C700F564B7 /* SCActiveSkill.swift */,
-				0D6B19512290FA8F00F564B7 /* SCPassiveSkill.swift */,
-				0D6B195322911A5500F564B7 /* SCRunes.swift */,
+				0DF25CB022951BD90050043B /* Equipment */,
+				0DF25CAF22951BCB0050043B /* Character */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -615,6 +618,28 @@
 				0DD22C74228E69FB00F37491 /* SCComposeTypeView.xib */,
 			);
 			path = ComposeType;
+			sourceTree = "<group>";
+		};
+		0DF25CAF22951BCB0050043B /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				0D6B19492290F8F200F564B7 /* SCCharacter.swift */,
+				0D6B194B2290F94400F564B7 /* SCSkillCategory.swift */,
+				0D6B194D2290F98F00F564B7 /* SCSkill.swift */,
+				0D6B194F2290F9C700F564B7 /* SCActiveSkill.swift */,
+				0D6B19512290FA8F00F564B7 /* SCPassiveSkill.swift */,
+				0D6B195322911A5500F564B7 /* SCRunes.swift */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		0DF25CB022951BD90050043B /* Equipment */ = {
+			isa = PBXGroup;
+			children = (
+				0DF25CB122951C070050043B /* SCEquipmentType.swift */,
+				0DF25CB3229520920050043B /* SCCategoryEquipmentType.swift */,
+			);
+			path = Equipment;
 			sourceTree = "<group>";
 		};
 		5AE1837790C6C92DCCAD91F0 /* Pods */ = {
@@ -861,6 +886,7 @@
 				0D1DD2AF228D513200FFC9FD /* SCVisitorView.swift in Sources */,
 				0D1DD29E228D513200FFC9FD /* UINavigationController+extension.swift in Sources */,
 				0D1DD29C228D513200FFC9FD /* UIView+extension.swift in Sources */,
+				0DF25CAE229516690050043B /* SCEquipmentViewModel.swift in Sources */,
 				0D6B19502290F9C700F564B7 /* SCActiveSkill.swift in Sources */,
 				0D1DD291228D513200FFC9FD /* SCNetworkManager.swift in Sources */,
 				0D1DD294228D513200FFC9FD /* SCSQLiteManager.swift in Sources */,
@@ -897,6 +923,7 @@
 				0D1DD297228D513200FFC9FD /* UIImageView+extension.swift in Sources */,
 				0D1DD288228D513200FFC9FD /* FFLabel.swift in Sources */,
 				0D1DD2A6228D513200FFC9FD /* UITableView+extension.swift in Sources */,
+				0DF25CB4229520920050043B /* SCCategoryEquipmentType.swift in Sources */,
 				0D1DD293228D513200FFC9FD /* SCNetworkManager+extension.swift in Sources */,
 				0D516C44229223E10006DBCB /* SCActiveSkillRuneView.swift in Sources */,
 				0D1DD29F228D513200FFC9FD /* Bundle+extension.swift in Sources */,
@@ -908,6 +935,7 @@
 				0DB441622293DD2600A1F520 /* SCPassiveSkillsIntroView.swift in Sources */,
 				0D1DD217228D503600FFC9FD /* AppDelegate.swift in Sources */,
 				0D6B19372290DEEB00F564B7 /* SCPassiveSkillView.swift in Sources */,
+				0DF25CB222951C070050043B /* SCEquipmentType.swift in Sources */,
 				0D1DD2A4228D513200FFC9FD /* UIPageControl+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
