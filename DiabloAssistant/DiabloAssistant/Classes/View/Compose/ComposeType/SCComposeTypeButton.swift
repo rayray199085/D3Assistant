@@ -10,6 +10,7 @@ import UIKit
 
 class SCComposeTypeButton: UIControl {
     var characterName: String?
+    var characterEquipmentName: String?
     
     @IBOutlet weak var buttonImageView: UIImageView!
     @IBOutlet weak var buttonLabel: UILabel!

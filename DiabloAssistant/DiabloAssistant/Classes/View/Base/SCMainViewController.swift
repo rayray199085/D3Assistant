@@ -11,8 +11,8 @@ import UIKit
 class SCMainViewController: UITabBarController {
     
     private lazy var composeButton: UIButton = UIButton.imageButton(
-        withNormalImageName: "composeButton",
-        andWithHighlightedImageName: "composeButton_highlighted")
+        withNormalImageName: "compose_button_normal",
+        andWithHighlightedImageName: "compose_button_highlighted")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,7 @@ class SCMainViewController: UITabBarController {
         setupComposeButton()
         tabBar.barTintColor = UIColor.black
         NotificationCenter.default.addObserver(self, selector: #selector(handleLoginNotification), name: NSNotification.Name(SCUserShouldLoginNotification), object: nil)
+        disableTabBarItem(index: 2)
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
@@ -42,9 +43,10 @@ class SCMainViewController: UITabBarController {
             return
         }
         let composeView = SCComposeTypeView.composeTypeView()
-        composeView.show { [weak composeView](characterName) in
+        composeView.show { [weak composeView] (characterName, characterEquipmentName) in
             let vc = SCCharacterViewController()
             vc.characterName = characterName
+            vc.characterEquipmentName = characterEquipmentName
             let nav = SCNavigationViewController(rootViewController: vc)
             self.present(nav, animated: true, completion: {
                 composeView?.removeFromSuperview()

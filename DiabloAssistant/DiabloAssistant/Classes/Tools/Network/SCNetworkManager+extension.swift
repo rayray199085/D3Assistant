@@ -80,6 +80,8 @@ extension SCNetworkManager{
     }
 }
 
+
+// MARK: - load equipment info
 extension SCNetworkManager{
     func getEquipmentTypeList(completion:@escaping (_ array: [[String: Any]]?, _ isSuccess: Bool)->()){
         guard let region = UserDefaults.standard.object(forKey: "region") as? String else{
@@ -90,6 +92,45 @@ extension SCNetworkManager{
         requestWithToken(urlString: urlString, method: HTTPMethod.get, params: nil) { (res, isSuccess) in
             let array = res as? [[String: Any]]
             completion(array, isSuccess)
+        }
+    }
+    
+    func getEquipmentType(type: String, completion:@escaping (_ array: [[String: Any]]?, _ isSuccess: Bool)->()){
+        var type = type
+        guard let region = UserDefaults.standard.object(forKey: "region") as? String else{
+            completion(nil,false)
+            return
+        }
+        type = (type as NSString).replacingOccurrences(of: "_", with: "")
+        let urlString = "https://\(region).api.blizzard.com/d3/data/item-type/\(type.lowercased())"
+        requestWithToken(urlString: urlString, method: HTTPMethod.get, params: nil) { (res, isSuccess) in
+            let array = res as? [[String: Any]]
+            completion(array, isSuccess)
+        }
+    }
+    
+    func getItemImage(icon: String, completion:@escaping (_ image: UIImage?)->()){
+        let urlString = "http://media.blizzard.com/d3/icons/items/large/\(icon).png"
+        guard let url = URL(string: urlString) else{
+            completion(nil)
+            return
+        }
+        UIImage.downloadImage(url: url) { (image) in
+            completion(image)
+        }
+    }
+    
+    func getItemDetails(item: SCEquipmentItem, completion:@escaping (_ dict: [String: Any]?,_ isSuccess: Bool)->()){
+        guard let region = UserDefaults.standard.object(forKey: "region") as? String,
+              let slug = item.slug,
+              let id = item.id  else{
+            completion(nil,false)
+            return
+        }
+        let urlString = "https://\(region).api.blizzard.com/d3/data/item/\(slug)-\(id)"
+        requestWithToken(urlString: urlString, method: HTTPMethod.get, params: nil) {(res, isSuccess) in
+            let dict = res as? [String: Any]
+            completion(dict, isSuccess)
         }
     }
 }

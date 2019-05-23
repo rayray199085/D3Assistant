@@ -14,8 +14,13 @@ class SCEquipmentViewController: UIViewController {
     var viewModel: SCEquipmentViewModel?{
         didSet{
             SVProgressHUD.show()
-            viewModel?.loadEquipmentTypeList(completion: { (array, isSuccess) in
-                SVProgressHUD.dismiss()
+            viewModel?.loadEquipmentTypeList(completion: { [weak self](isSuccess) in
+                self?.viewModel?.loadEquipmentType(typeIndexGroup: self?.viewModel?.feetTypes, completion: { (items, isSuccess) in
+                    self?.viewModel?.loadEquipmentItemDetails(item: items?[0][0], completion: { (details, isSuccess) in
+                        print(details)
+                        SVProgressHUD.dismiss()
+                    })
+                })
             })
         }
     }

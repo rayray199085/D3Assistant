@@ -13,6 +13,7 @@
     UIButton *button = [[UIButton alloc]init];
     [button setImage:[UIImage imageNamed:normalImage] forState:UIControlStateNormal];
     [button setImage:[UIImage imageNamed:highlightedImage] forState:UIControlStateHighlighted];
+    button.imageView.contentMode = UIViewContentModeScaleAspectFit;
     [button sizeToFit];
     return button;
 }

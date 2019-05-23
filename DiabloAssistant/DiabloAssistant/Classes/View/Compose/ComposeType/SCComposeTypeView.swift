@@ -19,8 +19,8 @@ class SCComposeTypeView: UIView {
     
     @IBOutlet weak var closeButtonCenterXCons: NSLayoutConstraint!
     @IBOutlet weak var prevButtonCenterXCons: NSLayoutConstraint!
-    private var completionBlock:((_ characterName: String?)->())?
-    private let buttonsInfo = [["imageName":"barbarian_male","title":"Barbarian","characterName":"barbarian"],["imageName":"crusader_male","title":"Crusader","characterName":"crusader"],["imageName":"demonhunter_female","title":"Demon Hunter","characterName":"demon-hunter"],["imageName":"monk_male","title":"Monk","characterName":"monk"],["imageName":"necro_male","title":"Necro","characterName":"necromancer"],["imageName":"moreHeroes","title":"More", "actionName":"clickMore"],["imageName":"witchdoctor_male","title":"Witch Doctor","characterName":"witch-doctor"],["imageName":"wizard_female","title":"Wizard","characterName":"wizard"]]
+    private var completionBlock:((_ characterName: String?,_ characterEquipmentName: String?)->())?
+    private let buttonsInfo = [["imageName":"barbarian_male","title":"Barbarian","characterName":"barbarian","characterEquipmentName":"Barbarian"],["imageName":"crusader_male","title":"Crusader","characterName":"crusader","characterEquipmentName":"Crusader"],["imageName":"demonhunter_female","title":"Demon Hunter","characterName":"demon-hunter","characterEquipmentName":"DemonHunter"],["imageName":"monk_male","title":"Monk","characterName":"monk","characterEquipmentName":"Monk"],["imageName":"necro_male","title":"Necro","characterName":"necromancer","characterEquipmentName":"Necromancer"],["imageName":"moreHeroes","title":"More", "actionName":"clickMore"],["imageName":"witchdoctor_male","title":"Witch Doctor","characterName":"witch-doctor","characterEquipmentName":"WitchDoctor"],["imageName":"wizard_female","title":"Wizard","characterName":"wizard","characterEquipmentName":"Wizard"]]
     
     class func composeTypeView()->SCComposeTypeView{
         let nib = UINib(nibName: "SCComposeTypeView", bundle: nil)
@@ -30,7 +30,7 @@ class SCComposeTypeView: UIView {
         return v
     }
     
-    func show(completion: @escaping (_ clsName: String?)->()) {
+    func show(completion: @escaping (_ characterName: String?,_ characterEquipmentName: String?)->()) {
         let vc = UIApplication.shared.keyWindow?.rootViewController
         vc?.view.addSubview(self)
         completionBlock = completion
@@ -77,7 +77,9 @@ class SCComposeTypeView: UIView {
             }
             btn.addPopAlphaAnimation(fromValue: 1.0, toValue: 0.2, duration: 0.5) { (_, _) in
                 if btn == currentView.subviews.last{
-                    self.completionBlock?(button.characterName)
+                self.completionBlock?(
+                    button.characterName,
+                    button.characterEquipmentName)
                 }
             }
         }
@@ -115,6 +117,7 @@ private extension SCComposeTypeView{
                 button.addTarget(self, action: #selector(clickComposeButton), for: UIControl.Event.touchUpInside)
             }
             button.characterName = dict["characterName"]
+            button.characterEquipmentName = dict["characterEquipmentName"]
             parentView.addSubview(button)
             
         }

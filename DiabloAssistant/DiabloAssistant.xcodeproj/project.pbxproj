@@ -79,6 +79,13 @@
 		0D71CF4C228FB1CD0029FF16 /* SCSkillsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D71CF4B228FB1CD0029FF16 /* SCSkillsViewController.xib */; };
 		0D71CF4F228FECF00029FF16 /* SCEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D71CF4E228FECF00029FF16 /* SCEquipmentViewController.swift */; };
 		0D71CF51228FECFE0029FF16 /* SCEquipmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D71CF50228FECFE0029FF16 /* SCEquipmentViewController.xib */; };
+		0D85384522966FD2002FC6B1 /* SCEquipmentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85384422966FD2002FC6B1 /* SCEquipmentItem.swift */; };
+		0D85384722967DBA002FC6B1 /* SCEquipmentItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85384622967DBA002FC6B1 /* SCEquipmentItemDetails.swift */; };
+		0D8538492296866D002FC6B1 /* SCDetailsAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8538482296866D002FC6B1 /* SCDetailsAttributes.swift */; };
+		0D85384B229686D3002FC6B1 /* SCMainAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85384A229686D3002FC6B1 /* SCMainAttribute.swift */; };
+		0D85384D2296878C002FC6B1 /* SCDetailsRandomAffixes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85384C2296878C002FC6B1 /* SCDetailsRandomAffixes.swift */; };
+		0D85384F22968AF6002FC6B1 /* SCDetailsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85384E22968AF6002FC6B1 /* SCDetailsType.swift */; };
+		0D8538512296A01C002FC6B1 /* UITabBarController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8538502296A01C002FC6B1 /* UITabBarController+extension.swift */; };
 		0DB4415F22937B2A00A1F520 /* characterSkills.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DB4415E22937B2A00A1F520 /* characterSkills.plist */; };
 		0DB441622293DD2600A1F520 /* SCPassiveSkillsIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB441612293DD2600A1F520 /* SCPassiveSkillsIntroView.swift */; };
 		0DB441642293DE3500A1F520 /* SCPassiveSkillsIntroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DB441632293DE3500A1F520 /* SCPassiveSkillsIntroView.xib */; };
@@ -201,6 +208,13 @@
 		0D71CF4B228FB1CD0029FF16 /* SCSkillsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCSkillsViewController.xib; sourceTree = "<group>"; };
 		0D71CF4E228FECF00029FF16 /* SCEquipmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCEquipmentViewController.swift; sourceTree = "<group>"; };
 		0D71CF50228FECFE0029FF16 /* SCEquipmentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCEquipmentViewController.xib; sourceTree = "<group>"; };
+		0D85384422966FD2002FC6B1 /* SCEquipmentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCEquipmentItem.swift; sourceTree = "<group>"; };
+		0D85384622967DBA002FC6B1 /* SCEquipmentItemDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCEquipmentItemDetails.swift; sourceTree = "<group>"; };
+		0D8538482296866D002FC6B1 /* SCDetailsAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCDetailsAttributes.swift; sourceTree = "<group>"; };
+		0D85384A229686D3002FC6B1 /* SCMainAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCMainAttribute.swift; sourceTree = "<group>"; };
+		0D85384C2296878C002FC6B1 /* SCDetailsRandomAffixes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCDetailsRandomAffixes.swift; sourceTree = "<group>"; };
+		0D85384E22968AF6002FC6B1 /* SCDetailsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCDetailsType.swift; sourceTree = "<group>"; };
+		0D8538502296A01C002FC6B1 /* UITabBarController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+extension.swift"; sourceTree = "<group>"; };
 		0DB4415E22937B2A00A1F520 /* characterSkills.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = characterSkills.plist; sourceTree = "<group>"; };
 		0DB441612293DD2600A1F520 /* SCPassiveSkillsIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCPassiveSkillsIntroView.swift; sourceTree = "<group>"; };
 		0DB441632293DE3500A1F520 /* SCPassiveSkillsIntroView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCPassiveSkillsIntroView.xib; sourceTree = "<group>"; };
@@ -410,6 +424,7 @@
 				0D1DD273228D513200FFC9FD /* UIPageControl+extension.swift */,
 				0D1DD274228D513200FFC9FD /* UIBarButtonItem+extension.swift */,
 				0D1DD275228D513200FFC9FD /* UITableView+extension.swift */,
+				0D8538502296A01C002FC6B1 /* UITabBarController+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -561,7 +576,6 @@
 		0D71CF40228F86A70029FF16 /* Character */ = {
 			isa = PBXGroup;
 			children = (
-				0D71CF4D228FECCB0029FF16 /* Equipment */,
 				0D71CF48228FB1950029FF16 /* Skills */,
 				0D71CF41228F86A70029FF16 /* SCCharacterViewController.swift */,
 				0D71CF43228F92990029FF16 /* SCCharacterViewController.xib */,
@@ -603,6 +617,7 @@
 		0DD22C6C228E69FB00F37491 /* Compose */ = {
 			isa = PBXGroup;
 			children = (
+				0D71CF4D228FECCB0029FF16 /* Equipment */,
 				0D71CF40228F86A70029FF16 /* Character */,
 				0DD22C70228E69FB00F37491 /* ComposeType */,
 			);
@@ -638,6 +653,12 @@
 			children = (
 				0DF25CB122951C070050043B /* SCEquipmentType.swift */,
 				0DF25CB3229520920050043B /* SCCategoryEquipmentType.swift */,
+				0D85384422966FD2002FC6B1 /* SCEquipmentItem.swift */,
+				0D85384622967DBA002FC6B1 /* SCEquipmentItemDetails.swift */,
+				0D8538482296866D002FC6B1 /* SCDetailsAttributes.swift */,
+				0D85384A229686D3002FC6B1 /* SCMainAttribute.swift */,
+				0D85384C2296878C002FC6B1 /* SCDetailsRandomAffixes.swift */,
+				0D85384E22968AF6002FC6B1 /* SCDetailsType.swift */,
 			);
 			path = Equipment;
 			sourceTree = "<group>";
@@ -873,12 +894,14 @@
 			files = (
 				0D1DD29B228D513200FFC9FD /* UILabel+extension.swift in Sources */,
 				0D1DD289228D513200FFC9FD /* UIButton+SCAddition.m in Sources */,
+				0D85384522966FD2002FC6B1 /* SCEquipmentItem.swift in Sources */,
 				0D6B19522290FA8F00F564B7 /* SCPassiveSkill.swift in Sources */,
 				0D6B195622912A0600F564B7 /* SCActiveSkillsIntroView.swift in Sources */,
 				0D6B194E2290F98F00F564B7 /* SCSkill.swift in Sources */,
 				0D516C4022921ADA0006DBCB /* SCActiveSkillItemView.swift in Sources */,
 				0D1DD28C228D513200FFC9FD /* NSString+SCAddition.m in Sources */,
 				0D1DD29D228D513200FFC9FD /* UIImage+extension.swift in Sources */,
+				0D8538512296A01C002FC6B1 /* UITabBarController+extension.swift in Sources */,
 				0D1DD2AB228D513200FFC9FD /* SCOAuthViewController.swift in Sources */,
 				0D2242CD2292C70C00F7B1DD /* SCRuneSelectionView.swift in Sources */,
 				0D1DD2AE228D513200FFC9FD /* SCBaseViewController.swift in Sources */,
@@ -890,6 +913,7 @@
 				0D6B19502290F9C700F564B7 /* SCActiveSkill.swift in Sources */,
 				0D1DD291228D513200FFC9FD /* SCNetworkManager.swift in Sources */,
 				0D1DD294228D513200FFC9FD /* SCSQLiteManager.swift in Sources */,
+				0D85384F22968AF6002FC6B1 /* SCDetailsType.swift in Sources */,
 				0D1DD2A9228D513200FFC9FD /* SCItemsViewController.swift in Sources */,
 				0D1DD28A228D513200FFC9FD /* NSObject+SCAddition.m in Sources */,
 				0D2242CB2292C10E00F7B1DD /* SCActiveSkillSelectionView.swift in Sources */,
@@ -900,9 +924,11 @@
 				0D1DD2A8228D513200FFC9FD /* SCRankingsViewController.swift in Sources */,
 				0D71CF42228F86A70029FF16 /* SCCharacterViewController.swift in Sources */,
 				0D1DD2A5228D513200FFC9FD /* UIBarButtonItem+extension.swift in Sources */,
+				0D85384D2296878C002FC6B1 /* SCDetailsRandomAffixes.swift in Sources */,
 				0D1DD28F228D513200FFC9FD /* UILabel+SCAddition.m in Sources */,
 				0D6B19482290EFFB00F564B7 /* SCCharacterViewModel.swift in Sources */,
 				0D1DD2A3228D513200FFC9FD /* WKWebView+extension.swift in Sources */,
+				0D85384B229686D3002FC6B1 /* SCMainAttribute.swift in Sources */,
 				0D1DD2A2228D513200FFC9FD /* UITableViewCell+extension.swift in Sources */,
 				0D1DD298228D513200FFC9FD /* NSAttributedString+extension.swift in Sources */,
 				0D1DD2A1228D513200FFC9FD /* String+extension.swift in Sources */,
@@ -920,11 +946,13 @@
 				0D1DD292228D513200FFC9FD /* SCUserAccount.swift in Sources */,
 				0DD22C78228E69FC00F37491 /* SCComposeTypeView.swift in Sources */,
 				0D71CF4A228FB1B00029FF16 /* SCSkillsViewController.swift in Sources */,
+				0D85384722967DBA002FC6B1 /* SCEquipmentItemDetails.swift in Sources */,
 				0D1DD297228D513200FFC9FD /* UIImageView+extension.swift in Sources */,
 				0D1DD288228D513200FFC9FD /* FFLabel.swift in Sources */,
 				0D1DD2A6228D513200FFC9FD /* UITableView+extension.swift in Sources */,
 				0DF25CB4229520920050043B /* SCCategoryEquipmentType.swift in Sources */,
 				0D1DD293228D513200FFC9FD /* SCNetworkManager+extension.swift in Sources */,
+				0D8538492296866D002FC6B1 /* SCDetailsAttributes.swift in Sources */,
 				0D516C44229223E10006DBCB /* SCActiveSkillRuneView.swift in Sources */,
 				0D1DD29F228D513200FFC9FD /* Bundle+extension.swift in Sources */,
 				0D1DD29A228D513200FFC9FD /* Date+extension.swift in Sources */,

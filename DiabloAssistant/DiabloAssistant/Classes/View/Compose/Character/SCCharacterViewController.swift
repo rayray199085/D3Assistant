@@ -18,6 +18,8 @@ class SCCharacterViewController: UIViewController {
             equipmentViewController?.viewModel = equipmentViewModel
         }
     }
+    // for loading character's equipment, show suitable only for this character
+    var characterEquipmentName: String?
     var characterName: String?{
         didSet{
             guard let characterName = characterName else{
@@ -87,16 +89,8 @@ extension SCCharacterViewController: DLTabedSlideViewDelegate{
     }
     func dlTabedSlideView(_ sender: DLTabedSlideView!, didSelectedAt index: Int) {
         // equipment page is being shown
-        if index == 1{
-            guard let name = characterViewModel?.character?.name else{
-                SVProgressHUD.showError(withStatus: "Please try again later")
-                return
-            }
-            if equipmentViewModel == nil{
-                equipmentViewModel = SCEquipmentViewModel(characterName: name)
-            }
-        }else{
-            SVProgressHUD.dismiss()
+        if index == 1 && equipmentViewModel == nil{
+            equipmentViewModel = SCEquipmentViewModel(characterName: characterEquipmentName)
         }
     }
 
