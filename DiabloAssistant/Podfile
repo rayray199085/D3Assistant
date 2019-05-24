@@ -16,4 +16,5 @@ pod "SVProgressHUD"
 pod "YYModel"
 pod 'DLSlideView', :git => 'https://github.com/agdsdl/DLSlideView.git'
 pod "Atributika"
+pod 'TCPickerView'
 end

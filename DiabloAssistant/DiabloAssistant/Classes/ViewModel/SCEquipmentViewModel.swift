@@ -13,59 +13,22 @@ class SCEquipmentViewModel{
     var characterName: String?
     var equipmentTypes: [SCEquipmentType]?
     var categoryEquipmentTypes: [SCCategoryEquipmentType]?
-    // one-handed
-    lazy var axeTypes = [SCCategoryEquipmentType]()
-    lazy var daggerTypes = [SCCategoryEquipmentType]()
-    lazy var maceTypes = [SCCategoryEquipmentType]()
-    lazy var spearTypes = [SCCategoryEquipmentType]()
-    lazy var swordTypes = [SCCategoryEquipmentType]()
-    lazy var ceremonialKnifeTypes = [SCCategoryEquipmentType]()
-    lazy var FistTypes = [SCCategoryEquipmentType]()
-    lazy var FlailTypes = [SCCategoryEquipmentType]()
-    lazy var mightyTypes = [SCCategoryEquipmentType]()
-    lazy var scytheTypes = [SCCategoryEquipmentType]()
     
-    // two-handed
-    lazy var twoHandedAxeTypes = [SCCategoryEquipmentType]()
-    lazy var twoHandedMaceTypes = [SCCategoryEquipmentType]()
-    lazy var polearmTypes = [SCCategoryEquipmentType]()
-    lazy var staffTypes = [SCCategoryEquipmentType]()
-    lazy var twoHandedSwordTypes = [SCCategoryEquipmentType]()
-    lazy var daiboTypes = [SCCategoryEquipmentType]()
-    lazy var twoHandedFlailTypes = [SCCategoryEquipmentType]()
-    lazy var twoHandedMightyTypes = [SCCategoryEquipmentType]()
-    lazy var twoHandedScytheTypes = [SCCategoryEquipmentType]()
-    // ranged
-    lazy var bowTypes = [SCCategoryEquipmentType]()
-    lazy var crossbowTypes = [SCCategoryEquipmentType]()
-    lazy var handedCrossbowTypes = [SCCategoryEquipmentType]()
-    lazy var wandTypes = [SCCategoryEquipmentType]()
-    
-    lazy var otherWeapon = [SCCategoryEquipmentType]()
-    
-    lazy var headTypes = [SCCategoryEquipmentType]()
-    lazy var shoulderTypes = [SCCategoryEquipmentType]()
-    lazy var torsoTypes = [SCCategoryEquipmentType]()
-    lazy var wristTypes = [SCCategoryEquipmentType]()
-    lazy var handTypes = [SCCategoryEquipmentType]()
-    lazy var waistTypes = [SCCategoryEquipmentType]()
-    lazy var legTypes = [SCCategoryEquipmentType]()
-    lazy var feetTypes = [SCCategoryEquipmentType]()
-    lazy var jewelryTypes = [SCCategoryEquipmentType]()
-    lazy var offHandTypes = [SCCategoryEquipmentType]()
-    lazy var followerTypes = [SCCategoryEquipmentType]()
-    lazy var consumableTypes = [SCCategoryEquipmentType]()
-    lazy var craftingTypes = [SCCategoryEquipmentType]()
-    lazy var dyeTypes = [SCCategoryEquipmentType]()
-    lazy var gemTypes = [SCCategoryEquipmentType]()
-    lazy var miscellaneousTypes = [SCCategoryEquipmentType]()
-    lazy var goldTypes = [SCCategoryEquipmentType]()
-    lazy var questTypes = [SCCategoryEquipmentType]()
-    lazy var shardTypes = [SCCategoryEquipmentType]()
-    lazy var scrollTypes = [SCCategoryEquipmentType]()
-    lazy var planTypes = [SCCategoryEquipmentType]()
-        
-    
+    lazy var weapons = [SCWeapons]()
+    lazy var heads = [SCHeads]()
+    lazy var shoulders = [SCShoulders]()
+    lazy var torsos = [SCTorsos]()
+    lazy var wrists = [SCWrists]()
+    lazy var hands = [SCHands]()
+    lazy var waists = [SCWaists]()
+    lazy var legs = [SCLegs]()
+    lazy var feet = [SCFeet]()
+    lazy var amulets = [SCAmulets]()
+    lazy var rings = [SCRings]()
+    lazy var offHands = [SCOffHands]()
+    lazy var followerSpecials = [SCFollowerSpecial]()
+    lazy var others = [SCOthers]()
+   
     init(characterName: String?) {
         self.characterName = characterName
     }
@@ -73,13 +36,14 @@ class SCEquipmentViewModel{
     func loadEquipmentTypeList(completion:@escaping (_ isSuccess: Bool)->()){
         SCNetworkManager.shared.getEquipmentTypeList { [weak self] (array, isSuccess) in
             guard let array = array,
-                let types = NSArray.yy_modelArray(with: SCEquipmentType.self, json: array) as? [SCEquipmentType] else{
+                var types = NSArray.yy_modelArray(with: SCEquipmentType.self, json: array) as? [SCEquipmentType] else{
                 completion(isSuccess)
                 return
             }
-            
+            types.sort(by: { (type0, type1) -> Bool in
+                return type0.name! < type1.name!
+            })
             self?.categoryEquipmentTypes = [SCCategoryEquipmentType]()
-        
             for type in types{
                 let res = self?.categoryEquipmentTypes?.filter({ (ct) -> Bool in
                     return ct.type == type.name
@@ -93,104 +57,70 @@ class SCEquipmentViewModel{
                     self?.categoryEquipmentTypes?.append(newCt)
                 }
             }
-    
+           
             for categoryType in self?.categoryEquipmentTypes ?? []{
                 switch categoryType.type{
-                case "Axe":
-                    self?.axeTypes.append(categoryType)
-                case "Dagger":
-                    self?.daggerTypes.append(categoryType)
-                case "Mace":
-                    self?.maceTypes.append(categoryType)
-                case "Spear":
-                    self?.spearTypes.append(categoryType)
-                case "Sword":
-                    self?.swordTypes.append(categoryType)
-                case "Ceremonial Knife":
-                    self?.ceremonialKnifeTypes.append(categoryType)
-                case "Fist Weapon":
-                    self?.FistTypes.append(categoryType)
-                case "Flail":
-                    self?.FlailTypes.append(categoryType)
-                case "Mighty Weapon":
-                    self?.mightyTypes.append(categoryType)
-                case "Scythe":
-                    self?.scytheTypes.append(categoryType)
-                    
-                case "Two-Handed Axe":
-                    self?.twoHandedAxeTypes.append(categoryType)
-                case "Two-Handed Mace":
-                    self?.twoHandedMaceTypes.append(categoryType)
-                case "Polearm":
-                    self?.polearmTypes.append(categoryType)
-                case "Staff":
-                    self?.staffTypes.append(categoryType)
-                case "Two-Handed Sword":
-                    self?.twoHandedSwordTypes.append(categoryType)
-                case "Daibo":
-                    self?.daiboTypes.append(categoryType)
-                case "Two-Handed Flail":
-                    self?.twoHandedFlailTypes.append(categoryType)
-                case "Two-Handed Mighty Weapon":
-                    self?.twoHandedMightyTypes.append(categoryType)
-                case "Two-Handed Scythe":
-                    self?.twoHandedScytheTypes.append(categoryType)
-                    
-                    
-                case "Bow":
-                    self?.bowTypes.append(categoryType)
-                case "Crossbow":
-                    self?.crossbowTypes.append(categoryType)
-                case "Hand Crossbow":
-                    self?.handedCrossbowTypes.append(categoryType)
-                case"Wand":
-                    self?.wandTypes.append(categoryType)
-                    
-                case "Weapon":
-                    self?.otherWeapon.append(categoryType)
+                case "Axe","Dagger","Mace","Spear","Sword","Ceremonial Knife","Fist Weapon",
+                     "Flail","Mighty Weapon","Scythe","Two-Handed Axe","Two-Handed Mace","Polearm","Staff","Two-Handed Sword","Daibo","Two-Handed Flail","Two-Handed Mighty Weapon","Two-Handed Scythe","Bow","Crossbow","Hand Crossbow","Wand","Weapon":
+                   
+                    let weapon = SCWeapons(typeName: categoryType.type!)
+                    weapon.items = categoryType
+                    self?.weapons.append(weapon)
                     
                 case "Helm", "Spirit Stone", "Voodoo Mask", "Wizard Hat":
-                    self?.headTypes.append(categoryType)
+                    let head = SCHeads(typeName: categoryType.type!)
+                    head.items = categoryType
+                    self?.heads.append(head)
+                    
                 case "Shoulders":
-                    self?.shoulderTypes.append(categoryType)
+                    let shoulder = SCShoulders(typeName: categoryType.type!)
+                    shoulder.items = categoryType
+                    self?.shoulders.append(shoulder)
                 case "Chest Armor", "Cloak":
-                    self?.torsoTypes.append(categoryType)
+                    let torso = SCTorsos(typeName: categoryType.type!)
+                    torso.items = categoryType
+                    self?.torsos.append(torso)
                 case "Bracers":
-                    self?.wristTypes.append(categoryType)
+                    let wrist = SCWrists(typeName: categoryType.type!)
+                    wrist.items = categoryType
+                    self?.wrists.append(wrist)
                 case "Gloves":
-                    self?.handTypes.append(categoryType)
+                    let hand = SCHands(typeName: categoryType.type!)
+                    hand.items = categoryType
+                    self?.hands.append(hand)
                 case "Belt", "Mighty Belt":
-                    self?.waistTypes.append(categoryType)
+                    let waist = SCWaists(typeName: categoryType.type!)
+                    waist.items = categoryType
+                    self?.waists.append(waist)
                 case "Pants":
-                    self?.legTypes.append(categoryType)
+                    let leg = SCLegs(typeName: categoryType.type!)
+                    leg.items = categoryType
+                    self?.legs.append(leg)
                 case "Boots":
-                    self?.feetTypes.append(categoryType)
-                case "Amulet", "Ring":
-                    self?.jewelryTypes.append(categoryType)
+                    let foot = SCFeet(typeName: categoryType.type!)
+                    foot.items = categoryType
+                    self?.feet.append(foot)
+                case "Amulet":
+                    let amulet = SCAmulets(typeName: categoryType.type!)
+                     amulet.items = categoryType
+                    self?.amulets.append(amulet)
+                case "Ring":
+                    let ring = SCRings(typeName: categoryType.type!)
+                     ring.items = categoryType
+                    self?.rings.append(ring)
                 case "Shield","Crusader Shield","Source", "Mojo", "Quiver", "Phylactery":
-                    self?.offHandTypes.append(categoryType)
+                    let offHand = SCOffHands(typeName: categoryType.type!)
+                    offHand.items = categoryType
+                    self?.offHands.append(offHand)
                 case "Enchantress Focus", "Scoundrel Token", "Templar Relic":
-                    self?.followerTypes.append(categoryType)
-                case "Consumable","Potion":
-                    self?.consumableTypes.append(categoryType)
-                case "Crafting Material", "Blacksmith Plan", "Jeweler Design", "Tome of Training":
-                    self?.craftingTypes.append(categoryType)
-                case "Dye":
-                    self?.dyeTypes.append(categoryType)
-                case "Gem":
-                    self?.gemTypes.append(categoryType)
-                case "Portal Device":
-                    self?.miscellaneousTypes.append(categoryType)
-                case "Gold":
-                    self?.goldTypes.append(categoryType)
-                case "Quest":
-                    self?.questTypes.append(categoryType)
-                case "Shard", "Greater Shard":
-                    self?.shardTypes.append(categoryType)
-                case "Scroll":
-                    self?.questTypes.append(categoryType)
-                case "Transmogrify Plan":
-                    self?.planTypes.append(categoryType)
+                    let special = SCFollowerSpecial(typeName: categoryType.type!)
+                    special.items = categoryType
+                    self?.followerSpecials.append(special)
+                case "Consumable","Potion","Crafting Material", "Blacksmith Plan", "Jeweler Design", "Tome of Training","Dye","Gem","Portal Device","Gold","Quest","Shard", "Greater Shard","Scroll","Transmogrify Plan":
+                   
+                    let other = SCOthers(typeName: categoryType.type!)
+                    other.items = categoryType
+                    self?.others.append(other)
                 default:
                     break
                 }
@@ -220,7 +150,7 @@ class SCEquipmentViewModel{
                             continue
                         }
                         group.enter()
-                        SCNetworkManager.shared.getItemImage(icon: icon, completion: { (image) in
+                        SCNetworkManager.shared.getItemImage(icon: icon,size: SCItemImageSize.small, completion: { (image) in
                             item.iconImage = image
                             group.leave()
                         })
@@ -248,7 +178,7 @@ class SCEquipmentViewModel{
                 completion(nil, isSuccess)
                 return
             }
-            SCNetworkManager.shared.getItemImage(icon: icon, completion: { (image) in
+            SCNetworkManager.shared.getItemImage(icon: icon,size: SCItemImageSize.large, completion: { (image) in
                 details.iconImage = image
                 completion(details, isSuccess)
             })

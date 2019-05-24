@@ -8,7 +8,10 @@
 
 import Foundation
 import Alamofire
-
+enum SCItemImageSize {
+    case small
+    case large
+}
 extension SCNetworkManager{
     func getAccessToken(code: String,completion:@escaping (_ isSuccess: Bool)->()){
         guard let region = UserDefaults.standard.object(forKey: "region") as? String else{
@@ -109,8 +112,9 @@ extension SCNetworkManager{
         }
     }
     
-    func getItemImage(icon: String, completion:@escaping (_ image: UIImage?)->()){
-        let urlString = "http://media.blizzard.com/d3/icons/items/large/\(icon).png"
+    func getItemImage(icon: String,size: SCItemImageSize, completion:@escaping (_ image: UIImage?)->()){
+        let iconSize = size == SCItemImageSize.large ? "large" : "small"
+        let urlString = "http://media.blizzard.com/d3/icons/items/\(iconSize)/\(icon).png"
         guard let url = URL(string: urlString) else{
             completion(nil)
             return

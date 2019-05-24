@@ -13,6 +13,7 @@ class SCEquipmentItemDetails: NSObject {
     @objc var id: String?
     @objc var slug: String?
     @objc var name: String?
+    @objc var typeName: String?
     @objc var icon: String?
     @objc var iconImage: UIImage?
     @objc var requiredLevel: Int = 0
