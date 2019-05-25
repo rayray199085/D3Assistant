@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D54543059A256636E145363122A54101"
-               BuildableName = "Atributika.framework"
-               BlueprintName = "Atributika"
+               BlueprintIdentifier = "8FFA99AB8A5EF8D85E18B2469CEE6FDC"
+               BuildableName = "LTInfiniteScrollViewSwift.framework"
+               BlueprintName = "LTInfiniteScrollViewSwift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D54543059A256636E145363122A54101"
-            BuildableName = "Atributika.framework"
-            BlueprintName = "Atributika"
+            BlueprintIdentifier = "8FFA99AB8A5EF8D85E18B2469CEE6FDC"
+            BuildableName = "LTInfiniteScrollViewSwift.framework"
+            BlueprintName = "LTInfiniteScrollViewSwift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

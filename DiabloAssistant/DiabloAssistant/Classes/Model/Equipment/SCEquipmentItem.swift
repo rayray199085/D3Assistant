@@ -14,6 +14,7 @@ class SCEquipmentItem: NSObject {
     @objc var name: String?
     @objc var icon: String?
     @objc var path: String?
+    @objc var details: SCEquipmentItemDetails?
     @objc var iconImage: UIImage?
     
     override var description: String{

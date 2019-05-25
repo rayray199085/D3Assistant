@@ -15,7 +15,7 @@ class SCEquipmentItemDetails: NSObject {
     @objc var name: String?
     @objc var typeName: String?
     @objc var icon: String?
-    @objc var iconImage: UIImage?
+//    @objc var iconImage: UIImage?
     @objc var requiredLevel: Int = 0
     @objc var flavorTextHtml: String?
     @objc var type: SCDetailsType?

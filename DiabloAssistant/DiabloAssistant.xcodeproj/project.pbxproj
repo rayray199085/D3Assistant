@@ -96,28 +96,17 @@
 		0DD22C79228E69FC00F37491 /* SCComposeTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD22C72228E69FB00F37491 /* SCComposeTypeButton.swift */; };
 		0DD22C7A228E69FC00F37491 /* SCComposeTypeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD22C73228E69FB00F37491 /* SCComposeTypeButton.xib */; };
 		0DD22C7B228E69FC00F37491 /* SCComposeTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD22C74228E69FB00F37491 /* SCComposeTypeView.xib */; };
-		0DDCA03A229798C80032596A /* SCWeapons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDCA039229798C80032596A /* SCWeapons.swift */; };
-		0DDCA03C22979B6D0032596A /* SCHeads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDCA03B22979B6D0032596A /* SCHeads.swift */; };
-		0DDCA03E22979C340032596A /* SCTorsos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDCA03D22979C340032596A /* SCTorsos.swift */; };
-		0DDCA04022979C990032596A /* SCShoulders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDCA03F22979C990032596A /* SCShoulders.swift */; };
-		0DDCA04222979D700032596A /* SCWrists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDCA04122979D700032596A /* SCWrists.swift */; };
-		0DDCA04422979E060032596A /* SCHands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDCA04322979E060032596A /* SCHands.swift */; };
-		0DDCA04622979E510032596A /* SCWaists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDCA04522979E510032596A /* SCWaists.swift */; };
-		0DDCA04822979EB70032596A /* SCLegs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDCA04722979EB70032596A /* SCLegs.swift */; };
-		0DDCA04A22979F170032596A /* SCFeet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDCA04922979F170032596A /* SCFeet.swift */; };
-		0DDCA04C22979F8A0032596A /* SCAmulets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDCA04B22979F8A0032596A /* SCAmulets.swift */; };
-		0DDCA04E22979FF40032596A /* SCRings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDCA04D22979FF40032596A /* SCRings.swift */; };
-		0DDCA0502297A0640032596A /* SCOffHands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDCA04F2297A0640032596A /* SCOffHands.swift */; };
-		0DDCA0522297A0DB0032596A /* SCFollowerSpecial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDCA0512297A0DB0032596A /* SCFollowerSpecial.swift */; };
-		0DDCA0542297A1620032596A /* SCOthers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDCA0532297A1620032596A /* SCOthers.swift */; };
-		0DDCA0572297B1880032596A /* SCEquipmentTypeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDCA0562297B1880032596A /* SCEquipmentTypeSelectionView.swift */; };
-		0DDCA0592297B19B0032596A /* SCEquipmentTypeSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DDCA0582297B19B0032596A /* SCEquipmentTypeSelectionView.xib */; };
-		0DED3FB12297DA21003C2887 /* SCItemCommonTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED3FB02297DA21003C2887 /* SCItemCommonTypes.swift */; };
 		0DED3FB42297DF9E003C2887 /* SCPickerViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DED3FB22297DF9E003C2887 /* SCPickerViewTableViewCell.xib */; };
 		0DED3FB52297DF9E003C2887 /* SCPickerViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED3FB32297DF9E003C2887 /* SCPickerViewTableViewCell.swift */; };
 		0DF25CAE229516690050043B /* SCEquipmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF25CAD229516690050043B /* SCEquipmentViewModel.swift */; };
 		0DF25CB222951C070050043B /* SCEquipmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF25CB122951C070050043B /* SCEquipmentType.swift */; };
 		0DF25CB4229520920050043B /* SCCategoryEquipmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF25CB3229520920050043B /* SCCategoryEquipmentType.swift */; };
+		0DFDEE012298AD9F00552C47 /* SCItemCommonTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFDEE002298AD9F00552C47 /* SCItemCommonTypes.swift */; };
+		0DFDEE0A2299169C00552C47 /* SCCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFDEE092299169C00552C47 /* SCCollectionViewFlowLayout.swift */; };
+		0DFDEE0C229917ED00552C47 /* SCItemSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFDEE0B229917ED00552C47 /* SCItemSelectionView.swift */; };
+		0DFDEE1022991BBF00552C47 /* SCCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFDEE0F22991BBF00552C47 /* SCCollectionViewCell.swift */; };
+		0DFDEE1222992DC300552C47 /* SCCollectionViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFDEE1122992DC300552C47 /* SCCollectionViewButton.swift */; };
+		0DFDEE1422992DE000552C47 /* SCCollectionViewButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DFDEE1322992DE000552C47 /* SCCollectionViewButton.xib */; };
 		AB98779B57BACC1F8FFBC77C /* Pods_DiabloAssistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C792F1AAEC9669FCE6C27E76 /* Pods_DiabloAssistant.framework */; };
 /* End PBXBuildFile section */
 
@@ -244,28 +233,17 @@
 		0DD22C72228E69FB00F37491 /* SCComposeTypeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCComposeTypeButton.swift; sourceTree = "<group>"; };
 		0DD22C73228E69FB00F37491 /* SCComposeTypeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCComposeTypeButton.xib; sourceTree = "<group>"; };
 		0DD22C74228E69FB00F37491 /* SCComposeTypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCComposeTypeView.xib; sourceTree = "<group>"; };
-		0DDCA039229798C80032596A /* SCWeapons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCWeapons.swift; sourceTree = "<group>"; };
-		0DDCA03B22979B6D0032596A /* SCHeads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCHeads.swift; sourceTree = "<group>"; };
-		0DDCA03D22979C340032596A /* SCTorsos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCTorsos.swift; sourceTree = "<group>"; };
-		0DDCA03F22979C990032596A /* SCShoulders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCShoulders.swift; sourceTree = "<group>"; };
-		0DDCA04122979D700032596A /* SCWrists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCWrists.swift; sourceTree = "<group>"; };
-		0DDCA04322979E060032596A /* SCHands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCHands.swift; sourceTree = "<group>"; };
-		0DDCA04522979E510032596A /* SCWaists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCWaists.swift; sourceTree = "<group>"; };
-		0DDCA04722979EB70032596A /* SCLegs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCLegs.swift; sourceTree = "<group>"; };
-		0DDCA04922979F170032596A /* SCFeet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCFeet.swift; sourceTree = "<group>"; };
-		0DDCA04B22979F8A0032596A /* SCAmulets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCAmulets.swift; sourceTree = "<group>"; };
-		0DDCA04D22979FF40032596A /* SCRings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCRings.swift; sourceTree = "<group>"; };
-		0DDCA04F2297A0640032596A /* SCOffHands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCOffHands.swift; sourceTree = "<group>"; };
-		0DDCA0512297A0DB0032596A /* SCFollowerSpecial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCFollowerSpecial.swift; sourceTree = "<group>"; };
-		0DDCA0532297A1620032596A /* SCOthers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCOthers.swift; sourceTree = "<group>"; };
-		0DDCA0562297B1880032596A /* SCEquipmentTypeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCEquipmentTypeSelectionView.swift; sourceTree = "<group>"; };
-		0DDCA0582297B19B0032596A /* SCEquipmentTypeSelectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCEquipmentTypeSelectionView.xib; sourceTree = "<group>"; };
-		0DED3FB02297DA21003C2887 /* SCItemCommonTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCItemCommonTypes.swift; sourceTree = "<group>"; };
 		0DED3FB22297DF9E003C2887 /* SCPickerViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCPickerViewTableViewCell.xib; sourceTree = "<group>"; };
 		0DED3FB32297DF9E003C2887 /* SCPickerViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPickerViewTableViewCell.swift; sourceTree = "<group>"; };
 		0DF25CAD229516690050043B /* SCEquipmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCEquipmentViewModel.swift; sourceTree = "<group>"; };
 		0DF25CB122951C070050043B /* SCEquipmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCEquipmentType.swift; sourceTree = "<group>"; };
 		0DF25CB3229520920050043B /* SCCategoryEquipmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCategoryEquipmentType.swift; sourceTree = "<group>"; };
+		0DFDEE002298AD9F00552C47 /* SCItemCommonTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCItemCommonTypes.swift; sourceTree = "<group>"; };
+		0DFDEE092299169C00552C47 /* SCCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		0DFDEE0B229917ED00552C47 /* SCItemSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCItemSelectionView.swift; sourceTree = "<group>"; };
+		0DFDEE0F22991BBF00552C47 /* SCCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCollectionViewCell.swift; sourceTree = "<group>"; };
+		0DFDEE1122992DC300552C47 /* SCCollectionViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCollectionViewButton.swift; sourceTree = "<group>"; };
+		0DFDEE1322992DE000552C47 /* SCCollectionViewButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCCollectionViewButton.xib; sourceTree = "<group>"; };
 		72F020C3052E04C7B10CCA82 /* Pods-DiabloAssistant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiabloAssistant.release.xcconfig"; path = "Target Support Files/Pods-DiabloAssistant/Pods-DiabloAssistant.release.xcconfig"; sourceTree = "<group>"; };
 		B36DBCB64FF9A45F4835F5A5 /* Pods-DiabloAssistant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiabloAssistant.debug.xcconfig"; path = "Target Support Files/Pods-DiabloAssistant/Pods-DiabloAssistant.debug.xcconfig"; sourceTree = "<group>"; };
 		C792F1AAEC9669FCE6C27E76 /* Pods_DiabloAssistant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiabloAssistant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -596,7 +574,7 @@
 		0D6B19432290EFAC00F564B7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				0DDCA038229798960032596A /* Model */,
+				0DFDEDFF2298AD9300552C47 /* Model */,
 				0D6B19472290EFFB00F564B7 /* SCCharacterViewModel.swift */,
 				0DF25CAD229516690050043B /* SCEquipmentViewModel.swift */,
 			);
@@ -675,35 +653,11 @@
 			path = ComposeType;
 			sourceTree = "<group>";
 		};
-		0DDCA038229798960032596A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				0DDCA039229798C80032596A /* SCWeapons.swift */,
-				0DDCA03B22979B6D0032596A /* SCHeads.swift */,
-				0DDCA03D22979C340032596A /* SCTorsos.swift */,
-				0DDCA03F22979C990032596A /* SCShoulders.swift */,
-				0DDCA04122979D700032596A /* SCWrists.swift */,
-				0DDCA04322979E060032596A /* SCHands.swift */,
-				0DDCA04522979E510032596A /* SCWaists.swift */,
-				0DDCA04722979EB70032596A /* SCLegs.swift */,
-				0DDCA04922979F170032596A /* SCFeet.swift */,
-				0DDCA04B22979F8A0032596A /* SCAmulets.swift */,
-				0DDCA04D22979FF40032596A /* SCRings.swift */,
-				0DDCA04F2297A0640032596A /* SCOffHands.swift */,
-				0DDCA0512297A0DB0032596A /* SCFollowerSpecial.swift */,
-				0DDCA0532297A1620032596A /* SCOthers.swift */,
-				0DED3FB02297DA21003C2887 /* SCItemCommonTypes.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		0DDCA0552297B1650032596A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0DED3FB32297DF9E003C2887 /* SCPickerViewTableViewCell.swift */,
-				0DED3FB22297DF9E003C2887 /* SCPickerViewTableViewCell.xib */,
-				0DDCA0562297B1880032596A /* SCEquipmentTypeSelectionView.swift */,
-				0DDCA0582297B19B0032596A /* SCEquipmentTypeSelectionView.xib */,
+				0DFDEE0E22991A8300552C47 /* SelectionView */,
+				0DFDEE0D22991A7500552C47 /* PickerView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -734,6 +688,35 @@
 				0D85384E22968AF6002FC6B1 /* SCDetailsType.swift */,
 			);
 			path = Equipment;
+			sourceTree = "<group>";
+		};
+		0DFDEDFF2298AD9300552C47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0DFDEE002298AD9F00552C47 /* SCItemCommonTypes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0DFDEE0D22991A7500552C47 /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				0DED3FB32297DF9E003C2887 /* SCPickerViewTableViewCell.swift */,
+				0DED3FB22297DF9E003C2887 /* SCPickerViewTableViewCell.xib */,
+			);
+			path = PickerView;
+			sourceTree = "<group>";
+		};
+		0DFDEE0E22991A8300552C47 /* SelectionView */ = {
+			isa = PBXGroup;
+			children = (
+				0DFDEE0B229917ED00552C47 /* SCItemSelectionView.swift */,
+				0DFDEE092299169C00552C47 /* SCCollectionViewFlowLayout.swift */,
+				0DFDEE0F22991BBF00552C47 /* SCCollectionViewCell.swift */,
+				0DFDEE1122992DC300552C47 /* SCCollectionViewButton.swift */,
+				0DFDEE1322992DE000552C47 /* SCCollectionViewButton.xib */,
+			);
+			path = SelectionView;
 			sourceTree = "<group>";
 		};
 		5AE1837790C6C92DCCAD91F0 /* Pods */ = {
@@ -872,9 +855,9 @@
 				0D516C4222921AED0006DBCB /* SCActiveSkillItemView.xib in Resources */,
 				0D1DD21E228D503800FFC9FD /* Assets.xcassets in Resources */,
 				0D6B19392290DEFE00F564B7 /* SCPassiveSkillView.xib in Resources */,
+				0DFDEE1422992DE000552C47 /* SCCollectionViewButton.xib in Resources */,
 				0D6B193E2290EA7800F564B7 /* ExocetBold.ttf in Resources */,
 				0DD22C7B228E69FC00F37491 /* SCComposeTypeView.xib in Resources */,
-				0DDCA0592297B19B0032596A /* SCEquipmentTypeSelectionView.xib in Resources */,
 				0DD22C7A228E69FC00F37491 /* SCComposeTypeButton.xib in Resources */,
 				0D6B195822912A1C00F564B7 /* SCActiveSkillsIntroView.xib in Resources */,
 				0DB441682293E23500A1F520 /* SCPassiveSkillItemView.xib in Resources */,
@@ -913,6 +896,7 @@
 				"${BUILT_PRODUCTS_DIR}/DLSlideView/DLSlideView.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/LTInfiniteScrollViewSwift/LTInfiniteScrollViewSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/TCPickerView/TCPickerView.framework",
@@ -929,6 +913,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLSlideView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTInfiniteScrollViewSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TCPickerView.framework",
@@ -969,26 +954,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DFDEE1022991BBF00552C47 /* SCCollectionViewCell.swift in Sources */,
 				0D1DD29B228D513200FFC9FD /* UILabel+extension.swift in Sources */,
 				0D1DD289228D513200FFC9FD /* UIButton+SCAddition.m in Sources */,
 				0D85384522966FD2002FC6B1 /* SCEquipmentItem.swift in Sources */,
 				0D6B19522290FA8F00F564B7 /* SCPassiveSkill.swift in Sources */,
 				0D6B195622912A0600F564B7 /* SCActiveSkillsIntroView.swift in Sources */,
+				0DFDEE012298AD9F00552C47 /* SCItemCommonTypes.swift in Sources */,
 				0D6B194E2290F98F00F564B7 /* SCSkill.swift in Sources */,
 				0D516C4022921ADA0006DBCB /* SCActiveSkillItemView.swift in Sources */,
 				0D1DD28C228D513200FFC9FD /* NSString+SCAddition.m in Sources */,
 				0D1DD29D228D513200FFC9FD /* UIImage+extension.swift in Sources */,
 				0D8538512296A01C002FC6B1 /* UITabBarController+extension.swift in Sources */,
-				0DDCA04622979E510032596A /* SCWaists.swift in Sources */,
 				0D1DD2AB228D513200FFC9FD /* SCOAuthViewController.swift in Sources */,
+				0DFDEE0A2299169C00552C47 /* SCCollectionViewFlowLayout.swift in Sources */,
 				0D2242CD2292C70C00F7B1DD /* SCRuneSelectionView.swift in Sources */,
 				0D1DD2AE228D513200FFC9FD /* SCBaseViewController.swift in Sources */,
 				0D1DD2AD228D513200FFC9FD /* SCMainViewController.swift in Sources */,
 				0D1DD2AF228D513200FFC9FD /* SCVisitorView.swift in Sources */,
-				0DDCA03C22979B6D0032596A /* SCHeads.swift in Sources */,
 				0D1DD29E228D513200FFC9FD /* UINavigationController+extension.swift in Sources */,
 				0D1DD29C228D513200FFC9FD /* UIView+extension.swift in Sources */,
-				0DDCA0522297A0DB0032596A /* SCFollowerSpecial.swift in Sources */,
 				0DF25CAE229516690050043B /* SCEquipmentViewModel.swift in Sources */,
 				0D6B19502290F9C700F564B7 /* SCActiveSkill.swift in Sources */,
 				0D1DD291228D513200FFC9FD /* SCNetworkManager.swift in Sources */,
@@ -1001,11 +986,11 @@
 				0D6B19352290C9BF00F564B7 /* SCActiveSkillView.swift in Sources */,
 				0D6B194C2290F94400F564B7 /* SCSkillCategory.swift in Sources */,
 				0D6B194A2290F8F200F564B7 /* SCCharacter.swift in Sources */,
+				0DFDEE1222992DC300552C47 /* SCCollectionViewButton.swift in Sources */,
 				0D1DD299228D513200FFC9FD /* UIWindow+extension.swift in Sources */,
 				0D1DD2A8228D513200FFC9FD /* SCRankingsViewController.swift in Sources */,
 				0D71CF42228F86A70029FF16 /* SCCharacterViewController.swift in Sources */,
 				0D1DD2A5228D513200FFC9FD /* UIBarButtonItem+extension.swift in Sources */,
-				0DED3FB12297DA21003C2887 /* SCItemCommonTypes.swift in Sources */,
 				0D85384D2296878C002FC6B1 /* SCDetailsRandomAffixes.swift in Sources */,
 				0D1DD28F228D513200FFC9FD /* UILabel+SCAddition.m in Sources */,
 				0D6B19482290EFFB00F564B7 /* SCCharacterViewModel.swift in Sources */,
@@ -1020,31 +1005,24 @@
 				0D1DD290228D513200FFC9FD /* UIColor+SCAddition.m in Sources */,
 				0D1DD2A7228D513200FFC9FD /* SCNewsViewController.swift in Sources */,
 				0DB441662293E21200A1F520 /* SCPassiveSkillItemView.swift in Sources */,
-				0DDCA0542297A1620032596A /* SCOthers.swift in Sources */,
 				0DD22C79228E69FC00F37491 /* SCComposeTypeButton.swift in Sources */,
 				0DB4416A2293E83500A1F520 /* SCPassiveSkillSelectionView.swift in Sources */,
 				0D1DD2AA228D513200FFC9FD /* SCSettingsViewController.swift in Sources */,
 				0D1DD28B228D513200FFC9FD /* UIImageView+SCAddition.m in Sources */,
-				0DDCA04222979D700032596A /* SCWrists.swift in Sources */,
 				0D6B195422911A5500F564B7 /* SCRunes.swift in Sources */,
 				0D1DD292228D513200FFC9FD /* SCUserAccount.swift in Sources */,
-				0DDCA03E22979C340032596A /* SCTorsos.swift in Sources */,
-				0DDCA0502297A0640032596A /* SCOffHands.swift in Sources */,
-				0DDCA04022979C990032596A /* SCShoulders.swift in Sources */,
 				0DD22C78228E69FC00F37491 /* SCComposeTypeView.swift in Sources */,
 				0D71CF4A228FB1B00029FF16 /* SCSkillsViewController.swift in Sources */,
-				0DDCA0572297B1880032596A /* SCEquipmentTypeSelectionView.swift in Sources */,
 				0D85384722967DBA002FC6B1 /* SCEquipmentItemDetails.swift in Sources */,
-				0DDCA04422979E060032596A /* SCHands.swift in Sources */,
 				0D1DD297228D513200FFC9FD /* UIImageView+extension.swift in Sources */,
 				0D1DD288228D513200FFC9FD /* FFLabel.swift in Sources */,
 				0D1DD2A6228D513200FFC9FD /* UITableView+extension.swift in Sources */,
+				0DFDEE0C229917ED00552C47 /* SCItemSelectionView.swift in Sources */,
 				0DF25CB4229520920050043B /* SCCategoryEquipmentType.swift in Sources */,
 				0D1DD293228D513200FFC9FD /* SCNetworkManager+extension.swift in Sources */,
 				0D8538492296866D002FC6B1 /* SCDetailsAttributes.swift in Sources */,
 				0D516C44229223E10006DBCB /* SCActiveSkillRuneView.swift in Sources */,
 				0D1DD29F228D513200FFC9FD /* Bundle+extension.swift in Sources */,
-				0DDCA04A22979F170032596A /* SCFeet.swift in Sources */,
 				0D1DD29A228D513200FFC9FD /* Date+extension.swift in Sources */,
 				0D1DD296228D513200FFC9FD /* UIApplication+extension.swift in Sources */,
 				0D71CF4F228FECF00029FF16 /* SCEquipmentViewController.swift in Sources */,
@@ -1052,13 +1030,9 @@
 				0D1DD28D228D513200FFC9FD /* UIScreen+UISCreen_extenshion.m in Sources */,
 				0DB441622293DD2600A1F520 /* SCPassiveSkillsIntroView.swift in Sources */,
 				0D1DD217228D503600FFC9FD /* AppDelegate.swift in Sources */,
-				0DDCA04E22979FF40032596A /* SCRings.swift in Sources */,
 				0D6B19372290DEEB00F564B7 /* SCPassiveSkillView.swift in Sources */,
-				0DDCA04C22979F8A0032596A /* SCAmulets.swift in Sources */,
-				0DDCA03A229798C80032596A /* SCWeapons.swift in Sources */,
 				0DF25CB222951C070050043B /* SCEquipmentType.swift in Sources */,
 				0D1DD2A4228D513200FFC9FD /* UIPageControl+extension.swift in Sources */,
-				0DDCA04822979EB70032596A /* SCLegs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,11 +9,26 @@
 import UIKit
 import SVProgressHUD
 import TCPickerView
-private let reuseIdentifier = "cell_id"
+
 class SCEquipmentViewController: UIViewController {
-    private let theme = TCPickerViewDarkTheme()
-    var characterName: String?
     
+    @IBOutlet weak var itemSelectionView: SCItemSelectionView!
+    @IBOutlet weak var selectionMaskView: UIView!
+    @IBOutlet weak var offHandButton: UIButton!
+    
+    private var selectedItems: [SCEquipmentItem]?{
+        didSet{
+            itemSelectionView.items = selectedItems
+            itemSelectionView.reloadCollectionViewData()
+        }
+    }
+    
+    private let theme = TCPickerViewDarkTheme()
+    private lazy var buttonIndexDict = [101: "heads",102: "shoulders",103: "amulets",
+                                   104: "torsos",105: "hands", 106: "wrists",
+                                   107: "waists",108: "rings",109: "rings",
+                                   110: "legs", 111: "weapons",112: "offHands",113: "feet"]
+    var characterName: String?
     var viewModel: SCEquipmentViewModel?{
         didSet{
             SVProgressHUD.show()
@@ -30,72 +45,19 @@ class SCEquipmentViewController: UIViewController {
     }
     
     @IBAction func clickEquipmentButton(_ sender: UIButton) {
-        var titles = [String]()
-        switch sender.tag{
-        case 101:
-            for head in viewModel?.heads ?? []{
-                titles.append(head.itemType)
-            }
-            showTypeSelectionView(title: "Heads", items: titles, itemTypes: viewModel?.heads)
-        case 102:
-            for shoulder in viewModel?.shoulders ?? []{
-                titles.append(shoulder.itemType)
-            }
-            showTypeSelectionView(title: "Shoulders", items: titles, itemTypes: viewModel?.shoulders)
-        case 103:
-            for amulet in viewModel?.amulets ?? []{
-                titles.append(amulet.itemType)
-            }
-            showTypeSelectionView(title: "Amulets", items: titles, itemTypes: viewModel?.amulets)
-        case 104:
-            for torso in viewModel?.torsos ?? []{
-                titles.append(torso.itemType)
-            }
-            showTypeSelectionView(title: "Torsos", items: titles, itemTypes: viewModel?.torsos)
-        case 105:
-            for hand in viewModel?.hands ?? []{
-                titles.append(hand.itemType)
-            }
-            showTypeSelectionView(title: "Hands", items: titles, itemTypes: viewModel?.hands)
-        case 106:
-            for wrist in viewModel?.wrists ?? []{
-                titles.append(wrist.itemType)
-            }
-            showTypeSelectionView(title: "Wrists", items: titles, itemTypes: viewModel?.wrists)
-        case 107:
-            for waist in viewModel?.waists ?? []{
-                titles.append(waist.itemType)
-            }
-            showTypeSelectionView(title: "Waists", items: titles, itemTypes: viewModel?.waists)
-        case 108, 109:
-            for ring in viewModel?.rings ?? []{
-                titles.append(ring.itemType)
-            }
-            showTypeSelectionView(title: "Rings", items: titles, itemTypes: viewModel?.rings)
-        case 110:
-            for leg in viewModel?.legs ?? []{
-                titles.append(leg.itemType)
-            }
-            showTypeSelectionView(title: "Legs", items: titles, itemTypes: viewModel?.legs)
-        case 111:
-            for weapon in viewModel?.weapons ?? []{
-                titles.append(weapon.itemType)
-            }
-            showTypeSelectionView(title: "Weapons", items: titles, itemTypes: viewModel?.weapons)
-        case 112:
-            for offHand in viewModel?.offHands ?? []{
-                titles.append(offHand.itemType)
-            }
-            showTypeSelectionView(title: "OffHands", items: titles, itemTypes: viewModel?.offHands)
-        case 113:
-            for foot in viewModel?.feet ?? []{
-                titles.append(foot.itemType)
-            }
-            showTypeSelectionView(title: "Feet", items: titles, itemTypes: viewModel?.feet)
-        default:
-            break
+        guard let propertyName = buttonIndexDict[sender.tag],
+              let itemTypes = viewModel?.value(forKey: propertyName) as? [SCItemCommonTypes] else{
+            return
         }
+        showTypeSelectionView(title: propertyName.capitalizingFirstLetter(), itemTypes: itemTypes)
     }
+    
+    @IBAction func switchOffHandStatus(_ sender: UISwitch){
+        buttonIndexDict[112] = sender.isOn ? "offHands" : "weapons"
+        let buttonTitle = sender.isOn ? "OFF-HAND" : "WEAPON"
+        offHandButton.setTitle(buttonTitle, for: [])
+    }
+    
 }
 private extension SCEquipmentViewController{
     func setupUI(){
@@ -103,13 +65,31 @@ private extension SCEquipmentViewController{
             return
         }
         equipmentImageView.image = UIImage(named: "\(characterName)_equip")
+        setupItemSelectionView()
+        hideItemSelectionView()
+    }
+    func setupItemSelectionView(){
+        itemSelectionView.delegate = self
+    }
+    func showItemSelectionView(){
+        selectionMaskView.isHidden = false
+        itemSelectionView.isHidden = false
+    }
+    func hideItemSelectionView(){
+        selectionMaskView.isHidden = true
+        itemSelectionView.isHidden = true
     }
 }
 private extension SCEquipmentViewController{
-    func showTypeSelectionView(title: String, items: [String], itemTypes: [SCItemCommonTypes]?){
+    func showTypeSelectionView(title: String, itemTypes: [SCItemCommonTypes]?){
+        var titles = [String]()
+
+        for item in itemTypes ?? []{
+            titles.append(item.itemType)
+        }
         var picker: TCPickerViewInput = TCPickerView()
         picker.title = title
-        let itemName = items
+        let itemName = titles
         let values = itemName.map { TCPickerView.Value(title: $0) }
         picker.values = values
         picker.delegate = self
@@ -117,16 +97,18 @@ private extension SCEquipmentViewController{
         picker.selection = .single
         picker.register(UINib(nibName: "SCPickerViewTableViewCell", bundle: nil), forCellReuseIdentifier: "ExampleTableViewCell")
         picker.completion = { (selectedIndexes) in
-            for _ in selectedIndexes {
-                print(itemTypes)
+            for index in selectedIndexes {
+                guard let itemType = itemTypes?[index] else {
+                    return
+                }
+                self.loadEquipmentItems(itemType: itemType)
             }
-        }
-        picker.closeAction = {
-            print("Handle close action here")
         }
         picker.show()
     }
 }
+
+// MARK: - TCPickerView delegate methods
 extension SCEquipmentViewController: TCPickerViewOutput,TCPickerViewThemeType {
     func pickerView(_ pickerView: TCPickerViewInput, didSelectRowAtIndex index: Int) {
         
@@ -143,5 +125,25 @@ extension SCEquipmentViewController: TCPickerViewOutput,TCPickerViewThemeType {
         cell.checkmarkImageView?.tintColor = self.theme.textColor
         cell.backgroundColor = self.theme.mainColor
         return cell
+    }
+}
+
+private extension SCEquipmentViewController{
+    func loadEquipmentItems(itemType: SCItemCommonTypes){
+        guard let categoryType = itemType.items else{
+            return
+        }
+        SVProgressHUD.show()
+        viewModel?.loadEquipmentType(typeIndexGroup: categoryType, completion: { [weak self](items, isSuccess) in
+            self?.selectedItems = items
+            self?.showItemSelectionView()
+            SVProgressHUD.dismiss()
+        })
+    }
+}
+
+extension SCEquipmentViewController: SCItemSelectionViewDelegate{
+    func didClickCloseButton(view: SCItemSelectionView) {
+        hideItemSelectionView()
     }
 }

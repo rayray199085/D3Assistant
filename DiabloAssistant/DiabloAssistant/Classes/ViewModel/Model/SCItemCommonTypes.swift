@@ -8,13 +8,13 @@
 
 import Foundation
 
-class SCItemCommonTypes: CustomStringConvertible{
-    var description: String{
-        return items?.description ?? ""
-    }
-    var itemType: String
-    var items: SCCategoryEquipmentType?
+class SCItemCommonTypes: NSObject{
+    @objc var itemType: String
+    @objc var items: SCCategoryEquipmentType?
     init(typeName: String){
         itemType = typeName
+    }
+    override var description: String{
+        return yy_modelDescription()
     }
 }
