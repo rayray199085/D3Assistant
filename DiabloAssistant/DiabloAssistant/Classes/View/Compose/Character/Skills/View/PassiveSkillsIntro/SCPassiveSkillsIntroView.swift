@@ -57,7 +57,7 @@ class SCPassiveSkillsIntroView: UIView {
         for (index,v) in passiveSkillView.subviews.enumerated(){
             if (v as! SCPassiveSkillItemView).isSelected(){
                 attrStringM.append(
-                    NSAttributedString.getDescriptionAttributedText(skillName: passiveSkills?[index].name, skillLevel: passiveSkills?[index].level ?? 1, htmlString: passiveSkills?[index].descriptionHtml))
+                    NSAttributedString.getSkillDescriptionAttributedText(skillName: passiveSkills?[index].name, skillLevel: passiveSkills?[index].level ?? 1, htmlString: passiveSkills?[index].descriptionHtml))
                 attrStringM.append(NSAttributedString(string: "\n\n"))
             }
         }

@@ -12,8 +12,7 @@ class SCCollectionViewCell: UICollectionViewCell {
     private lazy var itemButton = SCCollectionViewButton.viewButton()
     var item: SCEquipmentItem?{
         didSet{
-            itemButton.setIcon(image: item?.iconImage)
-            itemButton.setTypeBackgroundImage(name: item?.details?.color)
+            itemButton.item = item
         }
     }
     override init(frame: CGRect) {
@@ -26,6 +25,11 @@ class SCCollectionViewCell: UICollectionViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    func didSelected(){
+        itemButton.addPopAlphaAnimation(fromValue: 1.0, toValue: 0.3, duration: 0.2) { [weak self](_, _) in
+            self?.itemButton.addPopAlphaAnimation(fromValue: 0.3, toValue: 1.0, duration: 0.2)
+        }
     }
 }
 private extension SCCollectionViewCell{

@@ -120,7 +120,7 @@ extension SCActiveSkillsIntroView: SCActiveSkillSelectionViewDelegate{
         
         runeView.setupRuneView(runes: categorySkills?[index][activeSkillIndex].runes)
         
-        activeSkillDescription = NSAttributedString.getDescriptionAttributedText(
+        activeSkillDescription = NSAttributedString.getSkillDescriptionAttributedText(
             skillName: selectedSkill?.name,
             skillLevel: selectedSkill?.level ?? 1,
             htmlString: selectedSkill?.descriptionHtml)
@@ -135,7 +135,7 @@ extension SCActiveSkillsIntroView: SCRuneSelectionViewDelegate{
         }
         selectedRuneIndex = tag
         requiredLevel = max(requiredLevel, rune.level)
-        let runeDescription = NSAttributedString.getDescriptionAttributedText(
+        let runeDescription = NSAttributedString.getSkillDescriptionAttributedText(
             skillName: rune.name,
             skillLevel: rune.level,
             htmlString: rune.descriptionHtml)

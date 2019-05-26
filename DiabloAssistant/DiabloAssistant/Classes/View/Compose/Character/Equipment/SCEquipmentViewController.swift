@@ -12,10 +12,14 @@ import TCPickerView
 
 class SCEquipmentViewController: UIViewController {
     
+    @IBOutlet var equipmentButtons: [UIButton]!
+    
+    @IBOutlet weak var switchOffHandButton: UISwitch!
     @IBOutlet weak var itemSelectionView: SCItemSelectionView!
     @IBOutlet weak var selectionMaskView: UIView!
     @IBOutlet weak var offHandButton: UIButton!
     
+    private var pressedButtonTag: Int = 0
     private var selectedItems: [SCEquipmentItem]?{
         didSet{
             itemSelectionView.items = selectedItems
@@ -42,6 +46,9 @@ class SCEquipmentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        for btn in equipmentButtons{
+            btn.imageView?.contentMode = .scaleAspectFill
+        }
     }
     
     @IBAction func clickEquipmentButton(_ sender: UIButton) {
@@ -49,21 +56,30 @@ class SCEquipmentViewController: UIViewController {
               let itemTypes = viewModel?.value(forKey: propertyName) as? [SCItemCommonTypes] else{
             return
         }
+        pressedButtonTag = sender.tag
+        itemSelectionView.isWeaponType = propertyName == "weapons"
         showTypeSelectionView(title: propertyName.capitalizingFirstLetter(), itemTypes: itemTypes)
     }
     
     @IBAction func switchOffHandStatus(_ sender: UISwitch){
         buttonIndexDict[112] = sender.isOn ? "offHands" : "weapons"
-        let buttonTitle = sender.isOn ? "OFF-HAND" : "WEAPON"
+        let buttonTitle = sender.isOn ? "OFFHANDS" : "WEAPON"
         offHandButton.setTitle(buttonTitle, for: [])
     }
     
+    
+    @IBAction func clickResetButton(_ sender: Any) {
+        setupEquipmentButtons()
+        switchOffHandButton.setOn(true, animated: true)
+        switchOffHandStatus(switchOffHandButton)
+    }
 }
 private extension SCEquipmentViewController{
     func setupUI(){
         guard let characterName = characterName else {
             return
         }
+        setupEquipmentButtons()
         equipmentImageView.image = UIImage(named: "\(characterName)_equip")
         setupItemSelectionView()
         hideItemSelectionView()
@@ -78,6 +94,12 @@ private extension SCEquipmentViewController{
     func hideItemSelectionView(){
         selectionMaskView.isHidden = true
         itemSelectionView.isHidden = true
+    }
+    func setupEquipmentButtons(){
+        for btn in equipmentButtons{
+            btn.setTitle(buttonIndexDict[btn.tag], for: [])
+            btn.setImage(nil, for: [])
+        }
     }
 }
 private extension SCEquipmentViewController{
@@ -143,6 +165,16 @@ private extension SCEquipmentViewController{
 }
 
 extension SCEquipmentViewController: SCItemSelectionViewDelegate{
+    func didSelectItem(index: Int) {
+        for btn in equipmentButtons{
+            if btn.tag == pressedButtonTag{
+                btn.setImage(selectedItems?[index].iconImage?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), for: [])
+                btn.setTitle("", for: [])
+                break
+            }
+        }
+    }
+    
     func didClickCloseButton(view: SCItemSelectionView) {
         hideItemSelectionView()
     }

@@ -16,7 +16,7 @@ class SCEquipmentItemDetails: NSObject {
     @objc var typeName: String?
     @objc var icon: String?
 //    @objc var iconImage: UIImage?
-    @objc var requiredLevel: Int = 0
+    @objc var requiredLevel: Int = 1
     @objc var flavorTextHtml: String?
     @objc var type: SCDetailsType?
     @objc var dps: String?
@@ -27,6 +27,7 @@ class SCEquipmentItemDetails: NSObject {
     @objc var color: String?
     @objc var setNameHtml: String?
     @objc var setDescriptionHtml: String?
+    @objc var accountBound: Int = 0
     
     @objc class func modelContainerPropertyGenericClass()->[String:AnyClass]{
         return ["randomAffixes": SCDetailsRandomAffixes.self]

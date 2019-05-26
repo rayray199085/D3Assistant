@@ -86,6 +86,7 @@
 		0D85384D2296878C002FC6B1 /* SCDetailsRandomAffixes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85384C2296878C002FC6B1 /* SCDetailsRandomAffixes.swift */; };
 		0D85384F22968AF6002FC6B1 /* SCDetailsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85384E22968AF6002FC6B1 /* SCDetailsType.swift */; };
 		0D8538512296A01C002FC6B1 /* UITabBarController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8538502296A01C002FC6B1 /* UITabBarController+extension.swift */; };
+		0DB0705E229A093400B61E68 /* MXCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0705D229A093400B61E68 /* MXCornerRadius.m */; };
 		0DB4415F22937B2A00A1F520 /* characterSkills.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DB4415E22937B2A00A1F520 /* characterSkills.plist */; };
 		0DB441622293DD2600A1F520 /* SCPassiveSkillsIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB441612293DD2600A1F520 /* SCPassiveSkillsIntroView.swift */; };
 		0DB441642293DE3500A1F520 /* SCPassiveSkillsIntroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DB441632293DE3500A1F520 /* SCPassiveSkillsIntroView.xib */; };
@@ -223,6 +224,8 @@
 		0D85384C2296878C002FC6B1 /* SCDetailsRandomAffixes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCDetailsRandomAffixes.swift; sourceTree = "<group>"; };
 		0D85384E22968AF6002FC6B1 /* SCDetailsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCDetailsType.swift; sourceTree = "<group>"; };
 		0D8538502296A01C002FC6B1 /* UITabBarController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+extension.swift"; sourceTree = "<group>"; };
+		0DB0705C229A093400B61E68 /* MXCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXCornerRadius.h; sourceTree = "<group>"; };
+		0DB0705D229A093400B61E68 /* MXCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXCornerRadius.m; sourceTree = "<group>"; };
 		0DB4415E22937B2A00A1F520 /* characterSkills.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = characterSkills.plist; sourceTree = "<group>"; };
 		0DB441612293DD2600A1F520 /* SCPassiveSkillsIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCPassiveSkillsIntroView.swift; sourceTree = "<group>"; };
 		0DB441632293DE3500A1F520 /* SCPassiveSkillsIntroView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCPassiveSkillsIntroView.xib; sourceTree = "<group>"; };
@@ -343,6 +346,7 @@
 		0D1DD246228D513200FFC9FD /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				0DB0705B229A093400B61E68 /* MXCornerRadius */,
 				0D6B193A2290E9EA00F564B7 /* Font */,
 				0D1DD25C228D513200FFC9FD /* Network */,
 				0D1DD247228D513200FFC9FD /* FFLabel */,
@@ -423,9 +427,9 @@
 		0D1DD264228D513200FFC9FD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0D1DD267228D513200FFC9FD /* NSAttributedString+extension.swift */,
 				0D1DD265228D513200FFC9FD /* UIApplication+extension.swift */,
 				0D1DD266228D513200FFC9FD /* UIImageView+extension.swift */,
-				0D1DD267228D513200FFC9FD /* NSAttributedString+extension.swift */,
 				0D1DD268228D513200FFC9FD /* UIWindow+extension.swift */,
 				0D1DD269228D513200FFC9FD /* Date+extension.swift */,
 				0D1DD26A228D513200FFC9FD /* UILabel+extension.swift */,
@@ -619,6 +623,15 @@
 				0D71CF50228FECFE0029FF16 /* SCEquipmentViewController.xib */,
 			);
 			path = Equipment;
+			sourceTree = "<group>";
+		};
+		0DB0705B229A093400B61E68 /* MXCornerRadius */ = {
+			isa = PBXGroup;
+			children = (
+				0DB0705C229A093400B61E68 /* MXCornerRadius.h */,
+				0DB0705D229A093400B61E68 /* MXCornerRadius.m */,
+			);
+			path = MXCornerRadius;
 			sourceTree = "<group>";
 		};
 		0DB441602293DCED00A1F520 /* PassiveSkillsIntro */ = {
@@ -1003,6 +1016,7 @@
 				0D1DD2A0228D513200FFC9FD /* UIViewController+extension.swift in Sources */,
 				0D1DD28E228D513200FFC9FD /* CABasicAnimation+SCAddition.m in Sources */,
 				0D1DD290228D513200FFC9FD /* UIColor+SCAddition.m in Sources */,
+				0DB0705E229A093400B61E68 /* MXCornerRadius.m in Sources */,
 				0D1DD2A7228D513200FFC9FD /* SCNewsViewController.swift in Sources */,
 				0DB441662293E21200A1F520 /* SCPassiveSkillItemView.swift in Sources */,
 				0DD22C79228E69FC00F37491 /* SCComposeTypeButton.swift in Sources */,

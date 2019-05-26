@@ -18,7 +18,7 @@ class SCComposeTypeButton: UIControl {
         let nib = UINib(nibName: "SCComposeTypeButton", bundle: nil)
         let btn = nib.instantiate(withOwner: nil, options: nil)[0] as! SCComposeTypeButton
         btn.buttonImageView.image = UIImage(named: imageName)
-        btn.buttonImageView.setCircleImage()
+        btn.buttonImageView.mxCornerRadius = btn.buttonImageView.bounds.width * 0.5
         btn.buttonLabel.text = labelText
         btn.buttonLabel.textColor = SCButtonTitleColor
         return btn
