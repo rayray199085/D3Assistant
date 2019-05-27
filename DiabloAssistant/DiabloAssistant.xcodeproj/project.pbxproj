@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D18AD77229B51F800B3CF4E /* SCEquipmentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D18AD76229B51F800B3CF4E /* SCEquipmentButton.swift */; };
+		0D18AD93229BB95C00B3CF4E /* SCFollowerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D18AD92229BB95C00B3CF4E /* SCFollowerContentView.swift */; };
+		0D18AD95229BB96900B3CF4E /* SCFollowerContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D18AD94229BB96900B3CF4E /* SCFollowerContentView.xib */; };
 		0D1DD217228D503600FFC9FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD216228D503600FFC9FD /* AppDelegate.swift */; };
 		0D1DD21E228D503800FFC9FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D1DD21D228D503800FFC9FD /* Assets.xcassets */; };
 		0D1DD22C228D503800FFC9FD /* DiabloAssistantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD22B228D503800FFC9FD /* DiabloAssistantTests.swift */; };
@@ -44,7 +47,7 @@
 		0D1DD2A6228D513200FFC9FD /* UITableView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD275228D513200FFC9FD /* UITableView+extension.swift */; };
 		0D1DD2A7228D513200FFC9FD /* SCNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD279228D513200FFC9FD /* SCNewsViewController.swift */; };
 		0D1DD2A8228D513200FFC9FD /* SCRankingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD27B228D513200FFC9FD /* SCRankingsViewController.swift */; };
-		0D1DD2A9228D513200FFC9FD /* SCItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD27D228D513200FFC9FD /* SCItemsViewController.swift */; };
+		0D1DD2A9228D513200FFC9FD /* SCFollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD27D228D513200FFC9FD /* SCFollowerViewController.swift */; };
 		0D1DD2AA228D513200FFC9FD /* SCSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD27F228D513200FFC9FD /* SCSettingsViewController.swift */; };
 		0D1DD2AB228D513200FFC9FD /* SCOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD282228D513200FFC9FD /* SCOAuthViewController.swift */; };
 		0D1DD2AC228D513200FFC9FD /* SCNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD283228D513200FFC9FD /* SCNavigationViewController.swift */; };
@@ -129,6 +132,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D18AD76229B51F800B3CF4E /* SCEquipmentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCEquipmentButton.swift; sourceTree = "<group>"; };
+		0D18AD92229BB95C00B3CF4E /* SCFollowerContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCFollowerContentView.swift; sourceTree = "<group>"; };
+		0D18AD94229BB96900B3CF4E /* SCFollowerContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCFollowerContentView.xib; sourceTree = "<group>"; };
 		0D1DD213228D503600FFC9FD /* DiabloAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiabloAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D1DD216228D503600FFC9FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D1DD21D228D503800FFC9FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -181,7 +187,7 @@
 		0D1DD275228D513200FFC9FD /* UITableView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+extension.swift"; sourceTree = "<group>"; };
 		0D1DD279228D513200FFC9FD /* SCNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNewsViewController.swift; sourceTree = "<group>"; };
 		0D1DD27B228D513200FFC9FD /* SCRankingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCRankingsViewController.swift; sourceTree = "<group>"; };
-		0D1DD27D228D513200FFC9FD /* SCItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCItemsViewController.swift; sourceTree = "<group>"; };
+		0D1DD27D228D513200FFC9FD /* SCFollowerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCFollowerViewController.swift; sourceTree = "<group>"; };
 		0D1DD27F228D513200FFC9FD /* SCSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCSettingsViewController.swift; sourceTree = "<group>"; };
 		0D1DD282228D513200FFC9FD /* SCOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCOAuthViewController.swift; sourceTree = "<group>"; };
 		0D1DD283228D513200FFC9FD /* SCNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNavigationViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +284,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D18AD75229B51B700B3CF4E /* EquipmentButtons */ = {
+			isa = PBXGroup;
+			children = (
+				0D18AD76229B51F800B3CF4E /* SCEquipmentButton.swift */,
+			);
+			path = EquipmentButtons;
+			sourceTree = "<group>";
+		};
+		0D18AD87229BA22F00B3CF4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D18AD92229BB95C00B3CF4E /* SCFollowerContentView.swift */,
+				0D18AD94229BB96900B3CF4E /* SCFollowerContentView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0D1DD20A228D503600FFC9FD = {
 			isa = PBXGroup;
 			children = (
@@ -456,7 +479,7 @@
 				0D1DD280228D513200FFC9FD /* Base */,
 				0D1DD278228D513200FFC9FD /* News */,
 				0D1DD27A228D513200FFC9FD /* Ranks */,
-				0D1DD27C228D513200FFC9FD /* Items */,
+				0D1DD27C228D513200FFC9FD /* Followers */,
 				0D1DD27E228D513200FFC9FD /* Settings */,
 			);
 			path = View;
@@ -478,12 +501,13 @@
 			path = Ranks;
 			sourceTree = "<group>";
 		};
-		0D1DD27C228D513200FFC9FD /* Items */ = {
+		0D1DD27C228D513200FFC9FD /* Followers */ = {
 			isa = PBXGroup;
 			children = (
-				0D1DD27D228D513200FFC9FD /* SCItemsViewController.swift */,
+				0D18AD87229BA22F00B3CF4E /* View */,
+				0D1DD27D228D513200FFC9FD /* SCFollowerViewController.swift */,
 			);
-			path = Items;
+			path = Followers;
 			sourceTree = "<group>";
 		};
 		0D1DD27E228D513200FFC9FD /* Settings */ = {
@@ -669,6 +693,7 @@
 		0DDCA0552297B1650032596A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0D18AD75229B51B700B3CF4E /* EquipmentButtons */,
 				0DFDEE0E22991A8300552C47 /* SelectionView */,
 				0DFDEE0D22991A7500552C47 /* PickerView */,
 			);
@@ -867,6 +892,7 @@
 				0D71CF51228FECFE0029FF16 /* SCEquipmentViewController.xib in Resources */,
 				0D516C4222921AED0006DBCB /* SCActiveSkillItemView.xib in Resources */,
 				0D1DD21E228D503800FFC9FD /* Assets.xcassets in Resources */,
+				0D18AD95229BB96900B3CF4E /* SCFollowerContentView.xib in Resources */,
 				0D6B19392290DEFE00F564B7 /* SCPassiveSkillView.xib in Resources */,
 				0DFDEE1422992DE000552C47 /* SCCollectionViewButton.xib in Resources */,
 				0D6B193E2290EA7800F564B7 /* ExocetBold.ttf in Resources */,
@@ -908,8 +934,10 @@
 				"${BUILT_PRODUCTS_DIR}/Atributika/Atributika.framework",
 				"${BUILT_PRODUCTS_DIR}/DLSlideView/DLSlideView.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/ExpandingMenu/ExpandingMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
-				"${BUILT_PRODUCTS_DIR}/LTInfiniteScrollViewSwift/LTInfiniteScrollViewSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/TCPickerView/TCPickerView.framework",
@@ -925,8 +953,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Atributika.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLSlideView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ExpandingMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTInfiniteScrollViewSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TCPickerView.framework",
@@ -967,6 +997,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D18AD77229B51F800B3CF4E /* SCEquipmentButton.swift in Sources */,
 				0DFDEE1022991BBF00552C47 /* SCCollectionViewCell.swift in Sources */,
 				0D1DD29B228D513200FFC9FD /* UILabel+extension.swift in Sources */,
 				0D1DD289228D513200FFC9FD /* UIButton+SCAddition.m in Sources */,
@@ -992,7 +1023,7 @@
 				0D1DD291228D513200FFC9FD /* SCNetworkManager.swift in Sources */,
 				0D1DD294228D513200FFC9FD /* SCSQLiteManager.swift in Sources */,
 				0D85384F22968AF6002FC6B1 /* SCDetailsType.swift in Sources */,
-				0D1DD2A9228D513200FFC9FD /* SCItemsViewController.swift in Sources */,
+				0D1DD2A9228D513200FFC9FD /* SCFollowerViewController.swift in Sources */,
 				0DED3FB52297DF9E003C2887 /* SCPickerViewTableViewCell.swift in Sources */,
 				0D1DD28A228D513200FFC9FD /* NSObject+SCAddition.m in Sources */,
 				0D2242CB2292C10E00F7B1DD /* SCActiveSkillSelectionView.swift in Sources */,
@@ -1012,6 +1043,7 @@
 				0D1DD2A2228D513200FFC9FD /* UITableViewCell+extension.swift in Sources */,
 				0D1DD298228D513200FFC9FD /* NSAttributedString+extension.swift in Sources */,
 				0D1DD2A1228D513200FFC9FD /* String+extension.swift in Sources */,
+				0D18AD93229BB95C00B3CF4E /* SCFollowerContentView.swift in Sources */,
 				0D1DD2B2228D51D400FFC9FD /* AssistantCommon.swift in Sources */,
 				0D1DD2A0228D513200FFC9FD /* UIViewController+extension.swift in Sources */,
 				0D1DD28E228D513200FFC9FD /* CABasicAnimation+SCAddition.m in Sources */,

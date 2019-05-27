@@ -62,7 +62,7 @@ private extension SCMainViewController{
         ["title": "News","clsName":"SCNewsViewController","imageName":"news"],
         ["title": "Rankings","clsName":"SCRankingsViewController","imageName":"rank"],
         ["clsName":"UIViewController"],
-        ["title": "Items","clsName":"SCItemsViewController","imageName":"items"],
+        ["title": "Followers","clsName":"SCFollowerViewController","imageName":"followers"],
         ["title": "Settings","clsName":"SCSettingsViewController","imageName":"settings"]]
         var childControllers = [UIViewController]()
         for dict in array{

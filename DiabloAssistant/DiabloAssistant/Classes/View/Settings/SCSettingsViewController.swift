@@ -13,4 +13,16 @@ class SCSettingsViewController: SCBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    override func loadData() {
+        
+    }
+    override func setupUserView() {
+        super.setupUserView()
+        setupUI()
+    }
+}
+private extension SCSettingsViewController{
+    func setupUI(){
+        
+    }
 }

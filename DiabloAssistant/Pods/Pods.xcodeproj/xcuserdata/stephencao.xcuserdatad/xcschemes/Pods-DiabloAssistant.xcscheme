@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1020"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "051030C17DE13393230A4D4EB931CA7B"
+               BlueprintIdentifier = "1D0C9E7793281E161FA4B1E3BE7676B2"
                BuildableName = "Pods_DiabloAssistant.framework"
                BlueprintName = "Pods-DiabloAssistant"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "051030C17DE13393230A4D4EB931CA7B"
+            BlueprintIdentifier = "1D0C9E7793281E161FA4B1E3BE7676B2"
             BuildableName = "Pods_DiabloAssistant.framework"
             BlueprintName = "Pods-DiabloAssistant"
             ReferencedContainer = "container:Pods.xcodeproj">

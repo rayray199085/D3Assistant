@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SVProgressHUD
 enum SCItemImageSize {
     case small
     case large
@@ -32,7 +33,10 @@ extension SCNetworkManager{
             }
             self.userAccount.yy_modelSet(with: tokenDict)
             self.userAccount.saveUserInfo()
-            completion(isSuccess)
+            SVProgressHUD.showInfo(withStatus: "Login Success!")
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
+                completion(isSuccess)
+            })
         }
     }
 }

@@ -17,4 +17,6 @@ pod "YYModel"
 pod 'DLSlideView', :git => 'https://github.com/agdsdl/DLSlideView.git'
 pod "Atributika"
 pod 'TCPickerView'
+pod 'ExpandingMenu', '~> 0.4'
+pod 'MLeaksFinder'
 end

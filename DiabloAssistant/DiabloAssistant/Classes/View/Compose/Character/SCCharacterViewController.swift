@@ -93,5 +93,4 @@ extension SCCharacterViewController: DLTabedSlideViewDelegate{
             equipmentViewModel = SCEquipmentViewModel(characterName: characterEquipmentName)
         }
     }
-
 }

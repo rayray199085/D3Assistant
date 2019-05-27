@@ -12,7 +12,9 @@ import TCPickerView
 
 class SCEquipmentViewController: UIViewController {
     
-    @IBOutlet var equipmentButtons: [UIButton]!
+    @IBOutlet weak var armorLabel: UILabel!
+    @IBOutlet weak var dpsLabel: UILabel!
+    @IBOutlet var equipmentButtons: [SCEquipmentButton]!
     
     @IBOutlet weak var switchOffHandButton: UISwitch!
     @IBOutlet weak var itemSelectionView: SCItemSelectionView!
@@ -48,10 +50,11 @@ class SCEquipmentViewController: UIViewController {
         setupUI()
         for btn in equipmentButtons{
             btn.imageView?.contentMode = .scaleAspectFill
+            btn.imageView?.clipsToBounds = false
         }
     }
     
-    @IBAction func clickEquipmentButton(_ sender: UIButton) {
+    @IBAction func clickEquipmentButton(_ sender: SCEquipmentButton) {
         guard let propertyName = buttonIndexDict[sender.tag],
               let itemTypes = viewModel?.value(forKey: propertyName) as? [SCItemCommonTypes] else{
             return
@@ -63,7 +66,7 @@ class SCEquipmentViewController: UIViewController {
     
     @IBAction func switchOffHandStatus(_ sender: UISwitch){
         buttonIndexDict[112] = sender.isOn ? "offHands" : "weapons"
-        let buttonTitle = sender.isOn ? "OFFHANDS" : "WEAPON"
+        let buttonTitle = sender.isOn ? "OFFHANDS" : "WEAPONS"
         offHandButton.setTitle(buttonTitle, for: [])
     }
     
@@ -72,6 +75,8 @@ class SCEquipmentViewController: UIViewController {
         setupEquipmentButtons()
         switchOffHandButton.setOn(true, animated: true)
         switchOffHandStatus(switchOffHandButton)
+        dpsLabel.text = "DPS: 0.0"
+        armorLabel.text = "ARMOR: 0.0"
     }
 }
 private extension SCEquipmentViewController{
@@ -98,7 +103,7 @@ private extension SCEquipmentViewController{
     func setupEquipmentButtons(){
         for btn in equipmentButtons{
             btn.setTitle(buttonIndexDict[btn.tag], for: [])
-            btn.setImage(nil, for: [])
+            btn.resetButtonContent()
         }
     }
 }
@@ -168,8 +173,8 @@ extension SCEquipmentViewController: SCItemSelectionViewDelegate{
     func didSelectItem(index: Int) {
         for btn in equipmentButtons{
             if btn.tag == pressedButtonTag{
-                btn.setImage(selectedItems?[index].iconImage?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), for: [])
-                btn.setTitle("", for: [])
+                btn.setButtonContent(item: selectedItems?[index])
+                calculateDpsAndArmorValues()
                 break
             }
         }
@@ -177,5 +182,20 @@ extension SCEquipmentViewController: SCItemSelectionViewDelegate{
     
     func didClickCloseButton(view: SCItemSelectionView) {
         hideItemSelectionView()
+    }
+}
+
+private extension SCEquipmentViewController{
+    func calculateDpsAndArmorValues(){
+        var dpsTotal: Double = 0
+        var minArmorTotal: Double = 0
+        var maxArmorTotal: Double = 0
+        for btn in equipmentButtons{
+            dpsTotal += btn.dps
+            minArmorTotal += btn.minArmor
+            maxArmorTotal += btn.maxArmor
+        }
+        dpsLabel.text = "DPS: \(dpsTotal)"
+        armorLabel.text = "ARMOR: \(minArmorTotal) - \(maxArmorTotal)"
     }
 }
