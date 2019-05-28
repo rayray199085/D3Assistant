@@ -59,8 +59,8 @@ private extension SCMainViewController{
     /// setup child controllers by initializing an array of dictionary
     func setupChildControllers(){
         let array = [
+        ["title": "Profile","clsName":"SCProfileViewController","imageName":"profile"],
         ["title": "News","clsName":"SCNewsViewController","imageName":"news"],
-        ["title": "Rankings","clsName":"SCRankingsViewController","imageName":"rank"],
         ["clsName":"UIViewController"],
         ["title": "Followers","clsName":"SCFollowerViewController","imageName":"followers"],
         ["title": "Settings","clsName":"SCSettingsViewController","imageName":"settings"]]

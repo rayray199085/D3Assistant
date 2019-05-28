@@ -142,3 +142,15 @@ extension SCNetworkManager{
         }
     }
 }
+
+
+// MARK: - load follower info
+extension SCNetworkManager{
+    func getFollowerSkills(followerName: String,completion:@escaping (_ dict: [String: Any]?, _ isSuccess: Bool)->()){
+        let urlString = "https://us.api.blizzard.com/d3/data/follower/\(followerName)"
+        requestWithToken(urlString: urlString, method: HTTPMethod.get, params: nil) { (res, isSuccess) in
+            let dict = res as? [String: Any]
+            completion(dict, isSuccess)
+        }
+    }
+}

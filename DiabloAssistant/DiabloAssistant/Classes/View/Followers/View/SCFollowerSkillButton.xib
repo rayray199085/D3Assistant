@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="7kW-IY-gua" customClass="SCFollowerSkillButton" customModule="DiabloAssistant" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="42" height="41"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zav-8Q-DeS" userLabel="skill icon">
+                    <rect key="frame" x="0.0" y="0.0" width="42" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="ECo-yT-tDh"/>
+                        <constraint firstAttribute="width" constant="42" id="Sq9-9d-gpv"/>
+                    </constraints>
+                    <connections>
+                        <action selector="clickSkilIconButton:" destination="7kW-IY-gua" eventType="touchUpInside" id="ifW-JY-rvB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFk-vH-4K4" userLabel="skill mask">
+                    <rect key="frame" x="0.0" y="0.0" width="42" height="41"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="9fX-KF-foN"/>
+                        <constraint firstAttribute="width" constant="42" id="nQs-hN-Qob"/>
+                    </constraints>
+                    <connections>
+                        <action selector="clickSkillMaskButton:" destination="7kW-IY-gua" eventType="touchUpInside" id="egv-iN-Ngd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8p-2Q-TYz" userLabel="skill frame">
+                    <rect key="frame" x="0.0" y="0.0" width="42" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="dcf-Eb-2rA"/>
+                        <constraint firstAttribute="width" constant="42" id="tOF-Hh-w3G"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="skill_selected_frame"/>
+                    <connections>
+                        <action selector="clickSkillFrameButton:" destination="7kW-IY-gua" eventType="touchUpInside" id="u9Y-MN-IQI"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="c8p-2Q-TYz" firstAttribute="centerX" secondItem="7kW-IY-gua" secondAttribute="centerX" id="CIs-Qg-GKz"/>
+                <constraint firstItem="HFk-vH-4K4" firstAttribute="centerX" secondItem="7kW-IY-gua" secondAttribute="centerX" id="a6A-gz-O16"/>
+                <constraint firstItem="c8p-2Q-TYz" firstAttribute="centerY" secondItem="7kW-IY-gua" secondAttribute="centerY" id="bkP-cv-Qqy"/>
+                <constraint firstItem="zav-8Q-DeS" firstAttribute="centerX" secondItem="7kW-IY-gua" secondAttribute="centerX" id="nTR-S2-iQb"/>
+                <constraint firstItem="HFk-vH-4K4" firstAttribute="centerY" secondItem="7kW-IY-gua" secondAttribute="centerY" id="rAT-Sy-TRj"/>
+                <constraint firstItem="zav-8Q-DeS" firstAttribute="centerY" secondItem="7kW-IY-gua" secondAttribute="centerY" id="rjG-C9-rdr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="2xc-xq-vlj"/>
+            <connections>
+                <outlet property="skillFrameButton" destination="c8p-2Q-TYz" id="pcM-qV-aMb"/>
+                <outlet property="skillIconButton" destination="zav-8Q-DeS" id="GAe-bs-PNU"/>
+                <outlet property="skillMaskButton" destination="HFk-vH-4K4" id="A8z-5h-sxF"/>
+            </connections>
+            <point key="canvasLocation" x="252" y="224"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="skill_selected_frame" width="21" height="21"/>
+    </resources>
+</document>
