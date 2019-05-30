@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import SVProgressHUD
 
-private let reuseIdentifier = "cell_id"
 class SCProfileViewController: SCBaseViewController {
-    private var tableView: UITableView?
-    private lazy var profiles = [SCProfileInfo]()
-
+    private lazy var profileView = SCProfileRecordView.recordView()
+    private lazy var profileInputView = SCProfileInputView.inputView()
+    private lazy var viewModel = SCProfileViewModel()
+    
+    private var profileData: SCProfileData? {
+        didSet{
+            profileView.profileData = profileData
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -24,26 +31,37 @@ class SCProfileViewController: SCBaseViewController {
         setupUI()
     }
     @objc private func addNewProfile(){
-        print("add")
+        profileInputView.isHidden = false
+        profileInputView.setFirstResponder()
     }
 }
 private extension SCProfileViewController{
     func setupUI(){
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(addNewProfile))
         navigationController?.navigationBar.tintColor = SCButtonTitleColor
-        tableView = UITableView(frame: view.bounds)
-        tableView?.delegate = self
-        tableView?.dataSource = self
-        tableView?.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
+        view.addSubview(profileView)
+        view.addSubview(profileInputView)
+        profileInputView.isHidden = true
+        profileInputView.delegate = self
     }
 }
-extension SCProfileViewController: UITableViewDelegate, UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return profiles.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-        return cell
+extension SCProfileViewController: SCProfileInputViewDelegate{
+    func getRegionAndBattleTag(view: SCProfileInputView, region: String?, battleTag: String?) {
+        guard let region = region,
+            let battleTag = battleTag else{
+                return
+        }
+        SVProgressHUD.show()
+        viewModel.loadPlayerProfile(region: region, battleTag: battleTag) { [weak self](profileData, isSuccess) in
+            if !isSuccess || profileData == nil{
+                SVProgressHUD.showInfo(withStatus: "Incorrect input")
+                return
+            }
+            SVProgressHUD.showInfo(withStatus: "Success")
+            self?.profileData = profileData
+//            print(profileData)
+        }
     }
 }
+
+

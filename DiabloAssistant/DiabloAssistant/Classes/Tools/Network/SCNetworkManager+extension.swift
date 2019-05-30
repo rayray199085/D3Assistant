@@ -154,3 +154,17 @@ extension SCNetworkManager{
         }
     }
 }
+
+// MARK: - load player profile
+extension SCNetworkManager{
+    func getPlayerProfile(region: String, battleTag: String, completion:@escaping (_ dict: [String: Any]?, _ isSuccess: Bool)->()){
+        var battleTag = battleTag
+        battleTag = (battleTag as NSString).replacingOccurrences(of: " ", with: "")
+        battleTag = (battleTag as NSString).replacingOccurrences(of: "#", with: "-")
+        let urlString = "https://\(region.lowercased()).api.blizzard.com/d3/profile/\(battleTag)/"
+        requestWithToken(urlString: urlString, method: HTTPMethod.get, params: nil) { (res, isSuccess) in
+            let dict = res as? [String:Any]
+            completion(dict, isSuccess)
+        }
+    }
+}

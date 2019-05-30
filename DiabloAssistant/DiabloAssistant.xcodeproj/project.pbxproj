@@ -57,6 +57,8 @@
 		0D1DD2B2228D51D400FFC9FD /* AssistantCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1DD2B1228D51D400FFC9FD /* AssistantCommon.swift */; };
 		0D2242CB2292C10E00F7B1DD /* SCActiveSkillSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2242CA2292C10E00F7B1DD /* SCActiveSkillSelectionView.swift */; };
 		0D2242CD2292C70C00F7B1DD /* SCRuneSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2242CC2292C70C00F7B1DD /* SCRuneSelectionView.swift */; };
+		0D337BAA229D43E900DE8704 /* SCProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D337BA9229D43E900DE8704 /* SCProfileButton.swift */; };
+		0D337BAC229D440100DE8704 /* SCProfileButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D337BAB229D440100DE8704 /* SCProfileButton.xib */; };
 		0D516C4022921ADA0006DBCB /* SCActiveSkillItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D516C3F22921ADA0006DBCB /* SCActiveSkillItemView.swift */; };
 		0D516C4222921AED0006DBCB /* SCActiveSkillItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D516C4122921AED0006DBCB /* SCActiveSkillItemView.xib */; };
 		0D516C44229223E10006DBCB /* SCActiveSkillRuneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D516C43229223E10006DBCB /* SCActiveSkillRuneView.swift */; };
@@ -102,9 +104,14 @@
 		0DB6A5DA229CEC8800694A2E /* SCFollowerSkill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6A5D9229CEC8800694A2E /* SCFollowerSkill.swift */; };
 		0DB6A5DC229CED4C00694A2E /* SCFollowerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6A5DB229CED4C00694A2E /* SCFollowerInfo.swift */; };
 		0DB6A5DE229D0D2000694A2E /* SCProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6A5DD229D0D2000694A2E /* SCProfileInfo.swift */; };
-		0DB6A5E2229D13B500694A2E /* SCProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6A5E1229D13B500694A2E /* SCProfileTableViewCell.swift */; };
-		0DB6A5E4229D142000694A2E /* SCProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DB6A5E3229D142000694A2E /* SCProfileTableViewCell.xib */; };
-		0DB6A5E8229D2C8200694A2E /* SCWebViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB6A5E7229D2C8200694A2E /* SCWebViewManager.swift */; };
+		0DC25074229F51BC00BDEA44 /* SCProfileRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC25073229F51BC00BDEA44 /* SCProfileRecordView.swift */; };
+		0DCD2E13229F58CC00887AD7 /* SCProfileRecordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DCD2E12229F58CC00887AD7 /* SCProfileRecordView.xib */; };
+		0DCD2E15229F680B00887AD7 /* SCProfileInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCD2E14229F680B00887AD7 /* SCProfileInputView.swift */; };
+		0DCD2E17229F681900887AD7 /* SCProfileInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DCD2E16229F681900887AD7 /* SCProfileInputView.xib */; };
+		0DCD2E19229F800700887AD7 /* SCProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCD2E18229F800700887AD7 /* SCProfileViewModel.swift */; };
+		0DCD2E1C229F829B00887AD7 /* SCProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCD2E1B229F829B00887AD7 /* SCProfileData.swift */; };
+		0DCD2E1E229F82FE00887AD7 /* SCProfileHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCD2E1D229F82FE00887AD7 /* SCProfileHero.swift */; };
+		0DCD2E20229F84B000887AD7 /* SCProfilesKills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCD2E1F229F84B000887AD7 /* SCProfilesKills.swift */; };
 		0DD22C78228E69FC00F37491 /* SCComposeTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD22C71228E69FB00F37491 /* SCComposeTypeView.swift */; };
 		0DD22C79228E69FC00F37491 /* SCComposeTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD22C72228E69FB00F37491 /* SCComposeTypeButton.swift */; };
 		0DD22C7A228E69FC00F37491 /* SCComposeTypeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD22C73228E69FB00F37491 /* SCComposeTypeButton.xib */; };
@@ -207,6 +214,8 @@
 		0D1DD2B1228D51D400FFC9FD /* AssistantCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssistantCommon.swift; sourceTree = "<group>"; };
 		0D2242CA2292C10E00F7B1DD /* SCActiveSkillSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCActiveSkillSelectionView.swift; sourceTree = "<group>"; };
 		0D2242CC2292C70C00F7B1DD /* SCRuneSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCRuneSelectionView.swift; sourceTree = "<group>"; };
+		0D337BA9229D43E900DE8704 /* SCProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfileButton.swift; sourceTree = "<group>"; };
+		0D337BAB229D440100DE8704 /* SCProfileButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCProfileButton.xib; sourceTree = "<group>"; };
 		0D516C3F22921ADA0006DBCB /* SCActiveSkillItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCActiveSkillItemView.swift; sourceTree = "<group>"; };
 		0D516C4122921AED0006DBCB /* SCActiveSkillItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCActiveSkillItemView.xib; sourceTree = "<group>"; };
 		0D516C43229223E10006DBCB /* SCActiveSkillRuneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCActiveSkillRuneView.swift; sourceTree = "<group>"; };
@@ -253,9 +262,14 @@
 		0DB6A5D9229CEC8800694A2E /* SCFollowerSkill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCFollowerSkill.swift; sourceTree = "<group>"; };
 		0DB6A5DB229CED4C00694A2E /* SCFollowerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCFollowerInfo.swift; sourceTree = "<group>"; };
 		0DB6A5DD229D0D2000694A2E /* SCProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfileInfo.swift; sourceTree = "<group>"; };
-		0DB6A5E1229D13B500694A2E /* SCProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfileTableViewCell.swift; sourceTree = "<group>"; };
-		0DB6A5E3229D142000694A2E /* SCProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCProfileTableViewCell.xib; sourceTree = "<group>"; };
-		0DB6A5E7229D2C8200694A2E /* SCWebViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCWebViewManager.swift; sourceTree = "<group>"; };
+		0DC25073229F51BC00BDEA44 /* SCProfileRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfileRecordView.swift; sourceTree = "<group>"; };
+		0DCD2E12229F58CC00887AD7 /* SCProfileRecordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCProfileRecordView.xib; sourceTree = "<group>"; };
+		0DCD2E14229F680B00887AD7 /* SCProfileInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfileInputView.swift; sourceTree = "<group>"; };
+		0DCD2E16229F681900887AD7 /* SCProfileInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCProfileInputView.xib; sourceTree = "<group>"; };
+		0DCD2E18229F800700887AD7 /* SCProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfileViewModel.swift; sourceTree = "<group>"; };
+		0DCD2E1B229F829B00887AD7 /* SCProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfileData.swift; sourceTree = "<group>"; };
+		0DCD2E1D229F82FE00887AD7 /* SCProfileHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfileHero.swift; sourceTree = "<group>"; };
+		0DCD2E1F229F84B000887AD7 /* SCProfilesKills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfilesKills.swift; sourceTree = "<group>"; };
 		0DD22C71228E69FB00F37491 /* SCComposeTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCComposeTypeView.swift; sourceTree = "<group>"; };
 		0DD22C72228E69FB00F37491 /* SCComposeTypeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCComposeTypeButton.swift; sourceTree = "<group>"; };
 		0DD22C73228E69FB00F37491 /* SCComposeTypeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCComposeTypeButton.xib; sourceTree = "<group>"; };
@@ -443,7 +457,6 @@
 		0D1DD25C228D513200FFC9FD /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				0DB6A5E7229D2C8200694A2E /* SCWebViewManager.swift */,
 				0D1DD25D228D513200FFC9FD /* SCNetworkManager.swift */,
 				0D1DD260228D513200FFC9FD /* SCNetworkManager+extension.swift */,
 				0D1DD25E228D513200FFC9FD /* Model */,
@@ -629,6 +642,7 @@
 				0D6B19472290EFFB00F564B7 /* SCCharacterViewModel.swift */,
 				0DF25CAD229516690050043B /* SCEquipmentViewModel.swift */,
 				0DB6A5D6229CEB7400694A2E /* SCFollowerViewModel.swift */,
+				0DCD2E18229F800700887AD7 /* SCProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -636,6 +650,7 @@
 		0D6B19442290EFAC00F564B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0DCD2E1A229F827300887AD7 /* Profile */,
 				0DB6A5D8229CEC6500694A2E /* Follower */,
 				0DF25CB022951BD90050043B /* Equipment */,
 				0DF25CAF22951BCB0050043B /* Skill */,
@@ -715,10 +730,24 @@
 		0DB6A5E0229D139000694A2E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0DB6A5E1229D13B500694A2E /* SCProfileTableViewCell.swift */,
-				0DB6A5E3229D142000694A2E /* SCProfileTableViewCell.xib */,
+				0D337BA9229D43E900DE8704 /* SCProfileButton.swift */,
+				0D337BAB229D440100DE8704 /* SCProfileButton.xib */,
+				0DC25073229F51BC00BDEA44 /* SCProfileRecordView.swift */,
+				0DCD2E12229F58CC00887AD7 /* SCProfileRecordView.xib */,
+				0DCD2E14229F680B00887AD7 /* SCProfileInputView.swift */,
+				0DCD2E16229F681900887AD7 /* SCProfileInputView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0DCD2E1A229F827300887AD7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0DCD2E1B229F829B00887AD7 /* SCProfileData.swift */,
+				0DCD2E1D229F82FE00887AD7 /* SCProfileHero.swift */,
+				0DCD2E1F229F84B000887AD7 /* SCProfilesKills.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		0DD22C6C228E69FB00F37491 /* Compose */ = {
@@ -936,11 +965,11 @@
 				0D71CF44228F92990029FF16 /* SCCharacterViewController.xib in Resources */,
 				0D516C46229223F10006DBCB /* SCActiveSkillRuneView.xib in Resources */,
 				0D1DD295228D513200FFC9FD /* mydata.sql in Resources */,
-				0DB6A5E4229D142000694A2E /* SCProfileTableViewCell.xib in Resources */,
 				0DB4415F22937B2A00A1F520 /* characterSkills.plist in Resources */,
 				0D6B19332290C76E00F564B7 /* SCActiveSkillView.xib in Resources */,
 				0D71CF4C228FB1CD0029FF16 /* SCSkillsViewController.xib in Resources */,
 				0DB441642293DE3500A1F520 /* SCPassiveSkillsIntroView.xib in Resources */,
+				0DCD2E17229F681900887AD7 /* SCProfileInputView.xib in Resources */,
 				0D71CF51228FECFE0029FF16 /* SCEquipmentViewController.xib in Resources */,
 				0D516C4222921AED0006DBCB /* SCActiveSkillItemView.xib in Resources */,
 				0D1DD21E228D503800FFC9FD /* Assets.xcassets in Resources */,
@@ -949,6 +978,8 @@
 				0DFDEE1422992DE000552C47 /* SCCollectionViewButton.xib in Resources */,
 				0D6B193E2290EA7800F564B7 /* ExocetBold.ttf in Resources */,
 				0DD22C7B228E69FC00F37491 /* SCComposeTypeView.xib in Resources */,
+				0DCD2E13229F58CC00887AD7 /* SCProfileRecordView.xib in Resources */,
+				0D337BAC229D440100DE8704 /* SCProfileButton.xib in Resources */,
 				0DD22C7A228E69FC00F37491 /* SCComposeTypeButton.xib in Resources */,
 				0D6B195822912A1C00F564B7 /* SCActiveSkillsIntroView.xib in Resources */,
 				0DB441682293E23500A1F520 /* SCPassiveSkillItemView.xib in Resources */,
@@ -988,9 +1019,7 @@
 				"${BUILT_PRODUCTS_DIR}/DLSlideView/DLSlideView.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 				"${BUILT_PRODUCTS_DIR}/ExpandingMenu/ExpandingMenu.framework",
-				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
-				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/TCPickerView/TCPickerView.framework",
@@ -1007,9 +1036,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLSlideView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ExpandingMenu.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TCPickerView.framework",
@@ -1057,6 +1084,7 @@
 				0D1DD289228D513200FFC9FD /* UIButton+SCAddition.m in Sources */,
 				0D85384522966FD2002FC6B1 /* SCEquipmentItem.swift in Sources */,
 				0D6B19522290FA8F00F564B7 /* SCPassiveSkill.swift in Sources */,
+				0DC25074229F51BC00BDEA44 /* SCProfileRecordView.swift in Sources */,
 				0D6B195622912A0600F564B7 /* SCActiveSkillsIntroView.swift in Sources */,
 				0DFDEE012298AD9F00552C47 /* SCItemCommonTypes.swift in Sources */,
 				0D6B194E2290F98F00F564B7 /* SCSkill.swift in Sources */,
@@ -1078,6 +1106,7 @@
 				0D1DD294228D513200FFC9FD /* SCSQLiteManager.swift in Sources */,
 				0D85384F22968AF6002FC6B1 /* SCDetailsType.swift in Sources */,
 				0D1DD2A9228D513200FFC9FD /* SCFollowerViewController.swift in Sources */,
+				0DCD2E15229F680B00887AD7 /* SCProfileInputView.swift in Sources */,
 				0DED3FB52297DF9E003C2887 /* SCPickerViewTableViewCell.swift in Sources */,
 				0D1DD28A228D513200FFC9FD /* NSObject+SCAddition.m in Sources */,
 				0D2242CB2292C10E00F7B1DD /* SCActiveSkillSelectionView.swift in Sources */,
@@ -1103,11 +1132,13 @@
 				0DB6A5D3229CB51E00694A2E /* SCFollowerSkillButton.swift in Sources */,
 				0D18AD93229BB95C00B3CF4E /* SCFollowerContentView.swift in Sources */,
 				0D1DD2B2228D51D400FFC9FD /* AssistantCommon.swift in Sources */,
+				0DCD2E1C229F829B00887AD7 /* SCProfileData.swift in Sources */,
+				0D337BAA229D43E900DE8704 /* SCProfileButton.swift in Sources */,
 				0D1DD2A0228D513200FFC9FD /* UIViewController+extension.swift in Sources */,
 				0D1DD28E228D513200FFC9FD /* CABasicAnimation+SCAddition.m in Sources */,
+				0DCD2E19229F800700887AD7 /* SCProfileViewModel.swift in Sources */,
 				0D1DD290228D513200FFC9FD /* UIColor+SCAddition.m in Sources */,
 				0DB0705E229A093400B61E68 /* MXCornerRadius.m in Sources */,
-				0DB6A5E2229D13B500694A2E /* SCProfileTableViewCell.swift in Sources */,
 				0D1DD2A7228D513200FFC9FD /* SCNewsViewController.swift in Sources */,
 				0DB441662293E21200A1F520 /* SCPassiveSkillItemView.swift in Sources */,
 				0DD22C79228E69FC00F37491 /* SCComposeTypeButton.swift in Sources */,
@@ -1132,9 +1163,10 @@
 				0D1DD296228D513200FFC9FD /* UIApplication+extension.swift in Sources */,
 				0D71CF4F228FECF00029FF16 /* SCEquipmentViewController.swift in Sources */,
 				0D1DD2AC228D513200FFC9FD /* SCNavigationViewController.swift in Sources */,
-				0DB6A5E8229D2C8200694A2E /* SCWebViewManager.swift in Sources */,
 				0D1DD28D228D513200FFC9FD /* UIScreen+UISCreen_extenshion.m in Sources */,
+				0DCD2E20229F84B000887AD7 /* SCProfilesKills.swift in Sources */,
 				0DB441622293DD2600A1F520 /* SCPassiveSkillsIntroView.swift in Sources */,
+				0DCD2E1E229F82FE00887AD7 /* SCProfileHero.swift in Sources */,
 				0D1DD217228D503600FFC9FD /* AppDelegate.swift in Sources */,
 				0D6B19372290DEEB00F564B7 /* SCPassiveSkillView.swift in Sources */,
 				0DF25CB222951C070050043B /* SCEquipmentType.swift in Sources */,

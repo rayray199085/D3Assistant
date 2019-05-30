@@ -39,7 +39,6 @@ class SCNetworkManager{
             params = [String:Any]()
         }
         params?["access_token"] = token
-        
         if let name = name,
             let data = data{
             // if name & data are not nil, use upload function

@@ -58,4 +58,10 @@ extension Date{
         }
         return dateformatter.string(from: self)
     }
+    
+    static func timeInterval2String(timeInterval: TimeInterval)->String{
+        let date = Date(timeIntervalSince1970: timeInterval)
+        dateformatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return dateformatter.string(from: date)
+    }
 }
