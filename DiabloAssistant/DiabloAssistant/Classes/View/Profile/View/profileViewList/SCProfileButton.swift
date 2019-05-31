@@ -7,8 +7,13 @@
 //
 
 import UIKit
+protocol SCProfileButtonDelegate: NSObjectProtocol {
+    func didClickProfileButton(view: SCProfileButton, hero: SCProfileHero?)
+}
 
 class SCProfileButton: UIView {
+    weak var delegate: SCProfileButtonDelegate?
+    
     var hero: SCProfileHero?{
         didSet{
             frameImageView.image = UIImage(named: "profile_\(hero?.gender ?? 0)_bg")
@@ -30,6 +35,6 @@ class SCProfileButton: UIView {
         return v
     }
     @IBAction func clickIconButton(_ sender: Any) {
-        print(hero?.id ?? "")
+        delegate?.didClickProfileButton(view: self, hero: hero)
     }
 }

@@ -85,7 +85,7 @@ private extension SCEquipmentViewController{
             return
         }
         setupEquipmentButtons()
-        equipmentImageView.image = UIImage(named: "\(characterName)_equip")
+        equipmentImageView.image = UIImage(named: "\(characterName)_equip_1")
         setupItemSelectionView()
         hideItemSelectionView()
     }

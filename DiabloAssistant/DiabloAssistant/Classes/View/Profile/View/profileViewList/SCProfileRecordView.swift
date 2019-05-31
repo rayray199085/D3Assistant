@@ -7,8 +7,13 @@
 //
 
 import UIKit
+protocol SCProfileRecordViewDelegate: NSObjectProtocol {
+    func didSelectedHero(view: SCProfileRecordView, button: SCProfileButton, hero: SCProfileHero?)
+}
 
 class SCProfileRecordView: UIView {
+    weak var delegate: SCProfileRecordViewDelegate?
+    
     var profileData: SCProfileData?{
         didSet{
             if let profileData = profileData,
@@ -48,11 +53,17 @@ extension SCProfileRecordView{
         let horizontalMargin = (UIScreen.screenWidth() - width * 3 - margin * 2) / 2
         for i in 0..<count{
             let v = SCProfileButton.profileButton()
+            v.delegate = self
             let x = horizontalMargin + CGFloat(i % 3) * (width + margin)
             let y = verticalMargin + CGFloat(i / 3) * (width + margin)
             v.frame = CGRect(x: x, y: y, width: width, height: width)
             buttonsView.addSubview(v)
         }
         buttonsView.contentSize = CGSize(width: 0, height: CGFloat(count / 3) * (width + margin) + width - margin)
+    }
+}
+extension SCProfileRecordView: SCProfileButtonDelegate{
+    func didClickProfileButton(view: SCProfileButton, hero: SCProfileHero?) {
+        delegate?.didSelectedHero(view: self, button: view, hero: hero)
     }
 }

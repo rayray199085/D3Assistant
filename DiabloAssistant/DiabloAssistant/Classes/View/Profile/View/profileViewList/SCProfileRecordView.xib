@@ -16,8 +16,11 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calculatorInner" translatesAutoresizingMaskIntoConstraints="NO" id="zFh-mh-FPo">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atW-Od-YFL">
-                    <rect key="frame" x="10" y="54" width="61.5" height="21"/>
+                    <rect key="frame" x="15" y="59" width="61.5" height="21"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" red="0.94117647059999998" green="0.87450980389999999" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -29,28 +32,32 @@
                     </constraints>
                 </scrollView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BattleTag" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYA-0i-YK3">
-                    <rect key="frame" x="172.5" y="55.5" width="69" height="18"/>
+                    <rect key="frame" x="172.5" y="60.5" width="69" height="18"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <color key="textColor" red="0.94117647059999998" green="0.87450980389999999" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last updated:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1b-dG-ny1">
-                    <rect key="frame" x="171" y="73.5" width="72.5" height="13.5"/>
+                    <rect key="frame" x="171" y="78.5" width="72.5" height="13.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <constraints>
+                <constraint firstItem="5cb-K1-KFc" firstAttribute="trailing" secondItem="zFh-mh-FPo" secondAttribute="trailing" id="0av-89-jGf"/>
                 <constraint firstItem="I1b-dG-ny1" firstAttribute="centerX" secondItem="tEp-wP-O9f" secondAttribute="centerX" id="5G4-8l-GIC"/>
                 <constraint firstItem="ufN-yt-BKc" firstAttribute="leading" secondItem="5cb-K1-KFc" secondAttribute="leading" id="AbD-SQ-LLS"/>
                 <constraint firstItem="AYA-0i-YK3" firstAttribute="centerY" secondItem="atW-Od-YFL" secondAttribute="centerY" id="IsD-tB-Yuu"/>
+                <constraint firstItem="zFh-mh-FPo" firstAttribute="leading" secondItem="5cb-K1-KFc" secondAttribute="leading" id="L97-ne-HtH"/>
+                <constraint firstItem="5cb-K1-KFc" firstAttribute="bottom" secondItem="zFh-mh-FPo" secondAttribute="bottom" id="Nmk-0b-bKz"/>
                 <constraint firstItem="I1b-dG-ny1" firstAttribute="top" secondItem="AYA-0i-YK3" secondAttribute="bottom" id="eMc-5K-Od9"/>
                 <constraint firstItem="AYA-0i-YK3" firstAttribute="centerX" secondItem="tEp-wP-O9f" secondAttribute="centerX" id="hCl-Ps-O88"/>
                 <constraint firstItem="ufN-yt-BKc" firstAttribute="centerY" secondItem="tEp-wP-O9f" secondAttribute="centerY" id="naS-y0-g93"/>
-                <constraint firstItem="atW-Od-YFL" firstAttribute="leading" secondItem="5cb-K1-KFc" secondAttribute="leading" constant="10" id="ne0-hC-s0S"/>
+                <constraint firstItem="atW-Od-YFL" firstAttribute="leading" secondItem="5cb-K1-KFc" secondAttribute="leading" constant="15" id="ne0-hC-s0S"/>
                 <constraint firstItem="ufN-yt-BKc" firstAttribute="trailing" secondItem="5cb-K1-KFc" secondAttribute="trailing" id="rKP-uw-upT"/>
-                <constraint firstItem="atW-Od-YFL" firstAttribute="top" secondItem="5cb-K1-KFc" secondAttribute="top" constant="10" id="sgH-IO-Eye"/>
+                <constraint firstItem="atW-Od-YFL" firstAttribute="top" secondItem="5cb-K1-KFc" secondAttribute="top" constant="15" id="sgH-IO-Eye"/>
+                <constraint firstItem="zFh-mh-FPo" firstAttribute="top" secondItem="5cb-K1-KFc" secondAttribute="top" id="wCZ-cU-njw"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="5cb-K1-KFc"/>
             <connections>
@@ -62,4 +69,7 @@
             <point key="canvasLocation" x="144.92753623188406" y="127.90178571428571"/>
         </view>
     </objects>
+    <resources>
+        <image name="calculatorInner" width="270" height="337.5"/>
+    </resources>
 </document>

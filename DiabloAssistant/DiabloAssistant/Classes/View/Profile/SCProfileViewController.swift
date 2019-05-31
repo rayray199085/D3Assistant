@@ -43,6 +43,7 @@ private extension SCProfileViewController{
         view.addSubview(profileInputView)
         profileInputView.isHidden = true
         profileInputView.delegate = self
+        profileView.delegate = self
     }
 }
 extension SCProfileViewController: SCProfileInputViewDelegate{
@@ -53,14 +54,20 @@ extension SCProfileViewController: SCProfileInputViewDelegate{
         }
         SVProgressHUD.show()
         viewModel.loadPlayerProfile(region: region, battleTag: battleTag) { [weak self](profileData, isSuccess) in
-            if !isSuccess || profileData == nil{
+            if !isSuccess || profileData == nil || profileData?.battleTag == nil{
                 SVProgressHUD.showInfo(withStatus: "Incorrect input")
                 return
             }
             SVProgressHUD.showInfo(withStatus: "Success")
             self?.profileData = profileData
-//            print(profileData)
         }
+    }
+}
+extension SCProfileViewController: SCProfileRecordViewDelegate{
+    func didSelectedHero(view: SCProfileRecordView, button: SCProfileButton, hero: SCProfileHero?) {
+        let vc = SCProfileDetailsViewController()
+        vc.hero = hero
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
