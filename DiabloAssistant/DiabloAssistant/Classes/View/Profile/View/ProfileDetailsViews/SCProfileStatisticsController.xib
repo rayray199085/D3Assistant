@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Exocet.ttf">
+            <string>ExocetLight</string>
+        </array>
+        <array key="ExocetBold.ttf">
+            <string>ExocetHeavy</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SCProfileStatisticsController" customModule="DiabloAssistant" customModuleProvider="target">
+            <connections>
+                <outlet property="basicInfoLabel" destination="Zt7-ef-0Jc" id="tGP-yo-naU"/>
+                <outlet property="textView" destination="Fvg-wK-EyT" id="5A8-kT-ufF"/>
+                <outlet property="view" destination="iN0-l3-epB" id="kLf-xK-QSE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calculatorInner" translatesAutoresizingMaskIntoConstraints="NO" id="pqN-cq-ndh">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBI-f8-Z5U" userLabel="legendaryPower">
+                    <rect key="frame" x="0.0" y="672" width="414" height="190"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Weapon-Empty" translatesAutoresizingMaskIntoConstraints="NO" id="vat-kK-4GN">
+                            <rect key="frame" x="10" y="0.0" width="115" height="190"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="115" id="MvZ-lH-hi9"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jewelry-Empty" translatesAutoresizingMaskIntoConstraints="NO" id="0xK-9c-7Ac">
+                            <rect key="frame" x="289" y="0.0" width="115" height="190"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="115" id="g1D-5o-Zlw"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Armor-Empty" translatesAutoresizingMaskIntoConstraints="NO" id="4er-mE-4iB">
+                            <rect key="frame" x="149.5" y="0.0" width="115" height="190"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="115" id="GUe-c9-bC1"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="0xK-9c-7Ac" firstAttribute="top" secondItem="bBI-f8-Z5U" secondAttribute="top" id="3FX-Ck-3p3"/>
+                        <constraint firstAttribute="bottom" secondItem="vat-kK-4GN" secondAttribute="bottom" id="GSr-yh-xgC"/>
+                        <constraint firstItem="4er-mE-4iB" firstAttribute="top" secondItem="bBI-f8-Z5U" secondAttribute="top" id="Jkb-cJ-1pn"/>
+                        <constraint firstAttribute="bottom" secondItem="4er-mE-4iB" secondAttribute="bottom" id="Mc4-ey-eai"/>
+                        <constraint firstAttribute="trailing" secondItem="0xK-9c-7Ac" secondAttribute="trailing" constant="10" id="TWe-40-wzx"/>
+                        <constraint firstItem="vat-kK-4GN" firstAttribute="top" secondItem="bBI-f8-Z5U" secondAttribute="top" id="UiU-G4-6qC"/>
+                        <constraint firstAttribute="bottom" secondItem="0xK-9c-7Ac" secondAttribute="bottom" id="cU0-wj-S82"/>
+                        <constraint firstItem="vat-kK-4GN" firstAttribute="leading" secondItem="bBI-f8-Z5U" secondAttribute="leading" constant="10" id="gEu-fU-RX1"/>
+                        <constraint firstAttribute="height" constant="190" id="i24-Z1-xqz"/>
+                        <constraint firstItem="4er-mE-4iB" firstAttribute="centerX" secondItem="bBI-f8-Z5U" secondAttribute="centerX" id="ke4-mV-uLB"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zt7-ef-0Jc">
+                    <rect key="frame" x="202" y="54" width="10" height="23"/>
+                    <fontDescription key="fontDescription" name="ExocetHeavy" family="Exocet" pointSize="20"/>
+                    <color key="textColor" red="0.94117647059999998" green="0.87450980389999999" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fvg-wK-EyT">
+                    <rect key="frame" x="0.0" y="77" width="414" height="553"/>
+                    <color key="textColor" red="0.72094088789999999" green="0.603359282" blue="0.38813751940000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="divider" translatesAutoresizingMaskIntoConstraints="NO" id="1xx-LQ-zMc">
+                    <rect key="frame" x="5" y="657" width="404" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="Nau-0a-sgs"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KANAI'S CUBE POWERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaG-3o-zHX">
+                    <rect key="frame" x="103" y="635" width="208" height="19"/>
+                    <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="1xx-LQ-zMc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="8Sv-fT-cmT"/>
+                <constraint firstItem="WaG-3o-zHX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="94D-gt-SCx"/>
+                <constraint firstItem="bBI-f8-Z5U" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="C0w-eA-rM8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="pqN-cq-ndh" secondAttribute="bottom" id="IO8-6m-uYe"/>
+                <constraint firstItem="Zt7-ef-0Jc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Jfo-IY-wQ7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bBI-f8-Z5U" secondAttribute="trailing" id="N8u-DC-Lxl"/>
+                <constraint firstItem="Fvg-wK-EyT" firstAttribute="top" secondItem="Zt7-ef-0Jc" secondAttribute="bottom" id="NgN-dJ-L7c"/>
+                <constraint firstItem="1xx-LQ-zMc" firstAttribute="top" secondItem="WaG-3o-zHX" secondAttribute="bottom" constant="3" id="QYV-nl-LcG"/>
+                <constraint firstItem="Fvg-wK-EyT" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="RfI-Dq-dJj"/>
+                <constraint firstItem="Zt7-ef-0Jc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="UrU-qk-hXu"/>
+                <constraint firstItem="pqN-cq-ndh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="VlE-Ei-9a0"/>
+                <constraint firstItem="WaG-3o-zHX" firstAttribute="top" secondItem="Fvg-wK-EyT" secondAttribute="bottom" constant="5" id="WWU-ev-Wyo"/>
+                <constraint firstItem="bBI-f8-Z5U" firstAttribute="top" secondItem="1xx-LQ-zMc" secondAttribute="bottom" constant="5" id="bLQ-PD-hej"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="bBI-f8-Z5U" secondAttribute="bottom" id="fjr-em-now"/>
+                <constraint firstItem="Fvg-wK-EyT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ovb-9I-Ao2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pqN-cq-ndh" secondAttribute="trailing" id="qIl-8H-3rb"/>
+                <constraint firstItem="pqN-cq-ndh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="urU-NF-upP"/>
+                <constraint firstAttribute="trailing" secondItem="1xx-LQ-zMc" secondAttribute="trailing" constant="5" id="wwF-uE-iK3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="47.826086956521742" y="64.955357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Armor-Empty" width="57.5" height="95"/>
+        <image name="Jewelry-Empty" width="57.5" height="95"/>
+        <image name="Weapon-Empty" width="57.5" height="95"/>
+        <image name="calculatorInner" width="270" height="337.5"/>
+        <image name="divider" width="220" height="1.5"/>
+    </resources>
+</document>

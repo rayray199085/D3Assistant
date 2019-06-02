@@ -60,6 +60,7 @@ extension SCProfileViewController: SCProfileInputViewDelegate{
             }
             SVProgressHUD.showInfo(withStatus: "Success")
             self?.profileData = profileData
+            self?.profileData?.region = region
         }
     }
 }
@@ -67,7 +68,16 @@ extension SCProfileViewController: SCProfileRecordViewDelegate{
     func didSelectedHero(view: SCProfileRecordView, button: SCProfileButton, hero: SCProfileHero?) {
         let vc = SCProfileDetailsViewController()
         vc.hero = hero
-        navigationController?.pushViewController(vc, animated: true)
+        SVProgressHUD.show()
+        viewModel.loadHeroDetails(region: profileData?.region, battleTag: profileData?.battleTag, id: hero?.id) { [weak self](isSuccess) in
+            if !isSuccess{
+                SVProgressHUD.showInfo(withStatus: "Connection error")
+                return
+            }
+            SVProgressHUD.dismiss()
+            vc.viewModel = self?.viewModel
+            self?.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 

@@ -10,6 +10,7 @@ import UIKit
 
 class SCProfileData: NSObject {
     @objc var battleTag: String?
+    @objc var region: String?
     @objc var heroes: [SCProfileHero]?
     @objc var lastUpdated: TimeInterval = 0{
         didSet{
