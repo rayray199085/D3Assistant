@@ -179,4 +179,16 @@ extension SCNetworkManager{
         battleTag = (battleTag as NSString).replacingOccurrences(of: "#", with: "-")
         return battleTag
     }
+    
+    func getProfileEquipmentDetails(slugId: String, completion:@escaping (_ dict: [String: Any]?,_ isSuccess: Bool)->()){
+        guard let region = UserDefaults.standard.object(forKey: "region") as? String else{
+                completion(nil,false)
+                return
+        }
+        let urlString = "https://\(region).api.blizzard.com/d3/data/item/\(slugId)"
+        requestWithToken(urlString: urlString, method: HTTPMethod.get, params: nil) {(res, isSuccess) in
+            let dict = res as? [String: Any]
+            completion(dict, isSuccess)
+        }
+    }
 }

@@ -52,7 +52,7 @@ extension NSAttributedString {
     }
 }
 extension NSAttributedString{
-    static func getItemDescriptionAttributedText(details: SCEquipmentItemDetails?)->NSAttributedString{
+    static func getItemDescriptionAttributedText(details: SCEquipmentItemDetails?,withoutTitle: Bool = false)->NSAttributedString{
         guard let details = details,
               let colorName = details.color else{
             return NSAttributedString(string: "")
@@ -76,7 +76,10 @@ extension NSAttributedString{
         default:
             break
         }
-        setDescription(nextRow: nextRow,text: details.name,color: color, font: UIFont(name: "Exocet", size: 18)!, parentAttrString: itemDescription)
+        if !withoutTitle{
+            setDescription(nextRow: nextRow,text: details.name,color: color, font: UIFont(name: "Exocet", size: 18)!, parentAttrString: itemDescription)
+        }
+        
         setDescription(nextRow: nextRow,text: details.typeName,color: color, parentAttrString: itemDescription)
         if (details.dps?.count ?? 0) > 0{
             setDescription(nextRow: nextRow,text: details.dps,color: UIColor.white,font: UIFont.boldSystemFont(ofSize: 20), parentAttrString: itemDescription)

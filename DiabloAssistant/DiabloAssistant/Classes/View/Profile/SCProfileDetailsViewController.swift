@@ -88,6 +88,7 @@ extension SCProfileDetailsViewController: DLTabedSlideViewDelegate{
                 return
             }
             equipsViewController.setBackgroundImage(imageName: "\(slug)_equip_\(hero?.gender ?? 0)")
+            equipsViewController.viewModel = viewModel
         default:
             break
         }

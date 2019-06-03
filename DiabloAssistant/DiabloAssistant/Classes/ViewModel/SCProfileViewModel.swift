@@ -44,6 +44,7 @@ class SCProfileViewModel{
                 return c == ";"
             }
             statistics = (statistics as NSString).replacingOccurrences(of: " =", with: ":")
+            statistics = statistics.trimmingCharacters(in: NSCharacterSet.newlines)
             heroStatsDescription = statistics.uppercased()
         }
     }
@@ -94,8 +95,45 @@ class SCProfileViewModel{
             self.heroEquipments = SCProfileEquipments.yy_model(with: equipments)
             self.followers = SCProfileFollowerList.yy_model(with: followers)
             self.heroStats = SCProfileHeroStats.yy_model(with: heroStats)
-            self.legendaryPowers = powerArray
-            completion(true)
+            let group = DispatchGroup()
+            for power in powerArray{
+                guard let icon =  power.icon else{
+                    continue
+                }
+                group.enter()
+                SCNetworkManager.shared.getItemImage(icon: icon, size: SCItemImageSize.large, completion: { (image) in
+                    power.iconImage = image
+                    group.leave()
+                })
+            }
+            
+            group.notify(queue: DispatchQueue.main, execute: {
+                self.legendaryPowers = powerArray
+                completion(true)
+            })
+        }
+    }
+    
+    func loadEquipmentDetails(slugId: String,completion: @escaping (_ details: SCEquipmentItemDetails?, _ isSuccess: Bool)->()){
+        SCNetworkManager.shared.getProfileEquipmentDetails(slugId: slugId) { (dict, isSuccess) in
+            if !isSuccess{
+                completion(nil, false)
+                return
+            }
+            guard let dict = dict,
+                let details = SCEquipmentItemDetails.yy_model(with: dict) else{
+                    completion(nil, isSuccess)
+                    return
+            }
+            completion(details, isSuccess)
+        }
+    }
+    func loadEquipmentItemImages(){
+        for item in heroEquipments?.items ?? []{
+            guard let item = item else{
+                continue
+            }
+            print(item)
         }
     }
 }

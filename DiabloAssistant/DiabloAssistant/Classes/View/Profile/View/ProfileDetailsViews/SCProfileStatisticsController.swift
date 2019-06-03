@@ -11,6 +11,7 @@ import UIKit
 class SCProfileStatisticsController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var basicInfoLabel: UILabel!
+    
     var viewModel: SCProfileViewModel?{
         didSet{
             guard let text = viewModel?.heroStatsDescription else{

@@ -11,6 +11,12 @@ import UIKit
 class SCProfileLegendaryPowerItem: NSObject {
     @objc var id: String?
     @objc var name: String?
+    @objc var slug: String?{
+        guard let s = name?.lowercased()  else {
+            return nil
+        }
+        return (s as NSString).replacingOccurrences(of: "-", with: "").replacingOccurrences(of: "'", with: "").replacingOccurrences(of: " ", with: "-")
+    }
     @objc var icon: String?
     @objc var displayColor: String?
     @objc var iconImage: UIImage?

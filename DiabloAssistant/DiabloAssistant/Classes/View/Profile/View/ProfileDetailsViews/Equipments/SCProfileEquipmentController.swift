@@ -9,6 +9,11 @@
 import UIKit
 
 class SCProfileEquipmentController: UIViewController {
+    var viewModel: SCProfileViewModel?{
+        didSet{
+            
+        }
+    }
     @IBOutlet weak var bgImageView: UIImageView!
     @IBOutlet var equipmentButtons: [SCEquipmentButton]!
     
