@@ -44,7 +44,7 @@ class SCProfileEquipmentItem: NSObject {
     }
     @objc var minDamage: Int = 0
     @objc var maxDamage: Int = 0
-    @objc var attributes: SCDetailsAttributes?
+    @objc var attributesHtml: SCProfileAttributes?
     @objc var openSockets: Int = 0
     @objc var gems: [SCProfileGem]?
     @objc var set: SCProfileSet?

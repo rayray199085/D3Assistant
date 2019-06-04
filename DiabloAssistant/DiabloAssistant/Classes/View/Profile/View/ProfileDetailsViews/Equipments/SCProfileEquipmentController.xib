@@ -19,19 +19,19 @@
             <connections>
                 <outlet property="bgImageView" destination="p1n-a3-u6v" id="f18-F0-65G"/>
                 <outlet property="view" destination="iN0-l3-epB" id="IDF-Id-wgg"/>
-                <outletCollection property="equipmentButtons" destination="eJd-qR-x4K" collectionClass="NSMutableArray" id="JiQ-O2-bxh"/>
-                <outletCollection property="equipmentButtons" destination="c43-mM-e9J" collectionClass="NSMutableArray" id="bvN-mn-dLp"/>
-                <outletCollection property="equipmentButtons" destination="puX-OL-m6F" collectionClass="NSMutableArray" id="7eD-vW-2IZ"/>
-                <outletCollection property="equipmentButtons" destination="bzY-mY-XUz" collectionClass="NSMutableArray" id="HJd-zt-cxh"/>
-                <outletCollection property="equipmentButtons" destination="JHs-Sl-UaX" collectionClass="NSMutableArray" id="6qn-f3-4uc"/>
-                <outletCollection property="equipmentButtons" destination="Iyh-GS-bNV" collectionClass="NSMutableArray" id="CCB-UB-Psv"/>
-                <outletCollection property="equipmentButtons" destination="kMZ-H0-idX" collectionClass="NSMutableArray" id="r3d-bQ-3Q6"/>
-                <outletCollection property="equipmentButtons" destination="ZkI-PX-H5J" collectionClass="NSMutableArray" id="eMh-bz-wC7"/>
-                <outletCollection property="equipmentButtons" destination="qaw-0c-YvF" collectionClass="NSMutableArray" id="fUf-rW-JAx"/>
-                <outletCollection property="equipmentButtons" destination="ge9-sh-8hV" collectionClass="NSMutableArray" id="8Vx-K1-qal"/>
-                <outletCollection property="equipmentButtons" destination="5UW-8x-mso" collectionClass="NSMutableArray" id="PTr-l2-p2q"/>
-                <outletCollection property="equipmentButtons" destination="1Jn-bJ-j8F" collectionClass="NSMutableArray" id="z0c-qI-wy1"/>
-                <outletCollection property="equipmentButtons" destination="xDM-TV-4V9" collectionClass="NSMutableArray" id="QPZ-OU-feE"/>
+                <outletCollection property="equipmentButtons" destination="ge9-sh-8hV" collectionClass="NSMutableArray" id="pts-EF-ntd"/>
+                <outletCollection property="equipmentButtons" destination="ZkI-PX-H5J" collectionClass="NSMutableArray" id="xUR-Mg-2G7"/>
+                <outletCollection property="equipmentButtons" destination="qaw-0c-YvF" collectionClass="NSMutableArray" id="I3f-WO-DJ5"/>
+                <outletCollection property="equipmentButtons" destination="kMZ-H0-idX" collectionClass="NSMutableArray" id="ryY-s3-RZY"/>
+                <outletCollection property="equipmentButtons" destination="xDM-TV-4V9" collectionClass="NSMutableArray" id="9U9-dS-FD7"/>
+                <outletCollection property="equipmentButtons" destination="Iyh-GS-bNV" collectionClass="NSMutableArray" id="Rbh-gr-LcY"/>
+                <outletCollection property="equipmentButtons" destination="eJd-qR-x4K" collectionClass="NSMutableArray" id="vNe-Bo-kdX"/>
+                <outletCollection property="equipmentButtons" destination="5UW-8x-mso" collectionClass="NSMutableArray" id="GBJ-gi-htW"/>
+                <outletCollection property="equipmentButtons" destination="JHs-Sl-UaX" collectionClass="NSMutableArray" id="Bbv-wh-TpV"/>
+                <outletCollection property="equipmentButtons" destination="c43-mM-e9J" collectionClass="NSMutableArray" id="vAZ-IG-29w"/>
+                <outletCollection property="equipmentButtons" destination="1Jn-bJ-j8F" collectionClass="NSMutableArray" id="X6h-8g-XMp"/>
+                <outletCollection property="equipmentButtons" destination="bzY-mY-XUz" collectionClass="NSMutableArray" id="LBV-Mb-aWF"/>
+                <outletCollection property="equipmentButtons" destination="puX-OL-m6F" collectionClass="NSMutableArray" id="SV4-IV-yIc"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -39,6 +39,9 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calculatorInner" translatesAutoresizingMaskIntoConstraints="NO" id="Joh-t6-haL">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demon-hunter_equip_1" translatesAutoresizingMaskIntoConstraints="NO" id="p1n-a3-u6v">
                     <rect key="frame" x="24.5" y="185" width="365" height="526"/>
                     <constraints>
@@ -46,170 +49,170 @@
                         <constraint firstAttribute="width" constant="365" id="ot3-H5-4IZ"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ge9-sh-8hV" customClass="SCEquipmentButton" customModule="DiabloAssistant" customModuleProvider="target">
+                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ge9-sh-8hV" userLabel="Head " customClass="SCProfileEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
                     <rect key="frame" x="174.5" y="285.5" width="65" height="65"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="65" id="61J-Dr-BXi"/>
                         <constraint firstAttribute="height" constant="65" id="nkz-RU-4lE"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="10"/>
-                    <state key="normal" title="HEAD">
+                    <state key="normal">
                         <color key="titleColor" red="0.94117647059999998" green="0.79607843140000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="clickEquipmentButton:" destination="-1" eventType="touchUpInside" id="VfX-Ya-ZVq"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkI-PX-H5J" customClass="SCEquipmentButton" customModule="DiabloAssistant" customModuleProvider="target">
+                <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkI-PX-H5J" userLabel="Shoulder" customClass="SCProfileEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
                     <rect key="frame" x="93" y="307.5" width="66" height="90"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="90" id="6bf-5m-q4e"/>
                         <constraint firstAttribute="width" constant="66" id="FK2-9u-mJh"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="10"/>
-                    <state key="normal" title="SHOULDERS">
+                    <state key="normal">
                         <color key="titleColor" red="0.94117647059999998" green="0.79607843140000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="clickEquipmentButton:" destination="-1" eventType="touchUpInside" id="VIM-YD-bfi"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaw-0c-YvF" customClass="SCEquipmentButton" customModule="DiabloAssistant" customModuleProvider="target">
+                <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaw-0c-YvF" userLabel="Amulet" customClass="SCProfileEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
                     <rect key="frame" x="258.5" y="328.5" width="55" height="56"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="55" id="dSS-h4-ODR"/>
                         <constraint firstAttribute="height" constant="56" id="qR6-V9-8F0"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="10"/>
-                    <state key="normal" title="AMULET">
+                    <state key="normal">
                         <color key="titleColor" red="0.94117647059999998" green="0.79607843140000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="clickEquipmentButton:" destination="-1" eventType="touchUpInside" id="4Ju-AL-pGs"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMZ-H0-idX" customClass="SCEquipmentButton" customModule="DiabloAssistant" customModuleProvider="target">
+                <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMZ-H0-idX" userLabel="Torso" customClass="SCProfileEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
                     <rect key="frame" x="167" y="356.5" width="80" height="113"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="113" id="17L-gU-QSx"/>
                         <constraint firstAttribute="width" constant="80" id="2kv-J3-8MM"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="10"/>
-                    <state key="normal" title="TORSO">
+                    <state key="normal">
                         <color key="titleColor" red="0.94117647059999998" green="0.79607843140000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="clickEquipmentButton:" destination="-1" eventType="touchUpInside" id="9dn-TF-ez4"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDM-TV-4V9" customClass="SCEquipmentButton" customModule="DiabloAssistant" customModuleProvider="target">
+                <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDM-TV-4V9" userLabel="Hands" customClass="SCProfileEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
                     <rect key="frame" x="67" y="409.5" width="66" height="86"/>
                     <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="10"/>
-                    <state key="normal" title="HANDS">
+                    <state key="normal">
                         <color key="titleColor" red="0.94117647059999998" green="0.79607843140000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="clickEquipmentButton:" destination="-1" eventType="touchUpInside" id="sjV-Nh-U1l"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyh-GS-bNV" customClass="SCEquipmentButton" customModule="DiabloAssistant" customModuleProvider="target">
+                <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyh-GS-bNV" userLabel="Wrists" customClass="SCProfileEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
                     <rect key="frame" x="281.5" y="409.5" width="66" height="86"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="66" id="MHo-IY-dkH"/>
                         <constraint firstAttribute="height" constant="86" id="yKs-K5-CxV"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="10"/>
-                    <state key="normal" title="WRISTS">
+                    <state key="normal">
                         <color key="titleColor" red="0.94117647059999998" green="0.79607843140000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="clickEquipmentButton:" destination="-1" eventType="touchUpInside" id="PBD-NI-WcL"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="107" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJd-qR-x4K" customClass="SCEquipmentButton" customModule="DiabloAssistant" customModuleProvider="target">
+                <button opaque="NO" tag="107" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJd-qR-x4K" userLabel="Waist" customClass="SCProfileEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
                     <rect key="frame" x="167" y="474.5" width="80" height="33"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="33" id="wfX-vw-qDq"/>
                         <constraint firstAttribute="width" constant="80" id="xrd-F4-Cmm"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="10"/>
-                    <state key="normal" title="Waist">
+                    <state key="normal">
                         <color key="titleColor" red="0.94117647059999998" green="0.79607843140000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="clickEquipmentButton:" destination="-1" eventType="touchUpInside" id="NcL-py-YcO"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="108" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHs-Sl-UaX" customClass="SCEquipmentButton" customModule="DiabloAssistant" customModuleProvider="target">
-                    <rect key="frame" x="294" y="509.5" width="41" height="41"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="41" id="tNj-IU-x7S"/>
-                        <constraint firstAttribute="height" constant="41" id="yyb-V7-ZdV"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="10"/>
-                    <state key="normal" title="RING">
-                        <color key="titleColor" red="0.94117647059999998" green="0.79607843140000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="clickEquipmentButton:" destination="-1" eventType="touchUpInside" id="81X-D6-rL4"/>
-                    </connections>
-                </button>
-                <button opaque="NO" tag="109" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UW-8x-mso" customClass="SCEquipmentButton" customModule="DiabloAssistant" customModuleProvider="target">
+                <button opaque="NO" tag="108" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UW-8x-mso" userLabel="Left Ring" customClass="SCProfileEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
                     <rect key="frame" x="80.5" y="509.5" width="41" height="41"/>
                     <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="10"/>
-                    <state key="normal" title="RING">
+                    <state key="normal">
                         <color key="titleColor" red="0.94117647059999998" green="0.79607843140000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="clickEquipmentButton:" destination="-1" eventType="touchUpInside" id="NKg-7q-XTE"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="110" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c43-mM-e9J" customClass="SCEquipmentButton" customModule="DiabloAssistant" customModuleProvider="target">
+                <button opaque="NO" tag="109" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHs-Sl-UaX" userLabel="Right Ring" customClass="SCProfileEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
+                    <rect key="frame" x="294" y="509.5" width="41" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="41" id="tNj-IU-x7S"/>
+                        <constraint firstAttribute="height" constant="41" id="yyb-V7-ZdV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="10"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.94117647059999998" green="0.79607843140000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickEquipmentButton:" destination="-1" eventType="touchUpInside" id="81X-D6-rL4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="110" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c43-mM-e9J" userLabel="Legs" customClass="SCProfileEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
                     <rect key="frame" x="174.5" y="512.5" width="65" height="87"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="65" id="7eV-CL-Vfm"/>
                         <constraint firstAttribute="height" constant="87" id="jXT-Gh-wxY"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="10"/>
-                    <state key="normal" title="LEGS">
+                    <state key="normal">
                         <color key="titleColor" red="0.94117647059999998" green="0.79607843140000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="clickEquipmentButton:" destination="-1" eventType="touchUpInside" id="Ta0-kv-uJb"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="111" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jn-bJ-j8F" customClass="SCEquipmentButton" customModule="DiabloAssistant" customModuleProvider="target">
+                <button opaque="NO" tag="111" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jn-bJ-j8F" userLabel="Weapon" customClass="SCProfileEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
                     <rect key="frame" x="67.5" y="563.5" width="65" height="130"/>
                     <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="10"/>
-                    <state key="normal" title="WEAPON">
+                    <state key="normal">
                         <color key="titleColor" red="0.94117647059999998" green="0.79607843140000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="clickEquipmentButton:" destination="-1" eventType="touchUpInside" id="LTZ-nj-DJB"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="112" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzY-mY-XUz" userLabel="OFF-HAND" customClass="SCEquipmentButton" customModule="DiabloAssistant" customModuleProvider="target">
+                <button opaque="NO" tag="112" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzY-mY-XUz" userLabel="Off-Hand" customClass="SCProfileEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
                     <rect key="frame" x="282" y="563.5" width="65" height="130"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="65" id="LVd-QR-KRG"/>
                         <constraint firstAttribute="height" constant="130" id="eMH-7b-oLf"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="10"/>
-                    <state key="normal" title="OFF-HAND ">
+                    <state key="normal">
                         <color key="titleColor" red="0.94117647059999998" green="0.79607843140000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
                         <action selector="clickEquipmentButton:" destination="-1" eventType="touchUpInside" id="UX2-eq-3l5"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="113" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puX-OL-m6F" customClass="SCEquipmentButton" customModule="DiabloAssistant" customModuleProvider="target">
+                <button opaque="NO" tag="113" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puX-OL-m6F" userLabel="Feet" customClass="SCProfileEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
                     <rect key="frame" x="174.5" y="604.5" width="65" height="87"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="65" id="LCW-eM-5cC"/>
                         <constraint firstAttribute="height" constant="87" id="y3h-KT-5Wn"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="10"/>
-                    <state key="normal" title="FEET">
+                    <state key="normal">
                         <color key="titleColor" red="0.94117647059999998" green="0.79607843140000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
@@ -231,11 +234,13 @@
                 <constraint firstItem="p1n-a3-u6v" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="DaM-5q-5j1"/>
                 <constraint firstItem="kMZ-H0-idX" firstAttribute="leading" secondItem="ZkI-PX-H5J" secondAttribute="trailing" constant="8" id="GpU-42-uEq"/>
                 <constraint firstItem="p1n-a3-u6v" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Hts-ZG-YId"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Joh-t6-haL" secondAttribute="bottom" id="JcO-Fz-S81"/>
                 <constraint firstItem="puX-OL-m6F" firstAttribute="top" secondItem="c43-mM-e9J" secondAttribute="bottom" constant="5" id="KTC-1M-Mkq"/>
                 <constraint firstItem="JHs-Sl-UaX" firstAttribute="top" secondItem="5UW-8x-mso" secondAttribute="top" id="KVi-Ti-W3K"/>
                 <constraint firstItem="puX-OL-m6F" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NAe-ch-Bqx"/>
                 <constraint firstItem="kMZ-H0-idX" firstAttribute="top" secondItem="ge9-sh-8hV" secondAttribute="bottom" constant="6" id="ODF-81-6ui"/>
                 <constraint firstItem="kMZ-H0-idX" firstAttribute="leading" secondItem="xDM-TV-4V9" secondAttribute="trailing" constant="34" id="Pkf-vV-Sog"/>
+                <constraint firstItem="Joh-t6-haL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Qom-Au-mLi"/>
                 <constraint firstItem="JHs-Sl-UaX" firstAttribute="top" secondItem="Iyh-GS-bNV" secondAttribute="bottom" constant="14" id="RAC-wa-kax"/>
                 <constraint firstItem="bzY-mY-XUz" firstAttribute="leading" secondItem="c43-mM-e9J" secondAttribute="trailing" constant="42.5" id="SGd-ka-2lI"/>
                 <constraint firstItem="bzY-mY-XUz" firstAttribute="width" secondItem="1Jn-bJ-j8F" secondAttribute="width" id="SUp-Y3-4c1"/>
@@ -243,9 +248,11 @@
                 <constraint firstItem="bzY-mY-XUz" firstAttribute="height" secondItem="1Jn-bJ-j8F" secondAttribute="height" id="UWX-nl-Bn6"/>
                 <constraint firstItem="Iyh-GS-bNV" firstAttribute="width" secondItem="xDM-TV-4V9" secondAttribute="width" id="Uph-6X-H54"/>
                 <constraint firstItem="Iyh-GS-bNV" firstAttribute="top" secondItem="qaw-0c-YvF" secondAttribute="bottom" constant="25" id="Wq7-fT-JH0"/>
+                <constraint firstItem="Joh-t6-haL" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ZZD-ZF-lf7"/>
                 <constraint firstItem="bzY-mY-XUz" firstAttribute="bottom" secondItem="puX-OL-m6F" secondAttribute="bottom" constant="2" id="Zqg-WZ-wMS"/>
                 <constraint firstItem="c43-mM-e9J" firstAttribute="leading" secondItem="1Jn-bJ-j8F" secondAttribute="trailing" constant="42" id="c2L-rL-oR9"/>
                 <constraint firstItem="kMZ-H0-idX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cUf-BB-cPZ"/>
+                <constraint firstItem="Joh-t6-haL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dOA-xB-40E"/>
                 <constraint firstItem="c43-mM-e9J" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jRz-s1-q2A"/>
                 <constraint firstItem="eJd-qR-x4K" firstAttribute="top" secondItem="kMZ-H0-idX" secondAttribute="bottom" constant="5" id="mDA-F6-zaz"/>
                 <constraint firstItem="ge9-sh-8hV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mGA-sm-mXR"/>
@@ -259,6 +266,7 @@
         </view>
     </objects>
     <resources>
+        <image name="calculatorInner" width="270" height="337.5"/>
         <image name="demon-hunter_equip_1" width="184.5" height="262.5"/>
     </resources>
 </document>

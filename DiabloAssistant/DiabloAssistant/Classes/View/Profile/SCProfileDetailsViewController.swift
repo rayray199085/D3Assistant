@@ -14,6 +14,7 @@ class SCProfileDetailsViewController: UIViewController {
     
     private lazy var equipsViewController = SCProfileEquipmentController()
     private lazy var statsViewController = SCProfileStatisticsController()
+    private lazy var skillViewController = SCProfileSkillController()
     var hero: SCProfileHero?{
         didSet{
             title = hero?.name
@@ -67,9 +68,7 @@ extension SCProfileDetailsViewController: DLTabedSlideViewDelegate{
         case 1:
             return equipsViewController
         case 2:
-            let vc = UIViewController()
-            vc.view.backgroundColor = UIColor.orange
-            return vc
+            return skillViewController
         case 3:
             let vc = UIViewController()
             vc.view.backgroundColor = UIColor.purple

@@ -17,7 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="Xeb-YS-1oF" customClass="SCProfileEquipmentDetailsView" customModule="DiabloAssistant" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="Xeb-YS-1oF" customClass="SCProfileHeroEquipDetailsView" customModule="DiabloAssistant" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -25,7 +25,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
-                        <action selector="clickDetailsMaskButton:" destination="Xeb-YS-1oF" eventType="touchUpInside" id="hU3-fX-xdQ"/>
+                        <action selector="clickEquipMaskButton:" destination="Xeb-YS-1oF" eventType="touchUpInside" id="hMO-F1-3Yf"/>
                     </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sidebar-bg" translatesAutoresizingMaskIntoConstraints="NO" id="KR6-SK-bCX">
@@ -73,9 +73,9 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="rnw-hC-ovG"/>
             <connections>
-                <outlet property="textView" destination="7cd-Ht-oWs" id="Vxb-MD-r2t"/>
-                <outlet property="titleBgImageView" destination="hl9-Kj-96V" id="pHe-Ju-C4P"/>
-                <outlet property="titleLabel" destination="fJj-Q0-Tci" id="5Jn-c1-aa8"/>
+                <outlet property="textView" destination="7cd-Ht-oWs" id="Jv1-cW-Xu4"/>
+                <outlet property="titleBgImageView" destination="hl9-Kj-96V" id="fUX-XP-KAh"/>
+                <outlet property="titleLabel" destination="fJj-Q0-Tci" id="p9o-zU-0QM"/>
             </connections>
             <point key="canvasLocation" x="196" y="191"/>
         </view>

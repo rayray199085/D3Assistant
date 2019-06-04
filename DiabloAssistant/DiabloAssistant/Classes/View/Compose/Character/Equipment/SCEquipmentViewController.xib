@@ -45,6 +45,9 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calculatorInner" translatesAutoresizingMaskIntoConstraints="NO" id="sHw-4J-jT0">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="demon-hunter_equip_1" translatesAutoresizingMaskIntoConstraints="NO" id="p1n-a3-u6v">
                     <rect key="frame" x="24.5" y="185" width="365" height="526"/>
                     <constraints>
@@ -361,6 +364,7 @@
                 <constraint firstItem="Pvm-lf-2cR" firstAttribute="top" secondItem="kjw-BD-l9y" secondAttribute="bottom" constant="5" id="Acd-jD-6Iw"/>
                 <constraint firstItem="Iyh-GS-bNV" firstAttribute="height" secondItem="xDM-TV-4V9" secondAttribute="height" id="D21-9T-yGz"/>
                 <constraint firstItem="Iyh-GS-bNV" firstAttribute="top" secondItem="xDM-TV-4V9" secondAttribute="top" id="D3k-em-MY5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sHw-4J-jT0" secondAttribute="trailing" id="F0a-6H-cbu"/>
                 <constraint firstItem="kMZ-H0-idX" firstAttribute="leading" secondItem="ZkI-PX-H5J" secondAttribute="trailing" constant="8" id="GpU-42-uEq"/>
                 <constraint firstItem="p1n-a3-u6v" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Hts-ZG-YId"/>
                 <constraint firstItem="puX-OL-m6F" firstAttribute="top" secondItem="c43-mM-e9J" secondAttribute="bottom" constant="5" id="KTC-1M-Mkq"/>
@@ -384,8 +388,11 @@
                 <constraint firstItem="c43-mM-e9J" firstAttribute="leading" secondItem="1Jn-bJ-j8F" secondAttribute="trailing" constant="42" id="c2L-rL-oR9"/>
                 <constraint firstItem="kMZ-H0-idX" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cUf-BB-cPZ"/>
                 <constraint firstItem="x8O-YM-0cf" firstAttribute="top" secondItem="p1n-a3-u6v" secondAttribute="top" constant="5" id="ePl-9x-saN"/>
+                <constraint firstItem="sHw-4J-jT0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="i6B-4j-jpw"/>
+                <constraint firstItem="sHw-4J-jT0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ico-RM-eNe"/>
                 <constraint firstItem="c43-mM-e9J" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jRz-s1-q2A"/>
                 <constraint firstItem="15S-rp-V4Q" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kzp-7K-6VU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="sHw-4J-jT0" secondAttribute="bottom" id="lII-I7-kw7"/>
                 <constraint firstItem="kjw-BD-l9y" firstAttribute="centerY" secondItem="XfO-KX-JSa" secondAttribute="centerY" id="lgI-98-1wh"/>
                 <constraint firstItem="Pvm-lf-2cR" firstAttribute="trailing" secondItem="kjw-BD-l9y" secondAttribute="trailing" id="loO-Er-GCU"/>
                 <constraint firstItem="eJd-qR-x4K" firstAttribute="top" secondItem="kMZ-H0-idX" secondAttribute="bottom" constant="5" id="mDA-F6-zaz"/>
@@ -404,6 +411,7 @@
         </view>
     </objects>
     <resources>
+        <image name="calculatorInner" width="270" height="337.5"/>
         <image name="closePopupButton" width="18" height="18"/>
         <image name="closePopupButtonActive" width="18" height="18"/>
         <image name="demon-hunter_equip_1" width="184.5" height="262.5"/>

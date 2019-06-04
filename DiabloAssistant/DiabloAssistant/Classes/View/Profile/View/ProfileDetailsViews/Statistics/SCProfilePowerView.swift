@@ -12,6 +12,8 @@ protocol SCProfilePowerViewDelegate: NSObjectProtocol {
 }
 
 class SCProfilePowerView: UIView {
+    var details: SCEquipmentItemDetails?
+    
     weak var delegate: SCProfilePowerViewDelegate?
     var power: SCProfileLegendaryPowerItem?{
         didSet{

@@ -112,6 +112,16 @@
 		0D85384D2296878C002FC6B1 /* SCDetailsRandomAffixes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85384C2296878C002FC6B1 /* SCDetailsRandomAffixes.swift */; };
 		0D85384F22968AF6002FC6B1 /* SCDetailsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D85384E22968AF6002FC6B1 /* SCDetailsType.swift */; };
 		0D8538512296A01C002FC6B1 /* UITabBarController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8538502296A01C002FC6B1 /* UITabBarController+extension.swift */; };
+		0D9858C722A5E12A00090F00 /* SCProfileEquipGemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9858C622A5E12A00090F00 /* SCProfileEquipGemView.swift */; };
+		0D9858C922A5E13800090F00 /* SCProfileEquipGemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D9858C822A5E13800090F00 /* SCProfileEquipGemView.xib */; };
+		0D9858CB22A5F8C700090F00 /* SCProfileEquipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9858CA22A5F8C700090F00 /* SCProfileEquipButton.swift */; };
+		0D9858CD22A622A800090F00 /* SCProfileHeroEquipDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D9858CC22A622A800090F00 /* SCProfileHeroEquipDetailsView.xib */; };
+		0D9858CF22A622C300090F00 /* SCProfileHeroEquipDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9858CE22A622C300090F00 /* SCProfileHeroEquipDetailsView.swift */; };
+		0D9858D122A632C800090F00 /* SCProfileAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9858D022A632C800090F00 /* SCProfileAttributes.swift */; };
+		0D9858D422A649E000090F00 /* SCProfileSkillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9858D322A649E000090F00 /* SCProfileSkillController.swift */; };
+		0D9858D622A649F500090F00 /* SCProfileSkillController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D9858D522A649F500090F00 /* SCProfileSkillController.xib */; };
+		0D9858D822A64C6800090F00 /* SCProfileActiveSkillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9858D722A64C6800090F00 /* SCProfileActiveSkillView.swift */; };
+		0D9858DA22A64C7600090F00 /* SCProfileActiveSkillView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D9858D922A64C7600090F00 /* SCProfileActiveSkillView.xib */; };
 		0DB0705E229A093400B61E68 /* MXCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0705D229A093400B61E68 /* MXCornerRadius.m */; };
 		0DB4415F22937B2A00A1F520 /* characterSkills.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0DB4415E22937B2A00A1F520 /* characterSkills.plist */; };
 		0DB441622293DD2600A1F520 /* SCPassiveSkillsIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB441612293DD2600A1F520 /* SCPassiveSkillsIntroView.swift */; };
@@ -142,6 +152,8 @@
 		0DD22C79228E69FC00F37491 /* SCComposeTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD22C72228E69FB00F37491 /* SCComposeTypeButton.swift */; };
 		0DD22C7A228E69FC00F37491 /* SCComposeTypeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD22C73228E69FB00F37491 /* SCComposeTypeButton.xib */; };
 		0DD22C7B228E69FC00F37491 /* SCComposeTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DD22C74228E69FB00F37491 /* SCComposeTypeView.xib */; };
+		0DE0F7DF22A6627A00F0D2AD /* SCProfilePassiveSkillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE0F7DE22A6627A00F0D2AD /* SCProfilePassiveSkillView.swift */; };
+		0DE0F7E122A6628B00F0D2AD /* SCProfilePassiveSkillView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DE0F7E022A6628B00F0D2AD /* SCProfilePassiveSkillView.xib */; };
 		0DED3FB42297DF9E003C2887 /* SCPickerViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DED3FB22297DF9E003C2887 /* SCPickerViewTableViewCell.xib */; };
 		0DED3FB52297DF9E003C2887 /* SCPickerViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DED3FB32297DF9E003C2887 /* SCPickerViewTableViewCell.swift */; };
 		0DF25CAE229516690050043B /* SCEquipmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF25CAD229516690050043B /* SCEquipmentViewModel.swift */; };
@@ -295,6 +307,16 @@
 		0D85384C2296878C002FC6B1 /* SCDetailsRandomAffixes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCDetailsRandomAffixes.swift; sourceTree = "<group>"; };
 		0D85384E22968AF6002FC6B1 /* SCDetailsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCDetailsType.swift; sourceTree = "<group>"; };
 		0D8538502296A01C002FC6B1 /* UITabBarController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+extension.swift"; sourceTree = "<group>"; };
+		0D9858C622A5E12A00090F00 /* SCProfileEquipGemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfileEquipGemView.swift; sourceTree = "<group>"; };
+		0D9858C822A5E13800090F00 /* SCProfileEquipGemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCProfileEquipGemView.xib; sourceTree = "<group>"; };
+		0D9858CA22A5F8C700090F00 /* SCProfileEquipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfileEquipButton.swift; sourceTree = "<group>"; };
+		0D9858CC22A622A800090F00 /* SCProfileHeroEquipDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCProfileHeroEquipDetailsView.xib; sourceTree = "<group>"; };
+		0D9858CE22A622C300090F00 /* SCProfileHeroEquipDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfileHeroEquipDetailsView.swift; sourceTree = "<group>"; };
+		0D9858D022A632C800090F00 /* SCProfileAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfileAttributes.swift; sourceTree = "<group>"; };
+		0D9858D322A649E000090F00 /* SCProfileSkillController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfileSkillController.swift; sourceTree = "<group>"; };
+		0D9858D522A649F500090F00 /* SCProfileSkillController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCProfileSkillController.xib; sourceTree = "<group>"; };
+		0D9858D722A64C6800090F00 /* SCProfileActiveSkillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfileActiveSkillView.swift; sourceTree = "<group>"; };
+		0D9858D922A64C7600090F00 /* SCProfileActiveSkillView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCProfileActiveSkillView.xib; sourceTree = "<group>"; };
 		0DB0705C229A093400B61E68 /* MXCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXCornerRadius.h; sourceTree = "<group>"; };
 		0DB0705D229A093400B61E68 /* MXCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXCornerRadius.m; sourceTree = "<group>"; };
 		0DB4415E22937B2A00A1F520 /* characterSkills.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = characterSkills.plist; sourceTree = "<group>"; };
@@ -326,6 +348,8 @@
 		0DD22C72228E69FB00F37491 /* SCComposeTypeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCComposeTypeButton.swift; sourceTree = "<group>"; };
 		0DD22C73228E69FB00F37491 /* SCComposeTypeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCComposeTypeButton.xib; sourceTree = "<group>"; };
 		0DD22C74228E69FB00F37491 /* SCComposeTypeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCComposeTypeView.xib; sourceTree = "<group>"; };
+		0DE0F7DE22A6627A00F0D2AD /* SCProfilePassiveSkillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfilePassiveSkillView.swift; sourceTree = "<group>"; };
+		0DE0F7E022A6628B00F0D2AD /* SCProfilePassiveSkillView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCProfilePassiveSkillView.xib; sourceTree = "<group>"; };
 		0DED3FB22297DF9E003C2887 /* SCPickerViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCPickerViewTableViewCell.xib; sourceTree = "<group>"; };
 		0DED3FB32297DF9E003C2887 /* SCPickerViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCPickerViewTableViewCell.swift; sourceTree = "<group>"; };
 		0DF25CAD229516690050043B /* SCEquipmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCEquipmentViewModel.swift; sourceTree = "<group>"; };
@@ -686,6 +710,7 @@
 			children = (
 				0D64210E22A49A830084635A /* Statistics */,
 				0D64210F22A49A9A0084635A /* Equipments */,
+				0D9858D222A649A200090F00 /* Skills */,
 			);
 			path = ProfileDetailsViews;
 			sourceTree = "<group>";
@@ -711,6 +736,7 @@
 				0DC53B3722A50908009C44CD /* SCProfileGemItem.swift */,
 				0DC53B3922A509CC009C44CD /* SCProfileSet.swift */,
 				0DC53B3B22A510C0009C44CD /* SCProfileTransmog.swift */,
+				0D9858D022A632C800090F00 /* SCProfileAttributes.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -760,6 +786,11 @@
 			children = (
 				0D62CED022A340420003A698 /* SCProfileEquipmentController.swift */,
 				0D62CED422A341300003A698 /* SCProfileEquipmentController.xib */,
+				0D9858C622A5E12A00090F00 /* SCProfileEquipGemView.swift */,
+				0D9858C822A5E13800090F00 /* SCProfileEquipGemView.xib */,
+				0D9858CA22A5F8C700090F00 /* SCProfileEquipButton.swift */,
+				0D9858CE22A622C300090F00 /* SCProfileHeroEquipDetailsView.swift */,
+				0D9858CC22A622A800090F00 /* SCProfileHeroEquipDetailsView.xib */,
 			);
 			path = Equipments;
 			sourceTree = "<group>";
@@ -836,6 +867,19 @@
 				0D71CF50228FECFE0029FF16 /* SCEquipmentViewController.xib */,
 			);
 			path = Equipment;
+			sourceTree = "<group>";
+		};
+		0D9858D222A649A200090F00 /* Skills */ = {
+			isa = PBXGroup;
+			children = (
+				0D9858D322A649E000090F00 /* SCProfileSkillController.swift */,
+				0D9858D522A649F500090F00 /* SCProfileSkillController.xib */,
+				0D9858D722A64C6800090F00 /* SCProfileActiveSkillView.swift */,
+				0D9858D922A64C7600090F00 /* SCProfileActiveSkillView.xib */,
+				0DE0F7DE22A6627A00F0D2AD /* SCProfilePassiveSkillView.swift */,
+				0DE0F7E022A6628B00F0D2AD /* SCProfilePassiveSkillView.xib */,
+			);
+			path = Skills;
 			sourceTree = "<group>";
 		};
 		0DB0705B229A093400B61E68 /* MXCornerRadius */ = {
@@ -1103,6 +1147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D62CED522A341300003A698 /* SCProfileEquipmentController.xib in Resources */,
+				0D9858CD22A622A800090F00 /* SCProfileHeroEquipDetailsView.xib in Resources */,
 				0DED3FB42297DF9E003C2887 /* SCPickerViewTableViewCell.xib in Resources */,
 				0D6B193D2290EA7500F564B7 /* Exocet.ttf in Resources */,
 				0D71CF44228F92990029FF16 /* SCCharacterViewController.xib in Resources */,
@@ -1116,13 +1161,16 @@
 				0DB441642293DE3500A1F520 /* SCPassiveSkillsIntroView.xib in Resources */,
 				0DCD2E17229F681900887AD7 /* SCProfileInputView.xib in Resources */,
 				0D71CF51228FECFE0029FF16 /* SCEquipmentViewController.xib in Resources */,
+				0D9858C922A5E13800090F00 /* SCProfileEquipGemView.xib in Resources */,
 				0D516C4222921AED0006DBCB /* SCActiveSkillItemView.xib in Resources */,
 				0D1DD21E228D503800FFC9FD /* Assets.xcassets in Resources */,
 				0D18AD95229BB96900B3CF4E /* SCFollowerContentView.xib in Resources */,
 				0D6B19392290DEFE00F564B7 /* SCPassiveSkillView.xib in Resources */,
 				0DFDEE1422992DE000552C47 /* SCCollectionViewButton.xib in Resources */,
 				0D2757CA22A093160052D821 /* SCProfileDetailsViewController.xib in Resources */,
+				0DE0F7E122A6628B00F0D2AD /* SCProfilePassiveSkillView.xib in Resources */,
 				0D6B193E2290EA7800F564B7 /* ExocetBold.ttf in Resources */,
+				0D9858D622A649F500090F00 /* SCProfileSkillController.xib in Resources */,
 				0DD22C7B228E69FC00F37491 /* SCComposeTypeView.xib in Resources */,
 				0DCD2E13229F58CC00887AD7 /* SCProfileRecordView.xib in Resources */,
 				0D337BAC229D440100DE8704 /* SCProfileButton.xib in Resources */,
@@ -1131,6 +1179,7 @@
 				0D6B195822912A1C00F564B7 /* SCActiveSkillsIntroView.xib in Resources */,
 				0DB441682293E23500A1F520 /* SCPassiveSkillItemView.xib in Resources */,
 				0DB6A5D5229CB54400694A2E /* SCFollowerSkillButton.xib in Resources */,
+				0D9858DA22A64C7600090F00 /* SCProfileActiveSkillView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1244,9 +1293,11 @@
 				0D516C4022921ADA0006DBCB /* SCActiveSkillItemView.swift in Sources */,
 				0D1DD28C228D513200FFC9FD /* NSString+SCAddition.m in Sources */,
 				0D1DD29D228D513200FFC9FD /* UIImage+extension.swift in Sources */,
+				0DE0F7DF22A6627A00F0D2AD /* SCProfilePassiveSkillView.swift in Sources */,
 				0D8538512296A01C002FC6B1 /* UITabBarController+extension.swift in Sources */,
 				0D1DD2AB228D513200FFC9FD /* SCOAuthViewController.swift in Sources */,
 				0DFDEE0A2299169C00552C47 /* SCCollectionViewFlowLayout.swift in Sources */,
+				0D9858D422A649E000090F00 /* SCProfileSkillController.swift in Sources */,
 				0D2242CD2292C70C00F7B1DD /* SCRuneSelectionView.swift in Sources */,
 				0D1DD2AE228D513200FFC9FD /* SCBaseViewController.swift in Sources */,
 				0D1DD2AD228D513200FFC9FD /* SCMainViewController.swift in Sources */,
@@ -1255,8 +1306,10 @@
 				0D1DD29E228D513200FFC9FD /* UINavigationController+extension.swift in Sources */,
 				0D1DD29C228D513200FFC9FD /* UIView+extension.swift in Sources */,
 				0DF25CAE229516690050043B /* SCEquipmentViewModel.swift in Sources */,
+				0D9858CB22A5F8C700090F00 /* SCProfileEquipButton.swift in Sources */,
 				0D6B19502290F9C700F564B7 /* SCActiveSkill.swift in Sources */,
 				0D1DD291228D513200FFC9FD /* SCNetworkManager.swift in Sources */,
+				0D9858CF22A622C300090F00 /* SCProfileHeroEquipDetailsView.swift in Sources */,
 				0D1DD294228D513200FFC9FD /* SCSQLiteManager.swift in Sources */,
 				0D85384F22968AF6002FC6B1 /* SCDetailsType.swift in Sources */,
 				0D1DD2A9228D513200FFC9FD /* SCFollowerViewController.swift in Sources */,
@@ -1284,6 +1337,7 @@
 				0D1DD2A3228D513200FFC9FD /* WKWebView+extension.swift in Sources */,
 				0D85384B229686D3002FC6B1 /* SCMainAttribute.swift in Sources */,
 				0D1DD2A2228D513200FFC9FD /* UITableViewCell+extension.swift in Sources */,
+				0D9858D822A64C6800090F00 /* SCProfileActiveSkillView.swift in Sources */,
 				0D62CEDE22A3536F0003A698 /* SCProfileHeroActive.swift in Sources */,
 				0D62CEE022A353E90003A698 /* SCProfileSkillItem.swift in Sources */,
 				0DB6A5D7229CEB7400694A2E /* SCFollowerViewModel.swift in Sources */,
@@ -1297,6 +1351,7 @@
 				0DC53B3A22A509CC009C44CD /* SCProfileSet.swift in Sources */,
 				0DCD2E1C229F829B00887AD7 /* SCProfileData.swift in Sources */,
 				0D337BAA229D43E900DE8704 /* SCProfileButton.swift in Sources */,
+				0D9858D122A632C800090F00 /* SCProfileAttributes.swift in Sources */,
 				0D1DD2A0228D513200FFC9FD /* UIViewController+extension.swift in Sources */,
 				0DC53B3C22A510C0009C44CD /* SCProfileTransmog.swift in Sources */,
 				0D1DD28E228D513200FFC9FD /* CABasicAnimation+SCAddition.m in Sources */,
@@ -1314,6 +1369,7 @@
 				0D2757C822A092C70052D821 /* SCProfileDetailsViewController.swift in Sources */,
 				0D6B195422911A5500F564B7 /* SCRunes.swift in Sources */,
 				0D1DD292228D513200FFC9FD /* SCUserAccount.swift in Sources */,
+				0D9858C722A5E12A00090F00 /* SCProfileEquipGemView.swift in Sources */,
 				0DD22C78228E69FC00F37491 /* SCComposeTypeView.swift in Sources */,
 				0D71CF4A228FB1B00029FF16 /* SCSkillsViewController.swift in Sources */,
 				0D85384722967DBA002FC6B1 /* SCEquipmentItemDetails.swift in Sources */,

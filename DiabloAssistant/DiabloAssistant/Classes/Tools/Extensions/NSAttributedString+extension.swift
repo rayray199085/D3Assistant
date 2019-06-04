@@ -163,3 +163,84 @@ extension NSAttributedString{
         }
     }
 }
+extension NSAttributedString{
+    static func getHeroItemDescription(details: SCProfileEquipmentItem?)->NSAttributedString{
+        guard let details = details,
+            let colorName = details.displayColor else{
+                return NSAttributedString(string: "")
+        }
+        let nextRow = NSMutableAttributedString(string: "\n\n")
+        nextRow.addAttributes([NSAttributedString.Key.font : UIFont.systemFont(ofSize: 5)], range: NSRange(location: 0, length: nextRow.length))
+        
+        let itemDescription = NSMutableAttributedString(string: "")
+        var color = UIColor.white
+        switch colorName {
+        case "blue":
+            color = SCItemBlue
+        case "white":
+            color = UIColor.white
+        case "yellow":
+            color = SCItemYellow
+        case "orange":
+            color = SCItemOrange
+        case "green":
+            color = SCItemGreen
+        default:
+            break
+        }
+        
+        setDescription(nextRow: nextRow,text: details.typeName,color: color, parentAttrString: itemDescription)
+        setDescription(nextRow: nextRow,text: details.slots,color: UIColor.darkGray, parentAttrString: itemDescription)
+        
+        if (details.dps?.count ?? 0) > 0{
+            setDescription(nextRow: nextRow,text: details.dps,color: UIColor.white,font: UIFont.boldSystemFont(ofSize: 20), parentAttrString: itemDescription)
+            setDescription(nextRow: nextRow,text: "Damage Per Second",color: UIColor.darkGray, parentAttrString: itemDescription)
+            setDamageHtmlDescription(nextRow: nextRow,text: details.damage, color: UIColor.darkGray, parentAttrString: itemDescription)
+        }
+        if details.armor > 0{
+            setDescription(nextRow: nextRow,text: "\(details.armor)",color: UIColor.white,font: UIFont.boldSystemFont(ofSize: 20), parentAttrString: itemDescription)
+            setDescription(nextRow: nextRow,text: "Armor",color: UIColor.darkGray, parentAttrString: itemDescription)
+        }
+        if (details.attributesHtml?.primary?.count ?? 0) > 0{
+            setDescription(nextRow: nextRow,text: "Primary", color: UIColor.white,font:  UIFont.boldSystemFont(ofSize: 14), parentAttrString: itemDescription)
+            for attribute in details.attributesHtml?.primary ?? []{
+                setAttributeDescription(nextRow: nextRow,text: attribute, parentAttrString: itemDescription)
+            }
+        }
+        if (details.attributesHtml?.secondary?.count ?? 0) > 0{
+            setDescription(nextRow: nextRow,text: "Secondary", color: UIColor.white,font:  UIFont.boldSystemFont(ofSize: 14) ,parentAttrString: itemDescription)
+            for attribute in details.attributesHtml?.secondary ?? []{
+                setAttributeDescription(nextRow: nextRow,text: attribute, parentAttrString: itemDescription)
+            }
+        }
+        if (details.attributesHtml?.other?.count ?? 0) > 0{
+            setDescription(nextRow: nextRow,text: "Other", color: UIColor.white,font:  UIFont.boldSystemFont(ofSize: 14), parentAttrString: itemDescription)
+            for attribute in details.attributesHtml?.other ?? []{
+                setAttributeDescription(nextRow: nextRow, text: attribute, color: SCItemBlue, parentAttrString: itemDescription)
+            }
+        }
+        if (details.gems?.count ?? 0) > 0{
+            for gem in details.gems ?? []{
+                let gemColor = gem.isJewel == 1 ? SCItemOrange : SCItemYellow
+                for attribute in gem.attributes ?? []{
+                    setAttributeDescription(nextRow: nextRow, text: attribute, color: gemColor, font: UIFont.boldSystemFont(ofSize: 13), parentAttrString: itemDescription)
+                }
+            }
+        }
+        
+        if details.transmog != nil{
+            setDescription(nextRow: nextRow,text: "Transmogrification:", color: SCItemBlue,font:  UIFont.boldSystemFont(ofSize: 14), parentAttrString: itemDescription)
+            setAttributeDescription(nextRow: nextRow, text: details.transmog?.name, color: UIColor.white,font: UIFont.boldSystemFont(ofSize: 13), parentAttrString: itemDescription)
+        }
+        
+        if details.set != nil {
+            setAttributeDescription(nextRow: nextRow,text: details.set?.name, color: color, font: UIFont.boldSystemFont(ofSize: 14), parentAttrString: itemDescription)
+            setAttributeDescription(nextRow: nextRow,text: details.set?.descriptionHtml, color: color, parentAttrString: itemDescription)
+        }
+       
+        if details.accountBound > 0{
+            setDescription(nextRow: nextRow,text: "Required level: \(details.requiredLevel)\nAccount Bound\nUnique Equipped", color: SCButtonTitleColor, parentAttrString: itemDescription)
+        }
+        return itemDescription
+    }
+}

@@ -13,6 +13,7 @@ class SCProfileGemItem: NSObject {
     @objc var slug: String?
     @objc var name: String?
     @objc var icon: String?
+    @objc var iconImage: UIImage?
     @objc var path: String?
     
     override var description: String{

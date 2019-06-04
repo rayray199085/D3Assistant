@@ -10,16 +10,21 @@ import Foundation
 import YYModel
 
 class SCProfileViewModel{
+    var heroId: String?
+    var playerRegion: String?
+    var playerBattleTag: String?
+    
     var heroStatsDescription: String?
     
-    var heroSkills: SCProfileHeroSkills?{
+    var heroEquips: SCProfileEquipments?{
         didSet{
             
         }
     }
-    var heroEquipments: SCProfileEquipments?{
+    
+    var heroSkills: SCProfileHeroSkills?{
         didSet{
-           
+            
         }
     }
     var followers: SCProfileFollowerList?{
@@ -58,6 +63,8 @@ class SCProfileViewModel{
         
     }
     func loadPlayerProfile(region: String, battleTag: String, completion:@escaping (_ profileData: SCProfileData?,_ isSuccess: Bool)->()){
+        playerRegion = region
+        playerBattleTag = battleTag
         SCNetworkManager.shared.getPlayerProfile(region: region, battleTag: battleTag) { (dict, isSuccess) in
             guard let dict = dict else{
                 completion(nil, false)
@@ -68,13 +75,14 @@ class SCProfileViewModel{
         }
     }
     
-    func loadHeroDetails(region: String?,battleTag: String?, id: String?, completion:@escaping (_ isSuccess: Bool)->()){
-        guard let region = region,
-            let battleTag = battleTag,
+    func loadHeroDetails(id: String?, completion:@escaping (_ isSuccess: Bool)->()){
+        guard let region = playerRegion,
+            let battleTag = playerBattleTag,
             let id = id else{
                 completion(false)
                 return
         }
+        heroId = id
         SCNetworkManager.shared.getHeroDetails(region: region, battleTag: battleTag, id: id) { (dict, isSuccess) in
             if !isSuccess{
                 completion(false)
@@ -82,7 +90,6 @@ class SCProfileViewModel{
             }
             guard let dict = dict,
                 let skills = dict["skills"] as? [String: Any],
-                let equipments = dict["items"] as? [String: Any],
                 let followers = dict["followers"] as? [String: Any],
                 let heroStats = dict["stats"] as? [String: Any],
                 let legendaryPowers = dict["legendaryPowers"] as? [[String: Any]],
@@ -92,7 +99,6 @@ class SCProfileViewModel{
                 return
             }
             self.heroSkills = SCProfileHeroSkills.yy_model(with: skills)
-            self.heroEquipments = SCProfileEquipments.yy_model(with: equipments)
             self.followers = SCProfileFollowerList.yy_model(with: followers)
             self.heroStats = SCProfileHeroStats.yy_model(with: heroStats)
             let group = DispatchGroup()
@@ -128,12 +134,45 @@ class SCProfileViewModel{
             completion(details, isSuccess)
         }
     }
-    func loadEquipmentItemImages(){
-        for item in heroEquipments?.items ?? []{
-            guard let item = item else{
-                continue
+    
+    func loadEquipmentItems(completion:@escaping (_ isSuccess: Bool)->()){
+        guard let region = playerRegion,
+            let battleTag = playerBattleTag,
+            let id = heroId else{
+                completion(false)
+                return
+        }
+        SCNetworkManager.shared.getProfileEquipments(region: region, battleTag: battleTag, heroId: id) { (dict, isSuccess) in
+            guard let dict = dict,
+                  let equips = SCProfileEquipments.yy_model(with: dict) else{
+                return
             }
-            print(item)
+            let group = DispatchGroup()
+            for item in equips.items ?? []{
+                guard let item = item,
+                      let icon = item.icon else{
+                    continue
+                }
+                group.enter()
+                SCNetworkManager.shared.getItemImage(icon: icon, size: SCItemImageSize.large, completion: { (image) in
+                    item.iconImage = image
+                    group.leave()
+                })
+                for gem in item.gems ?? []{
+                    guard let gemIcon = gem.item?.icon else{
+                        continue
+                    }
+                    group.enter()
+                    SCNetworkManager.shared.getItemImage(icon: gemIcon, size: SCItemImageSize.small, completion: { (image) in
+                        gem.item?.iconImage = image
+                        group.leave()
+                    })
+                }
+            }
+            group.notify(queue: DispatchQueue.main, execute: {
+                self.heroEquips = equips
+                completion(true)
+            })
         }
     }
 }

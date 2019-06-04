@@ -65,6 +65,10 @@ private extension SCProfileStatisticsController{
         detailsView.isHidden = true
         detailsView.delegate = self
     }
+    func showDetailsViewContent(details: SCEquipmentItemDetails){
+        detailsView.details = details
+        detailsView.isHidden = false
+    }
 }
 extension SCProfileStatisticsController: SCProfileEquipmentDetailsViewDelegate{
     func dismissDetailsView() {
@@ -73,10 +77,17 @@ extension SCProfileStatisticsController: SCProfileEquipmentDetailsViewDelegate{
 }
 extension SCProfileStatisticsController: SCProfilePowerViewDelegate{
     func didClickEquipButton(powerView: SCProfilePowerView, slugId: String) {
+        if powerView.details != nil{
+            showDetailsViewContent(details: powerView.details!)
+            return
+        }
         SVProgressHUD.show()
         viewModel?.loadEquipmentDetails(slugId: slugId, completion: { [weak self] (details, isSuccess) in
-            self?.detailsView.details = details
-            self?.detailsView.isHidden = false
+            guard let details = details else{
+                return
+            }
+            powerView.details = details
+            self?.showDetailsViewContent(details: details)
             SVProgressHUD.dismiss()
         })
         

@@ -69,7 +69,7 @@ extension SCProfileViewController: SCProfileRecordViewDelegate{
         let vc = SCProfileDetailsViewController()
         vc.hero = hero
         SVProgressHUD.show()
-        viewModel.loadHeroDetails(region: profileData?.region, battleTag: profileData?.battleTag, id: hero?.id) { [weak self](isSuccess) in
+        viewModel.loadHeroDetails(id: hero?.id) { [weak self](isSuccess) in
             if !isSuccess{
                 SVProgressHUD.showInfo(withStatus: "Connection error")
                 return
