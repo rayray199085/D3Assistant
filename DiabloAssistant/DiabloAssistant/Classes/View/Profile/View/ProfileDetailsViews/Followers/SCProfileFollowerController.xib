@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Exocet.ttf">
+            <string>ExocetLight</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SCProfileFollowerController" customModule="DiabloAssistant" customModuleProvider="target">
+            <connections>
+                <outlet property="detailsImageView" destination="c1a-QH-dsw" id="vdj-zt-1Gu"/>
+                <outlet property="followerNameLabel" destination="qqC-O3-mwd" id="H0e-XC-ETa"/>
+                <outlet property="view" destination="ScQ-kL-gyx" id="eoI-qr-QeQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ScQ-kL-gyx">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calculatorInner" translatesAutoresizingMaskIntoConstraints="NO" id="jhD-8A-aVZ">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </imageView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ulF-Nq-0ay">
+                    <rect key="frame" x="146.5" y="71" width="121" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="121" id="BGv-yK-QyV"/>
+                        <constraint firstAttribute="height" constant="28" id="TqB-YM-y3j"/>
+                    </constraints>
+                    <segments>
+                        <segment title="S"/>
+                        <segment title="T"/>
+                        <segment title="E"/>
+                    </segments>
+                    <color key="tintColor" red="0.94117647059999998" green="0.87450980389999999" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="segment:" destination="-1" eventType="valueChanged" id="ZVB-hG-1BY"/>
+                    </connections>
+                </segmentedControl>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCOUNDREL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqC-O3-mwd">
+                    <rect key="frame" x="143" y="104" width="128.5" height="22.5"/>
+                    <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="20"/>
+                    <color key="textColor" red="0.94117647059999998" green="0.87450980389999999" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="follower_details_0" translatesAutoresizingMaskIntoConstraints="NO" id="c1a-QH-dsw">
+                    <rect key="frame" x="64" y="126.5" width="286" height="350"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="286" id="mTx-yL-tc4"/>
+                        <constraint firstAttribute="height" constant="350" id="w0X-CP-Dn5"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="jhD-8A-aVZ" firstAttribute="leading" secondItem="nCn-eX-Ym7" secondAttribute="leading" id="4sD-rJ-MSe"/>
+                <constraint firstItem="nCn-eX-Ym7" firstAttribute="trailing" secondItem="jhD-8A-aVZ" secondAttribute="trailing" id="4v1-FU-X9R"/>
+                <constraint firstItem="c1a-QH-dsw" firstAttribute="centerX" secondItem="ScQ-kL-gyx" secondAttribute="centerX" id="8CW-fn-hD7"/>
+                <constraint firstItem="ulF-Nq-0ay" firstAttribute="centerX" secondItem="ScQ-kL-gyx" secondAttribute="centerX" id="8pi-j8-TIp"/>
+                <constraint firstItem="ulF-Nq-0ay" firstAttribute="top" secondItem="nCn-eX-Ym7" secondAttribute="top" constant="27" id="DiK-H4-7FR"/>
+                <constraint firstItem="qqC-O3-mwd" firstAttribute="top" secondItem="ulF-Nq-0ay" secondAttribute="bottom" constant="5" id="KsN-j4-yt9"/>
+                <constraint firstItem="c1a-QH-dsw" firstAttribute="top" secondItem="qqC-O3-mwd" secondAttribute="bottom" id="XtK-bA-0i5"/>
+                <constraint firstItem="jhD-8A-aVZ" firstAttribute="top" secondItem="nCn-eX-Ym7" secondAttribute="top" id="etb-jf-Niy"/>
+                <constraint firstItem="nCn-eX-Ym7" firstAttribute="bottom" secondItem="jhD-8A-aVZ" secondAttribute="bottom" id="lq8-tM-XmV"/>
+                <constraint firstItem="qqC-O3-mwd" firstAttribute="centerX" secondItem="ScQ-kL-gyx" secondAttribute="centerX" id="ruO-b2-TqI"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="nCn-eX-Ym7"/>
+            <point key="canvasLocation" x="-87" y="140"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="calculatorInner" width="270" height="337.5"/>
+        <image name="follower_details_0" width="143" height="175"/>
+    </resources>
+</document>

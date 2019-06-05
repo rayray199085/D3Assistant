@@ -11,7 +11,11 @@ import SVProgressHUD
 
 class SCProfileViewController: SCBaseViewController {
     private lazy var profileView = SCProfileRecordView.recordView()
-    private lazy var profileInputView = SCProfileInputView.inputView()
+    private lazy var profileInputView: SCProfileInputView = {
+        let v = SCProfileInputView.inputView()
+        v.readTagRecords()
+        return v
+    }()
     private lazy var viewModel = SCProfileViewModel()
     
     private var profileData: SCProfileData? {
@@ -33,6 +37,7 @@ class SCProfileViewController: SCBaseViewController {
     @objc private func addNewProfile(){
         profileInputView.isHidden = false
         profileInputView.setFirstResponder()
+        profileInputView.tableView.scroll(to: UITableView.scrollsTo.top, animated: true)
     }
 }
 private extension SCProfileViewController{
@@ -47,20 +52,23 @@ private extension SCProfileViewController{
     }
 }
 extension SCProfileViewController: SCProfileInputViewDelegate{
-    func getRegionAndBattleTag(view: SCProfileInputView, region: String?, battleTag: String?) {
+    func getRegionAndBattleTag(view: SCProfileInputView, region: String?, battleTag: String?, completion: @escaping (Bool) -> ()) {
         guard let region = region,
             let battleTag = battleTag else{
+                completion(false)
                 return
         }
         SVProgressHUD.show()
         viewModel.loadPlayerProfile(region: region, battleTag: battleTag) { [weak self](profileData, isSuccess) in
             if !isSuccess || profileData == nil || profileData?.battleTag == nil{
                 SVProgressHUD.showInfo(withStatus: "Incorrect input")
+                completion(false)
                 return
             }
             SVProgressHUD.showInfo(withStatus: "Success")
             self?.profileData = profileData
             self?.profileData?.region = region
+            completion(true)
         }
     }
 }

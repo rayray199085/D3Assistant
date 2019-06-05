@@ -16,8 +16,8 @@
             <rect key="frame" x="0.0" y="0.0" width="180" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hammer-of-the-ancients" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnW-0x-8c3">
-                    <rect key="frame" x="56" y="6" width="120" height="33.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnW-0x-8c3">
+                    <rect key="frame" x="56" y="6" width="120" height="0.0"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="120" id="e5p-3g-ZGn"/>
                     </constraints>
@@ -25,8 +25,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk2-Uz-cGX">
-                    <rect key="frame" x="56" y="38" width="41" height="16"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk2-Uz-cGX">
+                    <rect key="frame" x="56" y="54" width="0.0" height="0.0"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.94117647059999998" green="0.87450980389999999" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -37,7 +37,6 @@
                         <constraint firstAttribute="height" constant="48" id="54q-Y0-iHe"/>
                         <constraint firstAttribute="width" constant="48" id="TIc-5A-lth"/>
                     </constraints>
-                    <state key="normal" backgroundImage="barbarian_bash"/>
                     <connections>
                         <action selector="clickSkillIconButton:" destination="fnQ-Cc-g16" eventType="touchUpInside" id="EYn-yO-LBq"/>
                     </connections>
@@ -73,6 +72,5 @@
     </objects>
     <resources>
         <image name="active_skill_0" width="10.5" height="10.5"/>
-        <image name="barbarian_bash" width="68" height="68"/>
     </resources>
 </document>

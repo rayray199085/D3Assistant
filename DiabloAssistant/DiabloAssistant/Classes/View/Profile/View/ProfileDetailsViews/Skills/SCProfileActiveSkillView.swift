@@ -7,8 +7,20 @@
 //
 
 import UIKit
-
+protocol SCProfileActiveSkillViewDelegate: NSObjectProtocol {
+    func didClickActiveSkillButton(view: SCProfileActiveSkillView, index: Int)
+}
 class SCProfileActiveSkillView: UIView {
+    weak var delegate: SCProfileActiveSkillViewDelegate?
+    
+    var activeSkill: SCProfileHeroActive?{
+        didSet{
+            runeNameLabel.text = activeSkill?.rune?.name
+            skillNameLabel.text = activeSkill?.skill?.name
+            skillIconButton.setImage(activeSkill?.skill?.skillImage, for: [])
+        }
+    }
+    
     @IBOutlet weak var runeNameLabel: UILabel!
     @IBOutlet weak var skillNameLabel: UILabel!
     @IBOutlet weak var positionImageView: UIImageView!
@@ -23,6 +35,6 @@ class SCProfileActiveSkillView: UIView {
     }
     
     @IBAction func clickSkillIconButton(_ sender: Any) {
+        delegate?.didClickActiveSkillButton(view: self, index: tag)
     }
-    
 }

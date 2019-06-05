@@ -15,7 +15,12 @@ class SCProfileLegendaryPowerItem: NSObject {
         guard let s = name?.lowercased()  else {
             return nil
         }
-        return (s as NSString).replacingOccurrences(of: "-", with: "").replacingOccurrences(of: "'", with: "").replacingOccurrences(of: " ", with: "-").replacingOccurrences(of: ",", with: "")
+        return (s as NSString)
+            .replacingOccurrences(of: "-", with: "")
+            .replacingOccurrences(of: "'", with: "")
+            .replacingOccurrences(of: " ", with: "-")
+            .replacingOccurrences(of: ",", with: "")
+            .replacingOccurrences(of: ".", with: "")
     }
     @objc var icon: String?
     @objc var displayColor: String?

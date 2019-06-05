@@ -11,8 +11,10 @@ import WebKit
 import SVProgressHUD
 
 class SCNewsViewController: UIViewController {
-    private lazy var webView = WKWebView(frame: UIScreen.main.bounds)
+    private var webView: WKWebView!
     override func loadView() {
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.scrollView.bounces = false
         webView.navigationDelegate = self
         webView.allowsBackForwardNavigationGestures = true

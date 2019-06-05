@@ -175,4 +175,32 @@ class SCProfileViewModel{
             })
         }
     }
+    func loadSkillimages(completion:@escaping (_ isSuccess:Bool)->()){
+        let group = DispatchGroup()
+        for active in heroSkills?.active ?? []{
+            guard let icon = active.skill?.icon else{
+                completion(false)
+                return
+            }
+            group.enter()
+            SCNetworkManager.shared.getSkillImage(icon: icon) { (image) in
+                active.skill?.skillImage = image
+                group.leave()
+            }
+        }
+        for passive in heroSkills?.passive ?? []{
+            guard let icon = passive.skill?.icon else{
+                completion(false)
+                return
+            }
+            group.enter()
+            SCNetworkManager.shared.getSkillImage(icon: icon) { (image) in
+                passive.skill?.skillImage = image
+                group.leave()
+            }
+        }
+        group.notify(queue: DispatchQueue.main) {
+            completion(true)
+        }
+    }
 }

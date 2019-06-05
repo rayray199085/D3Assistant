@@ -15,6 +15,7 @@ class SCProfileDetailsViewController: UIViewController {
     private lazy var equipsViewController = SCProfileEquipmentController()
     private lazy var statsViewController = SCProfileStatisticsController()
     private lazy var skillViewController = SCProfileSkillController()
+    private lazy var followerViewController = SCProfileFollowerController()
     var hero: SCProfileHero?{
         didSet{
             title = hero?.name
@@ -70,9 +71,7 @@ extension SCProfileDetailsViewController: DLTabedSlideViewDelegate{
         case 2:
             return skillViewController
         case 3:
-            let vc = UIViewController()
-            vc.view.backgroundColor = UIColor.purple
-            return vc
+            return followerViewController
         default:
             return nil
         }
@@ -88,6 +87,8 @@ extension SCProfileDetailsViewController: DLTabedSlideViewDelegate{
             }
             equipsViewController.setBackgroundImage(imageName: "\(slug)_equip_\(hero?.gender ?? 0)")
             equipsViewController.viewModel = viewModel
+        case 2:
+            skillViewController.viewModel = viewModel
         default:
             break
         }

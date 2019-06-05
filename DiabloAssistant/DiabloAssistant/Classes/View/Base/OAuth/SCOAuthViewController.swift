@@ -11,13 +11,18 @@ import WebKit
 import SVProgressHUD
 
 class SCOAuthViewController: UIViewController {
-    private lazy var webView = WKWebView(frame: UIScreen.main.bounds)
-    
+    private var webView: WKWebView!
     override func loadView() {
-        webView.navigationDelegate = self
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
         webView.scrollView.bounces = false
+        webView.navigationDelegate = self
+        webView.allowsBackForwardNavigationGestures = true
+        webView.isOpaque = false
+        webView.backgroundColor = UIColor.black
         view = webView
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -62,10 +67,9 @@ extension SCOAuthViewController: WKNavigationDelegate{
                 NotificationCenter.default.post(name: NSNotification.Name(SCUserSuccessLoginNotification), object: nil)
                 self.goBack()
             }
+            decisionHandler(WKNavigationActionPolicy.cancel)
         }
-        decisionHandler(WKNavigationActionPolicy.cancel)
     }
-    
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         SVProgressHUD.show()
     }

@@ -29,7 +29,6 @@
                         <constraint firstAttribute="height" constant="48" id="8Tl-WC-vJU"/>
                         <constraint firstAttribute="width" constant="48" id="hSR-7X-pTW"/>
                     </constraints>
-                    <state key="normal" backgroundImage="wizard_passive_powerhungry"/>
                     <connections>
                         <action selector="clickSkillIconButton:" destination="hAs-aq-Ky0" eventType="touchUpInside" id="fEP-X7-wR0"/>
                     </connections>
@@ -51,6 +50,5 @@
     </objects>
     <resources>
         <image name="buttonPassive" width="40" height="40"/>
-        <image name="wizard_passive_powerhungry" width="68" height="68"/>
     </resources>
 </document>
