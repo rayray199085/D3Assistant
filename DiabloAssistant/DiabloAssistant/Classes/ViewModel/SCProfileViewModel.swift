@@ -103,7 +103,7 @@ class SCProfileViewModel{
             self.heroStats = SCProfileHeroStats.yy_model(with: heroStats)
             let group = DispatchGroup()
             for power in powerArray{
-                guard let icon =  power.icon else{
+                guard let icon = power.icon else{
                     continue
                 }
                 group.enter()
@@ -112,7 +112,6 @@ class SCProfileViewModel{
                     group.leave()
                 })
             }
-            
             group.notify(queue: DispatchQueue.main, execute: {
                 self.legendaryPowers = powerArray
                 completion(true)
@@ -179,8 +178,7 @@ class SCProfileViewModel{
         let group = DispatchGroup()
         for active in heroSkills?.active ?? []{
             guard let icon = active.skill?.icon else{
-                completion(false)
-                return
+                continue
             }
             group.enter()
             SCNetworkManager.shared.getSkillImage(icon: icon) { (image) in
@@ -190,8 +188,7 @@ class SCProfileViewModel{
         }
         for passive in heroSkills?.passive ?? []{
             guard let icon = passive.skill?.icon else{
-                completion(false)
-                return
+                continue
             }
             group.enter()
             SCNetworkManager.shared.getSkillImage(icon: icon) { (image) in
@@ -201,6 +198,65 @@ class SCProfileViewModel{
         }
         group.notify(queue: DispatchQueue.main) {
             completion(true)
+        }
+    }
+    func loadFollowerInfo(completion:@escaping (_ isSuccess: Bool)->()){
+        guard let region = playerRegion,
+            let battleTag = playerBattleTag,
+            let id = heroId else{
+                completion(false)
+                return
+        }
+        SCNetworkManager.shared.getProfileFollowerItems(region: region, battleTag: battleTag, heroId: id) { (dict, isSuccess) in
+            if !isSuccess{
+                completion(false)
+                return
+            }
+            guard let dict = dict,
+                  let details = SCProfileFollowerItemDetails.yy_model(with: dict) else{
+                completion(false)
+                return
+            }
+            self.followers?.scoundrel?.items = details.scoundrel
+            self.followers?.templar?.items = details.templar
+            self.followers?.enchantress?.items = details.enchantress
+            let group = DispatchGroup()
+            for follower in self.followers?.followers ?? []{
+                for skill in follower?.skills ?? []{
+                    guard let icon = skill.icon else{
+                        continue
+                    }
+                    group.enter()
+                    SCNetworkManager.shared.getSkillImage(icon: icon, completion: { (image) in
+                        skill.skillImage = image
+                        group.leave()
+                    })
+                }
+                for item in follower?.items?.items ?? []{
+                    guard let item = item,
+                          let icon = item.icon else{
+                        continue
+                    }
+                    group.enter()
+                    SCNetworkManager.shared.getItemImage(icon: icon, size: SCItemImageSize.large, completion: { (image) in
+                        item.iconImage = image
+                        group.leave()
+                    })
+                    for gem in item.gems ?? []{
+                        guard let gemIcon = gem.item?.icon else{
+                            continue
+                        }
+                        group.enter()
+                        SCNetworkManager.shared.getItemImage(icon: gemIcon, size: SCItemImageSize.small, completion: { (image) in
+                            gem.item?.iconImage = image
+                            group.leave()
+                        })
+                    }
+                }
+            }
+            group.notify(queue: DispatchQueue.main, execute: {
+                completion(true)
+            })
         }
     }
 }

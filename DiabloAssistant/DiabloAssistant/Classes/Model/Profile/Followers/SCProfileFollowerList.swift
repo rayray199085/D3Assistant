@@ -13,6 +13,10 @@ class SCProfileFollowerList: NSObject {
     @objc var scoundrel: SCProfileFollower?
     @objc var enchantress: SCProfileFollower?
     
+    var followers: [SCProfileFollower?]?{
+        return [scoundrel,templar,enchantress]
+    }
+    
     override var description: String{
         return yy_modelDescription()
     }

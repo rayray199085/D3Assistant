@@ -120,10 +120,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="108" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHs-Sl-UaX" customClass="SCEquipmentButton" customModule="DiabloAssistant" customModuleProvider="target">
-                    <rect key="frame" x="294" y="509.5" width="41" height="41"/>
+                    <rect key="frame" x="292" y="506.5" width="45" height="45"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="41" id="tNj-IU-x7S"/>
-                        <constraint firstAttribute="height" constant="41" id="yyb-V7-ZdV"/>
+                        <constraint firstAttribute="width" constant="45" id="tNj-IU-x7S"/>
+                        <constraint firstAttribute="height" constant="45" id="yyb-V7-ZdV"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="10"/>
                     <state key="normal" title="RING">
@@ -162,7 +162,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkI-PX-H5J" customClass="SCEquipmentButton" customModule="DiabloAssistant" customModuleProvider="target">
-                    <rect key="frame" x="93" y="307.5" width="66" height="90"/>
+                    <rect key="frame" x="92" y="307.5" width="66" height="90"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="90" id="6bf-5m-q4e"/>
                         <constraint firstAttribute="width" constant="66" id="FK2-9u-mJh"/>
@@ -176,9 +176,9 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaw-0c-YvF" customClass="SCEquipmentButton" customModule="DiabloAssistant" customModuleProvider="target">
-                    <rect key="frame" x="258.5" y="328.5" width="55" height="56"/>
+                    <rect key="frame" x="256.5" y="328.5" width="56" height="56"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="55" id="dSS-h4-ODR"/>
+                        <constraint firstAttribute="width" constant="56" id="dSS-h4-ODR"/>
                         <constraint firstAttribute="height" constant="56" id="qR6-V9-8F0"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="10"/>
@@ -204,7 +204,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="109" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UW-8x-mso" customClass="SCEquipmentButton" customModule="DiabloAssistant" customModuleProvider="target">
-                    <rect key="frame" x="80.5" y="509.5" width="41" height="41"/>
+                    <rect key="frame" x="75.5" y="506.5" width="45" height="45"/>
                     <fontDescription key="fontDescription" name="ExocetLight" family="Exocet" pointSize="10"/>
                     <state key="normal" title="RING">
                         <color key="titleColor" red="0.94117647059999998" green="0.79607843140000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -351,21 +351,21 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="Iyh-GS-bNV" firstAttribute="centerX" secondItem="qaw-0c-YvF" secondAttribute="trailing" constant="1" id="25p-9S-QVS"/>
+                <constraint firstItem="Iyh-GS-bNV" firstAttribute="centerX" secondItem="qaw-0c-YvF" secondAttribute="trailing" constant="2" id="25p-9S-QVS"/>
                 <constraint firstItem="x8O-YM-0cf" firstAttribute="leading" secondItem="p1n-a3-u6v" secondAttribute="leading" constant="2" id="3ed-Qk-tzO"/>
                 <constraint firstItem="bzY-mY-XUz" firstAttribute="centerX" secondItem="JHs-Sl-UaX" secondAttribute="centerX" id="4TN-jt-Az1"/>
                 <constraint firstItem="15S-rp-V4Q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5AV-vi-Lit"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="15S-rp-V4Q" secondAttribute="bottom" id="78j-01-JII"/>
                 <constraint firstItem="eJd-qR-x4K" firstAttribute="centerX" secondItem="p1n-a3-u6v" secondAttribute="centerX" id="7bR-Tr-MBv"/>
                 <constraint firstItem="JHs-Sl-UaX" firstAttribute="centerX" secondItem="Iyh-GS-bNV" secondAttribute="centerX" id="7iw-xQ-MlN"/>
-                <constraint firstItem="bzY-mY-XUz" firstAttribute="top" secondItem="JHs-Sl-UaX" secondAttribute="bottom" constant="13" id="9hi-19-472"/>
+                <constraint firstItem="bzY-mY-XUz" firstAttribute="top" secondItem="JHs-Sl-UaX" secondAttribute="bottom" constant="12" id="9hi-19-472"/>
                 <constraint firstItem="JHs-Sl-UaX" firstAttribute="height" secondItem="5UW-8x-mso" secondAttribute="height" id="9pp-Ns-7SB"/>
                 <constraint firstItem="qaw-0c-YvF" firstAttribute="centerY" secondItem="ZkI-PX-H5J" secondAttribute="centerY" constant="4" id="APY-i0-RUI"/>
                 <constraint firstItem="Pvm-lf-2cR" firstAttribute="top" secondItem="kjw-BD-l9y" secondAttribute="bottom" constant="5" id="Acd-jD-6Iw"/>
                 <constraint firstItem="Iyh-GS-bNV" firstAttribute="height" secondItem="xDM-TV-4V9" secondAttribute="height" id="D21-9T-yGz"/>
                 <constraint firstItem="Iyh-GS-bNV" firstAttribute="top" secondItem="xDM-TV-4V9" secondAttribute="top" id="D3k-em-MY5"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sHw-4J-jT0" secondAttribute="trailing" id="F0a-6H-cbu"/>
-                <constraint firstItem="kMZ-H0-idX" firstAttribute="leading" secondItem="ZkI-PX-H5J" secondAttribute="trailing" constant="8" id="GpU-42-uEq"/>
+                <constraint firstItem="kMZ-H0-idX" firstAttribute="leading" secondItem="ZkI-PX-H5J" secondAttribute="trailing" constant="9" id="GpU-42-uEq"/>
                 <constraint firstItem="p1n-a3-u6v" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Hts-ZG-YId"/>
                 <constraint firstItem="puX-OL-m6F" firstAttribute="top" secondItem="c43-mM-e9J" secondAttribute="bottom" constant="5" id="KTC-1M-Mkq"/>
                 <constraint firstItem="JHs-Sl-UaX" firstAttribute="top" secondItem="5UW-8x-mso" secondAttribute="top" id="KVi-Ti-W3K"/>
@@ -375,7 +375,7 @@
                 <constraint firstItem="kMZ-H0-idX" firstAttribute="top" secondItem="ge9-sh-8hV" secondAttribute="bottom" constant="6" id="ODF-81-6ui"/>
                 <constraint firstItem="hTT-Mw-Arn" firstAttribute="top" secondItem="XfO-KX-JSa" secondAttribute="bottom" constant="5" id="Oqn-ad-hw1"/>
                 <constraint firstItem="kMZ-H0-idX" firstAttribute="leading" secondItem="xDM-TV-4V9" secondAttribute="trailing" constant="34" id="Pkf-vV-Sog"/>
-                <constraint firstItem="JHs-Sl-UaX" firstAttribute="top" secondItem="Iyh-GS-bNV" secondAttribute="bottom" constant="14" id="RAC-wa-kax"/>
+                <constraint firstItem="JHs-Sl-UaX" firstAttribute="top" secondItem="Iyh-GS-bNV" secondAttribute="bottom" constant="11" id="RAC-wa-kax"/>
                 <constraint firstItem="bzY-mY-XUz" firstAttribute="leading" secondItem="c43-mM-e9J" secondAttribute="trailing" constant="42.5" id="SGd-ka-2lI"/>
                 <constraint firstItem="bzY-mY-XUz" firstAttribute="width" secondItem="1Jn-bJ-j8F" secondAttribute="width" id="SUp-Y3-4c1"/>
                 <constraint firstItem="hTT-Mw-Arn" firstAttribute="leading" secondItem="XfO-KX-JSa" secondAttribute="leading" id="TGf-4P-PGd"/>
@@ -402,7 +402,7 @@
                 <constraint firstItem="kjw-BD-l9y" firstAttribute="top" secondItem="p1n-a3-u6v" secondAttribute="top" constant="5" id="riD-3G-nBQ"/>
                 <constraint firstItem="JHs-Sl-UaX" firstAttribute="width" secondItem="5UW-8x-mso" secondAttribute="width" id="sWc-QE-q5T"/>
                 <constraint firstItem="ndj-MD-foE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="uVa-YB-jvJ"/>
-                <constraint firstItem="c43-mM-e9J" firstAttribute="leading" secondItem="5UW-8x-mso" secondAttribute="trailing" constant="53" id="wLl-0P-ebk"/>
+                <constraint firstItem="c43-mM-e9J" firstAttribute="leading" secondItem="5UW-8x-mso" secondAttribute="trailing" constant="54" id="wLl-0P-ebk"/>
                 <constraint firstItem="p1n-a3-u6v" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wRF-TH-ibI"/>
                 <constraint firstItem="15S-rp-V4Q" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="x9v-oy-SnV"/>
             </constraints>

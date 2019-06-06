@@ -11,7 +11,7 @@ import UIKit
 class SCProfileFollower: NSObject {
     @objc var slug: String?
     @objc var level: Int = 0
-    @objc var items: SCProfileFollowerItems?
+    @objc var items: SCProfileEquipments?
     @objc var stats: SCProfileFollowerStats?
     @objc var skills: [SCProfileSkillItem]?
     

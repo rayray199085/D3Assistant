@@ -46,9 +46,6 @@ class SCProfileSkillController: UIViewController {
         super.viewDidLoad()
         setupUI()
     }
-    deinit {
-        hasLoadImages = false
-    }
 }
 private extension SCProfileSkillController{
     func setupUI(){

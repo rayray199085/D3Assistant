@@ -44,6 +44,9 @@ class SCProfileEquipmentController: UIViewController {
     }
     
     @IBAction func clickEquipmentButton(_ sender: SCProfileEquipButton) {
+        if sender.item == nil {
+            return 
+        }
         detailsView.isHidden = false
         detailsView.item = sender.item
     }

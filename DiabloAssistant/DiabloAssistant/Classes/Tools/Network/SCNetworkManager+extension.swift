@@ -199,4 +199,12 @@ extension SCNetworkManager{
             completion(dict, isSuccess)
         }
     }
+    
+    func getProfileFollowerItems(region: String, battleTag: String, heroId: String,completion: @escaping (_ dict: [String: Any]?,_ isSuccess: Bool)->()){
+        let urlString = "https://\(region).api.blizzard.com/d3/profile/\(battleTag)/hero/\(heroId)/follower-items"
+        requestWithToken(urlString: urlString, method: HTTPMethod.get, params: nil) { (res, isSuccess) in
+            let dict = res as? [String: Any]
+            completion(dict, isSuccess)
+        }
+    }
 }

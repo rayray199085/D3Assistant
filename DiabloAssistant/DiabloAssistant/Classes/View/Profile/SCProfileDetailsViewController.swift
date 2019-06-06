@@ -89,6 +89,8 @@ extension SCProfileDetailsViewController: DLTabedSlideViewDelegate{
             equipsViewController.viewModel = viewModel
         case 2:
             skillViewController.viewModel = viewModel
+        case 3:
+            followerViewController.viewModel = viewModel
         default:
             break
         }
