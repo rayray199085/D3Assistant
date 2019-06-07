@@ -45,10 +45,10 @@ class SCProfileInputView: UIView {
     
     @IBAction func clickConfirmButton(_ sender: Any) {
         isHidden = true
-        delegate?.getRegionAndBattleTag(view: self, region: regionTextField.text, battleTag: battleTagTextField.text, completion: { [weak self](isSuccess) in
+        delegate?.getRegionAndBattleTag(view: self, region: regionTextField.text?.lowercased(), battleTag: getUrlBattleTag(tag: battleTagTextField.text), completion: { [weak self](isSuccess) in
             if isSuccess{
-                guard let battleTag = self?.battleTagTextField.text,
-                    let region = self?.regionTextField.text else{
+                guard let battleTag = self?.getUrlBattleTag(tag: self?.battleTagTextField.text),
+                    let region = self?.regionTextField.text?.lowercased() else{
                         return
                 }
                 let res = self?.records.filter({ (rec) -> Bool in
@@ -146,5 +146,14 @@ private extension SCProfileInputView{
         tableView.register(UINib(nibName: "SCProfileRecordCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
         
         tableView?.separatorStyle = UITableViewCell.SeparatorStyle.none
+    }
+    
+    func getUrlBattleTag(tag: String?)->String{
+        guard var battleTag = tag else{
+            return ""
+        }
+        battleTag = battleTag.removingWhitespaces()
+        battleTag = (battleTag as NSString).replacingOccurrences(of: "#", with: "-")
+        return battleTag
     }
 }

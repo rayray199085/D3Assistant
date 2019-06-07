@@ -125,7 +125,7 @@ extension NSAttributedString{
             setAttributeDescription(nextRow: nextRow,text: details.setDescriptionHtml, color: color, parentAttrString: itemDescription)
         }
         if details.accountBound > 0{
-            setDescription(nextRow: nextRow,text: "Account Bound\nUnique Equipped", color: SCButtonTitleColor, parentAttrString: itemDescription)
+            setDescription(nextRow: nextRow,text: "Required level: \(details.requiredLevel)\nAccount Bound\nUnique Equipped", color: SCButtonTitleColor, parentAttrString: itemDescription)
         }
         return itemDescription
     }

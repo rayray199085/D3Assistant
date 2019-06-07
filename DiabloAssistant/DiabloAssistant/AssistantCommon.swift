@@ -20,6 +20,12 @@ let SCItemBlue: UIColor = UIColor(displayP3Red: 119.0 / 255, green: 123.0 / 255,
 let SCItemOrange: UIColor = UIColor(displayP3Red: 178.0 / 255, green: 102.0 / 255, blue: 58.0 / 255, alpha: 1.0)
 let SCItemYellow: UIColor = UIColor(displayP3Red: 243.0 / 255, green: 204.0 / 255, blue: 86.0 / 255, alpha: 1.0)
 let SCItemGreen: UIColor = UIColor(displayP3Red: 155.0 / 255, green: 209.0 / 255, blue: 90.0 / 255, alpha: 1.0)
+
+let SCProfileParagonLevelColor = UIColor(displayP3Red: 163.0 / 255, green: 147.0 / 255, blue: 191.0 / 255, alpha: 1.0)
+let SCProfileStatsNameNormalColor = UIColor(displayP3Red: 77.0 / 255, green: 69.0 / 255, blue: 56.0 / 255, alpha: 1.0)
+let SCProfileStatsNameHighlightedColor = UIColor(displayP3Red: 180.0 / 255, green: 170.0 / 255, blue: 150.0 / 255, alpha: 1.0)
+
+
 let SCUserShouldLoginNotification = "SCUserShouldLoginNotification"
 let SCUserSuccessLoginNotification = "SCUserSuccessLoginNotification"
 

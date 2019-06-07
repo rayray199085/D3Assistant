@@ -36,6 +36,7 @@ class SCProfileEquipmentDetailsView: UIView {
             }
             titleLabel.textColor = titleColor
             titleLabel.text = details.name
+            titleLabel.font = details.name?.count ?? 0 > 30 ? UIFont(name: "Exocet", size: 11)! : UIFont(name: "Exocet", size: 15)!
             textView.attributedText = NSAttributedString.getItemDescriptionAttributedText(details: details, withoutTitle: true)
         }
     }

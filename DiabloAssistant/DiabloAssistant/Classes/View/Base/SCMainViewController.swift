@@ -34,6 +34,7 @@ class SCMainViewController: UITabBarController {
     
     @objc private func handleLoginNotification(notification: Notification){
         let nav = UINavigationController(rootViewController: SCOAuthViewController())
+        nav.navigationBar.barTintColor = UIColor.black
         present(nav, animated: true, completion: nil)
     }
     

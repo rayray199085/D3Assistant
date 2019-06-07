@@ -25,7 +25,7 @@ class SCProfileLegendaryPowerItem: NSObject {
     @objc var icon: String?
     @objc var displayColor: String?
     @objc var iconImage: UIImage?
-    
+    @objc var details: SCEquipmentItemDetails?
     override var description: String{
         return yy_modelDescription()
     }

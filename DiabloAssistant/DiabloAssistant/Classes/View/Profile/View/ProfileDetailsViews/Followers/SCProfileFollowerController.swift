@@ -9,7 +9,9 @@
 import UIKit
 import SVProgressHUD
 class SCProfileFollowerController: UIViewController {
-    var hasLoadFollowerDetails: Bool = false
+    private lazy var detailsView = SCProfileHeroEquipDetailsView.detailsView()
+    
+    private var hasLoadFollowerDetails: Bool = false
     var viewModel: SCProfileViewModel?{
         didSet{
             if hasLoadFollowerDetails{
@@ -18,7 +20,7 @@ class SCProfileFollowerController: UIViewController {
             SVProgressHUD.show()
             viewModel?.loadFollowerInfo(completion: { [weak self](isSuccess) in
                 self?.hasLoadFollowerDetails = true
-                self?.detailsView.follower = self?.viewModel?.followers?.scoundrel
+                self?.contentView.follower = self?.viewModel?.followers?.scoundrel
                 SVProgressHUD.dismiss()
             })
         }
@@ -26,15 +28,19 @@ class SCProfileFollowerController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        contentView.delegate = self
+        
+        navigationController?.view.addSubview(detailsView)
+        detailsView.isHidden = true
         detailsView.delegate = self
     }
     
-    @IBOutlet weak var detailsView: SCProfileFollowerDetailsView!
+    @IBOutlet weak var contentView: SCProfileFollowerDetailsView!
     @IBOutlet weak var detailsImageView: UIImageView!
     @IBOutlet weak var followerNameLabel: UILabel!
     @IBAction func segment(_ sender: UISegmentedControl) {
         detailsImageView.image = UIImage(named: "follower_details_\(sender.selectedSegmentIndex)")
-        detailsView.follower = viewModel?.followers?.followers?[sender.selectedSegmentIndex]
+        contentView.follower = viewModel?.followers?.followers?[sender.selectedSegmentIndex]
         switch sender.selectedSegmentIndex {
         case 0:
             followerNameLabel.text = "SCOUNDREL"
@@ -48,10 +54,24 @@ class SCProfileFollowerController: UIViewController {
     }
 }
 extension SCProfileFollowerController: SCProfileFollowerDetailsViewDelegate{
-    func didClickSkillButton(view: SCProfileFollowerDetailsView, index: Int) {
-        print(index)
+    func didClickSkillButton(view: SCProfileFollowerDetailsView, skill: SCProfileSkillItem?) {
+        if skill == nil{
+            return
+        }
+        detailsView.isHidden = false
+        detailsView.skill = skill
     }
-    func didClickEquipButton(view: SCProfileFollowerDetailsView, index: Int) {
-        print(index)
+    
+    func didClickEquipButton(view: SCProfileFollowerDetailsView, item: SCProfileEquipmentItem?) {
+        if item == nil{
+            return 
+        }
+        detailsView.isHidden = false
+        detailsView.item = item
+    }
+}
+extension SCProfileFollowerController: SCProfileHeroEquipDetailsViewDelegate{
+    func didClickEquipMaskButton(view: SCProfileHeroEquipDetailsView) {
+        detailsView.isHidden = true
     }
 }

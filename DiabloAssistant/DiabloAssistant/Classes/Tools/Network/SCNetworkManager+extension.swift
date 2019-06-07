@@ -158,7 +158,7 @@ extension SCNetworkManager{
 // MARK: - load player profile
 extension SCNetworkManager{
     func getPlayerProfile(region: String, battleTag: String, completion:@escaping (_ dict: [String: Any]?, _ isSuccess: Bool)->()){
-        let urlString = "https://\(region.lowercased()).api.blizzard.com/d3/profile/\(getUrlBattleTag(tag: battleTag))/"
+        let urlString = "https://\(region).api.blizzard.com/d3/profile/\(battleTag)/"
         requestWithToken(urlString: urlString, method: HTTPMethod.get, params: nil) { (res, isSuccess) in
             let dict = res as? [String:Any]
             completion(dict, isSuccess)
@@ -166,18 +166,11 @@ extension SCNetworkManager{
     }
     
     func getHeroDetails(region: String, battleTag: String, id: String, completion:@escaping (_ dict: [String: Any]?,_ isSuccess: Bool)->()){
-        let urlString = "https://\(region).api.blizzard.com/d3/profile/\(getUrlBattleTag(tag: battleTag))/hero/\(id)"
+        let urlString = "https://\(region).api.blizzard.com/d3/profile/\(battleTag)/hero/\(id)"
         requestWithToken(urlString: urlString, method: HTTPMethod.get, params: nil) { (res, isSuccess) in
             let dict = res as? [String: Any]
             completion(dict, isSuccess)
         }
-    }
-    
-    func getUrlBattleTag(tag: String)->String{
-        var battleTag = tag
-        battleTag = (battleTag as NSString).replacingOccurrences(of: " ", with: "")
-        battleTag = (battleTag as NSString).replacingOccurrences(of: "#", with: "-")
-        return battleTag
     }
     
     func getProfileEquipmentDetails(slugId: String, completion:@escaping (_ dict: [String: Any]?,_ isSuccess: Bool)->()){
@@ -194,7 +187,8 @@ extension SCNetworkManager{
     
     func getProfileEquipments(region: String, battleTag: String, heroId: String,completion: @escaping (_ dict: [String: Any]?,_ isSuccess: Bool)->()){
         let urlString = "https://\(region).api.blizzard.com/d3/profile/\(battleTag)/hero/\(heroId)/items"
-        requestWithToken(urlString: urlString, method: HTTPMethod.get, params: nil) { (res, isSuccess) in
+        requestWithToken(urlString: urlString, method: HTTPMethod.get, params: nil) {
+            (res, isSuccess) in
             let dict = res as? [String: Any]
             completion(dict, isSuccess)
         }

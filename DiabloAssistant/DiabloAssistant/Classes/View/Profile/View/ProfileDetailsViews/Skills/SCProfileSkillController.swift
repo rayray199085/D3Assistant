@@ -99,7 +99,6 @@ extension SCProfileSkillController: SCProfileActiveSkillViewDelegate{
         attrText.append(NSAttributedString(string: "\n\n"))
         attrText.append(NSAttributedString.getSkillDescriptionAttributedText(skillName: rune.name, skillLevel: rune.level, htmlString: rune.descriptionHtml))
         textView.attributedText = attrText
-        
     }
 }
 extension SCProfileSkillController: SCProfilePassiveSkillViewDelegate{

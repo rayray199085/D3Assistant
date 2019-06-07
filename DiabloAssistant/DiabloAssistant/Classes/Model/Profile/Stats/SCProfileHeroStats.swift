@@ -9,7 +9,11 @@
 import UIKit
 
 class SCProfileHeroStats: NSObject {
-    @objc var life: Int = 0
+    @objc var life: Double = 0{
+        didSet{
+            life = Double(round(1000 * life) / 1000)
+        }
+    }
     @objc var damage: Int = 0
     @objc var toughness: Int = 0
     @objc var healing: Double = 0
@@ -45,7 +49,11 @@ class SCProfileHeroStats: NSObject {
             goldFind = Double(round(1000 * goldFind) / 1000)
         }
     }
-    @objc var critChance: Int = 0
+    @objc var critChance: Double = 0{
+        didSet{
+            critChance = Double(round(1000 * critChance) / 1000)
+        }
+    }
     @objc var thorns: Int = 0
     @objc var lifeSteal: Int = 0
     @objc var lifePerKill: Int = 0

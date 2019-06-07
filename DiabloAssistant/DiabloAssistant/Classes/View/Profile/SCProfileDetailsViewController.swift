@@ -79,7 +79,8 @@ extension SCProfileDetailsViewController: DLTabedSlideViewDelegate{
     func dlTabedSlideView(_ sender: DLTabedSlideView!, didSelectedAt index: Int) {
         switch index {
         case 0:
-            statsViewController.setBasicInfoContent(content: "\(hero?.level ?? 1) \(hero?.classSlug ?? "")")
+            
+            statsViewController.setBasicInfoContent(content: hero?.basicInfoAttrText)
             statsViewController.viewModel = viewModel
         case 1:
             guard let slug = hero?.classSlug else{

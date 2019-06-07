@@ -16,22 +16,9 @@ class SCProfileViewModel{
     
     var heroStatsDescription: String?
     
-    var heroEquips: SCProfileEquipments?{
-        didSet{
-            
-        }
-    }
-    
-    var heroSkills: SCProfileHeroSkills?{
-        didSet{
-            
-        }
-    }
-    var followers: SCProfileFollowerList?{
-        didSet{
-            
-        }
-    }
+    var heroEquips: SCProfileEquipments?
+    var heroSkills: SCProfileHeroSkills?
+    var followers: SCProfileFollowerList?
     var heroStats: SCProfileHeroStats?{
         didSet{
             guard let text = heroStats?.description else{
@@ -53,19 +40,12 @@ class SCProfileViewModel{
             heroStatsDescription = statistics.uppercased()
         }
     }
-    var legendaryPowers: [SCProfileLegendaryPowerItem]?{
-        didSet{
-            
-        }
-    }
+    var legendaryPowers: [SCProfileLegendaryPowerItem]?
     
-    init() {
-        
-    }
     func loadPlayerProfile(region: String, battleTag: String, completion:@escaping (_ profileData: SCProfileData?,_ isSuccess: Bool)->()){
         playerRegion = region
         playerBattleTag = battleTag
-        SCNetworkManager.shared.getPlayerProfile(region: region, battleTag: battleTag) { (dict, isSuccess) in
+        SCNetworkManager.shared.getPlayerProfile(region: region, battleTag: playerBattleTag!) { (dict, isSuccess) in
             guard let dict = dict else{
                 completion(nil, false)
                 return
@@ -103,12 +83,19 @@ class SCProfileViewModel{
             self.heroStats = SCProfileHeroStats.yy_model(with: heroStats)
             let group = DispatchGroup()
             for power in powerArray{
-                guard let icon = power.icon else{
+                guard let icon = power.icon,
+                      let slug = power.slug,
+                      let id = power.id else{
                     continue
                 }
                 group.enter()
                 SCNetworkManager.shared.getItemImage(icon: icon, size: SCItemImageSize.large, completion: { (image) in
                     power.iconImage = image
+                    group.leave()
+                })
+                group.enter()
+                self.loadEquipmentDetails(slugId: "\(slug)-\(id)", completion: { (details, isSuccess) in
+                    power.details = details
                     group.leave()
                 })
             }

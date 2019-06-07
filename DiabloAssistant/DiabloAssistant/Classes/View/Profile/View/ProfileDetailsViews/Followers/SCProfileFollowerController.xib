@@ -17,8 +17,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SCProfileFollowerController" customModule="DiabloAssistant" customModuleProvider="target">
             <connections>
+                <outlet property="contentView" destination="h3y-Bj-xka" id="OVf-2b-j15"/>
                 <outlet property="detailsImageView" destination="c1a-QH-dsw" id="vdj-zt-1Gu"/>
-                <outlet property="detailsView" destination="h3y-Bj-xka" id="OVf-2b-j15"/>
                 <outlet property="followerNameLabel" destination="qqC-O3-mwd" id="H0e-XC-ETa"/>
                 <outlet property="view" destination="ScQ-kL-gyx" id="eoI-qr-QeQ"/>
             </connections>
@@ -70,14 +70,14 @@
                                 <constraint firstAttribute="height" constant="420" id="u34-dv-NE2"/>
                             </constraints>
                         </imageView>
-                        <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XU6-56-C6L">
+                        <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XU6-56-C6L" customClass="SCProfileFollowerSkillButton" customModule="DiabloAssistant" customModuleProvider="target">
                             <rect key="frame" x="44.5" y="282" width="24" height="24"/>
                             <state key="normal" backgroundImage="follower-skill-unlocked"/>
                             <connections>
                                 <action selector="clickSkillButton:" destination="h3y-Bj-xka" eventType="touchUpInside" id="xsW-JQ-4gf"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4J9-Ce-4GT">
+                        <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4J9-Ce-4GT" customClass="SCProfileFollowerSkillButton" customModule="DiabloAssistant" customModuleProvider="target">
                             <rect key="frame" x="44.5" y="322" width="24" height="24"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="24" id="VI8-F1-ECp"/>
@@ -88,14 +88,14 @@
                                 <action selector="clickSkillButton:" destination="h3y-Bj-xka" eventType="touchUpInside" id="WdP-uZ-NW9"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAF-hy-DLk">
+                        <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAF-hy-DLk" customClass="SCProfileFollowerSkillButton" customModule="DiabloAssistant" customModuleProvider="target">
                             <rect key="frame" x="44.5" y="363" width="24" height="24"/>
                             <state key="normal" backgroundImage="follower-skill-unlocked"/>
                             <connections>
                                 <action selector="clickSkillButton:" destination="h3y-Bj-xka" eventType="touchUpInside" id="Y43-Fh-8z6"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJZ-o0-TtX">
+                        <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJZ-o0-TtX" customClass="SCProfileFollowerSkillButton" customModule="DiabloAssistant" customModuleProvider="target">
                             <rect key="frame" x="44.5" y="403" width="24" height="24"/>
                             <state key="normal" backgroundImage="follower-skill-unlocked"/>
                             <connections>
@@ -145,7 +145,7 @@
                                 <constraint firstAttribute="width" constant="57" id="pKG-5K-dnX"/>
                             </constraints>
                         </imageView>
-                        <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7l-1E-x42">
+                        <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7l-1E-x42" customClass="SCProfileFollowerEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
                             <rect key="frame" x="172" y="335.5" width="60" height="118"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="60" id="EX9-7r-AfE"/>
@@ -155,13 +155,13 @@
                                 <action selector="clickEquipButton:" destination="h3y-Bj-xka" eventType="touchUpInside" id="zhj-X4-urB"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSV-V2-7oh">
+                        <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSV-V2-7oh" customClass="SCProfileFollowerEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
                             <rect key="frame" x="238" y="335.5" width="60" height="118"/>
                             <connections>
                                 <action selector="clickEquipButton:" destination="h3y-Bj-xka" eventType="touchUpInside" id="jIt-kU-O1e"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="203" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfQ-xp-NUw">
+                        <button opaque="NO" tag="203" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfQ-xp-NUw" customClass="SCProfileFollowerEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
                             <rect key="frame" x="304" y="380" width="39" height="39"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="39" id="1kg-NE-l7Y"/>
@@ -171,13 +171,13 @@
                                 <action selector="clickEquipButton:" destination="h3y-Bj-xka" eventType="touchUpInside" id="amb-Yb-Je7"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="204" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVD-YZ-Vir">
+                        <button opaque="NO" tag="204" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVD-YZ-Vir" customClass="SCProfileFollowerEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
                             <rect key="frame" x="304" y="335" width="39" height="39"/>
                             <connections>
                                 <action selector="clickEquipButton:" destination="h3y-Bj-xka" eventType="touchUpInside" id="Nw0-ij-EzQ"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="205" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9b-2B-gC3">
+                        <button opaque="NO" tag="205" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9b-2B-gC3" customClass="SCProfileFollowerEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
                             <rect key="frame" x="272" y="277" width="50" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="Doo-NU-2Ae"/>
@@ -187,7 +187,7 @@
                                 <action selector="clickEquipButton:" destination="h3y-Bj-xka" eventType="touchUpInside" id="eQF-Mf-4se"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="206" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A02-45-fX6">
+                        <button opaque="NO" tag="206" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A02-45-fX6" customClass="SCProfileFollowerEquipButton" customModule="DiabloAssistant" customModuleProvider="target">
                             <rect key="frame" x="218" y="279" width="46" height="46"/>
                             <connections>
                                 <action selector="clickEquipButton:" destination="h3y-Bj-xka" eventType="touchUpInside" id="jD4-CI-Atk"/>
@@ -284,9 +284,9 @@
                         <outletCollection property="skillButtons" destination="4J9-Ce-4GT" collectionClass="NSMutableArray" id="4DB-Qm-evJ"/>
                         <outletCollection property="skillButtons" destination="AAF-hy-DLk" collectionClass="NSMutableArray" id="IrR-TT-wir"/>
                         <outletCollection property="skillButtons" destination="xJZ-o0-TtX" collectionClass="NSMutableArray" id="di5-x7-GBU"/>
-                        <outletCollection property="valueLabels" destination="uqF-SE-HA8" collectionClass="NSMutableArray" id="Kez-0C-fYZ"/>
-                        <outletCollection property="valueLabels" destination="4Bh-GH-9Sa" collectionClass="NSMutableArray" id="AYt-iC-Jwe"/>
-                        <outletCollection property="valueLabels" destination="Odc-US-lv2" collectionClass="NSMutableArray" id="UGD-6S-Dc3"/>
+                        <outletCollection property="statsLabels" destination="uqF-SE-HA8" collectionClass="NSMutableArray" id="Kez-0C-fYZ"/>
+                        <outletCollection property="statsLabels" destination="4Bh-GH-9Sa" collectionClass="NSMutableArray" id="AYt-iC-Jwe"/>
+                        <outletCollection property="statsLabels" destination="Odc-US-lv2" collectionClass="NSMutableArray" id="UGD-6S-Dc3"/>
                         <outletCollection property="equipButtons" destination="y9b-2B-gC3" collectionClass="NSMutableArray" id="3wG-y6-nK0"/>
                         <outletCollection property="equipButtons" destination="NfQ-xp-NUw" collectionClass="NSMutableArray" id="92V-ai-bQd"/>
                         <outletCollection property="equipButtons" destination="TVD-YZ-Vir" collectionClass="NSMutableArray" id="yVR-f0-lWK"/>
@@ -297,6 +297,9 @@
                         <outletCollection property="skillNameLabels" destination="MS0-7Z-Ne3" collectionClass="NSMutableArray" id="5cu-8o-T6b"/>
                         <outletCollection property="skillNameLabels" destination="vno-87-2m9" collectionClass="NSMutableArray" id="jpW-Zj-Bkj"/>
                         <outletCollection property="skillNameLabels" destination="Mgx-Mv-2wx" collectionClass="NSMutableArray" id="xAu-65-D4a"/>
+                        <outletCollection property="statsNameLabels" destination="UkM-9d-RWz" collectionClass="NSMutableArray" id="X3l-9q-Z9P"/>
+                        <outletCollection property="statsNameLabels" destination="vZB-Bi-Dvg" collectionClass="NSMutableArray" id="Ltn-AO-ZTe"/>
+                        <outletCollection property="statsNameLabels" destination="T5R-Al-RY7" collectionClass="NSMutableArray" id="uY1-AV-OxF"/>
                     </connections>
                 </view>
             </subviews>

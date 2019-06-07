@@ -8,12 +8,10 @@
 
 import UIKit
 protocol SCProfilePowerViewDelegate: NSObjectProtocol {
-    func didClickEquipButton(powerView: SCProfilePowerView, slugId: String)
+    func didClickEquipButton(powerView: SCProfilePowerView, index: Int)
 }
 
 class SCProfilePowerView: UIView {
-    var details: SCEquipmentItemDetails?
-    
     weak var delegate: SCProfilePowerViewDelegate?
     var power: SCProfileLegendaryPowerItem?{
         didSet{
@@ -21,18 +19,14 @@ class SCProfilePowerView: UIView {
             equipButton.isEnabled = true
             equipBackgroundImageView.image = UIImage(named: "Active-Default")
             equipButton.setImage(power?.iconImage, for: [])
-           
         }
     }
     
     @IBOutlet weak var equipBackgroundImageView: UIImageView!
     @IBOutlet weak var equipButton: UIButton!
+    
     @IBAction func clickEquipButton(_ sender: UIButton) {
-        guard let slug = power?.slug,
-            let id = power?.id else{
-                return
-        }
-        delegate?.didClickEquipButton(powerView: self, slugId: "\(slug)-\(id)")
+        delegate?.didClickEquipButton(powerView: self, index: tag)
     }
     
     class func powerView()->SCProfilePowerView{
@@ -51,8 +45,5 @@ class SCProfilePowerView: UIView {
     func clearEquipStatus(){
         equipBackgroundImageView.image = UIImage(named: "empty_\(equipButton.tag)")
         equipButton.setImage(nil, for: [])
-    }
-    
-    override func awakeFromNib() {
     }
 }

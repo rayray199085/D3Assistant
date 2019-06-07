@@ -34,8 +34,8 @@ class SCProfileStatisticsController: UIViewController {
         textView.scrollRangeToVisible(NSMakeRange(0, 0))
     }
     
-    func setBasicInfoContent(content: String){
-        basicInfoLabel.text = content
+    func setBasicInfoContent(content: NSAttributedString?){
+        basicInfoLabel.attributedText = content
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +57,7 @@ private extension SCProfileStatisticsController{
             v.frame.origin = CGPoint(x: x, y: 0)
             v.setEquipBackgroundImage(index: i)
             v.delegate = self
+            v.tag = i
             legendaryPowerView.addSubview(v)
         }
     }
@@ -76,20 +77,10 @@ extension SCProfileStatisticsController: SCProfileEquipmentDetailsViewDelegate{
     }
 }
 extension SCProfileStatisticsController: SCProfilePowerViewDelegate{
-    func didClickEquipButton(powerView: SCProfilePowerView, slugId: String) {
-        if powerView.details != nil{
-            showDetailsViewContent(details: powerView.details!)
+    func didClickEquipButton(powerView: SCProfilePowerView, index: Int) {
+        guard let details = viewModel?.legendaryPowers?[index].details else{
             return
         }
-        SVProgressHUD.show()
-        viewModel?.loadEquipmentDetails(slugId: slugId, completion: { [weak self] (details, isSuccess) in
-            guard let details = details else{
-                return
-            }
-            powerView.details = details
-            self?.showDetailsViewContent(details: details)
-            SVProgressHUD.dismiss()
-        })
-        
+        showDetailsViewContent(details: details)
     }
 }

@@ -9,8 +9,8 @@
 import UIKit
 
 protocol SCProfileFollowerDetailsViewDelegate: NSObjectProtocol {
-    func didClickSkillButton(view: SCProfileFollowerDetailsView, index: Int)
-    func didClickEquipButton(view: SCProfileFollowerDetailsView, index: Int)
+    func didClickSkillButton(view: SCProfileFollowerDetailsView, skill: SCProfileSkillItem?)
+    func didClickEquipButton(view: SCProfileFollowerDetailsView, item: SCProfileEquipmentItem?)
 }
 class SCProfileFollowerDetailsView: UIView {
     weak var delegate: SCProfileFollowerDetailsViewDelegate?
@@ -18,64 +18,56 @@ class SCProfileFollowerDetailsView: UIView {
         didSet{
             resetSkillButtonImages()
             for (index,skill) in (follower?.skills ?? []).enumerated(){
-                skillButtons[index].setBackgroundImage(skill.skillImage, for: [])
+                skillButtons[index].skill = skill
                 skillNameLabels[index].text = skill.name
             }
             for (index,btn) in equipButtons.enumerated(){
                 switch btn.tag{
                 //main hand
                 case 201:
-                    btn.setImage(follower?.items?.mainHand?.iconImage?
-                    .withRenderingMode(.alwaysOriginal), for: [])
-                    btn.setBackgroundImage(UIImage(named: "color_\(follower?.items?.mainHand?.displayColor ?? "")"), for: [])
-                    setEquipButtonGems(index: index, btn: btn, item: follower?.items?.mainHand)
+                    btn.item = follower?.items?.mainHand
                 //off hand
                 case 202:
-                    btn.setImage(follower?.items?.offHand?.iconImage?.withRenderingMode(
-                        .alwaysOriginal), for: [])
-                    btn.setBackgroundImage(UIImage(named: "color_\(follower?.items?.offHand?.displayColor ?? "")"), for: [])
-                    setEquipButtonGems(index: index, btn: btn, item: follower?.items?.offHand)
+                    btn.item = follower?.items?.offHand
                 // left ring
                 case 203:
-                    btn.setImage(follower?.items?.leftFinger?.iconImage?.withRenderingMode(
-                        .alwaysOriginal), for: [])
-                    btn.setBackgroundImage(UIImage(named: "color_\(follower?.items?.leftFinger?.displayColor ?? "")"), for: [])
-                    setEquipButtonGems(index: index, btn: btn, item: follower?.items?.leftFinger)
+                    btn.item = follower?.items?.leftFinger
                 // right ring
                 case 204:
-                    btn.setImage(follower?.items?.rightFinger?
-                        .iconImage?.withRenderingMode(
-                        .alwaysOriginal), for: [])
-                    btn.setBackgroundImage(UIImage(named: "color_\(follower?.items?.rightFinger?.displayColor ?? "")"), for: [])
-                    setEquipButtonGems(index: index, btn: btn, item: follower?.items?.rightFinger)
+                    btn.item = follower?.items?.rightFinger
                 // neck
                 case 205:
-                    btn.setImage(follower?.items?.neck?.iconImage?.withRenderingMode(
-                        .alwaysOriginal), for: [])
-                    btn.setBackgroundImage(UIImage(named: "color_\(follower?.items?.neck?.displayColor ?? "")"), for: [])
-                    setEquipButtonGems(index: index, btn: btn, item: follower?.items?.neck)
+                    btn.item = follower?.items?.neck
                 // special
                 case 206:
-                    btn.setImage(follower?.items?.special?.iconImage?.withRenderingMode(
-                        .alwaysOriginal), for: [])
-                    btn.setBackgroundImage(UIImage(named: "color_\(follower?.items?.special?.displayColor ?? "")"), for: [])
-                    specialBorderImageView.isHidden = follower?.items?.special == nil
-                    setEquipButtonGems(index: index, btn: btn, item: follower?.items?.special)
+                    btn.item = follower?.items?.special
+                    specialBorderImageView.isHidden = btn.item == nil
                 default:
                     break
                 }
+                setEquipButtonGems(index: index, btn: btn, item: btn.item)
             }
+            statsLabels[0].text = "\(follower?.stats?.goldFind ?? 0).00%"
+            setLabelTextColor(index: 0, value: follower?.stats?.goldFind ?? 0)
+            statsLabels[1].text = "\(follower?.stats?.magicFind ?? 0).00%"
+            setLabelTextColor(index: 1, value: follower?.stats?.magicFind ?? 0)
+            statsLabels[2].text = "+\(follower?.stats?.experienceBonus ?? 0).00"
+            setLabelTextColor(index: 2, value: follower?.stats?.experienceBonus ?? 0)
         }
     }
     
     @IBOutlet var specialBorderImageView: UIImageView!
     @IBOutlet var skillNameLabels: [UILabel]!
-    @IBOutlet var skillButtons: [UIButton]!
-    @IBOutlet var equipButtons: [UIButton]!
-    @IBOutlet var valueLabels: [UILabel]!
+    @IBOutlet var skillButtons: [SCProfileFollowerSkillButton]!
+    @IBOutlet var equipButtons: [SCProfileFollowerEquipButton]!
+    @IBOutlet var statsLabels: [UILabel]!
+    @IBOutlet var statsNameLabels: [UILabel]!
     
+    
+     // clear previous content
     func resetSkillButtonImages(){
         for btn in skillButtons{
+            btn.clearPreviousContent()
             btn.setBackgroundImage(UIImage(named: "follower-skill-unlocked"), for: [])
         }
         for lbl in skillNameLabels{
@@ -86,13 +78,18 @@ class SCProfileFollowerDetailsView: UIView {
                 v.removeFromSuperview()
             }
         }
+        for btn in equipButtons{
+            btn.item = nil
+            btn.setImage(nil, for: [])
+            btn.setBackgroundImage(nil, for: [])
+        }
     }
     
-    @IBAction func clickSkillButton(_ sender: UIButton){
-        delegate?.didClickSkillButton(view: self, index: sender.tag)
+    @IBAction func clickSkillButton(_ sender: SCProfileFollowerSkillButton){
+        delegate?.didClickSkillButton(view: self, skill: sender.skill)
     }
-    @IBAction func clickEquipButton(_ sender: UIButton){
-        delegate?.didClickEquipButton(view: self, index: sender.tag)
+    @IBAction func clickEquipButton(_ sender: SCProfileFollowerEquipButton){
+        delegate?.didClickEquipButton(view: self, item: sender.item)
     }
     
 }
@@ -113,5 +110,16 @@ private extension SCProfileFollowerDetailsView{
 extension SCProfileFollowerDetailsView: SCProfileEquipGemViewDelegate{
     func didClickGemButton(view: SCProfileEquipGemView, index: Int) {
         clickEquipButton(equipButtons[index])
+    }
+}
+private extension SCProfileFollowerDetailsView{
+    func setLabelTextColor(index: Int, value: Int){
+        if value > 0{
+            statsLabels[index].textColor = SCProfileStatsNameHighlightedColor
+            statsNameLabels[index].textColor = SCProfileStatsNameHighlightedColor
+        }else{
+            statsLabels[index].textColor = SCProfileStatsNameNormalColor
+            statsNameLabels[index].textColor = SCProfileStatsNameNormalColor
+        }
     }
 }

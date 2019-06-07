@@ -54,12 +54,27 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xIg-W9-sfU">
+                    <rect key="frame" x="37" y="578" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="5A1-SZ-xpe"/>
+                        <constraint firstAttribute="width" constant="90" id="jPd-ET-DPi"/>
+                    </constraints>
+                </imageView>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttonPassive" translatesAutoresizingMaskIntoConstraints="NO" id="SJ5-1a-yA1">
+                    <rect key="frame" x="32" y="573" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="nYv-vi-qjZ"/>
+                        <constraint firstAttribute="width" constant="100" id="yx4-YR-i7c"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <constraints>
                 <constraint firstItem="wIa-pj-rzW" firstAttribute="leading" secondItem="rnw-hC-ovG" secondAttribute="leading" id="2mA-RT-S7i"/>
                 <constraint firstItem="hl9-Kj-96V" firstAttribute="centerX" secondItem="Xeb-YS-1oF" secondAttribute="centerX" id="6zU-Pv-Zw4"/>
                 <constraint firstItem="wIa-pj-rzW" firstAttribute="top" secondItem="rnw-hC-ovG" secondAttribute="top" id="8am-Gl-tQZ"/>
                 <constraint firstItem="rnw-hC-ovG" firstAttribute="trailing" secondItem="wIa-pj-rzW" secondAttribute="trailing" id="EGi-NO-BlV"/>
+                <constraint firstItem="SJ5-1a-yA1" firstAttribute="leading" secondItem="7cd-Ht-oWs" secondAttribute="leading" id="HSE-Rr-9yQ"/>
                 <constraint firstItem="fJj-Q0-Tci" firstAttribute="top" secondItem="hl9-Kj-96V" secondAttribute="top" constant="13" id="MY5-In-J5O"/>
                 <constraint firstItem="KR6-SK-bCX" firstAttribute="centerX" secondItem="Xeb-YS-1oF" secondAttribute="centerX" id="O6F-2j-Xd2"/>
                 <constraint firstItem="rnw-hC-ovG" firstAttribute="bottom" secondItem="wIa-pj-rzW" secondAttribute="bottom" id="ROK-tA-Bck"/>
@@ -67,20 +82,26 @@
                 <constraint firstItem="7cd-Ht-oWs" firstAttribute="bottom" secondItem="KR6-SK-bCX" secondAttribute="bottom" id="VXX-4Z-LWl"/>
                 <constraint firstItem="7cd-Ht-oWs" firstAttribute="top" secondItem="hl9-Kj-96V" secondAttribute="bottom" id="VzC-Jq-OFH"/>
                 <constraint firstItem="7cd-Ht-oWs" firstAttribute="trailing" secondItem="KR6-SK-bCX" secondAttribute="trailing" id="Zms-B4-wYc"/>
+                <constraint firstItem="xIg-W9-sfU" firstAttribute="centerY" secondItem="SJ5-1a-yA1" secondAttribute="centerY" id="aTC-RU-WnV"/>
                 <constraint firstItem="hl9-Kj-96V" firstAttribute="top" secondItem="KR6-SK-bCX" secondAttribute="top" id="b55-GC-4eW"/>
                 <constraint firstItem="KR6-SK-bCX" firstAttribute="centerY" secondItem="Xeb-YS-1oF" secondAttribute="centerY" id="fPS-rM-Zcr"/>
+                <constraint firstItem="SJ5-1a-yA1" firstAttribute="bottom" secondItem="7cd-Ht-oWs" secondAttribute="bottom" id="h53-xl-Zng"/>
                 <constraint firstItem="fJj-Q0-Tci" firstAttribute="centerX" secondItem="Xeb-YS-1oF" secondAttribute="centerX" id="mv7-G9-HRk"/>
+                <constraint firstItem="xIg-W9-sfU" firstAttribute="centerX" secondItem="SJ5-1a-yA1" secondAttribute="centerX" id="tmy-yC-LFR"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="rnw-hC-ovG"/>
             <connections>
+                <outlet property="skillFrameImageView" destination="SJ5-1a-yA1" id="DgN-ga-vS6"/>
+                <outlet property="skillIconImageView" destination="xIg-W9-sfU" id="4UM-9I-cR1"/>
                 <outlet property="textView" destination="7cd-Ht-oWs" id="Jv1-cW-Xu4"/>
                 <outlet property="titleBgImageView" destination="hl9-Kj-96V" id="fUX-XP-KAh"/>
                 <outlet property="titleLabel" destination="fJj-Q0-Tci" id="p9o-zU-0QM"/>
             </connections>
-            <point key="canvasLocation" x="196" y="191"/>
+            <point key="canvasLocation" x="195.6521739130435" y="190.84821428571428"/>
         </view>
     </objects>
     <resources>
+        <image name="buttonPassive" width="40" height="40"/>
         <image name="frame_green" width="175" height="20.5"/>
         <image name="sidebar-bg" width="300" height="130"/>
     </resources>
