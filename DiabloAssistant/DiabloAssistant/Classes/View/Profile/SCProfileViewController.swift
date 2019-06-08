@@ -45,7 +45,7 @@ private extension SCProfileViewController{
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(addNewProfile))
         navigationController?.navigationBar.tintColor = SCButtonTitleColor
         view.addSubview(profileView)
-        view.addSubview(profileInputView)
+        navigationController?.view.addSubview(profileInputView)
         profileInputView.isHidden = true
         profileInputView.delegate = self
         profileView.delegate = self
