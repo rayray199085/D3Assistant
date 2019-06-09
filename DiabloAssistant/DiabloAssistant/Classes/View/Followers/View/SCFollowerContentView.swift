@@ -126,6 +126,13 @@ private extension SCFollowerContentView{
         for v in skillButtonViews{
             (v.subviews[0] as! SCFollowerSkillButton).hideMaskAndFrame()
         }
+        if let info = viewModel?.followerInfo[name]{
+            for (index,v) in (skillButtonViews).enumerated(){
+                (v.subviews[0] as! SCFollowerSkillButton).skill = info?.skills?[index]
+                levelLabels[index / 2].text = "\(info?.skills?[index].level ?? 0)"
+            }
+            return
+        }
         SVProgressHUD.show()
         viewModel?.loadFollowerInfo(followerName: name
             , completion: { [weak self] (followerInfo, isSuccess) in

@@ -28,6 +28,7 @@ class SCEquipmentViewModel: NSObject{
     @objc lazy var offHands = [SCItemCommonTypes]()
     @objc lazy var followerSpecials = [SCItemCommonTypes]()
     @objc lazy var others = [SCItemCommonTypes]()
+    lazy var temporyStoredItems = [SCCategoryEquipmentType:[SCEquipmentItem]]()
    
     init(characterName: String?) {
         self.characterName = characterName
@@ -167,6 +168,7 @@ class SCEquipmentViewModel: NSObject{
             itemGroup.sort(by: { (item0, item1) -> Bool in
                 return item0.details?.requiredLevel ?? 0 < item1.details?.requiredLevel ?? 0
             })
+            self.temporyStoredItems[typeIndexGroup!] = itemGroup
             completion(itemGroup, true)
         }
     }

@@ -79,7 +79,7 @@ extension SCProfileViewController: SCProfileRecordViewDelegate{
         SVProgressHUD.show()
         viewModel.loadHeroDetails(id: hero?.id) { [weak self](isSuccess) in
             if !isSuccess{
-                SVProgressHUD.showInfo(withStatus: "Connection error")
+                SVProgressHUD.showInfo(withStatus: "Please check the correctness of your input.")
                 return
             }
             SVProgressHUD.dismiss()

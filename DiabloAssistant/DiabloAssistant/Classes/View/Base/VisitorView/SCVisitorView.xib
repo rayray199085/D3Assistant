@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Vxy-cL-SeP" customClass="SCVisitorView" customModule="DiabloAssistant" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calculatorInner" translatesAutoresizingMaskIntoConstraints="NO" id="h0C-FM-3Le">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SX5-G0-xtB">
+                    <rect key="frame" x="32" y="223" width="350" height="450"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="450" id="8dZ-XX-HAE"/>
+                        <constraint firstAttribute="width" constant="350" id="DY7-CT-Iug"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQs-8s-wFo">
+                    <rect key="frame" x="186" y="683" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.94117647059999998" green="0.87450980389999999" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="rQs-8s-wFo" firstAttribute="top" secondItem="SX5-G0-xtB" secondAttribute="bottom" constant="10" id="3nq-M4-Vr0"/>
+                <constraint firstItem="h0C-FM-3Le" firstAttribute="leading" secondItem="06m-eb-EQd" secondAttribute="leading" id="78g-Ce-HJ5"/>
+                <constraint firstItem="h0C-FM-3Le" firstAttribute="top" secondItem="06m-eb-EQd" secondAttribute="top" id="L9H-Ai-hm5"/>
+                <constraint firstItem="06m-eb-EQd" firstAttribute="bottom" secondItem="h0C-FM-3Le" secondAttribute="bottom" id="OhX-3t-Bnl"/>
+                <constraint firstItem="06m-eb-EQd" firstAttribute="trailing" secondItem="h0C-FM-3Le" secondAttribute="trailing" id="dFW-6i-Trn"/>
+                <constraint firstItem="rQs-8s-wFo" firstAttribute="centerX" secondItem="Vxy-cL-SeP" secondAttribute="centerX" id="epX-JA-Vs1"/>
+                <constraint firstItem="SX5-G0-xtB" firstAttribute="centerX" secondItem="Vxy-cL-SeP" secondAttribute="centerX" id="ex4-yn-W7Y"/>
+                <constraint firstItem="SX5-G0-xtB" firstAttribute="centerY" secondItem="Vxy-cL-SeP" secondAttribute="centerY" id="n4H-xg-5B0"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="06m-eb-EQd"/>
+            <connections>
+                <outlet property="imageView" destination="SX5-G0-xtB" id="SRh-GW-FHg"/>
+                <outlet property="titleLable" destination="rQs-8s-wFo" id="pj6-ig-tMQ"/>
+            </connections>
+            <point key="canvasLocation" x="42" y="159"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="calculatorInner" width="270" height="337.5"/>
+    </resources>
+</document>

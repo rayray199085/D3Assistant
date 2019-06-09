@@ -77,7 +77,8 @@ extension SCBaseViewController{
     }
     
     private func setupVisitorView(){
-        let visitiorView = SCVisitorView(frame: view.bounds)
+        let visitiorView = SCVisitorView.visitorView()
+        visitiorView.visitorInfo = visitorInfo
         guard let naviBar = navigationController?.navigationBar else {
             return
         }

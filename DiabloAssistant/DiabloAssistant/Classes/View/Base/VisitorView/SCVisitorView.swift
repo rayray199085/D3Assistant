@@ -10,11 +10,24 @@ import UIKit
 
 class SCVisitorView: UIView {
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    var visitorInfo: [String: String]?{
+        didSet{
+            titleLable.text = visitorInfo?["message"]
+            guard let imageName = visitorInfo?["imageName"] else{
+                return 
+            }
+            imageView.image = UIImage(named: imageName)
+        }
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    @IBOutlet weak var titleLable: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    class func visitorView()->SCVisitorView{
+        let nib = UINib(nibName: "SCVisitorView", bundle: nil)
+        let v = nib.instantiate(withOwner: self, options: nil)[0] as! SCVisitorView
+        v.frame = UIScreen.main.bounds
+        return v
     }
+    
 }

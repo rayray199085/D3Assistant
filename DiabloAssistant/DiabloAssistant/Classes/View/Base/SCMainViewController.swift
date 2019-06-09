@@ -60,10 +60,12 @@ private extension SCMainViewController{
     /// setup child controllers by initializing an array of dictionary
     func setupChildControllers(){
         let array = [
-        ["title": "Profile","clsName":"SCProfileViewController","imageName":"profile"],
+        ["title": "Profile","clsName":"SCProfileViewController","imageName":"profile",
+         "visitorInfo":["imageName":"visitor_01","message":"Sync with your game account."]],
         ["title": "News","clsName":"SCNewsViewController","imageName":"news"],
         ["clsName":"UIViewController"],
-        ["title": "Followers","clsName":"SCFollowerViewController","imageName":"followers"],
+        ["title": "Followers","clsName":"SCFollowerViewController","imageName":"followers",
+         "visitorInfo":["imageName":"visitor_02","message":"Lastest game information."]],
         ["title": "More","clsName":"SCMoreViewController","imageName":"more"]]
         var childControllers = [UIViewController]()
         for dict in array{
@@ -94,6 +96,11 @@ private extension SCMainViewController{
             [NSAttributedString.Key.foregroundColor : SCButtonTitleColor],
             for: UIControl.State.highlighted)
         vc.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.darkGray,NSAttributedString.Key.font: UIFont(name: "Exocet", size: 10)!], for: [])
+        if let visitorInfo = dict["visitorInfo"] as? [String: String]{
+            if vc.isKind(of: SCBaseViewController.self){
+                (vc as! SCBaseViewController).visitorInfo = visitorInfo
+            }
+        }
         let nav = SCNavigationViewController(rootViewController: vc)
         return nav
     }

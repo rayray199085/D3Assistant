@@ -160,6 +160,11 @@ private extension SCEquipmentViewController{
         guard let categoryType = itemType.items else{
             return
         }
+        if let items = viewModel?.temporyStoredItems[categoryType]{
+            selectedItems = items
+            showItemSelectionView()
+            return 
+        }
         SVProgressHUD.show()
         viewModel?.loadEquipmentType(typeIndexGroup: categoryType, completion: { [weak self](items, isSuccess) in
             self?.selectedItems = items

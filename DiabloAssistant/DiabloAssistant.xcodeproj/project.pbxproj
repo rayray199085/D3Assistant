@@ -69,6 +69,7 @@
 		0D516C46229223F10006DBCB /* SCActiveSkillRuneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D516C45229223F10006DBCB /* SCActiveSkillRuneView.xib */; };
 		0D58D93822A8980E00BAD29B /* SCProfileFollowerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D58D93722A8980E00BAD29B /* SCProfileFollowerDetailsView.swift */; };
 		0D58D93A22A8C6F900BAD29B /* SCProfileFollowerItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D58D93922A8C6F900BAD29B /* SCProfileFollowerItemDetails.swift */; };
+		0D60957722ACCFB500F6E167 /* SCVisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D60957622ACCFB500F6E167 /* SCVisitorView.xib */; };
 		0D62CED122A340420003A698 /* SCProfileEquipmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62CED022A340420003A698 /* SCProfileEquipmentController.swift */; };
 		0D62CED522A341300003A698 /* SCProfileEquipmentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D62CED422A341300003A698 /* SCProfileEquipmentController.xib */; };
 		0D62CEDA22A352DE0003A698 /* SCProfileHeroSkills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62CED922A352DE0003A698 /* SCProfileHeroSkills.swift */; };
@@ -279,6 +280,7 @@
 		0D516C45229223F10006DBCB /* SCActiveSkillRuneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCActiveSkillRuneView.xib; sourceTree = "<group>"; };
 		0D58D93722A8980E00BAD29B /* SCProfileFollowerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfileFollowerDetailsView.swift; sourceTree = "<group>"; };
 		0D58D93922A8C6F900BAD29B /* SCProfileFollowerItemDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfileFollowerItemDetails.swift; sourceTree = "<group>"; };
+		0D60957622ACCFB500F6E167 /* SCVisitorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCVisitorView.xib; sourceTree = "<group>"; };
 		0D62CED022A340420003A698 /* SCProfileEquipmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfileEquipmentController.swift; sourceTree = "<group>"; };
 		0D62CED422A341300003A698 /* SCProfileEquipmentController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SCProfileEquipmentController.xib; sourceTree = "<group>"; };
 		0D62CED922A352DE0003A698 /* SCProfileHeroSkills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCProfileHeroSkills.swift; sourceTree = "<group>"; };
@@ -687,6 +689,7 @@
 			isa = PBXGroup;
 			children = (
 				0D1DD287228D513200FFC9FD /* SCVisitorView.swift */,
+				0D60957622ACCFB500F6E167 /* SCVisitorView.xib */,
 			);
 			path = VisitorView;
 			sourceTree = "<group>";
@@ -1234,6 +1237,7 @@
 				0D71CF51228FECFE0029FF16 /* SCEquipmentViewController.xib in Resources */,
 				0D9858C922A5E13800090F00 /* SCProfileEquipGemView.xib in Resources */,
 				0D516C4222921AED0006DBCB /* SCActiveSkillItemView.xib in Resources */,
+				0D60957722ACCFB500F6E167 /* SCVisitorView.xib in Resources */,
 				0D9738AA22A7417700C3B764 /* SCProfileRecordCell.xib in Resources */,
 				0D1DD21E228D503800FFC9FD /* Assets.xcassets in Resources */,
 				0D18AD95229BB96900B3CF4E /* SCFollowerContentView.xib in Resources */,
