@@ -7,7 +7,7 @@
 //
 
 import UIKit
-private let appId = "702071888"
+private let appId = "1468033330"
 private let emailAddress = "stephen.cao0805@outlook.com"
 class SCMoreViewController: UIViewController {
     private lazy var functionView = SCMoreFunctionView.functionView()

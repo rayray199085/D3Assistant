@@ -6,12 +6,9 @@ PODS:
   - DLSlideView (0.8.3)
   - DropDown (2.3.13)
   - ExpandingMenu (0.4.0)
-  - FBRetainCycleDetector (0.1.4)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
-  - MLeaksFinder (1.0.0):
-    - FBRetainCycleDetector
   - pop (1.0.12)
   - SDWebImage (5.0.2):
     - SDWebImage/Core (= 5.0.2)
@@ -28,7 +25,6 @@ DEPENDENCIES:
   - DropDown
   - ExpandingMenu (~> 0.4)
   - FMDB
-  - MLeaksFinder
   - pop
   - SDWebImage
   - SVProgressHUD
@@ -42,9 +38,7 @@ SPEC REPOS:
     - Atributika
     - DropDown
     - ExpandingMenu
-    - FBRetainCycleDetector
     - FMDB
-    - MLeaksFinder
     - pop
     - SDWebImage
     - SVProgressHUD
@@ -67,15 +61,13 @@ SPEC CHECKSUMS:
   DLSlideView: b517599cf60b1de71cb1b1e0bb356a893669c005
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   ExpandingMenu: 3187a4ed1aa1aea85418e444c213e4cd6063c122
-  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   SDWebImage: 6764b5fa0f73c203728052955dbefa2bf1f33282
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TCPickerView: 5964aa81307220bec0d126240a661d37c279e4e6
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 84a33d5af7ca86ffed03cb80fe94118bb5170f31
+PODFILE CHECKSUM: b7a61c1831c0c18fbb5d5595e3eff8574a0732b0
 
 COCOAPODS: 1.6.1

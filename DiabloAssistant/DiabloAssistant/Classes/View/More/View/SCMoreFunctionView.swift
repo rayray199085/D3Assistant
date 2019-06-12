@@ -20,7 +20,7 @@ class SCMoreFunctionView: UIView {
         ["title": "Rate us on the App Store", "iconName": "more_rate","content":"We'd love to hear your feedback, whether you've got ideas on how we can improve - and would really appreciate it if you rate us on the App Store."],
         ["title": "Contact us", "iconName": "more_email","content":"You can email us if you have any comments, suggestions or even ideas.\nYour opinion is very important to us."],
         ["title": "Fork us on GitHub", "iconName": "more_fork", "content":"This is a free and open source application.\n\nIf you are interested in this app and want to make it become better, contact us to know more."],
-        ["title": "About", "iconName": "more_about", "content": "Produced by: Rui Cao\n\nVersion: v1.0.0\n\nCopyright © 2019 Stephen Cao. All rights reserved."]]
+        ["title": "About", "iconName": "more_about", "content": "Produced by: Rui Cao\n\nVersion: v1.0.1\n\nCopyright © 2019 Rui Cao. All rights reserved."]]
     
     class func functionView()->SCMoreFunctionView{
         let nib = UINib(nibName: "SCMoreFunctionView", bundle: nil)
